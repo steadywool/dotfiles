@@ -1,0 +1,201 @@
+[colors]
+
+background = #282828
+background-alt = #458588
+foreground =  #ebdbb2
+foreground-alt = #a89984
+primary = #98971a
+secondary = #d79921
+alert= #cc241d
+
+;--------------------------------------------------------------------
+[bar/top]
+
+monitor =
+width = 100%
+height = 35
+radius = 0.0
+fixed-center = true
+
+background = #282828
+foreground = #ebdbb2
+
+line-size = 
+
+border-size = 
+border-color =
+
+padding-left = 
+padding-right = 
+
+module-margin-left = 
+module-margin-right = 
+
+font-0 = Ubuntu Mono:style=Regular:pixelsize=13
+font-1 = DejaVu Sans:style=Regular
+
+modules-left = i3
+modules-center = 
+modules-right = pulseaudio | xbacklight | cpu | memory | temperature | battery | wired-network | date | rofi | power |
+
+tray-position = right
+tray-padding = 1
+tray-background = 
+
+;bottom = false
+
+;---------------------------------------------------------
+[module/|]
+type = custom/text
+
+content =" | "
+content-foreground = ${colors.foreground-alt}
+
+;--------------------------------------------------------------------
+[module/i3]
+type = internal/i3
+
+format = <label-state> <label-mode>
+index-sort = true
+enable-click = true
+
+label-focused = %name%
+label-focused-background = ${colors.background-alt}
+label-focused-padding = 1 
+
+label-unfocused = %name%
+label-unfocused-foreground =${colors.foreground-alt} 
+label-unfocused-padding = 1
+
+label-visible = %name%
+label-visible-padding = 1
+
+label-urgent = %name%
+label-urgent-foreground = ${colors.alert}
+label-urgent-padding = 1
+
+;-----------------------------------------------------------------
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume>
+
+label-volume = "VOL %percentage%%"
+label-muted = "VOL muted"
+label-muted-foreground = ${colors.foreground-alt}
+
+;----------------------------------------------------------
+[module/alsa]
+type = internal/alsa
+
+format-volume = <label-volume>
+
+label-volume ="VOL %percentage%%"
+label-muted ="VOL muted" 
+label-muted-foreground = ${colors.foreground-alt}
+
+;---------------------------------------------------------
+[module/xbacklight]
+type = internal/xbacklight
+
+output = eDP1
+enable-scroll = true
+
+format = <label>
+label = "CONT %percentage%%"
+
+;---------------------------------------------------------
+[module/cpu]
+type = internal/cpu
+
+interval = 2
+
+format = <label>
+label = "CPU %percentage%%"
+
+;---------------------------------------------------------
+[module/memory]
+type = internal/memory
+
+interval = 2
+
+format= <label>
+label = "RAM %percentage_used%%"
+ 
+;---------------------------------------------------------
+[module/temperature]
+type = internal/temperature
+
+interval = 2
+thermal-zone = 0
+
+format =<label>
+label = "TEMP %temperature-c%"
+
+;---------------------------------------------------------
+[module/battery]
+type = internal/battery
+
+full-at = 99
+
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP1
+
+format-charging = <label-charging>
+label-charging = "BAT %percentage%%" 
+format-charging-foreground = ${colors.primary}
+
+format-discharging = <label-discharging>
+label-discharging = "BAT %percentage%%" 
+format-discharging-foreground = ${colors.alert}
+
+format-full = <label-full>
+label-full = "BAT %percentage%%"
+
+;-------------------------------------------------------
+[module/wired-network]
+type = internal/network
+
+interface = wlp1s0
+interval = 2
+
+label-connected = "NET ↑%upspeed% ↓%downspeed%"
+label-connected-foreground = ${colors.primary}
+
+label-disconnected = "NET not-connected"
+label-disconnected-foreground = ${colors.alert}
+
+unknown-as-up = true
+
+;---------------------------------------------------------
+[module/date]
+type = internal/date
+
+interval = 1
+
+format = <label>
+label = %time%
+
+time = "DATE %H:%M:%S"
+time-alt = "DATE %A, %d %B %Y"
+
+;---------------------------------------------------------
+[module/rofi]
+type = custom/text
+
+content = "ROFI"
+
+click-left= rofi -show drun
+click-right= rofi -show run
+
+;---------------------------------------------------------
+[module/power]
+type = custom/text
+
+content = "POWER"
+content-foreground=${colors.alert}
+
+click-left= ~/.config/script/power-menu.sh
+
+;---------------------------------------------------------

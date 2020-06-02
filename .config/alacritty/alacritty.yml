@@ -1,0 +1,63 @@
+env:
+  TERM: alacritty
+
+colors:
+  primary:
+    background: '#282828'
+    foreground: '#ebdbb2'
+  normal:
+    black:   '#282828'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#a89984'
+  bright:
+    black:   '#928374'
+    red:     '#fb4934'
+    green:   '#b8bb26'
+    yellow:  '#fabd2f'
+    blue:    '#83a598'
+    magenta: '#d3869b'
+    cyan:    '#8ec07c'
+    white:   '#ebdbb2'
+
+font:
+  normal:
+    family: Ubuntu Mono
+    style: Regular
+  bold:
+    family: Ubuntu Mono
+    style: Bold
+  italic:
+    family: Ubuntu Mono
+    style: Italic
+  size: 7.5
+
+scale_with_dpi: true
+draw_bold_text_with_bright_colors: true
+
+cursor:
+  style: Block
+  unfocused_hollow: false
+dynamic_title: true
+live_config_reload: true
+
+faux_multiplier: 3
+
+selection:
+  save_to_clipboard: false
+
+shell:
+  program: /bin/zsh
+
+  #mouse_bindings:
+  #- { mouse: Middle, action: PasteSelection }
+
+  #key_bindings:
+  #- { key: V, mods: Control, action: Paste }
+  #- { key: C, mods: Control, action: Copy }
+  #- { key: Q, mods: Control, action: Quit }
+  #- { key: F, mods: Control, action: ToggleFullscreen }
