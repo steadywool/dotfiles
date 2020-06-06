@@ -48,6 +48,10 @@ mouse_right_click = close_all
 [experimental]
 per_monitor_dpi = false
 
+[play_sound]
+summary = "*"
+script = ~/Script/dunst-sound/graceful.sh
+
 [shortcuts]
 # Close notification
 close = ctrl+space

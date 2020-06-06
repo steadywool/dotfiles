@@ -24,7 +24,7 @@ assign [class="Bitwarden"]$ws1
 assign [class="Alacritty"]$ws2
 assign [class="firefox|Tor Browser|Chromium"]$ws3
 assign [class="discord"] $ws5
-assign [class="net-mc-main-Main|Steam|retroarch|Gzdoom|gzdoom|Ankama Launcher"] $ws6
+assign [class="net-mc-main-Main|Steam|retroarch|Gzdoom|gzdoom|Ankama Launcher|com-ankamagames-wakfu-client-WakfuClient"] $ws6
 
 # autorun
 exec_always killall dunst; dunst
@@ -88,7 +88,7 @@ bindsym Print exec gnome-screenshot -i
 bindsym $mod+Shift+s exec gnome-screenshot -i
 
 # power menu
-bindsym $mod+Shift+e exec ~/.config/script/power-menu.sh
+bindsym $mod+Shift+e exec ~/Script/power-menu.sh
 
 # rofimoji
 bindsym $mod+e exec rofimoji -p -c

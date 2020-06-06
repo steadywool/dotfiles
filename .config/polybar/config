@@ -196,6 +196,6 @@ type = custom/text
 content = "POWER"
 content-foreground=${colors.alert}
 
-click-left= ~/.config/script/power-menu.sh
+click-left= ~/Script/power-menu.sh
 
 ;---------------------------------------------------------
