@@ -18,7 +18,7 @@ youtube-dl / redshift / leafpad / caja / gnome-screenshot /
 # OTHER
 **-Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
 
-**-GTK theme:** [Materia GTK Gruvbox](https://github.com/Kani-dev/Materia-gtk-gruvbox) (crée par mes soins)
+**-GTK theme:** [Materia GTK Gruvbox](https://github.com/Kani-dev/Materia-gtk-gruvbox)
 
 **-Icons:** [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/) 
 
