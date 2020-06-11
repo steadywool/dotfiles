@@ -1,11 +1,11 @@
-# About
+# ABOUT
 Here some screnshots of my computer.
 
 ![Screenshot-1](/Screenshot/screenshot-1.png)
 
 ![Screenshot-2](/Screenshot/screenshot-2.png)
 
-# LOGICIELS
+# SOFTWARE
 ## Priority: III
 ranger / ufw / alacritty / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git /
 
@@ -15,7 +15,7 @@ transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dun
 ## Priority: I
 youtube-dl / redshift / leafpad / caja / gnome-screenshot /
 
-# Others
+# OTHER
 **-Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
 
 **-GTK theme:** [Materia GTK Gruvbox](https://github.com/Kani-dev/Materia-gtk-gruvbox) (crée par mes soins)
