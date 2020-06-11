@@ -31,7 +31,7 @@ exec_always killall dunst; dunst
 exec_always killall polybar; polybar -r top
 
 exec_always feh --bg-scale ~/Pictures/Wallpaper/skull.jpg
-exec_always xrandr --auto
+exec_always xrandr --auto --output eDP-1 --same-as HDMI-1
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 

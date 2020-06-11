@@ -36,7 +36,7 @@ font-1 = DejaVu Sans:style=Regular
 
 modules-left = i3
 modules-center = 
-modules-right = pulseaudio | xbacklight | cpu | memory | temperature | battery | wired-network | date | rofi | power |
+modules-right = pulseaudio | backlight | cpu | memory | temperature | battery | wired-network | date | rofi | power |
 
 tray-position = right
 tray-padding = 1
@@ -95,11 +95,11 @@ label-muted ="VOL muted"
 label-muted-foreground = ${colors.foreground-alt}
 
 ;---------------------------------------------------------
-[module/xbacklight]
-type = internal/xbacklight
+[module/backlight]
+type = internal/backlight
 
-output = eDP1
-enable-scroll = true
+;$ ls -1 /sys/class/backlight/
+card = intel_backlight
 
 format = <label>
 label = "CONT %percentage%%"
