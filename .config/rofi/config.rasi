@@ -9,13 +9,13 @@ configuration {
 	border-color: #b16286;
 	highlight: bold #d3869b;
 	font: "Ubuntu 11";
-	columns: 2;
+	columns: 1;
 }
 
 #window {
 	height: 100%;
 	location: west;
-	width: 30%;
+	width: 25%;
 	border: 2px 2px 2px 0px;
 }
 
