@@ -1,7 +1,7 @@
 configuration {
- modi: "drun,run";
- drun-display-format: "{name}"; 
- }
+	modi: "drun,run";
+	drun-display-format: "{name}"; 
+}
 
 *{
 	text-color: #ebdbb2;
@@ -13,10 +13,10 @@ configuration {
 }
 
 #window {
-	height: 100%;
-	location: west;
+	height: 57%;
+	location: center;
 	width: 25%;
-	border: 2px 2px 2px 0px;
+	border: 2px 2px 2px 2px;
 }
 
 #listview {
