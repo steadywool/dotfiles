@@ -14,22 +14,10 @@ alert= #cc241d
 monitor =
 width = 100%
 height = 35
-radius = 0.0
 fixed-center = true
 
 background = #282828
 foreground = #ebdbb2
-
-line-size = 
-
-border-size = 
-border-color =
-
-padding-left = 
-padding-right = 
-
-module-margin-left = 
-module-margin-right = 
 
 font-0 = Ubuntu Mono:style=Regular:pixelsize=13
 font-1 = DejaVu Sans:style=Regular
@@ -40,9 +28,6 @@ modules-right = pulseaudio | backlight | cpu | memory | temperature | battery | 
 
 tray-position = right
 tray-padding = 1
-tray-background = 
-
-;bottom = false
 
 ;---------------------------------------------------------
 [module/|]
@@ -165,8 +150,6 @@ label-connected-foreground = ${colors.primary}
 
 label-disconnected = "NET not-connected"
 label-disconnected-foreground = ${colors.alert}
-
-unknown-as-up = true
 
 ;---------------------------------------------------------
 [module/date]

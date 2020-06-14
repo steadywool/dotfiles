@@ -1,81 +1,36 @@
 configuration {
  modi: "drun,run";
- combi-modi: "drun,run";
- show-icons: false;
- columns: 1;
- font: "Ubuntu 11";
- drun-display-format: "{name}";
+ drun-display-format: "{name}"; 
  }
-* {
+
+*{
 	text-color: #ebdbb2;
 	background-color: #282828;
-	highlight: bold #ebdbb2;
-}
-#element selected normal {
-	background-color: #665c54;
-}
-#element selected active {
-	background-color: #fabd2f;
-}
-#element alternate active {
-	background-color: #fabd2f;
-}
-#element selected urgent {
-	background-color: #fb4934;
-}
-#element alternate urgent {
-	background-color: #fb4934;
-}
-#element normal active {
-    background-color: #d79921;
-}
-#element alternate active {
-    background-color: #d79921;
-}
-#element normal urgent {
-    background-color: #cc241d;
-}
-#element alternate urgent {
-    background-color: #cc241d;
+	border-color: #b16286;
+	highlight: bold #d3869b;
+	font: "Ubuntu 11";
+	columns: 2;
 }
 
 #window {
-	height: 50%;
-	width: 25em;
-	location: center;
-	anchor: center;
-	border: 3px 3px 3px 3px;
-	border-color: #b16286;
-	text-color: #ebdbb2;
+	height: 100%;
+	location: west;
+	width: 30%;
+	border: 2px 2px 2px 0px;
 }
-#mode-switcher {
-	border: 2px 0px 0px 0px;
-	background-color: #32302f;
-	padding: 6px;
-}
-#button selected {
-	border-color: #b16286;
-	text-color: #ebdbb2;
-}
-#inputbar {
-	background-color: #282828;
-	text-color: #ebdbb2;
-	padding: 6px;
-}
-#mainbox {
-	expand: true;
-	background-color: #282828;
-	spacing: 1em;
-}
+
 #listview {
-	padding: 0em 0.6em 0em 1em;
-	dynamic:false;
-	lines: 0;
+	padding: 0em 0.6em 0em 0.6em;
 }
-#entry {
-	background-color: #32302f;
-	padding: 6px;
+
+#inputbar {
+	padding: 6px 6px;
 }
+
 #element {
 	padding: 6px 6px;
+}
+
+#element selected {
+	background-color: #665c54;
 }

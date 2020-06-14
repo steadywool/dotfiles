@@ -3,19 +3,18 @@
 ## APPEARENCE
 
 # font
-#font pango:Ubuntu Mono 13
-font pango:MonoSpace 11
+font pango:Ubuntu Mono 13
+#font pango:MonoSpace 11
 
 # color
 # class                 border  backgr. text   indicator child_border
-client.focused          #458588 #282828 #ebdbb2 #458588   #458588
+client.focused          #98971a #282828 #ebdbb2 #98971a   #98971a
 client.focused_inactive #d79921 #282828 #ebdbb2 #d79921   #d79921
 client.unfocused        #32302f #282828 #ebdbb2 #32302f   #32302f
 client.urgent           #cc241d #282828 #ebdbb2 #cc241d   #cc241d
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
 
-gaps inner 10
 #---------------------------------------------
 ## SOFTWARE
 
@@ -56,7 +55,7 @@ set $ws10 "10"
 
 # for window
 for_window [class="Alacritty|Bitwarden"] focus 
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 2
 for_window [class="Leafpad"] floating enable
 
 #---------------------------------------------
