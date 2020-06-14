@@ -1,12 +1,11 @@
 [colors]
 
 background = #282828
-background-alt = #458588
 foreground =  #ebdbb2
 foreground-alt = #a89984
-primary = #98971a
-secondary = #d79921
-alert= #cc241d
+primary = #83a598
+alert = #fb4934
+border = #458588
 
 ;--------------------------------------------------------------------
 [bar/top]
@@ -18,6 +17,9 @@ fixed-center = true
 
 background = #282828
 foreground = #ebdbb2
+
+border-color = ${colors.border}
+border-size = 2
 
 font-0 = Ubuntu Mono:style=Regular:pixelsize=13
 font-1 = DejaVu Sans:style=Regular
@@ -45,7 +47,7 @@ index-sort = true
 enable-click = true
 
 label-focused = %name%
-label-focused-background = ${colors.background-alt}
+label-focused-background = ${colors.primary}
 label-focused-padding = 1 
 
 label-unfocused = %name%
@@ -56,7 +58,7 @@ label-visible = %name%
 label-visible-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = ${colors.primary}
 label-urgent-padding = 1
 
 ;-----------------------------------------------------------------
@@ -149,7 +151,7 @@ label-connected = "NET ↑%upspeed% ↓%downspeed%"
 label-connected-foreground = ${colors.primary}
 
 label-disconnected = "NET not-connected"
-label-disconnected-foreground = ${colors.alert}
+label-disconnected-foreground = ${colors.primary}
 
 ;---------------------------------------------------------
 [module/date]
@@ -177,7 +179,7 @@ click-right= rofi -show run
 type = custom/text
 
 content = "POWER"
-content-foreground=${colors.alert}
+content-foreground=${colors.primary}
 
 click-left= ~/Script/power-menu.sh
 

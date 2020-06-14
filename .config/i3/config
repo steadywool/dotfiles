@@ -15,6 +15,7 @@ client.urgent           #cc241d #282828 #ebdbb2 #cc241d   #cc241d
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
 
+gaps inner 4
 #---------------------------------------------
 ## SOFTWARE
 
@@ -30,7 +31,7 @@ exec_always killall dunst; dunst
 exec_always killall polybar; polybar -r top
 
 exec_always feh --bg-scale ~/Pictures/Wallpaper/skull.jpg
-exec_always xrandr --auto --output eDP-1 --same-as HDMI-1
+exec_always xrandr --auto
 
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
