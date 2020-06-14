@@ -9,8 +9,7 @@ notification_height = 30
 separator_height = 2
 padding = 8
 horizontal_padding = 8
-frame_width = 3
-frame_color = "#458588"
+frame_width = 2
 separator_color = "#3c3836"
 sort = yes
 idle_threshold = 120
@@ -29,50 +28,37 @@ show_indicators = yes
 icon_position = left
 min_icon_size = 0
 max_icon_size = 32     
-#icon_path = /path/to/icon
 sticky_history = yes
 history_length = 20
-dmenu = /usr/bin/dmenu -p dunst:
-browser = /usr/bin/firefox -new-tab
 always_run_script = true
 title = Dunst
 class = Dunst
 startup_notification = false
 verbosity = mesg 
 corner_radius = 0
-force_xinerama = false
+
 mouse_left_click = close_current
 mouse_middle_click = do_action
 mouse_right_click = close_all
 
-[experimental]
-per_monitor_dpi = false
-
 [play_sound]
 summary = "*"
 script = ~/Script/dunst-sound/graceful.sh
-
-[shortcuts]
-# Close notification
-close = ctrl+space
 
 [urgency_low]
 background = "#282828"
 foreground = "#ebdbb2"
 frame_color = "#98971a"
 timeout = 5
-#icon = /path/to/icon
 
 [urgency_normal]
-background = "#282828"
+background = "#3c3836"
 foreground = "#ebdbb2"
 frame_color = "#d79921"
 timeout = 5
-#icon = /path/to/icon
 
 [urgency_critical]
 background = "#282828"
 foreground = "#ebdbb2"
 frame_color = "#cc241d"
 timeout = 5
-#icon = /path/to/icon
