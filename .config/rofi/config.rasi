@@ -7,7 +7,7 @@ configuration {
 	text-color: #ebdbb2;
 	background-color: #282828;
 	border-color: #b16286;
-	highlight: bold #d3869b;
+	highlight: bold #fbf1c7;
 	font: "Ubuntu 11";
 	columns: 1;
 }
@@ -32,5 +32,5 @@ configuration {
 }
 
 #element selected {
-	background-color: #665c54;
+	background-color: #d3869b;
 }
