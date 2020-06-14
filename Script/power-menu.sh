@@ -4,7 +4,6 @@ var+=("power off")
 var+=("reboot")
 var+=("lock")
 var+=("exit i3")
-var+=("exit bspwm")
 
 CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "Power-Menu:")
 
@@ -22,10 +21,6 @@ fi
 
 if [ "$CHOICE" = "exit i3" ]; then
 	i3-msg exit
-fi
-
-if [ "$CHOICE" = "exit bspwm" ]; then
-	bspc quit
 fi
 
 
