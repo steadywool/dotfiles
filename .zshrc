@@ -1,15 +1,15 @@
-#others
-export ZSH="/home/leo/.config/zsh"
+# History
 SAVEHIST=10000
-HISTFILE=$ZSH/.histfile 
+HISTFILE=$HOME/.config/zsh/.histfile 
 
-#plugins
-source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $ZSH/plugins/completion/init.zsh
-source $ZSH/plugins/command-not-found/init.zsh
-source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Plugins
+source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $HOME/.config/zsh/plugins/completion/init.zsh
+source $HOME/.config/zsh/plugins/command-not-found/init.zsh
+source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $HOME/.config/zsh/plugins/git/git.plugin.zsh
 
-#themes
-source $ZSH/themes/minimal.zsh-theme
+# Themes
+source $HOME/.config/zsh/themes/xiong-chiamiov.zsh-theme
 
 

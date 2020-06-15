@@ -36,16 +36,9 @@ font:
     style: Italic
   size: 7.5
 
-scale_with_dpi: true
-draw_bold_text_with_bright_colors: true
-
 cursor:
   style: Block
   unfocused_hollow: false
-dynamic_title: true
-live_config_reload: true
-
-faux_multiplier: 3
 
 selection:
   save_to_clipboard: false
@@ -53,11 +46,7 @@ selection:
 shell:
   program: /bin/zsh
 
-  #mouse_bindings:
-  #- { mouse: Middle, action: PasteSelection }
-
-  #key_bindings:
-  #- { key: V, mods: Control, action: Paste }
-  #- { key: C, mods: Control, action: Copy }
-  #- { key: Q, mods: Control, action: Quit }
-  #- { key: F, mods: Control, action: ToggleFullscreen }
+scale_with_dpi: true
+draw_bold_text_with_bright_colors: true
+dynamic_title: true
+live_config_reload: true

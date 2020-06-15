@@ -10,10 +10,10 @@ Here some screnshots of my computer.
 ranger / ufw / alacritty / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git /
 
 ## Priority: II
-transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / w3m / i3-gaps/
+transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/
 
 ## Priority: I
-youtube-dl / redshift / leafpad / caja / gnome-screenshot /
+youtube-dl / redshift / leafpad / gnome-screenshot /
 
 # OTHER
 **-Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`

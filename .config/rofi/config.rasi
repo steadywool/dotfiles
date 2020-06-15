@@ -1,10 +1,10 @@
 configuration {
+	drun-display-format: "{name}";
 	modi: "drun,run";
-	drun-display-format: "{name}"; 
 }
 
 *{
-	text-color: #ebdbb2;
+	text-color: #a89984;
 	background-color: #282828;
 	border-color: #b16286;
 	highlight: bold #ebdbb2;
@@ -13,18 +13,14 @@ configuration {
 }
 
 #window {
-	height: 57%;
-	location: center;
-	width: 25%;
-	border: 2px 2px 2px 2px;
-}
-
-#listview {
-	padding: 0em 0.6em 0em 0.6em;
+	height: 100%;
+	location: west;
+	width: 20%;
+	border: 2px 2px 2px 0px;
 }
 
 #inputbar {
-	padding: 6px 6px;
+	padding: 12px 12px;
 }
 
 #element {
@@ -32,5 +28,13 @@ configuration {
 }
 
 #element selected {
-	background-color: #7c6f64;
+	text-color: #fbf1c7;
+}
+
+#entry {
+    text-color: #ebdbb2;
+}
+
+#prompt {
+    text-color: #ebdbb2;
 }
