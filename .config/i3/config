@@ -8,14 +8,13 @@ font pango:Ubuntu Mono 13
 
 # color
 # class                 border  backgr. text   indicator child_border
-client.focused          #98971a #282828 #ebdbb2 #98971a   #98971a
+client.focused          #458588 #282828 #ebdbb2 #458588   #458588
 client.focused_inactive #d79921 #282828 #ebdbb2 #d79921   #d79921
 client.unfocused        #32302f #282828 #ebdbb2 #32302f   #32302f
 client.urgent           #cc241d #282828 #ebdbb2 #cc241d   #cc241d
 client.placeholder      #282828 #282828 #ebdbb2 #282828   #282828
 client.background       #282828
 
-gaps inner 4
 #---------------------------------------------
 ## SOFTWARE
 
