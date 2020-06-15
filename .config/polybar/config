@@ -1,15 +1,14 @@
 [colors]
-
 background = #282828
 background-alt = #458588
 foreground =  #ebdbb2
 foreground-alt = #a89984
 primary = #b8bb26
+secondary = #d79921
 alert = #fb4934
 
 ;--------------------------------------------------------------------
 [bar/top]
-
 monitor =
 width = 100%
 height = 35
@@ -119,7 +118,7 @@ type = internal/battery
 
 full-at = 99
 
-; $ ls -1 /sys/class/power_supply/
+;$ ls -1 /sys/class/power_supply/
 battery = BAT0
 adapter = ADP1
 
