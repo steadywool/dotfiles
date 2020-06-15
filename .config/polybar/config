@@ -1,12 +1,7 @@
 [colors]
-background = #282828
-
-foreground =  #ebdbb2
-foreground-4 = #a89984
-foreground-0 = #fbf1c7
+foreground-alt = #a89984
 
 primary = #b8bb26
-secondary = #d79921
 alert = #fb4934
 
 ;--------------------------------------------------------------------
@@ -18,6 +13,9 @@ fixed-center = true
 
 background = #282828
 foreground = #ebdbb2
+
+border-color = #282828
+border-size = 2
 
 font-0 = Ubuntu Mono:style=Regular:pixelsize=13
 font-1 = DejaVu Sans:style=Regular
@@ -34,7 +32,7 @@ tray-padding = 1
 type = custom/text
 
 content =" | "
-content-foreground = ${colors.foreground-4}
+content-foreground = ${colors.foreground-alt}
 
 ;--------------------------------------------------------------------
 [module/i3]
@@ -45,11 +43,11 @@ index-sort = true
 enable-click = true
 
 label-focused = %name%
-label-focused-foreground = ${colors.foreground-0}
+label-focused-foreground = ${colors.primary}
 label-focused-padding = 1 
 
 label-unfocused = %name%
-label-unfocused-foreground =${colors.foreground-4} 
+label-unfocused-foreground =${colors.foreground-alt} 
 label-unfocused-padding = 1
 
 label-urgent = %name%
@@ -64,7 +62,7 @@ format-volume = <label-volume>
 
 label-volume = "VOL %percentage%%"
 label-muted = "VOL muted"
-label-muted-foreground = ${colors.foreground-4}
+label-muted-foreground = ${colors.foreground-alt}
 
 ;----------------------------------------------------------
 [module/alsa]
@@ -74,7 +72,7 @@ format-volume = <label-volume>
 
 label-volume ="VOL %percentage%%"
 label-muted ="VOL muted" 
-label-muted-foreground = ${colors.foreground-4}
+label-muted-foreground = ${colors.foreground-alt}
 
 ;---------------------------------------------------------
 [module/backlight]
@@ -174,8 +172,7 @@ click-right= rofi -show run
 type = custom/text
 
 content = "POWER"
-content-foreground=${colors.alert}
-
+content-foreground = ${colors.alert}
 click-left= ~/Script/power-menu.sh
 
 ;---------------------------------------------------------

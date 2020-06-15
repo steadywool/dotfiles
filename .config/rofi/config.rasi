@@ -4,37 +4,45 @@ configuration {
 }
 
 *{
-	text-color: #a89984;
+	text-color: #7c6f64;
+	highlight: Bold #fe8019;
 	background-color: #282828;
-	border-color: #b16286;
-	highlight: bold #ebdbb2;
-	font: "Ubuntu 11";
-	columns: 1;
+	font: "Ubuntu Mono 13";
 }
 
 #window {
-	height: 100%;
-	location: west;
-	width: 20%;
-	border: 2px 2px 2px 0px;
+	anchor: north;
+	location: north;
+	width: 100%;
+	padding: 10px;
+	children: [horibox];
 }
 
-#inputbar {
-	padding: 12px 12px;
-}
-
-#element {
-	padding: 6px 6px;
-}
-
-#element selected {
-	text-color: #fbf1c7;
-}
-
-#entry {
-    text-color: #ebdbb2;
+#horibox {
+	orientation: horizontal;
+	children: [prompt,entry,listview];
 }
 
 #prompt {
-    text-color: #ebdbb2;
+	text-color: #ebdbb2;
+}
+
+#entry {
+	text-color: #ebdbb2;
+	expand: false;
+	width: 10em;
+}
+
+#listview {
+	layout: horizontal;
+	spacing: 10px;
+	lines: 100;
+}
+
+#element {
+	padding: 0px 2px;
+}
+
+#element selected {
+	text-color: #b8bb26;
 }
