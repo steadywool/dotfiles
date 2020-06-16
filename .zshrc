@@ -11,8 +11,3 @@ source $HOME/.config/zsh/plugins/git/git.plugin.zsh
 
 # Themes
 source $HOME/.config/zsh/themes/xiong-chiamiov.zsh-theme
-
-# Others
-if [ -z "$TMUX" ]; then
-	tmux attach -t default || tmux new -s default
-fi
