@@ -1,7 +1,6 @@
 
 #---------------------------------------------
 ## APPEARENCE
-
 # font
 font pango:Ubuntu Mono 13
 #font pango:MonoSpace 11
@@ -17,21 +16,12 @@ client.background       #282828
 
 #---------------------------------------------
 ## SOFTWARE
-
-# assign workspace to software
-assign [class="Bitwarden"]$ws1
-assign [class="Alacritty"]$ws2
-assign [class="firefox|Tor Browser|Chromium"]$ws3
-assign [class="discord"] $ws5
-assign [class="net-mc-main-Main|Steam|retroarch|Gzdoom|gzdoom|Ankama Launcher|com-ankamagames-wakfu-client-WakfuClient"] $ws6
-
 # autorun
 exec_always killall dunst; dunst
 exec_always killall polybar; polybar -r top
 
 exec_always feh --bg-scale ~/Pictures/Wallpaper/skull.jpg
 exec_always xrandr --auto
-
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 exec redshift
@@ -40,29 +30,22 @@ exec discord
 
 #---------------------------------------------
 ## WORKSPACE & WINDOWS
-
 # default workspace name
-set $ws1 "1-home"
-set $ws2 "2-term"
-set $ws3 "3-web"
-set $ws4 "4-code"
-set $ws5 "5-discord"
-set $ws6 "6-games"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-# for window
-for_window [class="Alacritty|Bitwarden"] focus 
-for_window [class="^.*"] border pixel 2
-for_window [class="Leafpad"] floating enable
-
 #---------------------------------------------
 ## WM INDEPENDENT KEYBINDING
-
 # start terminal
-bindsym $mod+x exec alacritty
+bindsym $mod+x exec alacritty -e tmux
 
 # start ranger
 bindsym $mod+Shift+d exec alacritty -e ranger
@@ -91,7 +74,6 @@ bindsym $mod+Shift+e exec ~/Script/power-menu.sh
 
 #---------------------------------------------
 ## I3 KEYBINDING
-
 set $mod Mod4
 floating_modifier $mod
 
