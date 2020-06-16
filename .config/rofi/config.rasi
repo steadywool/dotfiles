@@ -3,7 +3,7 @@ configuration {
 }
 
 *{
-	highlight: Bold #b8bb26;
+	highlight: Bold #fb4934;
 	background-color: #282828;
 	font: "Ubuntu Mono 13";
 	border-color: #d79921;
@@ -23,7 +23,7 @@ configuration {
 }
 
 #entry {
-	text-color: #b8bb26;
+	text-color: #fb4934;
 	padding: 6px;
 }
 
