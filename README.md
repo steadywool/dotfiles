@@ -38,4 +38,4 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 ## Help
-**-Change shell to zsh:** `chsh -s /bin/zsh`
+**-Change shell:** `chsh -s /bin/SHELL`
