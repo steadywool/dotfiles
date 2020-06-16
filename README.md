@@ -25,3 +25,14 @@ youtube-dl / redshift / leafpad / gnome-screenshot /
 **-Colorscheme:** [Gruvbox](https://github.com/morhetz/gruvbox-contrib)
 
 **-AUR Manager:** [Yay](https://github.com/Jguer/yay)
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
+
+**-Plugin Manager:** [Vim-plug](https://github.com/junegunn/vim-plug)
+```
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
