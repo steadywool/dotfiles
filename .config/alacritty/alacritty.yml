@@ -43,9 +43,6 @@ cursor:
 selection:
   save_to_clipboard: false
 
-shell:
-  program: /bin/zsh
-
 scale_with_dpi: true
 draw_bold_text_with_bright_colors: true
 dynamic_title: true
