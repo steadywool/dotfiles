@@ -7,10 +7,10 @@ Here some screnshots of my computer.
 
 # SOFTWARE
 ## Priority: III
-ranger / ufw / alacritty / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git /
+ranger / ufw / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git / curl /
 
 ## Priority: II
-transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/
+transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/ alacritty
 
 ## Priority: I
 youtube-dl / redshift / leafpad / gnome-screenshot /
