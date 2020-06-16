@@ -1,46 +1,35 @@
 configuration {
-	drun-display-format: "{name}";
 	modi: "drun,run";
 }
 
 *{
-	text-color: #7c6f64;
-	highlight: Bold #fe8019;
+	highlight: Bold #b8bb26;
 	background-color: #282828;
 	font: "Ubuntu Mono 13";
+	border-color: #d79921;
 }
 
 #window {
-	anchor: north;
-	location: north;
-	width: 100%;
-	padding: 10px;
-	children: [horibox];
-}
-
-#horibox {
-	orientation: horizontal;
-	children: [prompt,entry,listview];
+	anchor: east;
+	location: east;
+	width: 23%;
+	height: 100%;
+	border: 2px 0px 2px 2px;
 }
 
 #prompt {
 	text-color: #ebdbb2;
+	padding: 6px;
 }
 
 #entry {
-	text-color: #fe8019;
-	expand: false;
-	width: 10em;
-}
-
-#listview {
-	layout: horizontal;
-	spacing: 10px;
-	lines: 100;
+	text-color: #b8bb26;
+	padding: 6px;
 }
 
 #element {
-	padding: 0px 2px;
+	text-color: #7c6f64;
+	padding: 6px;
 }
 
 #element selected {

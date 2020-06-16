@@ -42,6 +42,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+for_window [class="^.*"] border pixel 2
+
 #---------------------------------------------
 ## WM INDEPENDENT KEYBINDING
 # start terminal
@@ -52,6 +54,7 @@ bindsym $mod+Shift+d exec alacritty -e ranger
 
 # start rofi
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+w exec rofi -show window
 
 # open text editor
 bindsym $mod+s exec leafpad
