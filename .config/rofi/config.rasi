@@ -28,7 +28,7 @@ configuration {
 }
 
 #entry {
-	text-color: #ebdbb2;
+	text-color: #fe8019;
 	expand: false;
 	width: 10em;
 }
@@ -44,5 +44,5 @@ configuration {
 }
 
 #element selected {
-	text-color: #b8bb26;
+	text-color: #fbf1c7;
 }
