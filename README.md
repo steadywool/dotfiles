@@ -39,3 +39,13 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ## Help
 **-Change shell:** `chsh -s /bin/SHELL`
+
+**-Deoplete plugin work:**
+
+> Install `python-pip`
+
+> Enter the `pip3 install pynvim` command 
+
+> on nvim or vim, enter `:UpdateRemotePlugins`
+
+

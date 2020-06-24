@@ -3,29 +3,34 @@ syntax enable
 set background=dark
 colorscheme gruvbox
 
-call plug#begin()
+" DEOPLETE
+let g:deoplete#enable_at_startup = 1
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
-Plug 'tpope/vim-surround'
-
-Plug 'itchyny/lightline.vim'
+" LIGHTLINE
 let g:lightline = {
       \ 'colorscheme': 'jellybeans'
       \ }
 
-Plug 'terryma/vim-multiple-cursors'
+" ALE
+let g:ale_echo_msg_error_str = 'E>'
+let g:ale_echo_msg_warning_str = 'W>'
+let g:ale_sign_error = 'E>'
+let g:ale_sign_warning = 'W>'
 
+" TAGBAR
+map <C-b> :TagbarToggle<CR>
+
+" NERDTREE
+map <C-n> :NERDTreeToggle<CR>
+
+call plug#begin()
+Plug 'Shougo/deoplete.nvim'
+Plug 'tpope/vim-surround'
+Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-
 Plug 'maximbaz/lightline-ale'
-
 Plug 'lilydjwg/colorizer'
-
 Plug 'nvie/vim-togglemouse'
-
-Plug 'shougo/deoplete.nvim'
-
+Plug 'preservim/nerdtree'
+Plug 'majutsushi/tagbar'
 call plug#end()
