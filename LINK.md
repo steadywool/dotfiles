@@ -1,8 +1,8 @@
-# ESSENTIAL SOFTWARE
-## Ranger (https://github.com/ranger/ranger)
+## ESSENTIAL SOFTWARE
+### Ranger (https://github.com/ranger/ranger)
 - https://github.com/maximtrp/ranger-archives
 
-## Neovim (https://github.com/neovim/neovim)
+### Neovim (https://github.com/neovim/neovim)
 - https://github.com/junegunn/vim-plug
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
@@ -30,30 +30,30 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/uiiaoo/java-syntax.vim
 
-## zsh (https://sourceforge.net/p/zsh/code/ci/master/tree/)
+### zsh (https://sourceforge.net/p/zsh/code/ci/master/tree/)
 - https://github.com/ohmyzsh/ohmyzsh
 
-## Alacritty (https://github.com/alacritty/alacritty)
+### Alacritty (https://github.com/alacritty/alacritty)
 
-## Polybar (https://github.com/polybar/polybar)
+### Polybar (https://github.com/polybar/polybar)
 
-## Tmux (https://github.com/tmux/tmux)
+### Tmux (https://github.com/tmux/tmux)
 
-## Rofi (https://github.com/davatorium/rofi)
+### Rofi (https://github.com/davatorium/rofi)
 
-## i3 (https://github.com/i3/i3)
+### i3 (https://github.com/i3/i3)
 
-## Dunst (https://github.com/dunst-project/dunst)
+### Dunst (https://github.com/dunst-project/dunst)
 
-# OTHER
+## OTHER
 
-## Materia GTK Gruvbox (https://github.com/Kani-dev/Materia-gtk-gruvbox)
+### Materia GTK Gruvbox (https://github.com/Kani-dev/Materia-gtk-gruvbox)
 
-## Papirus Icon Theme (https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
+### Papirus Icon Theme (https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
 
-## Gruvbox Colorscheme (https://github.com/morhetz/gruvbox-contrib)
+### Gruvbox Colorscheme (https://github.com/morhetz/gruvbox-contrib)
 
-## Yay (https://github.com/Jguer/yay)
+### Yay (https://github.com/Jguer/yay)
 ```
 git clone https://aur.archlinux.org/yay.git
 cd yay
