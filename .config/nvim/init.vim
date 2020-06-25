@@ -23,6 +23,9 @@ map <C-b> :TagbarToggle<CR>
 " NERDTREE
 map <C-n> :NERDTreeToggle<CR>
 
+" JAVA COMPLETION
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
 call plug#begin()
 Plug 'Shougo/deoplete.nvim'
 Plug 'tpope/vim-surround'
@@ -33,4 +36,6 @@ Plug 'lilydjwg/colorizer'
 Plug 'nvie/vim-togglemouse'
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
+Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 call plug#end()

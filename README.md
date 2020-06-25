@@ -7,13 +7,13 @@ Here some screnshots of my computer.
 
 # SOFTWARE
 ## Priority: III
-ranger / ufw / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git / curl / tmux
+ranger / ufw / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git / curl / tmux /
 
 ## Priority: II
-transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/ alacritty
+transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/ alacritty /
 
 ## Priority: I
-youtube-dl / redshift / leafpad / gnome-screenshot /
+youtube-dl / redshift / gnome-screenshot / nano /
 
 # OTHER
 **-Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
