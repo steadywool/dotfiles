@@ -6,21 +6,21 @@ Here some screnshots of my computer.
 ![Screenshot-2](/Screenshot/screenshot-2.png)
 
 # SOFTWARE
-## Priority: III
-ranger / ufw / yay / neovim / zsh / bluez / bluez-utils / udisks2 / atool / htop / ntp / acpi / git / curl / tmux /
+## Essential (for these dotfiles)
+ranger / neovim / zsh / alacritty / polybar / tmux / rofi / polybar / i3 / dunst /
 
-## Priority: II
-transmission-cli / mpv / moc / mupdf / i3lock / feh / tlp / rofi / polybar / dunst / i3/ alacritty /
+## Useful
+ufw / yay / atool / htop / ntp / acpi / git / curl / tlp / i3lock / feh /
 
-## Priority: I
-youtube-dl / redshift / gnome-screenshot / nano /
+## Others
+bluez / bluez-utils / transmission-cli / mpv / moc / mupdf / youtube-dl / redshift / gnome-screenshot /
 
 # OTHER
 **-Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
 
 **-GTK theme:** [Materia GTK Gruvbox](https://github.com/Kani-dev/Materia-gtk-gruvbox)
 
-**-Icons:** [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/) 
+**-Icons:** [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
 
 **-Colorscheme:** [Gruvbox](https://github.com/morhetz/gruvbox-contrib)
 
@@ -44,8 +44,6 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 > Install `python-pip`
 
-> Enter the `pip3 install pynvim` command 
+> Enter the `pip3 install pynvim` command
 
 > on nvim or vim, enter `:UpdateRemotePlugins`
-
-
