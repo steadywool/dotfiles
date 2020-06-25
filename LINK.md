@@ -32,7 +32,7 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - https://github.com/uiiaoo/java-syntax.vim
 
 ## zsh (https://sourceforge.net/p/zsh/code/ci/master/tree/)
--https://github.com/ohmyzsh/ohmyzsh
+- https://github.com/ohmyzsh/ohmyzsh
 
 ## Alacritty (https://github.com/alacritty/alacritty)
 
