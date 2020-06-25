@@ -1,5 +1,4 @@
-Here all external links.
-
+# ESSENTIAL SOFTWARE
 ## Ranger (https://github.com/ranger/ranger)
 - https://github.com/maximtrp/ranger-archives
 
@@ -45,3 +44,18 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ## i3 (https://github.com/i3/i3)
 
 ## Dunst (https://github.com/dunst-project/dunst)
+
+# OTHER
+
+## Materia GTK Gruvbox (https://github.com/Kani-dev/Materia-gtk-gruvbox)
+
+## Papirus Icon Theme (https://github.com/PapirusDevelopmentTeam/papirus-icon-theme/)
+
+## Gruvbox Colorscheme (https://github.com/morhetz/gruvbox-contrib)
+
+## Yay (https://github.com/Jguer/yay)
+```
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+```
