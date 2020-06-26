@@ -21,7 +21,7 @@ let g:ale_sign_warning = 'W>'
 map <C-n> :NERDTreeToggle<CR>
 
 " TAGBAR
-map <C-b> :TagbarToggle<CR>
+nmap <C-b> :TagbarToggle<CR>
 
 " JAVA COMPLETION
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
@@ -49,3 +49,33 @@ Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
 call plug#end()
+
+" TERMINAL
+let g:term_buf = 0
+let g:term_win = 0
+function! TermToggle(height)
+    if win_gotoid(g:term_win)
+        hide
+    else
+        botright new
+        exec "resize " . a:height
+        try
+            exec "buffer " . g:term_buf
+        catch
+            call termopen($SHELL, {"detach": 0})
+            let g:term_buf = bufnr("")
+            set nonumber
+            set norelativenumber
+            set signcolumn=no
+        endtry
+        startinsert!
+        let g:term_win = win_getid()
+    endif
+endfunction
+
+nnoremap <F2> :call TermToggle(12)<CR>
+inoremap <F2> <Esc>:call TermToggle(12)<CR>
+tnoremap <F2> <C-\><C-n>:call TermToggle(12)<CR>
+
+tnoremap <Esc> <C-\><C-n>
+tnoremap :q! <C-\><C-n>:q!<CR>
