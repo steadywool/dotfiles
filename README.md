@@ -29,11 +29,15 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 **Deoplete plugin work:**
 
-> Install `python-pip`
+Install `python-pip`
 
-> Enter the `pip3 install pynvim` command 
+Enter the `pip3 install pynvim` command 
 
-> on nvim or vim, enter `:UpdateRemotePlugins`
+on nvim or vim, enter `:UpdateRemotePlugins`
+
+**Tagbar plugin work:**
+
+Install `ctags`
 
 ---
 **Vim plugins:**
