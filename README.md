@@ -42,13 +42,9 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/Shougo/deoplete.nvim
 
-- https://github.com/tpope/vim-surround
-
 - https://github.com/itchyny/lightline.vim
 
 - https://github.com/dense-analysis/ale
-
-- https://github.com/maximbaz/lightline-ale
 
 - https://github.com/lilydjwg/colorizer
 

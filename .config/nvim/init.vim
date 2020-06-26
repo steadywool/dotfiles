@@ -17,25 +17,35 @@ let g:ale_echo_msg_warning_str = 'W>'
 let g:ale_sign_error = 'E>'
 let g:ale_sign_warning = 'W>'
 
-" TAGBAR
-map <C-b> :TagbarToggle<CR>
-
 " NERDTREE
 map <C-n> :NERDTreeToggle<CR>
+
+" TAGBAR
+map <C-b> :TagbarToggle<CR>
 
 " JAVA COMPLETION
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
 call plug#begin()
-Plug 'Shougo/deoplete.nvim'
-Plug 'tpope/vim-surround'
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-Plug 'maximbaz/lightline-ale'
-Plug 'lilydjwg/colorizer'
-Plug 'nvie/vim-togglemouse'
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
-Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+Plug 'Shougo/deoplete.nvim'
 Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
+Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+Plug 'nvie/vim-togglemouse'
+Plug 'lilydjwg/colorizer'
 call plug#end()
