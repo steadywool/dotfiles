@@ -1,6 +1,6 @@
 ranger / neovim / zsh / alacritty / tmux / rofi / polybar / i3 / dunst / mpv / redshift /
 
-ufw / yay / atool / htop / ntp / acpi / git / curl / tlp / i3lock / feh / bluez / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot /
+ufw / yay / atool / htop / ntp / acpi / git / curl / tlp / i3lock / feh / bluez / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / net-tools
 
 ---
 **Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
