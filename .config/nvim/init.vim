@@ -1,4 +1,3 @@
-
 syntax enable
 set background=dark
 colorscheme gruvbox
@@ -48,6 +47,8 @@ Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'othree/html5.vim'
 call plug#end()
 
 " TERMINAL

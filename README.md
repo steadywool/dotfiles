@@ -67,6 +67,10 @@ Install `ctags`
 
 - https://github.com/uiiaoo/java-syntax.vim
 
+- https://github.com/hail2u/vim-css3-syntax
+
+- https://github.com/othree/html5.vim
+
 **Ranger plugins:**
 
 - https://github.com/maximtrp/ranger-archives
