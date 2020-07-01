@@ -9,15 +9,15 @@ ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils /
 
 net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager /
 
-*grub:*
+~~grub:~~
 
 grub / os-prober / efibootmgr (uefi) /
 
-*media:*
+~~media:~~
 
 gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
 
-*gui:*
+~~gui:~~
 
 xorg-server / xorg-xinit / xorg-apps / 
 
