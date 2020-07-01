@@ -7,7 +7,7 @@ ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils /
 ---
 **Software to install during OS installation:**
 
-net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager /
+net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linyx-firmware / linux(-lts) /
 
 **grub:**
 
