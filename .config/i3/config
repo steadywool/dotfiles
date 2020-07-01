@@ -47,7 +47,7 @@ for_window [class="^.*"] border pixel 2
 #---------------------------------------------
 ## WM INDEPENDENT KEYBINDING
 # start terminal
-bindsym $mod+x exec alacritty -e tmux
+bindsym $mod+x exec alacritty
 
 # start ranger
 bindsym $mod+Shift+d exec alacritty -e ranger
@@ -57,7 +57,7 @@ bindsym $mod+d exec rofi -show drun
 bindsym $mod+w exec rofi -show window
 
 # open text editor
-bindsym $mod+s exec leafpad
+bindsym $mod+s exec alacritty -e nvim
 
 # pulseaudio control
 bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +5%
@@ -85,6 +85,7 @@ bindsym $mod+Shift+q kill
 
 # change focus between tiling & floating
 bindsym $mod+t focus mode_toggle
+indsym $mod+Shift+t floating toggle
 
 # restart i3
 bindsym $mod+Shift+r restart
@@ -115,7 +116,7 @@ bindsym $mod+Shift+Right move right
 # change layout
 bindsym $mod+Shift+z layout stacking
 bindsym $mod+z layout tabbed
-bindsym $mod+Shift+t floating toggle
+bindsym $mod+e layout toggle split
 
 # switch workspace
 bindsym $mod+ampersand workspace $ws1

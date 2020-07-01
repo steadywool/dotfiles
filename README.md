@@ -1,11 +1,25 @@
+*for x86-64 architectures*
+
 ranger / neovim / zsh / alacritty / tmux / rofi / polybar / i3 / dunst / mpv / redshift /
 
-ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / links
+ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / links
 
 ---
 **Software to install during OS installation:**
 
-net-tools / acpi /
+net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager /
+
+*grub:*
+
+grub / os-prober / efibootmgr (uefi) /
+
+*media:*
+
+gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
+
+*gui:*
+
+xorg-server / xorg-xinit / xorg-apps / 
 
 ---
 **Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
@@ -31,6 +45,8 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 ---
 **Change shell:** `chsh -s /bin/SHELL`
+
+**Add user:** `useradd -m -g GROUP USER`
 
 **Deoplete plugin work:**
 
