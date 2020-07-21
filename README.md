@@ -95,4 +95,4 @@ Install `ctags`
 
 - https://github.com/ohmyzsh/ohmyzsh
 
--https://github.com/Kaniville/dotfiles ;)
+- https://github.com/Kaniville/dotfiles ;)
