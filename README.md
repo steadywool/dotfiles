@@ -94,3 +94,5 @@ Install `ctags`
 **Zsh plugins:**
 
 - https://github.com/ohmyzsh/ohmyzsh
+
+-https://github.com/Kaniville/dotfiles ;)
