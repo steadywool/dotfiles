@@ -56,10 +56,6 @@ Enter the `pip3 install pynvim` command
 
 on nvim or vim, enter `:UpdateRemotePlugins`
 
-**Tagbar plugin work:**
-
-Install `ctags`
-
 ---
 **Vim plugins:**
 
