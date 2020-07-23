@@ -43,10 +43,11 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim'
-Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
-Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
+
+Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
+Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
 call plug#end()
