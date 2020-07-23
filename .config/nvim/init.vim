@@ -41,7 +41,6 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
-Plug 'majutsushi/tagbar'
 Plug 'Shougo/deoplete.nvim'
 Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
