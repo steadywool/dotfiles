@@ -18,6 +18,27 @@ super + shift + d
 super + shift + e
 	exec $HOME/Script/power-menu.sh
 
+# Neovim
+super + s
+	alacritty -e nvim
+
+# Pulseaudio control
+XF86AudioRaiseVolume
+	pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +5%
+
+XF86AudioLowerVolume 
+	pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo -5%
+
+XF86AudioMute 
+	pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
+
+# Screenshot
+Print
+	gnome-screenshot -i
+
+super + shift + s
+	gnome-screenshot -i
+
 #------------------------------------------------
 ## BSPWM HOTKEYS
 # Restart bspwm
