@@ -28,4 +28,4 @@ bspc config split_ratio 0.52
 
 # Rules
 bspc rule -a discord desktop='^5'
-bspc rule -a firefox desktop='^2'
+bspc rule -a firefox desktop='^3'
