@@ -1,6 +1,6 @@
 *for x86-64 architectures*
 
-ranger / neovim / zsh / alacritty / tmux / rofi / polybar / i3 / dunst / mpv / redshift /
+ranger / neovim / zsh / alacritty / tmux / rofi / polybar / i3,{bspwm + sxhkd} / dunst / mpv / redshift /
 
 ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / links
 
