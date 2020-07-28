@@ -1,0 +1,31 @@
+#! /bin/sh
+
+# Autostart
+sxhkd -m 1 &
+killall dunst; dunst &
+killall polybar; polybar -r top &
+feh --bg-scale $HOME/Pictures/Wallpaper/skull.jpg &
+xrandr --auto &
+killall redshift; redshift &
+discord &
+
+# Node & monitor
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+# Monocle layout
+bspc config borderless_monocle true
+bspc config gapless_monocle true
+
+# Appearence
+bspc config focused_border_color "#458588"
+bspc config normal_border_color "#3c3836"
+
+bspc config border_width 3
+bspc config window_gap 10
+
+# Others
+bspc config split_ratio 0.52
+
+# Rules
+bspc rule -a discord desktop='^5'
+bspc rule -a firefox desktop='^2'
