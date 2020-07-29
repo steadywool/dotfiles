@@ -6,8 +6,8 @@ killall dunst; dunst &
 killall polybar; polybar -r top &
 feh --bg-scale $HOME/Pictures/Wallpaper/skull.jpg &
 xrandr --auto &
-killall redshift; redshift &
-discord &
+discord --start-minimized &
+nm-applet &
 
 # Node & monitor
 bspc monitor -d I II III IV V VI VII VIII IX X

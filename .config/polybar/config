@@ -29,6 +29,8 @@ modules-right = pulseaudio | backlight | cpu | memory | temperature | battery | 
 tray-position = right
 tray-padding = 1
 
+wm-restack = bspwm
+
 ;---------------------------------------------------------
 [module/|]
 type = custom/text
@@ -40,10 +42,10 @@ content-foreground = ${colors.foreground-alt}
 [module/bspwm]
 type = internal/bspwm
 
-format = <label-state> <label-mode>
 pin-workspaces = true
-inline-mode = false
+inline-mode = true
 enable-click = true
+enable-scroll = false
 
 label-focused = %name% 
 label-focused-background = ${colors.background-alt}
@@ -57,16 +59,17 @@ label-urgent = %name%
 label-urgent-foreground = ${colors.alert}
 label-urgent-padding = 1
 
-label-empty = 
+label-empty =
 label-empty-padding = 1
 
 ;--------------------------------------------------------------------
 [module/i3]
 type = internal/i3
 
-format = <label-state> <label-mode>
+pin-workspaces = true
 index-sort = true
 enable-click = true
+enable-scroll = false
 
 label-focused = %name%
 label-focused-background = ${colors.background-alt}
