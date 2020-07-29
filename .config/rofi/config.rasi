@@ -8,14 +8,14 @@ configuration {
 *{
 	text-color: #ebdbb2;
 	background-color: #282828;
-	font: "Ubuntu Mono 12";
+	font: "Ubuntu Mono 12.5";
 }
 
 #window {
 	anchor: north;
 	location: north;
 	width: 100%;
-	padding: 3px;
+	padding: 8px;
 	children: [ horibox];
 }
 
