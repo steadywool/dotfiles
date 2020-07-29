@@ -48,7 +48,7 @@ script = ~/Script/dunst-sound/graceful.sh
 [urgency_low]
 background = "#282828"
 foreground = "#ebdbb2"
-frame_color = "#b8bb26"
+frame_color = "#98971a"
 timeout = 5
 
 [urgency_normal]
