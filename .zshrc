@@ -11,7 +11,7 @@ source $HOME/.config/zsh/plugins/git/git.plugin.zsh
 source $HOME/.config/zsh/plugins/zsh-tmux-autostart/zsh-tmux-autostart.zsh
 
 # Themes
-source $HOME/.config/zsh/themes/xiong-chiamiov.zsh-theme
+source $HOME/.config/zsh/themes/Simple_dir.zsh-theme
 
 # Other
 export EDITOR=nvim
