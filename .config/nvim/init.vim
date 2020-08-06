@@ -35,17 +35,20 @@ nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 call plug#begin()
+"Base
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim'
 Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
-Plug 'Kaniville/nvim-terminal-plugin'
+Plug 'Kaniville/nvim-terminal'
 
+"Java, HTML & CSS
 Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
+
 call plug#end()
 

@@ -7,7 +7,7 @@ ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils /
 ---
 **Software to install during OS installation:**
 
-net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linyx-firmware / linux(-lts) /
+net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
 **grub:**
 
@@ -37,12 +37,6 @@ cd yay
 makepkg -si
 ```
 
-**Vim plugin manager:** https://github.com/junegunn/vim-plug
-```
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
 ---
 **Change shell:** `chsh -s /bin/SHELL`
 
@@ -60,6 +54,10 @@ on nvim or vim, enter `:UpdateRemotePlugins`
 **Vim plugins:**
 
 - https://github.com/junegunn/vim-plug
+```
+curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
+https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
 - https://github.com/Shougo/deoplete.nvim
 
@@ -83,12 +81,22 @@ on nvim or vim, enter `:UpdateRemotePlugins`
 
 - https://github.com/othree/html5.vim
 
+- https://github.com/Kaniville/nvim-terminal
+
 **Ranger plugins:**
 
 - https://github.com/maximtrp/ranger-archives
 
 **Zsh plugins:**
 
-- https://github.com/ohmyzsh/ohmyzsh
+- https://github.com/ohmyzsh/ohmyzsh 
+(command-not-found / git)
 
-- https://github.com/Kaniville/dotfiles ;)
+- https://github.com/zsh-users/zsh-completions
+
+- https://github.com/zsh-users/zsh-autosuggestions 
+
+- https://github.com/zsh-users/zsh-syntax-highlighting
+
+- https://github.com/Kaniville/dotfiles
+(Crab.zsh-theme / zsh-tmux-autostart)
