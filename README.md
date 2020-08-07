@@ -1,13 +1,13 @@
 *for x86-64 architectures*
 
-ranger / neovim / zsh / alacritty / tmux / rofi / polybar / i3,{bspwm + sxhkd} / dunst / mpv /
+ranger / neovim / zsh / alacritty / tmux / rofi / polybar / {i3},{bspwm + sxhkd} / dunst /
 
-ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / mediainfo / w3m /
+ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / bluez-utils / transmission-cli / moc / mupdf / youtube-dl / gnome-screenshot / mediainfo / w3m / mpv /
 
 ---
 **Software to install during OS installation:**
 
-net-tools / acpi / base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
+base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
 **grub:**
 
@@ -20,6 +20,10 @@ gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...
 **gui:**
 
 xorg-server / xorg-xinit / xorg-apps / 
+
+**other:**
+
+net-tools / acpi /
 
 ---
 **Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
