@@ -30,8 +30,6 @@ net-tools / acpi /
 
 **GTK theme:** https://github.com/Kaniville/Materia-gtk-gruvbox
 
-**Icons:** https://github.com/PapirusDevelopmentTeam/papirus-icon-theme
-
 **Colorscheme:** https://github.com/morhetz/gruvbox-contrib
 
 **AUR manager:** https://github.com/Jguer/yay
@@ -74,8 +72,6 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - https://github.com/nvie/vim-togglemouse
 
 - https://github.com/preservim/nerdtree
-
-- https://github.com/majutsushi/tagbar
 
 - https://github.com/artur-shaik/vim-javacomplete2
 
