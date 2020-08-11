@@ -47,11 +47,11 @@ super + shift + r
 
 # Close node
 super + q
-	bspc node -k
+	bspc node -c
 
 # Kill node
 super + shift + q
-	bspc node -c
+	bspc node -k
 
 # Tiled/Monocle layout
 super + m
