@@ -34,6 +34,14 @@ imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
 nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
+" NVIM TERMINAL
+nmap <F2> :call TermToggle(15)<CR>
+imap <F2> <Esc>:call TermToggle(15)<CR>
+tmap <F2> <C-\><C-n>:call TermToggle(15)<CR>
+
+tmap <Esc> <C-\><C-n>
+tmap :q! <C-\><C-n>:q!<CR>
+
 call plug#begin()
 "Base
 Plug 'itchyny/lightline.vim'
