@@ -4,7 +4,7 @@
 sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
-feh --bg-scale $HOME/Pictures/Wallpaper/wallpaper.jpg &
+feh --bg-scale $HOME/Pictures/Wallpaper/skull.jpg &
 xrandr --auto &
 discord --start-minimized &
 nm-applet &
@@ -19,10 +19,10 @@ bspc config normal_border_color "#3c3836"
 bspc config active_border_color "#3c3836"
 
 bspc config border_width 3
-bspc config window_gap 0
+bspc config window_gap 10
 
 bspc config borderless_monocle true
-bspc config gapless_monocle false
+bspc config gapless_monocle true
 
 bspc config split_ratio 0.52
 
