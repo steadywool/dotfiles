@@ -36,7 +36,7 @@ configuration {
 }
 
 #element {
-	text-color: #7c6f64;
+	text-color: #a89984;
 	padding: 0px 3px;
 }
 

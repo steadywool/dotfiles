@@ -22,7 +22,6 @@ exec_always killall polybar; polybar -r top
 
 exec_always feh --bg-scale ~/Pictures/Wallpaper/skull.jpg
 exec_always xrandr --auto
-exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 
 exec redshift
 exec nm-applet
@@ -42,7 +41,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 
 #---------------------------------------------
 ## WM INDEPENDENT KEYBINDING

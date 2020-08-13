@@ -19,10 +19,10 @@ bspc config normal_border_color "#3c3836"
 bspc config active_border_color "#3c3836"
 
 bspc config border_width 3
-bspc config window_gap 10
+bspc config window_gap 0
 
 bspc config borderless_monocle true
-bspc config gapless_monocle true
+bspc config gapless_monocle false
 
 bspc config split_ratio 0.52
 
