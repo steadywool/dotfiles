@@ -2,7 +2,7 @@
 
 ranger / neovim / zsh / alacritty / tmux / rofi / polybar / {i3},{bspwm + sxhkd} / dunst /
 
-ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / moc / mupdf / youtube-dl / gnome-screenshot / mediainfo / w3m / mpv / arch-audit /
+ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / redshift / moc / mupdf / youtube-dl / gnome-screenshot / mediainfo / w3m / mpv / arch-audit /
 
 ---
 **Software to install during OS installation:**
