@@ -28,7 +28,7 @@ net-tools / acpi /
 ---
 **Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
 
-**GTK theme:** https://github.com/Kaniville/Materia-gtk-gruvbox
+**GTK theme:** https://github.com/Kaniville/arc-gruvbox-theme
 
 **Colorscheme:** https://github.com/morhetz/gruvbox-contrib
 
