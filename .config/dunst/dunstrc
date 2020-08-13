@@ -43,7 +43,7 @@ mouse_right_click = close_all
 
 [play_sound]
 summary = "*"
-script = $HOME/Script/dunst-sound/graceful.sh
+script = ~/Script/dunst-sound/dunst-sound.sh
 
 [urgency_low]
 background = "#282828"
