@@ -1,6 +1,6 @@
 [colors]
 
-foreground-alt = #a89984
+foreground-alt = #7c6f64
 primary = #b8bb26
 secondary = #fabd2f
 alert = #fb4934
@@ -9,7 +9,7 @@ alert = #fb4934
 [bar/top]
 monitor =
 width = 100%
-height = 35
+height = 30
 fixed-center = true
 
 background = #282828

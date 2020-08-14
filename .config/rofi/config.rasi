@@ -6,6 +6,7 @@ configuration {
 }
 
 *{
+	highlight: Bold #fb4934;
 	text-color: #ebdbb2;
 	background-color: #282828;
 	font: "Ubuntu Mono 12.5";
@@ -15,7 +16,7 @@ configuration {
 	anchor: north;
 	location: north;
 	width: 100%;
-	padding: 8px;
+	padding: 6px;
 	children: [ horibox];
 }
 
@@ -36,7 +37,7 @@ configuration {
 }
 
 #element {
-	text-color: #a89984;
+	text-color: #7c6f64;
 	padding: 0px 3px;
 }
 

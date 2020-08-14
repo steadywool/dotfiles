@@ -1,7 +1,7 @@
 [global]
 monitor = 0
 follow = keyboard
-geometry = "300x5-30+40"
+geometry = "300x5-20+20"
 indicate_hidden = yes
 shrink = no
 transparency = 0
@@ -9,7 +9,7 @@ notification_height = 30
 separator_height = 2
 padding = 8
 horizontal_padding = 8
-frame_width = 2
+frame_width = 3
 separator_color = "#3c3836"
 sort = yes
 idle_threshold = 120

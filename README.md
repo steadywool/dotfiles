@@ -1,8 +1,18 @@
-*for x86-64 architectures*
 
-ranger / neovim / zsh / alacritty / tmux / rofi / polybar / {i3},{bspwm + sxhkd} / dunst /
+---
+**cli:**
 
-ufw / yay / atool / htop / ntp / git / curl / tlp / i3lock / feh / redshift / youtube-dl / gnome-screenshot / mediainfo / w3m / mpv / arch-audit /
+*zsh* / *tmux* / *neovim* / *ranger* / mpv / ufw / w3m / htop
+
+**gui:**
+
+*alacritty* / *bspwm* / *sxhkd* / *polybar* / *dunst* / *rofi* / i3lock / feh 
+
+**other:**
+
+yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2
+
+atool / mediainfo 
 
 ---
 **Software to install during OS installation:**
