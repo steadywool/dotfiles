@@ -1,5 +1,5 @@
 # History
-SAVEHIST=10000
+SAVEHIST=1000
 HISTFILE=$HOME/.config/zsh/.histfile 
 
 # Plugins
