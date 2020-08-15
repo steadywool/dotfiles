@@ -1,9 +1,9 @@
 
 ---
-### cli:
+### cli base:
 **zsh** / **tmux** / **neovim** / **ranger** / mpv / ufw / w3m / htop
 
-### gui:
+### gui base:
 ly / **alacritty** / **bspwm** / **sxhkd** / **polybar** / **dunst** / **rofi** / i3lock / feh 
 
 ### other:
