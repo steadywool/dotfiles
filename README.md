@@ -4,10 +4,10 @@
 **zsh** / **tmux** / **neovim** / **ranger** / mpv / ufw / w3m / htop
 
 ### gui:
-**alacritty** / **bspwm** / **sxhkd** / **polybar** / **dunst** / **rofi** / i3lock / feh 
+ly / **alacritty** / **bspwm** / **sxhkd** / **polybar** / **dunst** / **rofi** / i3lock / feh 
 
 ### other:
-yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2
+yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 
 
 atool / mediainfo 
 

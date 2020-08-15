@@ -1,6 +1,6 @@
 [colors]
 
-foreground-alt = #7c6f64
+foreground-alt = #a89984
 primary = #b8bb26
 secondary = #fabd2f
 alert = #fb4934
@@ -162,10 +162,9 @@ type = internal/date
 interval = 1
 
 format = <label>
-label = %time%
+label= %date%
 
-time = "DATE %H:%M:%S"
-time-alt = "DATE %A, %d %B %Y"
+date = "DATE %a %d %b %Y %H:%M:%S"
 
 ;---------------------------------------------------------
 [module/rofi]
