@@ -88,8 +88,10 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 - https://github.com/maximtrp/ranger-archives
 
 ### Zsh plugins:
-- https://github.com/ohmyzsh/ohmyzsh 
-(command-not-found / git)
+- https://github.com/maxrodrigo/uz
+```
+git clone https://github.com/maxrodrigo/uz.git ~/.config/zsh/plugin/uz
+```
 
 - https://github.com/zsh-users/zsh-completions
 
@@ -97,5 +99,4 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/zsh-users/zsh-syntax-highlighting
 
-- https://github.com/Kaniville/dotfiles
-(Crab.zsh-theme / zsh-tmux-autostart)
+- ttps://github.com/Kaniville/dotfiles *(zsh-tmux-autostart)*

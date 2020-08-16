@@ -2,16 +2,20 @@
 SAVEHIST=1000
 HISTFILE=$HOME/.config/zsh/.histfile 
 
+# Completion
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select
+
 # Plugins
-source $HOME/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source $HOME/.config/zsh/plugins/completion/init.zsh
-source $HOME/.config/zsh/plugins/command-not-found/init.zsh
-source $HOME/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $HOME/.config/zsh/plugins/git/git.plugin.zsh
-source $HOME/.config/zsh/plugins/zsh-tmux-autostart/zsh-tmux-autostart.zsh
+source $HOME/.config/zsh/plugin/uz/uz.zsh
+source $HOME/.config/zsh/plugin/zsh-tmux-autostart/zsh-tmux-autostart.zsh
+zadd zsh-users/zsh-syntax-highlighting
+zadd zsh-users/zsh-completions
+zadd zsh-users/zsh-autosuggestions
 
 # Themes
-source $HOME/.config/zsh/themes/Crab.zsh-theme
+source $HOME/.config/zsh/theme/base-theme.zsh-theme
 
 # Other
 export EDITOR=nvim
