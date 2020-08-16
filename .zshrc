@@ -17,5 +17,8 @@ zadd zsh-users/zsh-autosuggestions
 # Themes
 source $HOME/.config/zsh/theme/base-theme.zsh-theme
 
+# Alias
+source $HOME/.config/zsh/alias/alias.zsh
+
 # Other
 export EDITOR=nvim
