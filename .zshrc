@@ -18,7 +18,6 @@ source $HOME/.config/zsh/alias/alias.zsh
 #-----------------------------------------------------------------------------
 # OTHER
 export EDITOR=nvim
-export UZ_PLUGIN_PATH=$HOME/.config/zsh/plugins
 
 ## history
 SAVEHIST=1000
