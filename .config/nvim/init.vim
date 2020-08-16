@@ -1,6 +1,8 @@
+" APPEARANCE
 syntax enable
 set background=dark
 colorscheme gruvbox
+set relativenumber
 
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
