@@ -3,6 +3,7 @@ syntax enable
 set background=dark
 colorscheme gruvbox
 set relativenumber
+set number
 
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
