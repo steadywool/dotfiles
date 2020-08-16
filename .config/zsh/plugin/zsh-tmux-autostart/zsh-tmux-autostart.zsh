@@ -1,13 +1,4 @@
-# Autostart Tmux at zsh launch and add alias
-## Alias
-alias ta='tmux attach -t'
-alias tad='tmux attach -d -t'
-alias ts='tmux new-session -s'
-alias tl='tmux list-sessions'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
-
-## Variable
+# Autostart Tmux at zsh launch
 if [ -z "$TMUX" ]; then
 	tmux attach -t TMUX || tmux new -s TMUX
 fi
