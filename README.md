@@ -54,6 +54,10 @@ Enter the `pip3 install pynvim` command
 
 on nvim or vim, enter `:UpdateRemotePlugins`
 
+**zsh-completions work:**
+
+Enter the `rm -f ~/.zcompdump; compinit` command
+
 ---
 ### Vim plugins:
 - https://github.com/junegunn/vim-plug
@@ -99,4 +103,4 @@ git clone https://github.com/maxrodrigo/uz.git ~/.config/zsh/plugin/uz
 
 - https://github.com/zsh-users/zsh-syntax-highlighting
 
-- ttps://github.com/Kaniville/dotfiles *(zsh-tmux-autostart)*
+- https://github.com/Kaniville/dotfiles *(zsh-tmux-autostart)*

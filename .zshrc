@@ -3,9 +3,9 @@ SAVEHIST=1000
 HISTFILE=$HOME/.config/zsh/.histfile 
 
 # Completion
-autoload -Uz compinit
-compinit
+autoload -U compinit && compinit
 zstyle ':completion:*' menu select
+fpath=($HOME/.config/zsh/plugin/uz/plugins/zsh-completions/src $fpath)
 
 # Plugins
 source $HOME/.config/zsh/plugin/uz/uz.zsh
