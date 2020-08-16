@@ -54,10 +54,6 @@ Enter the `pip3 install pynvim` command
 
 on nvim or vim, enter `:UpdateRemotePlugins`
 
-**zsh-completions work:**
-
-Enter the `rm -f ~/.zcompdump; compinit` command
-
 ---
 ### Vim plugins:
 - https://github.com/junegunn/vim-plug
