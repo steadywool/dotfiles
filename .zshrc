@@ -4,7 +4,6 @@
 source $HOME/.config/zsh/plugins/uz/uz.zsh
 source $HOME/.config/zsh/plugins/zsh-tmux-autostart/zsh-tmux-autostart.zsh
 
-zadd maxrodrigo/uz
 zadd zsh-users/zsh-syntax-highlighting
 zadd zsh-users/zsh-completions
 zadd zsh-users/zsh-autosuggestions
@@ -20,7 +19,7 @@ source $HOME/.config/zsh/alias/alias.zsh
 #-----------------------------------------------------------------------------
 # OTHER
 export EDITOR=nvim
-export UZ_PLUGIN_PATH=$HOME/.config/zsh/plugins
+export UZ_PLUGIN_PATH=${UZ_PATH}/plugins
 
 # History
 SAVEHIST=1000
