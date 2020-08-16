@@ -90,7 +90,7 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ### Zsh plugins:
 - https://github.com/maxrodrigo/uz
 ```
-git clone https://github.com/maxrodrigo/uz.git ~/.config/zsh/plugin/uz
+git clone https://github.com/maxrodrigo/uz.git ~/.config/zsh/plugins/uz
 ```
 
 - https://github.com/zsh-users/zsh-completions
