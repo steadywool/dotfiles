@@ -2,7 +2,6 @@
 #-----------------------------------------------------------------------------
 # PLUGINS
 source $HOME/.config/zsh/plugins/uz/uz.zsh
-source $HOME/.config/zsh/plugins/zsh-tmux-autostart/zsh-tmux-autostart.zsh
 
 zadd zsh-users/zsh-syntax-highlighting
 zadd zsh-users/zsh-completions
@@ -19,9 +18,8 @@ source $HOME/.config/zsh/alias/alias.zsh
 #-----------------------------------------------------------------------------
 # OTHER
 export EDITOR=nvim
-export UZ_PLUGIN_PATH=${UZ_PATH}/plugins
 
-# History
+## history
 SAVEHIST=1000
 HISTFILE=$HOME/.config/zsh/.histfile 
 
@@ -32,4 +30,8 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 
+## tmux
+if [ -z "$TMUX" ]; then
+	tmux attach -t 0 || tmux new -s 0
+fi
 #-----------------------------------------------------------------------------
