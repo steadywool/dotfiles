@@ -70,8 +70,6 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/lilydjwg/colorizer
 
-- https://github.com/nvie/vim-togglemouse
-
 - https://github.com/preservim/nerdtree
 
 - https://github.com/artur-shaik/vim-javacomplete2
@@ -98,5 +96,3 @@ git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
 - https://github.com/zsh-users/zsh-autosuggestions 
 
 - https://github.com/zsh-users/zsh-syntax-highlighting
-
-- https://github.com/Kaniville/dotfiles *(zsh-tmux-autostart)*

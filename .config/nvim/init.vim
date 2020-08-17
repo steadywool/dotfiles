@@ -1,9 +1,10 @@
-" APPEARANCE
+" OTHER
 syntax enable
 set background=dark
 colorscheme gruvbox
 set relativenumber
 set number
+set mouse=a
 
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
@@ -51,7 +52,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim'
-Plug 'nvie/vim-togglemouse'
 Plug 'lilydjwg/colorizer'
 Plug 'Kaniville/nvim-terminal'
 
