@@ -14,12 +14,13 @@ super + d
 # Ranger
 super + shift + d
 	alacritty -e ranger
+
 # Power menu
 super + shift + e
 	exec $HOME/Script/power-menu.sh
 
 # Neovim
-super + s
+super + e 
 	alacritty -e nvim
 
 # Pulseaudio control
@@ -57,6 +58,8 @@ super + shift + q
 super + m
 	bspc desktop -l next
 
+#-------------------------------------------------
+## STATE/FlAGS
 # Tiled / pseudo tiled
 super + {t,shift + t}
 	bspc node -t {tiled,pseudo_tiled}
@@ -65,6 +68,8 @@ super + {t,shift + t}
 super + {f,shift + f}
 	bspc node -t {floating,fullscreen}
 
+#-------------------------------------------------
+## FOCUS/SWAP
 # Focus the given desktop
 super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 	bspc desktop -f '^{1-9,10}'
@@ -72,6 +77,10 @@ super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,
 # Send node to the given desktop
 super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 	bspc node -d '^{1-9,10}'
+
+# Focus the previous/next desktop in the current monitor
+super + {shift + Tab,Tab}
+	bspc desktop -f {prev,next}.local
 
 # Focus the node
 super + {h,j,k,l}
@@ -87,6 +96,8 @@ super + shift + {h,j,k,l}
 super + shift + {Left,Down,Up,Right}
 	bspc node -s {west,south,north,east}
 
+#--------------------------------------------------
+## MOVE/RESIZE
 # Expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
@@ -102,9 +113,10 @@ super + alt + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
-super + ctrl + {Left,Down,Up,Right}
+super + ctrl {h,j,k,l}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
 
-super + ctrl + {h,j,k,l}
+super + ctrl {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+#--------------------------------------------------
 
