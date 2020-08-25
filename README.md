@@ -1,40 +1,40 @@
 ---
-#### CLI base
+### CLI base
 zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
  
-#### GUI base
+### GUI base
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 
-#### Other
+### Other
 yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / atool / mediainfo /
 
 ---
-#### Base
+### Base
 base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
-#### Grub
+### Grub
 grub / os-prober / efibootmgr (uefi) /
 
-#### Media
+### Media
 gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
 
-#### GUI
+### GUI
 xorg-server / xorg-xinit / xorg-apps / 
 
-#### Other
+### Other
 net-tools / acpi /
 
 ---
-#### Font
+### Font
 ttf-ubuntu-font-family / ttf-dejavu /
 
-#### GTK theme
+### GTK theme
 https://github.com/Kaniville/arc-gruvbox-theme
 
-#### Colorscheme
+### Colorscheme
 https://github.com/morhetz/gruvbox-contrib
 
-#### AUR manager
+### AUR manager
 https://github.com/Jguer/yay
 ```
 $ git clone https://aur.archlinux.org/yay.git
@@ -43,17 +43,17 @@ $ makepkg -si
 ```
 
 ---
-#### Change shell
+### Change shell
 ```
 # chsh -s /bin/SHELL
 ```
 
-#### Add user
+### Add user
 ```
 # useradd -m -g GROUP USER
 ```
 
-#### Deoplete plugin work
+### Deoplete plugin work
 Install python-pip and enter the following command:
 ```
 # pip3 install pynvim
@@ -64,14 +64,14 @@ and on nvim or vim:
 :UpdateRemotePlugins
 ```
 
-#### Disable power button
+### Disable power button
 Edit this setting `/etc/systemd/logind.conf`:
 ```
 HandlePowerKey=ignore
 ``` 
 
 ---
-#### Vim plugins
+### Vim plugins
 - https://github.com/junegunn/vim-plug
 ```
 $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -97,10 +97,10 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 
 - https://github.com/Kaniville/nvim-terminal
 
-#### Ranger plugins:
+### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
 
-#### Zsh plugins:
+### Zsh plugins:
 - https://github.com/maxrodrigo/uz
 ```
 $ git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
