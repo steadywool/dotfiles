@@ -28,13 +28,17 @@ xorg-server / xorg-xinit / xorg-apps /
 net-tools / acpi /
 
 ---
-**Font:** ttf-ubuntu-font-family / ttf-dejavu
+#### Font:
+ttf-ubuntu-font-family / ttf-dejavu
 
-**GTK theme:** https://github.com/Kaniville/arc-gruvbox-theme
+#### GTK theme:
+https://github.com/Kaniville/arc-gruvbox-theme
 
-**Colorscheme:** https://github.com/morhetz/gruvbox-contrib
+#### Colorscheme:
+https://github.com/morhetz/gruvbox-contrib
 
-**AUR manager:** https://github.com/Jguer/yay
+#### AUR manager:
+https://github.com/Jguer/yay
 ```
 git clone https://aur.archlinux.org/yay.git
 cd yay
