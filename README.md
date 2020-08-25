@@ -1,5 +1,4 @@
 ## My software
----
 ### CLI base
 zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
  
@@ -10,7 +9,6 @@ ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / atool / mediainfo /
 
 ## Software to install during OS installation
----
 ### Base
 base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
@@ -27,7 +25,6 @@ xorg-server / xorg-xinit / xorg-apps /
 net-tools / acpi /
 
 ## Information 
----
 ### Font
 ttf-ubuntu-font-family / ttf-dejavu /
 
@@ -46,7 +43,6 @@ https://github.com/Jguer/yay
 ```
 
 ## Help
----
 ### Change shell
 ```
 # chsh -s /bin/SHELL
@@ -75,7 +71,6 @@ HandlePowerKey=ignore
 ``` 
 
 ## Plugins links
----
 ### Vim plugins
 - https://github.com/junegunn/vim-plug
 ```
