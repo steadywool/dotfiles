@@ -1,86 +1,85 @@
-
+## My software
 ---
-#### cli base:
-**zsh** / **tmux** / **neovim** / **ranger** / mpv / ufw / w3m / htop
+### CLI base
+zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
+ 
+### GUI base
+ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 
-#### gui base:
-ly / **alacritty** / **bspwm** / **sxhkd** / **polybar** / **dunst** / **rofi** / i3lock / feh 
+### Other
+yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / atool / mediainfo /
 
-#### other:
-yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 
-
-atool / mediainfo 
-
+## Software to install during OS installation
 ---
-#### Software to install during OS installation:
+### Base
 base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
-#### grub:
+### Grub
 grub / os-prober / efibootmgr (uefi) /
 
-#### media:
+### Media
 gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
 
-#### gui:
+### GUI
 xorg-server / xorg-xinit / xorg-apps / 
 
-#### other:
+### Other
 net-tools / acpi /
 
+## Information 
 ---
-#### Font:
-ttf-ubuntu-font-family / ttf-dejavu
+### Font
+ttf-ubuntu-font-family / ttf-dejavu /
 
-#### GTK theme:
+### GTK theme
 https://github.com/Kaniville/arc-gruvbox-theme
 
-#### Colorscheme:
+### Colorscheme
 https://github.com/morhetz/gruvbox-contrib
 
-#### AUR manager:
+### AUR manager
 https://github.com/Jguer/yay
 ```
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+# git clone https://aur.archlinux.org/yay.git
+# cd yay
+# makepkg -si
 ```
 
+## Help
 ---
-#### Change shell:
+### Change shell
 ```
-chsh -s /bin/SHELL
-```
-
-#### Add user:
-```
-useradd -m -g GROUP USER
+# chsh -s /bin/SHELL
 ```
 
-#### Deoplete plugin work:
-Install `python-pip`
-
-Enter the following command
+### Add user
 ```
-pip3 install pynvim
+# useradd -m -g GROUP USER
 ```
 
-on nvim or vim
+### Deoplete plugin work
+Install python-pip and enter the following command:
+```
+# pip3 install pynvim
+```
+
+and on nvim or vim:
 ```
 :UpdateRemotePlugins
 ```
 
-#### Disable power button:
-Edit this setting `/etc/systemd/logind.conf`
+### Disable power button
+Edit this setting `/etc/systemd/logind.conf`:
 ```
 HandlePowerKey=ignore
 ``` 
 
+## Plugins links
 ---
-#### Vim plugins:
+### Vim plugins
 - https://github.com/junegunn/vim-plug
 ```
-curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
-https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+# curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 - https://github.com/Shougo/deoplete.nvim
@@ -103,13 +102,13 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/Kaniville/nvim-terminal
 
-#### Ranger plugins:
+### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
 
-#### Zsh plugins:
+### Zsh plugins:
 - https://github.com/maxrodrigo/uz
 ```
-git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
+# git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
 ```
 
 - https://github.com/zsh-users/zsh-completions
