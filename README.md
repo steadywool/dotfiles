@@ -28,7 +28,7 @@ xorg-server / xorg-xinit / xorg-apps /
 net-tools / acpi /
 
 ---
-**Font:**`ttf-ubuntu-font-family` / `ttf-dejavu`
+**Font:** ttf-ubuntu-font-family / ttf-dejavu
 
 **GTK theme:** https://github.com/Kaniville/arc-gruvbox-theme
 
@@ -42,20 +42,37 @@ makepkg -si
 ```
 
 ---
-**Change shell:** `chsh -s /bin/SHELL`
+##### Change shell:
+```
+chsh -s /bin/SHELL
+```
 
-**Add user:** `useradd -m -g GROUP USER`
+##### Add user:
+```
+useradd -m -g GROUP USER
+```
 
-**Deoplete plugin work:**
-
+##### Deoplete plugin work:
 Install `python-pip`
 
-Enter the `pip3 install pynvim` command 
+Enter the following command
+```
+pip3 install pynvim
+```
 
-on nvim or vim, enter `:UpdateRemotePlugins`
+on nvim or vim
+```
+:UpdateRemotePlugins
+```
+
+##### Disable power button:
+Edit this setting `/etc/systemd/logind.conf`
+```
+HandlePowerKey=ignore
+``` 
 
 ---
-### Vim plugins:
+##### Vim plugins:
 - https://github.com/junegunn/vim-plug
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
