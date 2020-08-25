@@ -1,30 +1,30 @@
 
 ---
-### cli base:
+#### cli base:
 **zsh** / **tmux** / **neovim** / **ranger** / mpv / ufw / w3m / htop
 
-### gui base:
+#### gui base:
 ly / **alacritty** / **bspwm** / **sxhkd** / **polybar** / **dunst** / **rofi** / i3lock / feh 
 
-### other:
+#### other:
 yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 
 
 atool / mediainfo 
 
 ---
-### Software to install during OS installation:
+#### Software to install during OS installation:
 base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
 
-### grub:
+#### grub:
 grub / os-prober / efibootmgr (uefi) /
 
-### media:
+#### media:
 gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
 
-### gui:
+#### gui:
 xorg-server / xorg-xinit / xorg-apps / 
 
-### other:
+#### other:
 net-tools / acpi /
 
 ---
@@ -42,17 +42,17 @@ makepkg -si
 ```
 
 ---
-### Change shell:
+#### Change shell:
 ```
 chsh -s /bin/SHELL
 ```
 
-### Add user:
+#### Add user:
 ```
 useradd -m -g GROUP USER
 ```
 
-### Deoplete plugin work:
+#### Deoplete plugin work:
 Install `python-pip`
 
 Enter the following command
@@ -65,14 +65,14 @@ on nvim or vim
 :UpdateRemotePlugins
 ```
 
-### Disable power button:
+#### Disable power button:
 Edit this setting `/etc/systemd/logind.conf`
 ```
 HandlePowerKey=ignore
 ``` 
 
 ---
-### Vim plugins:
+#### Vim plugins:
 - https://github.com/junegunn/vim-plug
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
@@ -99,10 +99,10 @@ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 - https://github.com/Kaniville/nvim-terminal
 
-### Ranger plugins:
+#### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
 
-### Zsh plugins:
+#### Zsh plugins:
 - https://github.com/maxrodrigo/uz
 ```
 git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
