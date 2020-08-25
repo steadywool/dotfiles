@@ -42,17 +42,17 @@ makepkg -si
 ```
 
 ---
-##### Change shell:
+### Change shell:
 ```
 chsh -s /bin/SHELL
 ```
 
-##### Add user:
+### Add user:
 ```
 useradd -m -g GROUP USER
 ```
 
-##### Deoplete plugin work:
+### Deoplete plugin work:
 Install `python-pip`
 
 Enter the following command
@@ -65,14 +65,14 @@ on nvim or vim
 :UpdateRemotePlugins
 ```
 
-##### Disable power button:
+### Disable power button:
 Edit this setting `/etc/systemd/logind.conf`
 ```
 HandlePowerKey=ignore
 ``` 
 
 ---
-##### Vim plugins:
+### Vim plugins:
 - https://github.com/junegunn/vim-plug
 ```
 curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs \
