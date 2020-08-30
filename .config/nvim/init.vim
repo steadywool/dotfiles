@@ -5,6 +5,7 @@ colorscheme gruvbox
 set relativenumber
 set number
 set mouse=a
+set signcolumn=yes 
 
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
