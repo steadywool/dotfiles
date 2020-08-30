@@ -6,7 +6,9 @@ zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 
 #### Other
-yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / atool / mediainfo /
+yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / 
+
+atool / mediainfo /
 
 ---
 #### Base
@@ -45,7 +47,7 @@ $ makepkg -si
 ---
 #### Change shell
 ```
-# chsh -s /bin/SHELL
+$ chsh -s /bin/SHELL
 ```
 
 #### Add user

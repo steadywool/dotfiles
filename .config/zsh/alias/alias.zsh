@@ -6,6 +6,9 @@ alias tl='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
+# mpv
+alias mpa='mpv --no-video'
+
 # git
 alias g='git'
 alias ga='git add'
