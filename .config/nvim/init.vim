@@ -7,6 +7,7 @@ set number
 set mouse=a
 set signcolumn=yes 
 
+"-----------------------------------------------------------------
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
 
@@ -47,6 +48,10 @@ tmap <F2> <C-\><C-n>:call TermToggle(15)<CR>
 tmap <Esc> <C-\><C-n>
 tmap :q! <C-\><C-n>:q!<CR>
 
+" TAGBAR
+nmap <F8> :TagbarToggle<CR>
+
+"-----------------------------------------------------------------
 call plug#begin()
 "Base
 Plug 'itchyny/lightline.vim'
@@ -59,8 +64,10 @@ Plug 'Kaniville/nvim-terminal'
 "Java, HTML & CSS
 Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+Plug 'majutsushi/tagbar', {'for': 'java'}
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
 
 call plug#end()
 
+"-----------------------------------------------------------------

@@ -66,6 +66,9 @@ and on nvim or vim:
 :UpdateRemotePlugins
 ```
 
+#### Tagbar plugin work
+Install ctags (universal-ctags)
+
 #### Disable power button
 Edit this setting `/etc/systemd/logind.conf`:
 ```
@@ -98,6 +101,8 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/othree/html5.vim
 
 - https://github.com/Kaniville/nvim-terminal
+
+- https://github.com/preservim/tagbar
 
 #### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
