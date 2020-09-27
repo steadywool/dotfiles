@@ -57,16 +57,22 @@ call plug#begin()
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'lilydjwg/colorizer'
 Plug 'Kaniville/nvim-terminal'
 Plug 'majutsushi/tagbar'
 
-"Java, HTML & CSS
+"Java
 Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
+
+"Web
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
+
+"C++
+Plug 'octol/vim-cpp-enhanced-highlight', {'for': 'cpp'}
+Plug 'deoplete-plugins/deoplete-clang', {'for': 'cpp'}
 
 call plug#end()
 

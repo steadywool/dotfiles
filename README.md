@@ -61,10 +61,8 @@ Install python-pip and enter the following command:
 # pip3 install pynvim
 ```
 
-and on nvim or vim:
-```
-:UpdateRemotePlugins
-```
+### Deoplete-clang plugin work
+Install clang and cmake
 
 #### Tagbar plugin work
 Install ctags (universal-ctags)
