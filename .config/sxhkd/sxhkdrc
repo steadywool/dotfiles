@@ -1,7 +1,7 @@
 ## WM INDEPENDENT HOTKEYS
 # Reload sxhkd
 super + r
-	pkill -USR1 -x sxhkd
+	killall sxhkd; sxhkd -m 1 &
 
 # Terminal
 super + x

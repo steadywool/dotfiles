@@ -49,7 +49,7 @@ tmap <Esc> <C-\><C-n>
 tmap :q! <C-\><C-n>:q!<CR>
 
 " TAGBAR
-nmap <F8> :TagbarToggle<CR>
+map <C-b> :TagbarToggle<CR>
 
 "-----------------------------------------------------------------
 call plug#begin()
@@ -60,11 +60,11 @@ Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'Kaniville/nvim-terminal'
+Plug 'majutsushi/tagbar'
 
 "Java, HTML & CSS
 Plug 'uiiaoo/java-syntax.vim', {'for': 'java'}
 Plug 'artur-shaik/vim-javacomplete2', {'for': 'java'}
-Plug 'majutsushi/tagbar', {'for': 'java'}
 Plug 'hail2u/vim-css3-syntax'
 Plug 'othree/html5.vim'
 
