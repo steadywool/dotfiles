@@ -61,7 +61,7 @@ Install python-pip and enter the following command:
 # pip3 install pynvim
 ```
 
-### Deoplete-clang plugin work
+#### Deoplete-clang plugin work
 Install clang and cmake
 
 #### Tagbar plugin work
@@ -102,11 +102,15 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 
 - https://github.com/preservim/tagbar
 
+- https://github.com/octol/vim-cpp-enhanced-highlighting
+
+- https://github.com/deoplete-plugins/deoplete-clang
+
 #### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
 
 #### Zsh plugins:
-- https://github.com/maxrodrigo/uz
+- https://github.com/Kaniville/uz
 ```
 $ git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
 ```
