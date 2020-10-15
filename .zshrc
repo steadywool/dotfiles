@@ -18,6 +18,7 @@ source $HOME/.config/zsh/alias/alias.zsh
 #-----------------------------------------------------------------------------
 # OTHER
 export EDITOR=nvim
+RANGER_LOAD_DEFAULT_RC=false
 
 ## history
 SAVEHIST=1000
@@ -34,5 +35,4 @@ zstyle ':completion::complete:*' gain-privileges 1
 if [ -z "$TMUX" ]; then
 	tmux attach -t 0 || tmux new -s 0
 fi
-
 #-----------------------------------------------------------------------------
