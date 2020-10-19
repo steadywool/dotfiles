@@ -27,5 +27,4 @@ bspc config window_gap 0
 
 # Rules
 bspc rule -a discord desktop=5 focus=off follow=off
-bspc rule -a Pavucontrol desktop=4 follow=on
 bspc rule -a firefox desktop=3
