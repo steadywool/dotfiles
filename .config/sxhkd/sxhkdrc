@@ -11,17 +11,13 @@ super + x
 super + d
 	rofi -show drun 
 
-# Ranger
-super + shift + d
+# Ranger file manager
+super + o
 	alacritty -e ranger
 
 # Power menu
 super + shift + e
 	exec $HOME/Script/power-menu.sh
-
-# Neovim
-super + e 
-	alacritty -e nvim
 
 # Pulseaudio control
 XF86AudioRaiseVolume
@@ -35,10 +31,10 @@ XF86AudioMute
 
 # Screenshot
 Print 
-	scrot -e 'mv $f ~/Pictures/'
+	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
 
 super + shift + s
-	scrot -e 'mv $f ~/Pictures/'
+	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
 
 # Change keyboard layout
 super + s
@@ -50,13 +46,9 @@ super + s
 super + shift + r
 	bspc wm -r
 
-# Close node
-super + q
-	bspc node -c
-
-# Kill node
-super + shift + q
-	bspc node -k
+# Close or kill node
+super + {q,shift + q}
+	bspc node -{c,k}
 
 # Tiled/Monocle layout
 super + m
@@ -72,8 +64,12 @@ super + {t,shift + t}
 super + {f,shift + f}
 	bspc node -t {floating,fullscreen}
 
+# Node flags
+super + ctrl + {s,l}
+	bspc node -g {sticky,locked}
+
 #-------------------------------------------------
-## FOCUS/SWAP/RESIZE
+## FOCUS/SWAP
 # Focus the given desktop
 super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 	bspc desktop -f '^{1-9,10}'
@@ -82,30 +78,34 @@ super + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,
 super + shift + {ampersand,eacute,quotedbl,apostrophe,parenleft,minus,egrave,underscore,ccedilla,agrave}
 	bspc node -d '^{1-9,10}'
 
-# Focus the previous/next desktop in the current monitor
-super + ctrl + {Left,Right}
-	bspc desktop -f {prev,next}.local
-
 # Focus the node
 super + {h,j,k,l}
-	bspc node -f {west,south,north,east}
-
-super + {Left,Down,Up,Right}
 	bspc node -f {west,south,north,east}
 
 # Swap the node
 super + shift + {h,j,k,l}
 	bspc node -s {west,south,north,east}
 
-super + shift + {Left,Down,Up,Right}
-	bspc node -s {west,south,north,east}
+# Focus previous/next node
+super + {p,n}
+	bspc node -f {prev,next}.local.!hidden.window
 
-# Resize the window
-super + alt + {h,j,k,l}
-	bspc node -z {right -20 0,top 0 20,top 0 -20,right 20 0}
-
-super + alt + {Left,Down,Up,Right}
-	bspc node -z {right -20 0,top 0 20,top 0 -20,right 20 0}
+# Focus previous/next desktop
+super + shift + {p,n}
+	bspc desktop -f {prev,next}.local
 
 #--------------------------------------------------
+## MOVE/RESIZE
+# Move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
 
+# Expand a window
+super + alt + {h,j,k,l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+    
+# Contract a window
+super + alt + shift + {h,j,k,l}
+	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+#--------------------------------------------------
