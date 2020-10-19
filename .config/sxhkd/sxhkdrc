@@ -34,11 +34,15 @@ XF86AudioMute
 	pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
 
 # Screenshot
-Print
-	gnome-screenshot -i
+Print 
+	scrot -e 'mv $f ~/Pictures/'
 
 super + shift + s
-	gnome-screenshot -i
+	scrot -e 'mv $f ~/Pictures/'
+
+# Change keyboard layout
+super + s
+	exec $HOME/Script/keybinding.sh
 
 #------------------------------------------------
 ## BSPWM HOTKEYS
