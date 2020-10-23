@@ -12,13 +12,16 @@ atool / mediainfo /
 
 ---
 #### Base
-base / base-devel / pacman-contrib / zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / grub / networkmanager / linux-firmware / linux(-lts) /
+base / base-devel / linux-firmware / linux(-lts) /
+
+#### Optionnal
+zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager /
 
 #### Grub
 grub / os-prober / efibootmgr (uefi) /
 
 #### Media
-gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / gvfs-{...} / pulseaudio-{...} / bluez (bluetooth) /
+gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez (bluetooth) /
 
 #### GUI
 xorg-server / xorg-xinit / xorg-apps / 
@@ -53,6 +56,21 @@ $ chsh -s /bin/SHELL
 #### Add user
 ```
 # useradd -m -g GROUP USER
+```
+
+#### Forward to syslog
+Change this setting `/etc/systemd/journald.conf`
+```
+#ForwardToSyslog=no
+```
+to
+```
+ForwardToSyslog=true
+```
+
+#### Keep keyboard config
+```
+# localectl set-x11-keymap LANG
 ```
 
 #### Deoplete plugin work
