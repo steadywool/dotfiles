@@ -12,22 +12,22 @@ atool / mediainfo /
 
 ---
 #### Base
-base / base-devel / linux-firmware / linux(-lts) /
+base / linux-firmware / linux(-lts) / (base-devel) /
 
 #### Optionnal
-zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager /
+zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / sudo / make / EDITOR /
 
 #### Grub
 grub / os-prober / efibootmgr (uefi) /
 
 #### Media
-gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez (bluetooth) /
+gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez /
 
 #### GUI
-xorg-server / xorg-xinit / xorg-apps / 
+xorg-server / xorg-xinit / xorg-{...} (xorg-apps) / 
 
 #### Other
-net-tools / acpi /
+net-tools / acpi / gcc /
 
 ---
 #### Font
