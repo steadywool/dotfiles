@@ -2,12 +2,12 @@
 #---------------------------------------------
 ## APPEARENCE
 # font
-font pango:Ubuntu Mono 13
+font pango:Ubuntu Mono 11
 #font pango:MonoSpace 11
 
 # color
 # class                 border  backgr. text   indicator child_border
-client.focused          #458588 #282828 #ebdbb2 #458588   #458588
+client.focused          #98971a #282828 #ebdbb2 #98971a   #98971a
 client.focused_inactive #3c3836 #282828 #ebdbb2 #3c3836   #3c3836
 client.unfocused        #3c3836 #282828 #ebdbb2 #3c3836   #3c3836
 client.urgent           #cc241d #282828 #ebdbb2 #cc241d   #cc241d
@@ -20,12 +20,11 @@ client.background       #282828
 exec_always killall dunst; dunst
 exec_always killall polybar; polybar -r top
 
-exec_always feh --bg-scale ~/Pictures/Wallpaper/skull.jpg
+exec_always feh --bg-scale ~/Pictures/Wallpaper/gruvbox2.png
 exec_always xrandr --auto
 
-exec redshift
+exec pkill -USR1 redshift; redshift -P -O 3000
 exec nm-applet
-exec discord
 
 #---------------------------------------------
 ## WORKSPACE & WINDOWS
@@ -41,7 +40,7 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 1
 
 #---------------------------------------------
 ## WM INDEPENDENT KEYBINDING
@@ -49,14 +48,10 @@ for_window [class="^.*"] border pixel 3
 bindsym $mod+x exec alacritty
 
 # start ranger
-bindsym $mod+Shift+d exec alacritty -e ranger
+bindsym $mod+o exec alacritty -e ranger
 
 # start rofi
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+w exec rofi -show window
-
-# open text editor
-bindsym $mod+s exec alacritty -e nvim
 
 # pulseaudio control
 bindsym XF86AudioRaiseVolume exec  pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +5%
@@ -68,8 +63,8 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 # screenshot
-bindsym Print exec gnome-screenshot -i
-bindsym $mod+Shift+s exec gnome-screenshot -i
+bindsym Print exec scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
+bindsym $mod+Shift+s exec scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
 
 # power menu
 bindsym $mod+Shift+e exec ~/Script/power-menu.sh
@@ -80,37 +75,29 @@ set $mod Mod4
 floating_modifier $mod
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # change focus between tiling & floating
 bindsym $mod+t focus mode_toggle
-indsym $mod+Shift+t floating toggle
+bindsym $mod+f floating toggle
 
 # restart i3
 bindsym $mod+Shift+r restart
 
 # fullscreen mode
-bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+f fullscreen toggle
 
 # change focus
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
 
 # change orientation
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
 
 # change layout
 bindsym $mod+Shift+z layout stacking
@@ -142,21 +129,8 @@ bindsym $mod+Shift+ccedilla move container to workspace $ws9
 bindsym $mod+Shift+agrave move container to workspace $ws10
 
 # resize window
-mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
-
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-bindsym $mod+r mode "resize"
-
+bindsym $mod+Left resize shrink width 10 px or 10 ppt
+bindsym $mod+Down resize grow height 10 px or 10 ppt
+bindsym $mod+Up resize shrink height 10 px or 10 ppt
+bindsym $mod+Right resize grow width 10 px or 10 ppt
 
