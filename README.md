@@ -6,16 +6,16 @@ zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 
 #### Other
-yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot 
+yay / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot /
 
 atool / mediainfo /
 
 ---
 #### Base
-base / linux-firmware / linux(-lts) / (base-devel) /
+base / linux-firmware / linux(-lts) / base-devel /
 
 #### Optionnal
-zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / sudo / make / EDITOR /
+zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / $EDITOR /
 
 #### Grub
 grub / os-prober / efibootmgr (uefi) /
@@ -27,14 +27,14 @@ gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudi
 xorg-server / xorg-xinit / xorg-{...} (xorg-apps) / 
 
 #### Other
-net-tools / acpi / gcc /
+net-tools / acpi /
 
 ---
 #### Font
 ttf-ubuntu-font-family / ttf-dejavu /
 
 #### GTK theme
-https://github.com/Kaniville/arc-gruvbox-theme
+https://github.com/Kaniville/oomox-gruvbox-theme
 
 #### Colorscheme
 https://github.com/morhetz/gruvbox-contrib
@@ -107,10 +107,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/lilydjwg/colorizer
 
 - https://github.com/preservim/nerdtree
-
-- https://github.com/artur-shaik/vim-javacomplete2
-
-- https://github.com/uiiaoo/java-syntax.vim
 
 - https://github.com/hail2u/vim-css3-syntax
 
