@@ -3,7 +3,7 @@
 var+=("us")
 var+=("fr")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "Keybinding:")
+CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "keybinding " )
 
 if [ "$CHOICE" = "us" ]; then
 	setxkbmap us

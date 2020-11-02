@@ -6,7 +6,7 @@ var+=("lock")
 var+=("exit i3")
 var+=("exit bspwm")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "Power-Menu:")
+CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "power ")
 
 if [ "$CHOICE" = "power off" ]; then
 	alacritty -e sudo shutdown -h now

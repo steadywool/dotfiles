@@ -14,7 +14,7 @@ fixed-center = true
 background = #282828
 foreground = #ebdbb2
 
-font-0 = Ubuntu Mono:style=Regular:pixelsize=12.5
+font-0 = Ubuntu Mono:style=Regular:pixelsize=12
 font-1 = DejaVu Sans:style=Regular
 
 modules-left = i3 bspwm 
