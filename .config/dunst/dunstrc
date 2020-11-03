@@ -25,15 +25,10 @@ ignore_newline = no
 stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
-icon_position = left
-min_icon_size = 0
-max_icon_size = 32     
 sticky_history = yes
 history_length = 20
 always_run_script = true
-title = Dunst
-class = Dunst
-startup_notification = true
+startup_notification = false
 verbosity = mesg 
 corner_radius = 0
 
