@@ -183,3 +183,4 @@ content-foreground = ${colors.alert}
 click-left= ~/Script/power-menu.sh
 
 ;---------------------------------------------------------
+; vim: ft=dosini

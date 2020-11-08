@@ -1,4 +1,5 @@
 [global]
+### Display ###
 monitor = 0
 follow = keyboard
 geometry = "300x5-20+20"
@@ -13,6 +14,8 @@ frame_width = 1
 separator_color = "#3c3836"
 sort = yes
 idle_threshold = 120
+
+### Text ###
 font = Ubuntu 11
 line_height = 0
 markup = full
@@ -25,6 +28,13 @@ ignore_newline = no
 stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
+
+### Icon ###
+icon_position = left
+min_icon_size = 0
+max_icon_size = 32
+
+### History ###
 sticky_history = yes
 history_length = 20
 always_run_script = true
@@ -32,6 +42,8 @@ startup_notification = false
 verbosity = mesg 
 corner_radius = 0
 
+### Misc/Advanded ###
+startup_notification = true
 mouse_left_click = close_current
 mouse_middle_click = do_action
 mouse_right_click = close_all
@@ -56,4 +68,6 @@ timeout = 5
 background = "#282828"
 foreground = "#ebdbb2"
 frame_color = "#cc241d"
-timeout = 60
+timeout = 0
+
+# vim: ft=cfg
