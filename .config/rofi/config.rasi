@@ -28,7 +28,6 @@ entry {
 
 listview {
 	layout: horizontal;
-	spacing: 10px;
 	lines: 100;
 }
 

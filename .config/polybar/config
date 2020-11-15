@@ -1,10 +1,3 @@
-[colors]
-foreground-alt = #a89984
-primary = #b8bb26
-secondary = #fabd2f
-alert = #fb4934
-
-;--------------------------------------------------------------------
 [bar/top]
 monitor =
 width = 100%
@@ -31,7 +24,7 @@ wm-restack = bspwm
 type = custom/text
 
 content =" | "
-content-foreground = ${colors.foreground-alt}
+content-foreground = #a89984
 
 ;--------------------------------------------------------------------
 [module/bspwm]
@@ -43,15 +36,15 @@ label-focused = %name%
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = ${colors.foreground-alt}
+label-occupied-foreground = #a89984
 label-occupied-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = #fb4934
 label-urgent-padding = 1
 
 label-empty = *
-label-empty-foreground = ${colors.foreground-alt}
+label-empty-foreground = #a89984
 label-empty-padding = 1
 
 ;--------------------------------------------------------------------
@@ -68,11 +61,11 @@ label-visible = %name%
 label-visible-padding = 1
 
 label-unfocused = %name%
-label-unfocused-foreground =${colors.foreground-alt} 
+label-unfocused-foreground = #a89984 
 label-unfocused-padding = 1
 
 label-urgent = %name%
-label-urgent-foreground = ${colors.alert}
+label-urgent-foreground = #fb4934
 label-urgent-padding = 1
 
 ;-----------------------------------------------------------------
@@ -83,7 +76,7 @@ format-volume = <label-volume>
 
 label-volume = "VOL %percentage%%"
 label-muted = "VOL muted"
-label-muted-foreground = ${colors.foreground-alt}
+label-muted-foreground = #a89984
 
 ;----------------------------------------------------------
 [module/alsa]
@@ -93,7 +86,7 @@ format-volume = <label-volume>
 
 label-volume ="VOL %percentage%%"
 label-muted ="VOL muted" 
-label-muted-foreground = ${colors.foreground-alt}
+label-muted-foreground = #a89984
 
 ;---------------------------------------------------------
 [module/backlight]
@@ -145,11 +138,11 @@ adapter = ADP1
 
 format-charging = <label-charging>
 label-charging = "BAT %percentage%%" 
-format-charging-foreground = ${colors.primary}
+format-charging-foreground = #b8bb26
 
 format-discharging = <label-discharging>
 label-discharging = "BAT %percentage%%" 
-format-discharging-foreground = ${colors.alert}
+format-discharging-foreground = #fb4934
 
 format-full = <label-full>
 label-full = "BAT %percentage%%"
@@ -179,7 +172,7 @@ click-right= rofi -show run
 type = custom/text
 
 content = "POWER"
-content-foreground = ${colors.alert}
+content-foreground = #fb4934
 click-left= ~/Script/power-menu.sh
 
 ;---------------------------------------------------------

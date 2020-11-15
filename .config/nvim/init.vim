@@ -24,14 +24,6 @@ let g:ale_sign_warning = '!>'
 " NERDTREE
 map <C-n> :NERDTreeToggle<CR>
 
-" NVIM TERMINAL
-nmap <F2> :call TermToggle(12)<CR>
-imap <F2> <Esc>:call TermToggle(12)<CR>
-tmap <F2> <C-\><C-n>:call TermToggle(12)<CR>
-
-tmap <Esc> <C-\><C-n>
-tmap :q! <C-\><C-n>:q!<CR>
-
 " TAGBAR
 map <C-b> :TagbarToggle<CR>
 
@@ -43,7 +35,6 @@ Plug 'dense-analysis/ale'
 Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'lilydjwg/colorizer'
-Plug 'Kaniville/nvim-terminal'
 Plug 'majutsushi/tagbar'
 
 "Web
