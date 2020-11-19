@@ -4,7 +4,7 @@
 killall sxhkd; sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
-feh --bg-scale $HOME/Pictures/Wallpaper/gruvbox2.png &
+feh --bg-scale $HOME/Pictures/Wallpaper/flat.jpg &
 pkill -USR1 redshift; redshift -P -O 3000 &
 
 discord --start-minimized &
@@ -15,9 +15,9 @@ blueman-applet &
 bspc monitor -d 1 2 3 4 5 6 7 8 9 10
 
 # Appearence
-bspc config focused_border_color "#98971a"
+bspc config focused_border_color "#b16286"
+bspc config active_border_color "#689d6a"
 bspc config normal_border_color "#3c3836"
-bspc config active_border_color "#3c3836"
 
 bspc config border_width 1
 bspc config borderless_monocle true
