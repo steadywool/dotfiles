@@ -19,10 +19,10 @@ bspc config focused_border_color "#b16286"
 bspc config active_border_color "#689d6a"
 bspc config normal_border_color "#3c3836"
 
-bspc config border_width 1
+bspc config border_width 2
 bspc config borderless_monocle true
 bspc config split_ratio 0.52
-bspc config window_gap 0
+bspc config window_gap 10
 
 # Rules
 bspc rule -a discord desktop=5 focus=off follow=off
