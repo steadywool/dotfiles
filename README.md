@@ -40,10 +40,10 @@ https://github.com/Kaniville/oomox-gruvbox-theme
 https://github.com/morhetz/gruvbox-contrib
 
 #### AUR manager
-https://github.com/Jguer/yay
+https://github.com/morganamilo/paru
 ```
-$ git clone https://aur.archlinux.org/yay.git
-$ cd yay
+$ git clone https://aur.archlinux.org/paru.git
+$ cd paru
 $ makepkg -si
 ```
 
@@ -111,8 +111,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/hail2u/vim-css3-syntax
 
 - https://github.com/othree/html5.vim
-
-- https://github.com/Kaniville/nvim-terminal
 
 - https://github.com/preservim/tagbar
 
