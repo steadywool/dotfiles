@@ -30,15 +30,11 @@ XF86AudioMute
 	pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
 
 # Screenshot
-Print 
-	exec $HOME/Script/scrot.sh
+Print
+	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
 
 super + shift + s
-	exec $HOME/Script/scrot.sh
-
-# Change keyboard layout
-super + s
-	exec $HOME/Script/keybinding.sh
+	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
 
 #------------------------------------------------
 ## BSPWM HOTKEYS

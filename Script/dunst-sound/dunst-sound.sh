@@ -1,3 +1,3 @@
 #!/bin/bash
 
-paplay ~/Script/dunst-sound/percussion-sound.ogg
+paplay ~/Script/dunst-sound/notification-1.ogg
