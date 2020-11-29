@@ -9,15 +9,15 @@ var+=("exit bspwm")
 CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "power ")
 
 if [ "$CHOICE" = "power off" ]; then
-	alacritty -e sudo shutdown -h now
+	shutdown -h now
 fi
 
 if [ "$CHOICE" = "reboot" ]; then
-	alacritty -e sudo reboot
+	reboot
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	i3lock -c 8ec07c -f -t -n
+	i3lock -c d79921 -f -t -n
 fi
 
 if [ "$CHOICE" = "exit i3" ]; then
