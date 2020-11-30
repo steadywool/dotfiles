@@ -39,11 +39,7 @@ font:
 cursor:
   style: Block
   unfocused_hollow: false
-
-selection:
-  save_to_clipboard: false
         
 scale_with_dpi: true
-draw_bold_text_with_bright_colors: true
 window.dynamic_title: true
 live_config_reload: true

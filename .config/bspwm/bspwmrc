@@ -23,7 +23,7 @@ bspc config border_width 2
 bspc config gapless_monocle true
 bspc config borderless_monocle true
 bspc config split_ratio 0.52
-bspc config window_gap 10
+bspc config window_gap 0
 
 # Rules
 bspc rule -a discord desktop=5 focus=off follow=off
