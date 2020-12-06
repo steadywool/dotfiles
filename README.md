@@ -31,7 +31,7 @@ net-tools / acpi /
 
 ---
 #### Font
-ttf-ubuntu-font-family / ttf-dejavu /
+ttf-ubuntu-font-family /
 
 #### GTK theme
 https://github.com/Kaniville/oomox-gruvbox-theme

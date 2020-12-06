@@ -1,19 +1,25 @@
 " OTHER
+colorscheme gruvbox
 syntax enable
 set background=dark
-colorscheme gruvbox
-set relativenumber
-set smartcase
-set number
+
 set mouse=a
+set smartcase
+
+set number
+set relativenumber
 set signcolumn=yes 
+set ruler
+set cursorline
+set nowrap
+set noshowmode
 
 "-----------------------------------------------------------------
 " DEOPLETE
 let g:deoplete#enable_at_startup = 1
 
 " LIGHTLINE
-let g:lightline = {'colorscheme': 'jellybeans'}
+let g:lightline = {'colorscheme': 'seoul256'}
 
 " ALE
 let g:ale_echo_msg_error_str = 'X>'
