@@ -1,4 +1,5 @@
-" OTHER
+" Other
+let g:gruvbox_italic=1
 colorscheme gruvbox
 syntax enable
 set background=dark
@@ -15,22 +16,22 @@ set nowrap
 set noshowmode
 
 "-----------------------------------------------------------------
-" DEOPLETE
+" Deoplete
 let g:deoplete#enable_at_startup = 1
 
-" LIGHTLINE
+" Lightline
 let g:lightline = {'colorscheme': 'seoul256'}
 
-" ALE
+" Ale
 let g:ale_echo_msg_error_str = 'X>'
 let g:ale_echo_msg_warning_str = '!>'
 let g:ale_sign_error = 'X>'
 let g:ale_sign_warning = '!>'
 
-" NERDTREE
+" Nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
-" TAGBAR
+" Tagbar
 map <C-b> :TagbarToggle<CR>
 
 "-----------------------------------------------------------------
