@@ -4,7 +4,7 @@
 killall sxhkd; sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
-feh --bg-scale $HOME/Pictures/Wallpaper/flat.jpg &
+feh --bg-fill $HOME/Pictures/Wallpaper/wallpaper.jpg &
 pkill -USR1 redshift; redshift -P -O 3000 &
 
 discord --start-minimized &
