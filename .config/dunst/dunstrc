@@ -10,13 +10,13 @@ notification_height = 30
 separator_height = 1
 padding = 8
 horizontal_padding = 8
-frame_width = 1
+frame_width = 2
 separator_color = "#3c3836"
 sort = yes
 idle_threshold = 120
 
 ### Text ###
-font = Ubuntu 11
+font = Ubuntu Mono 12
 line_height = 0
 markup = full
 format = "<b>%s</b>\n%b"
@@ -38,7 +38,6 @@ max_icon_size = 32
 sticky_history = yes
 history_length = 20
 always_run_script = true
-startup_notification = false
 verbosity = mesg 
 corner_radius = 0
 
