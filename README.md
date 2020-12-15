@@ -1,4 +1,9 @@
 ---
+![](/Screenshot/screenshot_1.png)
+
+![](/Screenshot/screenshot_2.png)
+
+---
 #### CLI base
 zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
  
