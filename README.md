@@ -42,13 +42,13 @@ ttf-ubuntu-font-family /
 https://github.com/Kaniville/oomox-gruvbox-theme
 
 #### Colorscheme
-https://github.com/morhetz/gruvbox-contrib
+https://github.com/morhetz/gruvbox
 
 #### AUR manager
-https://github.com/morganamilo/paru
+https://github.com/Jguer/yay
 ```
-$ git clone https://aur.archlinux.org/paru.git
-$ cd paru
+$ git clone https://aur.archlinux.org/yay-bin.git
+$ cd yay-bin
 $ makepkg -si
 ```
 
@@ -110,8 +110,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/dense-analysis/ale
 
 - https://github.com/lilydjwg/colorizer
-
-- https://github.com/preservim/nerdtree
 
 - https://github.com/hail2u/vim-css3-syntax
 
