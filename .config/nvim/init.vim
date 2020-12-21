@@ -43,9 +43,6 @@ let g:ale_echo_msg_warning_str = '!>'
 let g:ale_sign_error = 'X>'
 let g:ale_sign_warning = '!>'
 
-" Nerdtree
-map <C-n> :NERDTreeToggle<CR>
-
 " Tagbar
 map <C-b> :TagbarToggle<CR>
 
@@ -54,7 +51,6 @@ call plug#begin()
 "Base
 Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-Plug 'preservim/nerdtree'
 Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
 Plug 'lilydjwg/colorizer'
 Plug 'majutsushi/tagbar'
