@@ -31,10 +31,10 @@ XF86AudioMute
 
 # Screenshot
 Print
-	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
+	scrot -e 'mv $f ~/Pictures/Screenshot/' && notify-send "Scrot" "Saved in $HOME/Pictures/Screenshot"
 
 super + shift + s
-	scrot -e 'mv $f ~/Pictures/' && notify-send "Scrot" "Saved in $HOME/Pictures"
+	sleep 0.5; scrot -s -e 'mv $f ~/Pictures/Screenshot/' && notify-send "Scrot" "Saved in $HOME/Pictures/Screenshot"
 
 #------------------------------------------------
 ## BSPWM HOTKEYS
