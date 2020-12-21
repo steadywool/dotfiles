@@ -1,19 +1,34 @@
-" Other
+"General
+set number
+set relativenumber
+set signcolumn=yes
+set cursorline
+set cursorcolumn
+set mouse=a
+set noshowmode
+set visualbell
+set hidden
+
+" Search
+set smartcase
+
+" Syntax & colors
 let g:gruvbox_italic=1
 colorscheme gruvbox
 syntax enable
 set background=dark
 
-set mouse=a
-set smartcase
-
-set number
-set relativenumber
-set signcolumn=yes 
-set ruler
-set cursorline
+" Indentation
 set nowrap
-set noshowmode
+set autoindent
+set smartindent
+set smarttab
+
+set shiftwidth=4
+set tabstop=4
+
+set list 
+set listchars+=tab:\┊\ ,trail:·
 
 "-----------------------------------------------------------------
 " Deoplete
