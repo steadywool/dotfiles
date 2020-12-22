@@ -1,13 +1,12 @@
-"General
+" General
 set number
 set relativenumber
-set signcolumn=yes
 set cursorline
-set cursorcolumn
 set mouse=a
 set noshowmode
 set visualbell
 set hidden
+set laststatus=2
 
 " Search
 set smartcase
@@ -22,13 +21,6 @@ set background=dark
 set nowrap
 set autoindent
 set smartindent
-set smarttab
-
-set shiftwidth=4
-set tabstop=4
-
-set list 
-set listchars+=tab:\┊\ ,trail:·
 
 "-----------------------------------------------------------------
 " Deoplete
@@ -49,11 +41,11 @@ map <C-b> :TagbarToggle<CR>
 "-----------------------------------------------------------------
 call plug#begin()
 "Base
-Plug 'itchyny/lightline.vim'
 Plug 'dense-analysis/ale'
-Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
-Plug 'lilydjwg/colorizer'
 Plug 'majutsushi/tagbar'
+Plug 'Shougo/deoplete.nvim', {'do': ':UpdateRemotePlugins'}
+Plug 'itchyny/lightline.vim'
+Plug 'lilydjwg/colorizer'
 
 "Web
 Plug 'hail2u/vim-css3-syntax'
