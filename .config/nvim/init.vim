@@ -12,15 +12,19 @@ set laststatus=2
 set smartcase
 
 " Syntax & colors
+syntax enable
+set t_Co=256
 let g:gruvbox_italic=1
 colorscheme gruvbox
-syntax enable
 set background=dark
 
 " Indentation
 set nowrap
 set autoindent
 set smartindent
+
+filetype indent on
+filetype plugin on
 
 "-----------------------------------------------------------------
 " Lightline
