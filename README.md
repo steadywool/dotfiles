@@ -78,14 +78,8 @@ ForwardToSyslog=true
 # localectl set-x11-keymap LANG
 ```
 
-#### Deoplete plugin work
-Install python-pip and enter the following command:
-```
-# pip3 install pynvim
-```
-
-#### Deoplete-clang plugin work
-Install clang and cmake
+#### Coc.nvim plugin work
+Install nodejs & yarn (or npm)
 
 #### Tagbar plugin work
 Install ctags (universal-ctags)
@@ -103,23 +97,13 @@ HandlePowerKey=ignore
 $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-- https://github.com/Shougo/deoplete.nvim
-
 - https://github.com/itchyny/lightline.vim
-
-- https://github.com/dense-analysis/ale
 
 - https://github.com/lilydjwg/colorizer
 
-- https://github.com/hail2u/vim-css3-syntax
-
-- https://github.com/othree/html5.vim
-
 - https://github.com/preservim/tagbar
 
-- https://github.com/octol/vim-cpp-enhanced-highlighting
-
-- https://github.com/deoplete-plugins/deoplete-clang
+- https://github.com/neoclide/coc.nvim
 
 #### Ranger plugins:
 - https://github.com/maximtrp/ranger-archives
