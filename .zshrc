@@ -1,28 +1,32 @@
-
 #-----------------------------------------------------------------------------
-# PLUGINS
-source $HOME/.config/zsh/plugins/uz/uz.zsh
+# PLUGINS & THEMES
+source ~/.zplug/init.zsh
 
-zadd zsh-users/zsh-syntax-highlighting
-zadd zsh-users/zsh-completions
-zadd zsh-users/zsh-autosuggestions
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "romkatv/powerlevel10k", as:theme, depth:1
 
-#-----------------------------------------------------------------------------
-# THEMES
-source $HOME/.config/zsh/themes/base-theme.zsh-theme
+zplug load
 
 #-----------------------------------------------------------------------------
 # ALIAS
-source $HOME/.config/zsh/alias/alias.zsh
+## git
+alias g='git'
+alias ga='git add'
+alias gaa='git add --all'
+alias gav='git add --verbose'
+alias gc='git commit -v'
+alias gl='git pull'
+alias gm='git merge'
+alias gp='git push'
 
 #-----------------------------------------------------------------------------
 # OTHER
 export EDITOR=nvim
 export VISUAL=nvim
 
-## history
 SAVEHIST=1000
-HISTFILE=$HOME/.config/zsh/.histfile 
 
 ## completion
 autoload -Uz compinit
@@ -36,4 +40,10 @@ if [ -z "$TMUX" ]; then
 	tmux attach -t 0 || tmux new -s 0
 fi
 
+## PowerLevel10k
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 #-----------------------------------------------------------------------------

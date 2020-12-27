@@ -36,13 +36,13 @@ net-tools / acpi /
 
 ---
 #### Font
-ttf-ubuntu-font-family /
+ttf-ubuntu-font-family / ttf-twemoji-color
 
 #### GTK theme
 https://github.com/Kaniville/oomox-gruvbox-theme
 
 #### Colorscheme
-https://github.com/morhetz/gruvbox
+https://github.com/gruvbox-community/gruvbox
 
 #### AUR manager
 https://github.com/Jguer/yay
@@ -109,10 +109,12 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/maximtrp/ranger-archives
 
 #### Zsh plugins:
-- https://github.com/Kaniville/uz
+- https://github.com/zplug/zplug
 ```
-$ git clone https://github.com/Kaniville/uz.git ~/.config/zsh/plugins/uz
+$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 ```
+
+- https://github.com/romkatv/powerlevel10k
 
 - https://github.com/zsh-users/zsh-completions
 
