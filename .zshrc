@@ -9,7 +9,7 @@ zplug load
 
 #-----------------------------------------------------------------------------
 # THEME
-PROMPT=$'%B%F{green}%n@%m %F{blue}%~ ${vcs_info_msg_0_}%{$reset_color%}$%b '
+PROMPT=$'%B%F{green}%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}$%b%E '
 
 zstyle ':vcs_info:*' formats '%F{magenta}%b%c%u%f '
 zstyle ':vcs_info:*' actionformats '%F{magenta}%a%c%u%f '
@@ -33,6 +33,7 @@ alias gp='git push'
 export EDITOR=nvim
 export VISUAL=nvim
 
+HISTSIZE=1000
 SAVEHIST=1000
 
 ## completion
