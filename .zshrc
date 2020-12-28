@@ -9,14 +9,12 @@ zplug load
 
 #-----------------------------------------------------------------------------
 # THEME
-PROMPT=$'%{\e[1;32m%}%n@%m %{\e[1;34m%}%~ %{\e[0;38m%}$%b '
-RPROMPT='${vcs_info_msg_0_}'
+PROMPT=$'%B%F{green}%n@%m %F{blue}%~ ${vcs_info_msg_0_}%{$reset_color%}$%b '
 
-zstyle ':vcs_info:*' unstagedstr '%F{red}*'
+zstyle ':vcs_info:*' formats '%F{magenta}%b%c%u%f '
+zstyle ':vcs_info:*' actionformats '%F{magenta}%a%c%u%f '
+zstyle ':vcs_info:*' unstagedstr '%F{red}!'
 zstyle ':vcs_info:*' stagedstr '%F{yellow}+'
-zstyle ':vcs_info:*' branchformat '%b%F{1}:%F{3}%r'
-zstyle ':vcs_info:*' actionformats '%F{5}%F{5}[%F{2}%b%F{3}|%F{1}%a%c%u%F{5}]%f '
-zstyle ':vcs_info:*' formats '%F{5}%F{5}[%F{2}%b%c%u%F{5}]%f '
 
 #-----------------------------------------------------------------------------
 # ALIAS
@@ -54,9 +52,9 @@ autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
-setopt prompt_subst
 precmd() {
     vcs_info
 }
+setopt prompt_subst
 
 #-----------------------------------------------------------------------------
