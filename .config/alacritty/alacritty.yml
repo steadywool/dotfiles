@@ -26,15 +26,15 @@ colors:
 
 font:
   normal:
-    family: Hack
+    family: Ubuntu Mono
     style: Regular
   bold:
-    family: Hack
+    family: Ubuntu Mono
     style: Bold
   italic:
-    family: Hack
+    family: Ubuntu Mono
     style: Italic
-  size: 6
+  size: 7
 
 cursor:
   style: Block
