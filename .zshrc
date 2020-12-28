@@ -9,10 +9,11 @@ zplug load
 
 #-----------------------------------------------------------------------------
 # THEME
-PROMPT=$'%B%F{green}%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}$%b%E '
+PROMPT=$'┌%B%F{green}%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}%b
+└%B$%b%E '
 
-zstyle ':vcs_info:*' formats '%F{magenta}%b%c%u%f '
-zstyle ':vcs_info:*' actionformats '%F{magenta}%a%c%u%f '
+zstyle ':vcs_info:*' formats '%F{magenta}%b%u%c%f %F{white}%i%f '
+zstyle ':vcs_info:*' actionformats '%F{magenta}%b%u%c%f %F{white}%i%f '
 zstyle ':vcs_info:*' unstagedstr '%F{red}!'
 zstyle ':vcs_info:*' stagedstr '%F{yellow}+'
 
@@ -33,6 +34,8 @@ alias gp='git push'
 export EDITOR=nvim
 export VISUAL=nvim
 
+## History
+HISTFILE=~/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
