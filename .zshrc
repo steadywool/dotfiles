@@ -12,14 +12,11 @@ zplug load
 PROMPT=$'%{\e[1;32m%}%n@%m %{\e[1;34m%}%~ %{\e[0;38m%}$%b '
 RPROMPT='${vcs_info_msg_0_}'
 
-zstyle ':vcs_info:*' check-for-changes true
 zstyle ':vcs_info:*' unstagedstr '%F{red}*'
 zstyle ':vcs_info:*' stagedstr '%F{yellow}+'
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
-zstyle ':vcs_info:*' actionformats \
-    '%F{5}%F{5}[%F{2}%b%F{3}|%F{1}%a%c%u%F{5}]%f '
-zstyle ':vcs_info:*' formats       \
-    '%F{5}%F{5}[%F{2}%b%c%u%F{5}]%f '
+zstyle ':vcs_info:*' branchformat '%b%F{1}:%F{3}%r'
+zstyle ':vcs_info:*' actionformats '%F{5}%F{5}[%F{2}%b%F{3}|%F{1}%a%c%u%F{5}]%f '
+zstyle ':vcs_info:*' formats '%F{5}%F{5}[%F{2}%b%c%u%F{5}]%f '
 
 #-----------------------------------------------------------------------------
 # ALIAS
@@ -55,6 +52,8 @@ fi
 ## Vcs
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' check-for-changes true
 setopt prompt_subst
 precmd() {
     vcs_info
