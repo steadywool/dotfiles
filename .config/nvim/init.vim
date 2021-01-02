@@ -3,17 +3,16 @@ set number
 set relativenumber
 set cursorline
 set mouse=a
-set noshowmode
 set visualbell
 set hidden
-set laststatus=2
 
 " Search
 set smartcase
 
 " Syntax & colors
 syntax enable
-set t_Co=256
+"set t_Co=256
+set termguicolors
 let g:gruvbox_italic=1
 colorscheme gruvbox
 set background=dark
@@ -26,10 +25,22 @@ set smartindent
 filetype indent on
 filetype plugin on
 
-"-----------------------------------------------------------------
-" Lightline
-let g:lightline = {'colorscheme': 'seoul256'}
+" Status Line
+set laststatus=2
 
+set statusline=
+set statusline+=%#PmenuSel#
+set statusline+=\ %F
+set statusline+=\ %#StatusLine#
+set statusline+=[%n]%r%m
+
+set statusline+=%=
+set statusline+=%q%w%y
+set statusline+=%#PmenuThumb#
+set statusline+=\ %l:%c
+set statusline+=\ %p%%
+
+"-----------------------------------------------------------------
 " Tagbar
 map <C-b> :TagbarToggle<CR>
 
@@ -37,7 +48,6 @@ map <C-b> :TagbarToggle<CR>
 call plug#begin()
 "Base
 Plug 'majutsushi/tagbar'
-Plug 'itchyny/lightline.vim'
 Plug 'lilydjwg/colorizer'
 
 " Completion & Linter

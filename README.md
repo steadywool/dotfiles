@@ -1,4 +1,3 @@
----
 ![](/Screenshot/screenshot_1.png)
 
 ![](/Screenshot/screenshot_2.png)
@@ -32,7 +31,7 @@ gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudi
 xorg-server / xorg-xinit / xorg-{...} (xorg-apps) / 
 
 #### Other
-net-tools / acpi /
+net-tools / acpi / imagemagick / man-db / python-pip /
 
 ---
 #### Font
@@ -96,8 +95,6 @@ HandlePowerKey=ignore
 ```
 $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
-
-- https://github.com/itchyny/lightline.vim
 
 - https://github.com/lilydjwg/colorizer
 
