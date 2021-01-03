@@ -10,7 +10,7 @@ zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
 
 #### Other
-paru / redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot /
+redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot /
 
 atool / mediainfo /
 
@@ -35,7 +35,7 @@ net-tools / acpi / imagemagick / man-db / python-pip /
 
 ---
 #### Font
-ttf-ubuntu-font-family / ttf-twemoji-color
+ttf-ubuntu-font-family /
 
 #### GTK theme
 https://github.com/Kaniville/oomox-gruvbox-theme
@@ -80,9 +80,6 @@ ForwardToSyslog=true
 #### Coc.nvim plugin work
 Install nodejs & yarn (or npm)
 
-#### Tagbar plugin work
-Install ctags (universal-ctags)
-
 #### Disable power button
 Edit this setting `/etc/systemd/logind.conf`:
 ```
@@ -97,8 +94,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 ```
 
 - https://github.com/lilydjwg/colorizer
-
-- https://github.com/preservim/tagbar
 
 - https://github.com/neoclide/coc.nvim
 

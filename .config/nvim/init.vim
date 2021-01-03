@@ -39,15 +39,11 @@ set statusline+=%q%w%y
 set statusline+=%#PmenuThumb#
 set statusline+=\ %l:%c
 set statusline+=\ %p%%
-
-"-----------------------------------------------------------------
-" Tagbar
-map <C-b> :TagbarToggle<CR>
+set statusline+=\ 
 
 "-----------------------------------------------------------------
 call plug#begin()
 "Base
-Plug 'majutsushi/tagbar'
 Plug 'lilydjwg/colorizer'
 
 " Completion & Linter
