@@ -1,8 +1,8 @@
 [bar/top]
 monitor =
 width = 100%
-height = 30
-fixed-center = true
+height = 25
+module-margin = 1
 
 background = #282828
 foreground = #ebdbb2
@@ -10,63 +10,35 @@ foreground = #ebdbb2
 font-0 = Ubuntu Mono:style=Regular:pixelsize=12
 font-1 = DejaVu Sans:style=Regular
 
-modules-left = i3 bspwm 
+modules-left = bspwm
 modules-center = 
-modules-right = pulseaudio | backlight | cpu | memory | temperature | battery | date | rofi | power |
+modules-right = pulseaudio backlight cpu memory temperature battery network date rofi power
 
 tray-position = right
 tray-padding = 1
 
 wm-restack = bspwm
 
-;---------------------------------------------------------
-[module/|]
-type = custom/text
-
-content =" | "
-content-foreground = #a89984
-
 ;--------------------------------------------------------------------
 [module/bspwm]
 type = internal/bspwm
 
+reverse-scroll = false
 pin-workspaces = true
 
-label-focused = %name% 
+label-focused = [%name%]
 label-focused-padding = 1
 
 label-occupied = %name%
-label-occupied-foreground = #a89984
 label-occupied-padding = 1
 
 label-urgent = %name%
 label-urgent-foreground = #fb4934
 label-urgent-padding = 1
 
-label-empty = *
+label-empty = %name%
 label-empty-foreground = #a89984
 label-empty-padding = 1
-
-;--------------------------------------------------------------------
-[module/i3]
-type = internal/i3
-
-pin-workspaces = true
-index-sort = true
-
-label-focused = %name%
-label-focused-padding = 1
-
-label-visible = %name%
-label-visible-padding = 1
-
-label-unfocused = %name%
-label-unfocused-foreground = #a89984 
-label-unfocused-padding = 1
-
-label-urgent = %name%
-label-urgent-foreground = #fb4934
-label-urgent-padding = 1
 
 ;-----------------------------------------------------------------
 [module/pulseaudio]
@@ -74,8 +46,8 @@ type = internal/pulseaudio
 
 format-volume = <label-volume>
 
-label-volume = "VOL %percentage%%"
-label-muted = "VOL muted"
+label-volume = "[VOL %percentage%%]"
+label-muted = "[VOL muted]"
 label-muted-foreground = #a89984
 
 ;----------------------------------------------------------
@@ -84,8 +56,8 @@ type = internal/alsa
 
 format-volume = <label-volume>
 
-label-volume ="VOL %percentage%%"
-label-muted ="VOL muted" 
+label-volume ="[VOL %percentage%%]"
+label-muted ="[VOL muted]" 
 label-muted-foreground = #a89984
 
 ;---------------------------------------------------------
@@ -96,35 +68,35 @@ type = internal/backlight
 card = intel_backlight
 
 format = <label>
-label = "CONT %percentage%%"
+label = "[CONT %percentage%%]"
 
 ;---------------------------------------------------------
 [module/cpu]
 type = internal/cpu
 
-interval = 2
+interval = 3
 
 format = <label>
-label = "CPU %percentage%%"
+label = "[CPU %percentage%%]"
 
 ;---------------------------------------------------------
 [module/memory]
 type = internal/memory
 
-interval = 2
+interval = 3
 
 format= <label>
-label = "RAM %percentage_used%%"
+label = "[RAM %percentage_used%%]"
  
 ;---------------------------------------------------------
 [module/temperature]
 type = internal/temperature
 
-interval = 2
+interval = 3
 thermal-zone = 0
 
 format =<label>
-label = "TEMP %temperature-c%"
+label = "[TEMP %temperature-c%]"
 
 ;---------------------------------------------------------
 [module/battery]
@@ -137,15 +109,33 @@ battery = BAT0
 adapter = ADP1
 
 format-charging = <label-charging>
-label-charging = "BAT %percentage%%" 
+label-charging = "[BAT %percentage%%]" 
 format-charging-foreground = #b8bb26
 
 format-discharging = <label-discharging>
-label-discharging = "BAT %percentage%%" 
+label-discharging = "[BAT %percentage%%]" 
 format-discharging-foreground = #fb4934
 
 format-full = <label-full>
-label-full = "BAT %percentage%%"
+label-full = "[BAT %percentage%%]"
+
+;---------------------------------------------------------
+[module/network]
+type = internal/network
+
+interface = enp0s21f0u1c2
+interval = 3
+
+unknown-as-up = true
+
+
+format-connected = <label-connected>
+label-connected = "[NET connected]"
+format-connected-foreground = #b8bb26
+
+format-disconnected = <label-disconnected>
+label-disconnected = "[NET not connected]"
+format-disconnected-foreground = #fb4934
 
 ;---------------------------------------------------------
 [module/date]
@@ -156,13 +146,13 @@ interval = 1
 format = <label>
 label= %date%
 
-date = "DATE %a %d %b %Y %H:%M:%S"
+date = "[DATE %a %b %d %H:%M:%S %Y]"
 
 ;---------------------------------------------------------
 [module/rofi]
 type = custom/text
 
-content = "ROFI"
+content = "[rofi]"
 
 click-left= rofi -show drun
 click-right= rofi -show run
@@ -171,7 +161,7 @@ click-right= rofi -show run
 [module/power]
 type = custom/text
 
-content = "POWER"
+content = "[power]"
 content-foreground = #fb4934
 click-left= ~/Script/power-menu.sh
 
