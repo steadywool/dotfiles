@@ -1,6 +1,6 @@
 configuration {
 	modi: "drun,run";
-	drun-display-format: "{name}" ;
+	drun-display-format: "{name}";
 	display-drun: "drun ";
 	display-run: "run ";
 }

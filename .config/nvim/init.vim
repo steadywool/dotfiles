@@ -21,6 +21,8 @@ set background=dark
 set nowrap
 set autoindent
 set smartindent
+set list
+set listchars=tab:>-,trail:-,nbsp:+
 
 filetype indent on
 filetype plugin on
