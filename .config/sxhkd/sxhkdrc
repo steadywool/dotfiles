@@ -9,7 +9,7 @@ super + x
 
 # Rofi
 super + d
-	rofi -show drun 
+	rofi -show drun
 
 # Ranger file manager
 super + o
@@ -52,17 +52,13 @@ super + m
 
 #-------------------------------------------------
 ## STATE/FlAGS
-# Tiled / pseudo tiled
-super + {t,shift + t}
-	bspc node -t {tiled,pseudo_tiled}
-
-# Floating / fullscreen
-super + {f,shift + f}
-	bspc node -t {floating,fullscreen}
+# Tiled / pseudo tiled / Floating / Fulscreen
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 # Node flags
-super + ctrl + {s,l}
-	bspc node -g {sticky,locked}
+super + ctrl + {l,s,p}
+	bspc node -g {locked,sticky,private}
 
 #-------------------------------------------------
 ## FOCUS/SWAP

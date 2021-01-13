@@ -64,7 +64,7 @@ label-muted-foreground = #a89984
 [module/backlight]
 type = internal/backlight
 
-;$ ls -1 /sys/class/backlight/
+;$ ls /sys/class/backlight/
 card = intel_backlight
 
 format = <label>
@@ -104,7 +104,7 @@ type = internal/battery
 
 full-at = 99
 
-;$ ls -1 /sys/class/power_supply/
+;$ ls /sys/class/power_supply/
 battery = BAT0
 adapter = ADP1
 
@@ -123,11 +123,10 @@ label-full = "[BAT %percentage%%]"
 [module/network]
 type = internal/network
 
-interface = enp0s21f0u1c2
+interface =
 interval = 3
 
 unknown-as-up = true
-
 
 format-connected = <label-connected>
 label-connected = "[NET connected]"
