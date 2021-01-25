@@ -28,7 +28,7 @@ grub / os-prober / efibootmgr (uefi) /
 gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez /
 
 #### GUI
-xorg-server / xorg-xinit / xorg-{...} (xorg-apps) / 
+xorg-server / xorg-xinit / xorg-{...} (xorg-apps) /
 
 #### Other
 net-tools / acpi / imagemagick / man-db / python-pip /
