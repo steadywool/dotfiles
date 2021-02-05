@@ -11,11 +11,11 @@ set smartcase
 
 " Syntax & colors
 syntax enable
-set t_Co=256
+"set t_Co=256
+set termguicolors
 
 let g:gruvbox_italic=1
 colorscheme gruvbox
-set background=dark
 
 " Indentation
 set nowrap
@@ -47,6 +47,7 @@ set statusline+=\
 call plug#begin()
 "Base
 Plug 'lilydjwg/colorizer'
+Plug 'chriskempson/base16-vim'
 
 " Completion & Linter
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
