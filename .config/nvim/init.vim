@@ -47,7 +47,6 @@ set statusline+=\
 call plug#begin()
 "Base
 Plug 'lilydjwg/colorizer'
-Plug 'chriskempson/base16-vim'
 
 " Completion & Linter
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
