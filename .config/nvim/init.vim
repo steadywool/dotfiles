@@ -21,6 +21,7 @@ colorscheme gruvbox
 set nowrap
 set autoindent
 set smartindent
+
 set list
 set listchars=tab:>-,trail:-,nbsp:+
 
