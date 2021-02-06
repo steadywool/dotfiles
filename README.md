@@ -37,9 +37,6 @@ net-tools / acpi / imagemagick / man-db / python-pip /
 #### Font
 ttf-ubuntu-font-family /
 
-#### GTK theme
-https://github.com/Kaniville/oomox-gruvbox-theme
-
 #### Colorscheme
 https://github.com/gruvbox-community/gruvbox
 
