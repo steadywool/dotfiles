@@ -10,8 +10,8 @@ notification_height = 30
 separator_height = 1
 padding = 8
 horizontal_padding = 8
-frame_width = 2
-separator_color = "#3c3836"
+frame_width = 1
+separator_color = "#585858"
 sort = yes
 idle_threshold = 120
 
@@ -52,21 +52,21 @@ summary = "*"
 script = ~/Script/dunst-sound/dunst-sound.sh
 
 [urgency_low]
-background = "#282828"
-foreground = "#ebdbb2"
-frame_color = "#98971a"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#a1b56c"
 timeout = 5
 
 [urgency_normal]
-background = "#282828"
-foreground = "#ebdbb2"
-frame_color = "#d79921"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#f7ca88"
 timeout = 5
 
 [urgency_critical]
-background = "#282828"
-foreground = "#ebdbb2"
-frame_color = "#cc241d"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#ab4642"
 timeout = 0
 
 # vim: ft=cfg

@@ -6,9 +6,9 @@ configuration {
 }
 
 *{
-	highlight: Bold #fb4934;
-	text-color: #ebdbb2;
-	background-color: #282828;
+	highlight: Bold #ab4642;
+	text-color: #d8d8d8;
+	background-color: #181818;
 	font: "Ubuntu Mono 12";
 }
 
@@ -33,10 +33,10 @@ listview {
 }
 
 element {
-	text-color: #a89984;
+	text-color: #585858;
 }
 
 element selected {
-	text-color: #ebdbb2;
+	text-color: #d8d8d8;
 }
 

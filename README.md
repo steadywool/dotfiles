@@ -1,44 +1,39 @@
-![](/Screenshot/screenshot_1.png)
-
-![](/Screenshot/screenshot_2.png)
-
----
 #### CLI base
-zsh / tmux / neovim / ranger / mpv / ufw / w3m / htop /
+zsh / tmux / neovim / ranger / ufw / htop
  
 #### GUI base
-ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / feh /
+ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot /
+redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot / mpv / feh
 
-atool / mediainfo /
+atool / mediainfo
 
 ---
 #### Base
-base / linux-firmware / linux(-lts) / base-devel /
+base / linux-firmware / linux(-lts) / base-devel
 
 #### Optionnal
-zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / $EDITOR /
+zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / $EDITOR
 
 #### Grub
-grub / os-prober / efibootmgr (uefi) /
+grub / os-prober / efibootmgr (uefi)
 
 #### Media
-gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez /
+gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez
 
 #### GUI
-xorg-server / xorg-xinit / xorg-{...} (xorg-apps) /
+xorg-server / xorg-xinit / xorg-{...} (xorg-apps)
 
 #### Other
-net-tools / acpi / imagemagick / man-db / python-pip /
+net-tools / acpi / imagemagick / man-db / python-pip
 
 ---
 #### Font
-ttf-ubuntu-font-family /
+ttf-ubuntu-font-family
 
 #### Colorscheme
-https://github.com/gruvbox-community/gruvbox
+https://github.com/chriskempson/base16 (default dark)
 
 #### AUR manager
 https://github.com/Jguer/yay
