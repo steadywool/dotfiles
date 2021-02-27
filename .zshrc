@@ -46,6 +46,11 @@ zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
 
+## tmux
+if [ -z "$TMUX" ]; then
+	tmux attach -t 0 || tmux new -s 0
+fi
+
 ## Vcs
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
