@@ -2,7 +2,6 @@
 source ~/.zplug/init.zsh
 
 zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting"
 
 zplug load
@@ -36,8 +35,8 @@ export VISUAL=nvim
 
 ## History
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100
+SAVEHIST=100
 
 ## completion
 autoload -Uz compinit
@@ -45,11 +44,6 @@ compinit
 zstyle ':completion:*' menu select
 setopt COMPLETE_ALIASES
 zstyle ':completion::complete:*' gain-privileges 1
-
-## tmux
-if [ -z "$TMUX" ]; then
-	tmux attach -t 0 || tmux new -s 0
-fi
 
 ## Vcs
 autoload -Uz vcs_info

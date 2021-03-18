@@ -36,10 +36,10 @@ ttf-ubuntu-font-family
 https://github.com/chriskempson/base16 (default dark)
 
 #### AUR manager
-https://github.com/Jguer/yay
+https://github.com/morganamilo/paru
 ```
-$ git clone https://aur.archlinux.org/yay-bin.git
-$ cd yay-bin
+$ git clone https://aur.archlinux.org/paru.git
+$ cd paru
 $ makepkg -si
 ```
 
@@ -99,7 +99,5 @@ $ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/inst
 ```
 
 - https://github.com/zsh-users/zsh-completions
-
-- https://github.com/zsh-users/zsh-autosuggestions 
 
 - https://github.com/zsh-users/zsh-syntax-highlighting
