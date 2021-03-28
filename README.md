@@ -1,5 +1,5 @@
 #### CLI base
-zsh / tmux / neovim / ranger / ufw / htop
+zsh / tmux / neovim / ranger / ufw / htop / doas
  
 #### GUI base
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
@@ -76,7 +76,14 @@ Install nodejs & yarn (or npm)
 Edit this setting `/etc/systemd/logind.conf`:
 ```
 HandlePowerKey=ignore
-``` 
+```
+
+#### Use doas with paru
+Edit this setting `/etc/paru.conf`:
+```
+[bin]
+Sudo = doas
+```
 
 ---
 #### Vim plugins
