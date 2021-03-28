@@ -98,4 +98,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 $ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 ```
 
+- https://github.com/zsh-users/zsh-completions
+
 - https://github.com/zsh-users/zsh-syntax-highlighting
