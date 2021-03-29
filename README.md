@@ -5,28 +5,23 @@ zsh / tmux / neovim / ranger / ufw / htop / doas
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot / mpv / feh
-
-atool / mediainfo
+redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot / mpv / feh / atool
 
 ---
 #### Base
-base / linux-firmware / linux(-lts) / base-devel
+base / base-devel / linux-firmware / linux(-lts)
 
 #### Optionnal
-zip / unzip / unrar / p7zip / alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / bash-completion / networkmanager / $EDITOR
+alsa-utils / syslog-ng / mtools / dosfstools / lsb-release / ntfs-3g / exfat-utils / $EDITOR
+
+#### Archiving
+zip / unzip / unrar / p7zip
 
 #### Grub
 grub / os-prober / efibootmgr (uefi)
 
-#### Media
-gst-plugins-{...} / xf86-video-vesa (cf archlinux wiki about driver) / pulseaudio-{...} / bluez
-
-#### GUI
-xorg-server / xorg-xinit / xorg-{...} (xorg-apps)
-
 #### Other
-net-tools / acpi / imagemagick / man-db / python-pip
+net-tools / acpi / imagemagick / man-db / python-pip / networkmanager
 
 ---
 #### Font
@@ -95,9 +90,6 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 - https://github.com/lilydjwg/colorizer
 
 - https://github.com/neoclide/coc.nvim
-
-#### Ranger plugins:
-- https://github.com/maximtrp/ranger-archives
 
 #### Zsh plugins:
 - https://github.com/zplug/zplug
