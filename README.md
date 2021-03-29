@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop / doas
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-redshift / arch-audit / git / curl / ntp / tlp / udisks2 / scrot / mpv / feh / atool
+redshift / arch-audit / git / curl / udisks2 / scrot / mpv / feh / atool
 
 ---
 #### Base
@@ -21,7 +21,7 @@ zip / unzip / unrar / p7zip
 grub / os-prober / efibootmgr (uefi)
 
 #### Other
-net-tools / acpi / imagemagick / man-db / python-pip / networkmanager
+net-tools / acpi / imagemagick / man-db / networkmanager / ntp / tlp
 
 ---
 #### Font
