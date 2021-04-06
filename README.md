@@ -2,10 +2,10 @@
 zsh / tmux / neovim / ranger / ufw / htop / doas
  
 #### GUI base
-ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
+ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / cmst
 
 #### Other
-redshift / arch-audit / git / curl / udisks2 / scrot / mpv / feh / atool
+redshift / git / curl / udisks2 / scrot / mpv / feh / atool / connman
 
 ---
 #### Base
@@ -21,7 +21,7 @@ zip / unzip / unrar / p7zip
 grub / os-prober / efibootmgr (uefi)
 
 #### Other
-net-tools / acpi / imagemagick / man-db / networkmanager / ntp / tlp
+net-tools / acpi / imagemagick / man-db / ntp / tlp / iwd / arch-audit
 
 ---
 #### Font
@@ -78,6 +78,11 @@ Edit this setting `/etc/paru.conf`:
 ```
 [bin]
 Sudo = doas
+```
+
+### Activate connman, ufw & ntp at launch
+```
+# systemctl enable connman ufw ntpd
 ```
 
 ---
