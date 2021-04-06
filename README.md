@@ -1,11 +1,11 @@
 #### CLI base
-zsh / tmux / neovim / ranger / ufw / htop / doas
+zsh / tmux / neovim / ranger / ufw / htop / doas / connman
  
 #### GUI base
-ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock / cmst
+ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-redshift / git / curl / udisks2 / scrot / mpv / feh / atool / connman
+redshift / git / curl / udisks2 / scrot / mpv / feh / atool / cmst
 
 ---
 #### Base
@@ -80,7 +80,7 @@ Edit this setting `/etc/paru.conf`:
 Sudo = doas
 ```
 
-### Activate connman, ufw & ntp at launch
+#### Activate connman, ufw & ntp at launch
 ```
 # systemctl enable connman ufw ntpd
 ```
