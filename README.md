@@ -21,7 +21,7 @@ zip / unzip / unrar / p7zip
 grub / os-prober / efibootmgr (uefi)
 
 #### Other
-net-tools / acpi / imagemagick / man-db / ntp / tlp / iwd / arch-audit
+net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / arch-audit
 
 ---
 #### Font
