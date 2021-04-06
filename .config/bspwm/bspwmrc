@@ -4,11 +4,12 @@
 killall sxhkd; sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
+killall cmst; cmst -w 3 -m -n &
 pkill -USR1 redshift; redshift -P -O 3000 &
 
 feh --bg-fill ~/Pictures/Wallpaper/sufokia.jpg
 discord --start-minimized &
-nm-applet &
+xrandr --auto &
 
 # monitor
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
@@ -26,4 +27,5 @@ bspc config window_gap 0
 
 # Rules
 bspc rule -a firefox desktop=3
+bspc rule -a Chromium desktop=3
 bspc rule -a discord desktop=5 focus=off follow=off
