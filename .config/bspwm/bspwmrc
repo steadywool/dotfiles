@@ -9,7 +9,6 @@ pkill -USR1 redshift; redshift -P -O 3000 &
 
 feh --bg-fill ~/Pictures/Wallpaper/sufokia.jpg
 discord --start-minimized &
-xrandr --auto &
 
 # monitor
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0

@@ -85,6 +85,17 @@ Sudo = doas
 # systemctl enable connman ufw ntpd
 ```
 
+#### Disable Grub 2 Submenu
+Edit this setting `/etc/default/grub`
+```
+GRUB_DISABLE_SUBMENU=y
+```
+
+#### Generate Grub 2 config
+```
+# grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ---
 #### Vim plugins
 - https://github.com/junegunn/vim-plug
