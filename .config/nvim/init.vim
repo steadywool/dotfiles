@@ -1,3 +1,13 @@
+"Plugins
+call plug#begin()
+
+Plug 'lilydjwg/colorizer'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
+
+"-----------------------------------------------------------------
 " General
 set number
 set relativenumber
@@ -13,9 +23,10 @@ set smartcase
 syntax enable
 "set t_Co=256
 set termguicolors
+colorscheme dracula
 
 " Indentation
-set nowrap
+" set nowrap
 set autoindent
 set smartindent
 
@@ -40,15 +51,5 @@ set statusline+=%#PmenuThumb#
 set statusline+=\ %l:%c
 set statusline+=\ %p%%
 set statusline+=\ 
-
-"-----------------------------------------------------------------
-call plug#begin()
-"Base
-Plug 'lilydjwg/colorizer'
-
-" Completion & Linter
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-call plug#end()
 
 "-----------------------------------------------------------------
