@@ -29,8 +29,8 @@ fi
 
 ## History
 HISTFILE=~/.zsh_history
-HISTSIZE=100
-SAVEHIST=100
+HISTSIZE=500
+SAVEHIST=500
 
 ## completion
 autoload -Uz compinit
