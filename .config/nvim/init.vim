@@ -1,7 +1,6 @@
 "Plugins
 call plug#begin()
 
-Plug 'lilydjwg/colorizer'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
