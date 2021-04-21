@@ -34,7 +34,7 @@ font:
   italic:
     family: Ubuntu Mono
     style: Italic
-  size: 7
+  size: 7.5
 
 cursor:
   style: Block

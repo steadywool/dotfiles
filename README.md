@@ -1,5 +1,5 @@
 #### CLI base
-zsh / tmux / neovim / ranger / ufw / htop / doas / connman
+zsh / tmux / neovim / ranger / ufw / htop / connman
  
 #### GUI base
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
@@ -12,17 +12,17 @@ redshift / git / scrot / mpv / feh / cmst / paru
 base / base-devel / linux-firmware / linux(-lts)
 
 #### Disks
-ntfs-3g / exfat-utils / dosfstools / mtools
+ntfs-3g / exfat-utils / dosfstools
 
 #### Archiving
 zip / unzip / unrar / p7zip
 
-#### Grub
-grub / os-prober / efibootmgr (uefi)
+#### Boot loader
+os-prober / efibootmgr (uefi)
 
 ---
 #### Other
-alsa-utils / net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / udisks2 / atool
+alsa-utils / net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / udisks2 / atool / xdg-user-dirs / ffmpeg
 
 ---
 #### Change shell
@@ -47,24 +47,6 @@ Install nodejs & yarn (or npm)
 Edit this setting `/etc/systemd/logind.conf`:
 ```
 HandlePowerKey=ignore
-```
-
-#### Use doas with paru
-Edit this setting `/etc/paru.conf`:
-```
-[bin]
-Sudo = doas
-```
-
-#### Activate connman, ufw & ntp at launch
-```
-# systemctl enable connman ufw ntpd
-```
-
-#### Disable Grub 2 Submenu
-Edit this setting `/etc/default/grub`
-```
-GRUB_DISABLE_SUBMENU=y
 ```
 
 #### Generate Grub 2 config
