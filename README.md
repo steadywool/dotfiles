@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop / connman
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-redshift / git / scrot / mpv / feh / cmst / paru
+git / scrot / mpv / feh / cmst / paru
 
 ---
 #### Base
@@ -18,7 +18,7 @@ ntfs-3g / exfat-utils / dosfstools
 zip / unzip / unrar / p7zip
 
 #### Boot loader
-os-prober / efibootmgr (uefi)
+os-prober / efibootmgr (uefi) / grub (or other)
 
 ---
 #### Other
