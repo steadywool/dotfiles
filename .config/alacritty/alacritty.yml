@@ -26,20 +26,20 @@ colors:
 
 font:
   normal:
-    family: Ubuntu Mono
+    family: Anonymous Pro Minus
     style: Regular
   bold:
-    family: Ubuntu Mono
+    family: Anonymous Pro Minus
     style: Bold
   italic:
-    family: Ubuntu Mono
+    family: Anonymous Pro Minus
     style: Italic
   size: 7.5
 
 cursor:
   style: Block
   unfocused_hollow: false
-        
+
 scale_with_dpi: true
 window.dynamic_title: true
 live_config_reload: true

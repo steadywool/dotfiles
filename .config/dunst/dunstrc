@@ -16,7 +16,7 @@ sort = yes
 idle_threshold = 120
 
 ### Text ###
-font = Ubuntu Mono 10
+font = Anonymous pro Minus 10
 line_height = 0
 markup = full
 format = "<b>%s</b>\n%b"
@@ -50,13 +50,13 @@ mouse_right_click = close_all
 [urgency_low]
 background = "#181818"
 foreground = "#d8d8d8"
-frame_color = "#a1b56c"
+frame_color = "#7cafc2"
 timeout = 5
 
 [urgency_normal]
 background = "#181818"
 foreground = "#d8d8d8"
-frame_color = "#f7ca88"
+frame_color = "#a1b56c"
 timeout = 5
 
 [urgency_critical]

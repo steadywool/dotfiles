@@ -1,7 +1,7 @@
 "Plugins
 call plug#begin()
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
@@ -22,7 +22,7 @@ set smartcase
 syntax enable
 "set t_Co=256
 set termguicolors
-colorscheme dracula
+colorscheme base16-default-dark
 
 " Indentation
 " set nowrap
@@ -37,18 +37,6 @@ filetype plugin on
 
 " Status Line
 set laststatus=2
-set statusline=
-
-set statusline+=%#PmenuSel#
-set statusline+=\ %F
-set statusline+=\ %#StatusLine#
-set statusline+=[%n]%r%m
-
-set statusline+=%=
-set statusline+=%q%w%y
-set statusline+=%#PmenuThumb#
-set statusline+=\ %l:%c
-set statusline+=\ %p%%
-set statusline+=\ 
+set statusline=\ %F\ [%n]%r%m%=%q%w%y\ %l:%c\ %p%%\ 
 
 "-----------------------------------------------------------------

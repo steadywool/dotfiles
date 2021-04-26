@@ -9,7 +9,7 @@ configuration {
 	highlight: Bold #ab4642;
 	text-color: #d8d8d8;
 	background-color: #181818;
-	font: "Ubuntu Mono 10";
+	font: "Anonymous Pro Minus 10";
 }
 
 window {

@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop / connman
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-git / scrot / mpv / feh / cmst / paru
+git / scrot / mpv / feh / cmst / paru / ttf-anonymous-pro
 
 ---
 #### Base
