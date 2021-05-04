@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop / connman
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-git / scrot / mpv / feh / cmst / paru / ttf-anonymous-pro
+git / scrot / mpv / feh / cmst / paru / ttf-anonymous-pro / atool
 
 ---
 #### Base
@@ -22,7 +22,7 @@ os-prober / efibootmgr (uefi) / grub (or other)
 
 ---
 #### Other
-alsa-utils / net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / udisks2 / atool / xdg-user-dirs / ffmpeg
+alsa-utils / net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / udisks2 / xdg-user-dirs / ffmpeg
 
 ---
 #### Change shell

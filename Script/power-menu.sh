@@ -17,7 +17,7 @@ if [ "$CHOICE" = "reboot" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	i3lock -c 7cafc2 -f -t -n
+	systemctl suspend && i3lock -c 7cafc2 -f -t -n
 fi
 
 if [ "$CHOICE" = "exit i3" ]; then
