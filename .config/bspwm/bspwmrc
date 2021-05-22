@@ -5,7 +5,6 @@ killall sxhkd; sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
 killall cmst; cmst -w 3 -m -n &
-pkill -USR1 redshift; redshift -P -O 3000 &
 
 xrandr --auto
 if xrandr -q | grep 'HDMI-1 connected'; then

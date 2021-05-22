@@ -16,6 +16,8 @@ alias gl='git pull'
 alias gm='git merge'
 alias gp='git push'
 
+# brightness
+alias br='sudo $HOME/Script/brightness.sh'
 #-----------------------------------------------------------------------------
 # ZSH
 ## Default
