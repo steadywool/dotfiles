@@ -72,3 +72,5 @@ $ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/inst
 - https://github.com/zsh-users/zsh-completions
 
 - https://github.com/zsh-users/zsh-syntax-highlighting
+
+- https://github.com/zsh-users/zsh-autosuggestions
