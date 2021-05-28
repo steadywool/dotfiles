@@ -4,15 +4,16 @@
 killall sxhkd; sxhkd -m 1 &
 killall dunst; dunst &
 killall polybar; polybar -r top &
-killall cmst; cmst -w 3 -m -n &
+killall cmst; cmst -w 3 -m &
 
 xrandr --auto
 if xrandr -q | grep 'HDMI-1 connected'; then
 	xrandr --output HDMI-1 --scale-from 1366x768 --same-as eDP-1
 fi
 
-feh --bg-fill ~/Pictures/Wallpaper/forest.jpg
+feh --bg-fill ~/Pictures/Wallpaper/sunrise.jpg &
 discord --start-minimized &
+redshift -x; redshift -P -O 3500 &
 
 # monitor
 bspc monitor -d 1 2 3 4 5 6 7 8 9 0
