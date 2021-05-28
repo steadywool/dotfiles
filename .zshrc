@@ -16,9 +16,11 @@ alias gc='git commit -v'
 alias gl='git pull'
 alias gm='git merge'
 alias gp='git push'
+alias glog='git log --pretty="%h - %s - %ad" --relative-date -5'
 
 # brightness
 alias br='sudo $HOME/Script/brightness.sh'
+
 #-----------------------------------------------------------------------------
 # ZSH
 ## Default
@@ -45,19 +47,7 @@ zstyle ':completion::complete:*' gain-privileges 1
 ## Prompt
 autoload -Uz promptinit
 promptinit
-PROMPT=$'┌%B%F{green}%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}%b
+PROMPT=$'┌%B%F{green}%n@%m%f %F{blue}%~%f%b
 └%B$%b%E '
-
-## Vcs
-autoload -Uz vcs_info
-precmd() {vcs_info}
-setopt prompt_subst
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' get-revision true
-zstyle ':vcs_info:*' check-for-changes true
-zstyle ':vcs_info:*' formats '%F{magenta}%b%u%c%f %F{white}%i%f '
-zstyle ':vcs_info:*' actionformats '%F{magenta}%b%u%c%f %F{white}%i%f '
-zstyle ':vcs_info:*' unstagedstr '%F{red}!'
-zstyle ':vcs_info:*' stagedstr '%F{yellow}+'
 
 #-----------------------------------------------------------------------------

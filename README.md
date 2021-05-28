@@ -1,6 +1,6 @@
 #### CLI base
 zsh / tmux / neovim / ranger / ufw / htop / connman
- 
+
 #### GUI base
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
