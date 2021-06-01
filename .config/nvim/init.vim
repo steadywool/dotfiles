@@ -9,7 +9,7 @@ call plug#end()
 "-----------------------------------------------------------------
 " General
 set number
-set relativenumber
+"set relativenumber
 set cursorline
 set mouse=a
 set visualbell

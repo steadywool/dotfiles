@@ -37,8 +37,10 @@ font:
   size: 7.5
 
 cursor:
-  style: Block
-  unfocused_hollow: false
+  style:
+    shape: Block
+    blinking: Always
+  unfocused_hollow: true
 
 scale_with_dpi: true
 window.dynamic_title: true
