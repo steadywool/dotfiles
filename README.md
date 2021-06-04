@@ -9,7 +9,7 @@ git / scrot / mpv / feh / cmst / paru / ttf-anonymous-pro / atool
 
 ---
 #### Base
-base / base-devel / linux-firmware / linux(-lts)
+base / base-devel / linux-firmware / linux{-lts}
 
 #### Disks
 ntfs-3g / exfat-utils / dosfstools
@@ -19,6 +19,9 @@ zip / unzip / unrar / p7zip
 
 #### Boot loader
 os-prober / efibootmgr (uefi) / grub (or other)
+
+#### Printer
+cups / hplip (for HP printer) / foomatic-db{-nonfree}
 
 ---
 #### Other
