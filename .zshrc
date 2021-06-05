@@ -16,10 +16,13 @@ alias gc='git commit -v'
 alias gl='git pull'
 alias gm='git merge'
 alias gp='git push'
-alias glog='git log --pretty="%h - %s - %ad" --relative-date -5'
+alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
 # brightness
 alias br='sudo $HOME/Script/brightness.sh'
+
+# pacman
+alias fetch='pacman -Q | wc -l'
 
 #-----------------------------------------------------------------------------
 # ZSH
@@ -31,6 +34,10 @@ export VISUAL=nvim
 if [ -z "$TMUX" ]; then
 	tmux attach -t 0 || tmux new -s 0
 fi
+
+# Vi mode
+bindkey -v
+export KEYTIMEOUT=1
 
 ## History
 HISTFILE=~/.zsh_history

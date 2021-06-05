@@ -1,11 +1,11 @@
 #### CLI base
-zsh / tmux / neovim / ranger / ufw / htop / connman
+zsh / tmux / neovim / ranger / ufw / htop
 
 #### GUI base
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-git / scrot / mpv / feh / cmst / paru / ttf-anonymous-pro / atool
+git / scrot / mpv / feh / paru / ttf-anonymous-pro / atool
 
 ---
 #### Base
@@ -23,9 +23,11 @@ os-prober / efibootmgr (uefi) / grub (or other)
 #### Printer
 cups / hplip (for HP printer) / foomatic-db{-nonfree}
 
----
+#### Network
+networkmanager / connman (alternative) / iwd / wpa_supplicant
+
 #### Other
-alsa-utils / net-tools / acpi / imagemagick / man-db / ntp / tlp / wpa_supplicant / udisks2 / xdg-user-dirs / ffmpeg
+alsa-utils / net-tools / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg
 
 ---
 #### Change shell

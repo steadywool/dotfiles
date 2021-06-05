@@ -12,7 +12,7 @@ font-1 = DejaVu Sans:style=Regular
 
 modules-left = bspwm
 modules-center =
-modules-right = pulseaudio backlight cpu memory battery date rofi power
+modules-right = pulseaudio backlight cpu battery date rofi power
 
 tray-position = right
 tray-padding = 1
@@ -78,15 +78,6 @@ interval = 3
 
 format = <label>
 label = "[CPU %percentage%%]"
-
-;---------------------------------------------------------
-[module/memory]
-type = internal/memory
-
-interval = 3
-
-format= <label>
-label = "[RAM %percentage_used%%]"
 
 ;---------------------------------------------------------
 [module/battery]
