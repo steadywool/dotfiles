@@ -24,6 +24,9 @@ alias br='sudo $HOME/Script/brightness.sh'
 # pacman
 alias fetch='pacman -Q | wc -l'
 
+# ping
+alias aping='ping -c 1 www.gentoo.org'
+
 #-----------------------------------------------------------------------------
 # ZSH
 ## Default
@@ -32,7 +35,7 @@ export VISUAL=nvim
 
 ## Tmux
 if [ -z "$TMUX" ]; then
-	tmux attach -t 0 || tmux new -s 0
+	tmux attach -t S0 || tmux new -s S0
 fi
 
 # Vi mode
@@ -56,5 +59,3 @@ autoload -Uz promptinit
 promptinit
 PROMPT=$'┌%B%F{green}%n@%m%f %F{blue}%~%f%b
 └%B$%b%E '
-
-#-----------------------------------------------------------------------------

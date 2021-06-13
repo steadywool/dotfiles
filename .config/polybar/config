@@ -1,7 +1,7 @@
 [bar/top]
 monitor = eDP-1
 width = 100%
-height = 25
+height = 22
 module-margin = 1
 
 background = #181818
@@ -12,19 +12,13 @@ font-1 = DejaVu Sans:style=Regular
 
 modules-left = bspwm
 modules-center =
-modules-right = pulseaudio backlight cpu battery date rofi power
-
-tray-position = right
-tray-padding = 1
+modules-right = pulseaudio battery date power
 
 wm-restack = bspwm
 
 ;--------------------------------------------------------------------
 [module/bspwm]
 type = internal/bspwm
-
-reverse-scroll = false
-pin-workspaces = true
 
 label-focused = [%name%]
 label-focused-padding = 1
@@ -51,33 +45,14 @@ label-muted = "[VOL muted]"
 label-muted-foreground = #585858
 
 ;----------------------------------------------------------
-[module/alsa]
-type = internal/alsa
+;[module/alsa]
+;type = internal/alsa
 
-format-volume = <label-volume>
+;format-volume = <label-volume>
 
-label-volume ="[VOL %percentage%%]"
-label-muted ="[VOL muted]" 
-label-muted-foreground = #585858
-
-;---------------------------------------------------------
-[module/backlight]
-type = internal/backlight
-
-;$ ls /sys/class/backlight/
-card = intel_backlight
-
-format = <label>
-label = "[CONT %percentage%%]"
-
-;---------------------------------------------------------
-[module/cpu]
-type = internal/cpu
-
-interval = 3
-
-format = <label>
-label = "[CPU %percentage%%]"
+;label-volume ="[VOL %percentage%%]"
+;label-muted ="[VOL muted]" 
+;label-muted-foreground = #585858
 
 ;---------------------------------------------------------
 [module/battery]
@@ -109,16 +84,7 @@ interval = 1
 format = <label>
 label= %date%
 
-date = "[%a %b %d %H:%M:%S %Y]"
-
-;---------------------------------------------------------
-[module/rofi]
-type = custom/text
-
-content = "[rofi]"
-
-click-left= rofi -show drun
-click-right= rofi -show run
+date = "[%a %d %b %Y %H:%M]"
 
 ;---------------------------------------------------------
 [module/power]
