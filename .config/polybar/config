@@ -12,7 +12,10 @@ font-1 = DejaVu Sans:style=Regular
 
 modules-left = bspwm
 modules-center =
-modules-right = pulseaudio battery date power
+modules-right = pulseaudio backlight battery date power
+
+tray-position = right
+tray-padding = 1
 
 wm-restack = bspwm
 
@@ -53,6 +56,16 @@ label-muted-foreground = #585858
 ;label-volume ="[VOL %percentage%%]"
 ;label-muted ="[VOL muted]" 
 ;label-muted-foreground = #585858
+
+;---------------------------------------------------------
+[module/backlight]
+type = internal/backlight
+
+;$ ls /sys/class/backlight/
+card = intel_backlight
+
+format = <label>
+label = "[CONT %percentage%%]"
 
 ;---------------------------------------------------------
 [module/battery]

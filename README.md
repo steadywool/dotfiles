@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-git / scrot / feh / paru / ttf-anonymous-pro / atool
+git / scrot / feh / paru / ttf-anonymous-pro / atool / light
 
 ---
 #### Base
@@ -35,9 +35,14 @@ alsa-utils / net-tools / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-d
 $ chsh -s /bin/SHELL
 ```
 
-#### Add user
+#### Create a new user and add it to a group
 ```
 # useradd -m -g GROUP USER
+```
+
+#### Add a user to a group
+```
+# usermod -a -G GROUP USER
 ```
 
 #### Keep keyboard config
