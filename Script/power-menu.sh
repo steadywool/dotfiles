@@ -17,7 +17,7 @@ if [ "$CHOICE" = "reboot" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	systemctl suspend && i3lock -c 7cafc2 -f -t -n
+	i3lock -c 86c1b9 -f -t -n
 fi
 
 if [ "$CHOICE" = "exit i3" ]; then
@@ -27,5 +27,3 @@ fi
 if [ "$CHOICE" = "exit bspwm" ]; then
 	bspc quit
 fi
-
-

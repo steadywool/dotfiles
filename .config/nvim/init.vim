@@ -8,37 +8,33 @@ call plug#end()
 
 "-----------------------------------------------------------------
 " General
+set encoding=utf8
 set number
-"set relativenumber
 set cursorline
 set mouse=a
 set visualbell
+set hidden	"let nvim have unsaved work in buffer
 
-" filetype & encoding
-set encoding=utf8
-filetype plugin on
-filetype indent on
-
-" Syntax & colors
-syntax enable
+" Colors
 "set t_Co=256
 set termguicolors
 colorscheme base16-default-dark
 
-" Indentation, tab and space
-set nowrap
-set autoindent
-set smartindent
+" Syntax highlighting
+filetype plugin on	"load plugin files for specific file types
+syntax enable
 
+" Indentation
+filetype indent on	"load indent files for specific file types
+set autoindent	"copy indent from current line when starting a new line
+set smartindent	"do smart autoindenting when starting a new line
+
+" Tabs & spaces
+set nowrap
 set list
+
 set listchars=tab:\┊\ ,trail:•,nbsp:␣
 
 " Status Line
 set laststatus=2
 set statusline=\ %F\ [%n]%r%m%=%q%w%y\ %l:%c\ %p%%\ 
-
-"-----------------------------------------------------------------
-" C compilation with gcc
-map <F9> :!gcc % -o %< <CR>
-
-"-----------------------------------------------------------------

@@ -3,6 +3,7 @@ monitor = eDP-1
 width = 100%
 height = 22
 module-margin = 1
+override-redirect = true
 
 background = #181818
 foreground = #d8d8d8
