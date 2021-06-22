@@ -3,7 +3,7 @@ monitor = eDP-1
 width = 100%
 height = 22
 module-margin = 1
-override-redirect = true
+override-redirect = false
 
 background = #181818
 foreground = #d8d8d8
@@ -13,7 +13,7 @@ font-1 = DejaVu Sans:style=Regular
 
 modules-left = bspwm
 modules-center =
-modules-right = pulseaudio backlight battery date power
+modules-right = pulseaudio backlight battery date
 
 tray-position = right
 tray-padding = 1
@@ -97,16 +97,8 @@ interval = 1
 
 format = <label>
 label= %date%
+format-foreground = #a1b56c
 
 date = "[%a %d %b %Y %H:%M]"
 
-;---------------------------------------------------------
-[module/power]
-type = custom/text
-
-content = "[power]"
-content-foreground = #ab4642
-click-left= ~/Script/power-menu.sh
-
-;---------------------------------------------------------
 ; vim: ft=dosini

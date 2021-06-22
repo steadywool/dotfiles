@@ -18,6 +18,7 @@ set hidden	"let nvim have unsaved work in buffer
 " Colors
 "set t_Co=256
 set termguicolors
+"set background=dark
 colorscheme base16-default-dark
 
 " Syntax highlighting
