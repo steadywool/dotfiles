@@ -2,11 +2,11 @@
 
 # Autostart
 killall sxhkd; sxhkd -m 1 &
-killall polybar; polybar -r top &
+killall polybar; polybar top &
 
 redshift -P -O 3500 &
 dunst &
-feh --randomize --bg-scale ~/Pictures/Wallpapers/* &
+feh --randomize --bg-fill ~/Pictures/Wallpapers/* &
 
 xrandr --auto
 if xrandr -q | grep 'HDMI-1 connected'; then

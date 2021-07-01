@@ -5,7 +5,7 @@ zsh / tmux / neovim / ranger / ufw / htop
 ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
 
 #### Other
-git / scrot / feh / paru / ttf-anonymous-pro / atool / light
+git / scrot / feh / paru / ttf-anonymous-pro / atool / light / go-mtpfs
 
 ---
 #### Base
@@ -27,7 +27,7 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 networkmanager / connman (alternative) / iwd / wpa_supplicant
 
 #### Other
-alsa-utils / net-tools / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg
+alsa-utils / iproute2 / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg
 
 ---
 #### Change shell
