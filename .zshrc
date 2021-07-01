@@ -8,6 +8,7 @@ zplug load
 #-----------------------------------------------------------------------------
 # ALIAS
 ## git
+alias cdg='cd $HOME/Mount/git'
 alias g='git'
 alias ga='git add'
 alias gaa='git add --all'
@@ -27,8 +28,8 @@ alias fetch='pacman -Q | wc -l'
 # ping
 alias aping='ping -c 1 www.gentoo.org'
 
-# mtp mount & unmount with go-mtpfs & FUSE
-alias mtp-mount='go-mtpfs $HOME/Mount/mtp &'
+# mtp mount & unmount
+alias mtp-mount='aft-mtp-mount $HOME/Mount/mtp'
 alias mtp-unmount='fusermount -u $HOME/Mount/mtp'
 
 #-----------------------------------------------------------------------------
