@@ -2,12 +2,12 @@
 zsh / tmux / neovim / ranger / ufw / htop
 
 #### X11
-alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
+alacritty / bspwm / sxhkd / polybar / dunst / bemenu / i3lock
 
 feh / scrot / light / redshift / ly
 
 #### Wayland
-alacritty / sway / swaybg / swayidle / dunst / wofi / swaylock
+alacritty / sway / swaybg / swayidle / dunst / bemenu / swaylock
 
 swaybg / light / grim / gammastep / ly
 

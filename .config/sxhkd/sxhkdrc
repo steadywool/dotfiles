@@ -7,9 +7,9 @@ super + r
 super + x
 	alacritty
 
-# Rofi
+# Bemenu
 super + d
-	rofi -show drun
+	bemenu-run --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
 
 # Ranger file manager
 super + o
@@ -28,6 +28,13 @@ XF86AudioLowerVolume
 
 XF86AudioMute 
 	pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
+
+# Light control
+XF86MonBrightnessUp
+	light -A 5
+
+XF86MonBrightnessDown
+	light -U 5
 
 # Screenshot
 Print
@@ -52,7 +59,7 @@ super + m
 
 #-------------------------------------------------
 ## STATE/FlAGS
-# Tiled / pseudo tiled / Floating / Fulscreen
+# Tiled / pseudo tiled / Floating / Fullscreen
 super + {t,shift + t,s,f}
 	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
