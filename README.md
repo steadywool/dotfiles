@@ -1,11 +1,18 @@
-#### CLI base
+#### CLI
 zsh / tmux / neovim / ranger / ufw / htop
 
-#### GUI base
-ly / alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
+#### X11
+alacritty / bspwm / sxhkd / polybar / dunst / rofi / i3lock
+
+feh / scrot / light / redshift / ly
+
+#### Wayland
+alacritty / sway / swaybg / swayidle / dunst / wofi / swaylock
+
+swaybg / light / grim / gammastep / ly
 
 #### Other
-git / scrot / feh / paru / ttf-anonymous-pro / atool / light / android-file-transfer
+git / paru / ttf-anonymous-pro / atool / android-file-transfer / imv / mpv
 
 ---
 #### Base
@@ -26,6 +33,9 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 #### Network
 networkmanager / connman (alternative) / iwd / wpa_supplicant
 
+#### Sound
+pulseaudio{-alsa} / pipewire{-pulse,-alsa} (alternative)
+
 #### Other
 alsa-utils / iproute2 / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg / libmtp
 
@@ -34,6 +44,9 @@ alsa-utils / iproute2 / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-di
 ```
 $ chsh -s /bin/SHELL
 ```
+
+#### Set Hostname
+Create this file `/etc/hostname` and write the hostname of your choice.
 
 #### Create a new user and add it to a group
 ```

@@ -1,0 +1,152 @@
+## APPEARANCE
+# class                 border  backgr. text   indicator child_border
+client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
+client.focused_inactive #86c1b9 #181818 #d8d8d8 #86c1b9   #86c1b9
+client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
+client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
+client.placeholder      #181818 #181818 #d8d8d8 #181818   #181818
+client.background       #181818
+
+# Wallpaper
+output * bg $HOME/Pictures/Wallpapers/* fill
+
+# Gaps
+gaps inner 10
+
+# Title bar
+default_border pixel 2
+
+#-----------------------------------------------------------------------
+## SETTINGS
+# Keyboard layout
+input * xkb_layout "fr"
+
+# Monitor layout
+# You can get the names of your outputs by running: swaymsg -t get_outputs
+
+# Idle management
+exec swayidle -w \
+	timeout 300 'swaylock -f -c f7ca88' \
+	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c f7ca88'
+
+# set display/wayland_display in the systemd user env
+include /etc/sway/config.d/*
+
+# Input devices
+input type:touchpad {
+	tap enabled
+	natural_scroll enabled
+}
+
+# Autostart
+exec dunst &
+
+#-----------------------------------------------------------------------
+## WM INDEPENDANT HOTKEYS
+# Ranger file manager
+bindsym Mod4+o exec alacritty -e ranger
+
+# Terminal
+bindsym Mod4+x exec alacritty
+
+# Wofi
+wofi --show drun
+
+# Power menu
+bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
+
+# Light control
+bindsym XF86MonBrightnessUp exec light -A 5
+bindsym XF86MonBrightnessDown exec light -U 5
+
+# Pulseaudio
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +5%
+bindsym XF86AudioLowerVolume execpactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo -5%
+bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
+
+# Screenshot
+
+#---------------------------------------------------------------------
+## I3 HOTKEYS
+# Reload i3
+bindsym Mod4+Shift+r reload
+
+# kill window
+bindsym Mod4+q kill
+
+# Floating modifier
+floating_modifier Mod4 normal
+
+#---------------------------------------------------------------------
+## LAYOUT STYLE
+# Fullscreen
+bindsym Mod4+f fullscreen
+
+# Tiling/Floating
+bindsym Mod4+s floating toggle
+
+# Floating toggle
+bindsym Mod4+Shift+s focus mode_toggle
+
+# Split layout
+bindsym Mod4+t layout toggle split, gaps inner 10
+
+# tabbed layout
+bindsym Mod4+m layout tabbed, gaps inner 0
+#---------------------------------------------------------------------
+## FOCUS/SWAP
+# Focus the given workspace
+bindsym Mod4+ampersand workspace number 1
+bindsym Mod4+eacute workspace number 2
+bindsym Mod4+quotedbl workspace number 3
+bindsym Mod4+apostrophe workspace number 4
+bindsym Mod4+parenleft workspace number 5
+bindsym Mod4+minus workspace number 6
+bindsym Mod4+egrave workspace number 7
+bindsym Mod4+underscore workspace number 8
+bindsym Mod4+ccedilla workspace number 9
+bindsym Mod4+agrave workspace number 10
+
+# Send window to the given workspace
+bindsym Mod4+Shift+ampersand move container to workspace number 1
+bindsym Mod4+Shift+eacute move container to workspace number 2
+bindsym Mod4+Shift+quotedbl move container to workspace number 3
+bindsym Mod4+Shift+apostrophe move container to workspace number 4
+bindsym Mod4+Shift+parenleft move container to workspace number 5
+bindsym Mod4+Shift+minus move container to workspace number 6
+bindsym Mod4+Shift+egrave move container to workspace number 7
+bindsym Mod4+Shift+underscore move container to workspace number 8
+bindsym Mod4+Shift+ccedilla move container to workspace number 9
+bindsym Mod4+Shift+agrave move container to workspace number 10
+
+#Focus the window
+bindsym Mod4+h focus Left
+bindsym Mod4+j focus Down
+bindsym Mod4+k focus Up
+bindsym Mod4+l focus Right
+
+# Swap the window
+bindsym Mod4+Shift+h move Left
+bindsym Mod4+Shift+j move Down
+bindsym Mod4+Shift+k move Up
+bindsym Mod4+Shift+l move Right
+
+# Resize window
+bindsym Mod4+left resize shrink width 10px
+bindsym Mod4+Down resize grow height 10px
+bindsym Mod4+Up resize shrink height 10px
+bindsym Mod4+Right resize grow width 10px
+
+#---------------------------------------------------------------------
+## STATUS BAR
+# Read `man 5 sway-bar` for more information about this section.
+bar {
+	position top
+	status_command while date +'%Y-%m-%d %l:%M:%S %p'; do sleep 1; done
+	colors {
+		statusline #ffffff
+		background #323232
+		inactive_workspace #32323200 #32323200 #5c5c5c
+	}
+}

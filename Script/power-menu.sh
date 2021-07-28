@@ -5,6 +5,7 @@ var+=("reboot")
 var+=("lock")
 var+=("exit i3")
 var+=("exit bspwm")
+var+=("exit sway")
 
 CHOICE=$(printf '%s\n' "${var[@]}" | rofi -dmenu -config ~/.config/rofi/config.rasi -p "power ")
 
@@ -17,7 +18,7 @@ if [ "$CHOICE" = "reboot" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	i3lock -c 86c1b9 -f -t -n
+	i3lock -c f7ca88
 fi
 
 if [ "$CHOICE" = "exit i3" ]; then
@@ -26,4 +27,8 @@ fi
 
 if [ "$CHOICE" = "exit bspwm" ]; then
 	bspc quit
+fi
+
+if [ "$CHOICE" = "exit sway" ]; then
+	swaymsg exit
 fi
