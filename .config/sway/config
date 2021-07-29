@@ -35,12 +35,21 @@ input type:touchpad {
 # Autostart
 exec dunst &
 exec gammastep -P -O 3500 &
-exec $HOME/Script/gtk.sh
 
+# Idle or lock
 exec swayidle -w \
 	timeout 300 'swaylock -f -c f7ca88' \
 	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c f7ca88'
+
+# GTK theme
+exec_always import-gsettings
+exec_always {
+	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
+	gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
+	gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+	gsettings set org.gnome.desktop.interface font-name 'DejaVu Sans 9'
+}
 
 # Assign class
 assign [app_id="firefox"] 3
@@ -55,8 +64,8 @@ bindsym Mod4+o exec alacritty -e ranger
 bindsym Mod4+x exec alacritty
 
 # Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
-#bindsym Mod4+d exec bemenu-run --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
+#bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
+bindsym Mod4+d exec bemenu-run --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
