@@ -1,5 +1,6 @@
 "Plugins
 call plug#begin()
+Plug 'norcalli/nvim-colorizer.lua'
 Plug 'chriskempson/base16-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -12,12 +13,14 @@ set cursorline
 set mouse=a
 set visualbell
 set hidden	"let nvim have unsaved work in buffer
+set clipboard=unnamedplus	"use the clipboard for all operations
 
 " Colors
 "set t_Co=256
 set termguicolors
 set background=dark
 colorscheme base16-default-dark
+lua require'colorizer'.setup()	"launch nvim-colorizer
 
 " Syntax highlighting
 filetype plugin on	"load plugin files for specific file types

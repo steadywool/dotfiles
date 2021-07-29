@@ -2,14 +2,14 @@
 zsh / tmux / neovim / ranger / ufw / htop
 
 #### X11
-alacritty / bspwm / sxhkd / polybar / dunst / bemenu + j4-dmenu-desktop / i3lock
+alacritty / bspwm / sxhkd / polybar / dunst / bemenu / i3lock
 
 feh / scrot / light / redshift / ly
 
 #### Wayland
-alacritty / sway{bg,idle,lock} / dunst / bemenu + j4-dmenu-desktop
+alacritty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / ly
+light / grim + slurp / gammastep / ly / clipman (wl-clipboard)
 
 #### Other
 git / paru / ttf-anonymous-pro / atool / android-file-transfer / imv / mpv

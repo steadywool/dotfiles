@@ -10,16 +10,9 @@ client.background       #181818
 # Wallpaper
 output * bg #7cafc2 solid_color
 
-# Other
-gaps inner 10
-focus_follows_mouse no
-default_border pixel 2
-default_floating_border pixel 2
-
 #-----------------------------------------------------------------------
 ## SETTINGS
-# Monitor layout
-# You can get the names of your outputs by running: swaymsg -t get_outputs
+# Monitor layout (swaymsg -t get_outputs)
 
 # set display/wayland_display in the systemd user env
 include /etc/sway/config.d/*
@@ -32,28 +25,41 @@ input type:touchpad {
 	natural_scroll enabled
 }
 
-# Autostart
+# Assign class
+assign [app_id="firefox"] 3
+for_window [class="discord"] move container to workspace 5
+
+# Other
+gaps inner 10
+focus_follows_mouse no
+default_border pixel 2
+default_floating_border pixel 2
+
+#-----------------------------------------------------------------------
+## AUTOSTART
 exec dunst &
 exec gammastep -P -O 3500 &
+exec discord
+
+# Clipboard support
+exec wl-paste -t text --watch clipman store
 
 # Idle or lock
-exec swayidle -w \
+exec {
+	swayidle -w \
 	timeout 300 'swaylock -f -c f7ca88' \
 	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c f7ca88'
+}
 
 # GTK theme
-exec_always import-gsettings
 exec_always {
+	import-gsettings
 	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 	gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 	gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
 	gsettings set org.gnome.desktop.interface font-name 'DejaVu Sans 9'
 }
-
-# Assign class
-assign [app_id="firefox"] 3
-for_window [class="discord"] move container to workspace 5
 
 #-----------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
@@ -64,8 +70,10 @@ bindsym Mod4+o exec alacritty -e ranger
 bindsym Mod4+x exec alacritty
 
 # Bemenu
-#bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
-bindsym Mod4+d exec bemenu-run --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
+bindsym Mod4+d exec bemenu-run --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
+
+# clipboard history
+bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
@@ -96,20 +104,14 @@ floating_modifier Mod4 normal
 
 #---------------------------------------------------------------------
 ## LAYOUT STYLE
-# Stacking layout
-bindsym Mod4+s layout stacking
+# Tiling/tabbed layout
+bindsym Mod4+t layout toggle split tabbed
 
-# tabbed layout
-bindsym Mod4+w layout tabbed
-
-# Split layout
-bindsym Mod4+e layout toggle split
-
-# Fullscreen
+# Tiling/fullscreen
 bindsym Mod4+f fullscreen
 
 # Tiling/floating mode
-bindsym Mod4+Shift+Space floating toggle
+bindsym Mod4+s floating toggle
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP
@@ -157,9 +159,6 @@ bindsym Mod4+Mod1+Right resize grow width 10px
 
 # Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
-
-# Move focus to the parent container
-bindsym Mod4+a focus parent
 
 #---------------------------------------------------------------------
 ## STATUS BAR
