@@ -19,9 +19,6 @@ alias gm='git merge'
 alias gp='git push'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
-# brightness
-alias br='sudo $HOME/Script/brightness.sh'
-
 # pacman
 alias fetch='pacman -Q | wc -l'
 
@@ -63,5 +60,4 @@ zstyle ':completion::complete:*' gain-privileges 1
 ## Prompt
 autoload -Uz promptinit
 promptinit
-PROMPT=$'┌%B%F{green}%n@%m%f %F{blue}%~%f%b
-└%B$%b%E '
+PROMPT=$'%B%F{green}%n@%m%f %F{blue}%~%f $%b%E '

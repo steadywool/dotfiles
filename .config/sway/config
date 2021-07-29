@@ -154,10 +154,10 @@ bindsym Mod4+Shift+k move Up
 bindsym Mod4+Shift+l move Right
 
 # Resize window
-bindsym Mod4+Mod1+left resize shrink width 10px
-bindsym Mod4+Mod1+Down resize grow height 10px
-bindsym Mod4+Mod1+Up resize shrink height 10px
-bindsym Mod4+Mod1+Right resize grow width 10px
+bindsym Mod4+Mod1+h resize shrink width 10px
+bindsym Mod4+Mod1+j resize grow height 10px
+bindsym Mod4+Mod1+k resize shrink height 10px
+bindsym Mod4+Mod1+l resize grow width 10px
 
 # Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
