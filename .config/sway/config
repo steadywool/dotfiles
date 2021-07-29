@@ -41,6 +41,10 @@ input type:touchpad {
 exec dunst &
 exec gammastep -P -O 3500 &
 
+# Assign class
+assign [class="firefox"] 3
+assign [class="discord"] 5
+
 #-----------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
 # Ranger file manager
@@ -65,6 +69,8 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_
 bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
 
 # Screenshot
+bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
+bindsym Mod4+Shift+s exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
 
 #---------------------------------------------------------------------
 ## I3 HOTKEYS
@@ -86,7 +92,7 @@ bindsym Mod4+f fullscreen
 bindsym Mod4+s floating toggle
 
 # Floating toggle
-bindsym Mod4+Shift+s focus mode_toggle
+bindsym Mod4+Space focus mode_toggle
 
 # Split layout
 bindsym Mod4+t layout toggle split

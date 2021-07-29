@@ -2,14 +2,14 @@
 zsh / tmux / neovim / ranger / ufw / htop
 
 #### X11
-alacritty / bspwm / sxhkd / polybar / dunst / bemenu / i3lock
+alacritty / bspwm / sxhkd / polybar / dunst / dmenu / i3lock
 
 feh / scrot / light / redshift / ly
 
 #### Wayland
-alacritty / sway / swaybg / swayidle / dunst / bemenu / swaylock
+alacritty / sway{bg,idle,lock} / dunst / bemenu
 
-swaybg / light / grim / gammastep / ly
+light / grim + slurp / gammastep / ly
 
 #### Other
 git / paru / ttf-anonymous-pro / atool / android-file-transfer / imv / mpv
@@ -75,6 +75,11 @@ HandlePowerKey=ignore
 #### Generate Grub 2 config
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+#### Launch Firefox in wayland
+```
+MOZ_ENABLE_WAYLAND=1
 ```
 
 ---
