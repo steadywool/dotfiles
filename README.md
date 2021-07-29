@@ -77,9 +77,16 @@ HandlePowerKey=ignore
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### Launch Firefox in wayland
+#### Launch Firefox with wayland
+Edit this file `/etc/environment`:
 ```
 MOZ_ENABLE_WAYLAND=1
+```
+
+#### Get rid of socket error with sway
+Edit this file `/etc/environment`:
+```
+LIBSEAT_BACKEND=logind
 ```
 
 ---

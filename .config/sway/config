@@ -12,19 +12,14 @@ output * bg #7cafc2 solid_color
 
 # Other
 gaps inner 10
-default_border pixel 2
 focus_follows_mouse no
+default_border pixel 2
+default_floating_border pixel 2
 
 #-----------------------------------------------------------------------
 ## SETTINGS
 # Monitor layout
 # You can get the names of your outputs by running: swaymsg -t get_outputs
-
-# Idle management
-exec swayidle -w \
-	timeout 300 'swaylock -f -c f7ca88' \
-	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c f7ca88'
 
 # set display/wayland_display in the systemd user env
 include /etc/sway/config.d/*
@@ -40,10 +35,16 @@ input type:touchpad {
 # Autostart
 exec dunst &
 exec gammastep -P -O 3500 &
+exec $HOME/Script/gtk.sh
+
+exec swayidle -w \
+	timeout 300 'swaylock -f -c f7ca88' \
+	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c f7ca88'
 
 # Assign class
-assign [class="firefox"] 3
-assign [class="discord"] 5
+assign [app_id="firefox"] 3
+for_window [class="discord"] move container to workspace 5
 
 #-----------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
@@ -85,20 +86,20 @@ floating_modifier Mod4 normal
 
 #---------------------------------------------------------------------
 ## LAYOUT STYLE
+# Stacking layout
+bindsym Mod4+s layout stacking
+
+# tabbed layout
+bindsym Mod4+w layout tabbed
+
+# Split layout
+bindsym Mod4+e layout toggle split
+
 # Fullscreen
 bindsym Mod4+f fullscreen
 
-# Tiling/Floating
-bindsym Mod4+s floating toggle
-
-# Floating toggle
-bindsym Mod4+Space focus mode_toggle
-
-# Split layout
-bindsym Mod4+t layout toggle split
-
-# tabbed layout
-bindsym Mod4+m layout tabbed
+# Tiling/floating mode
+bindsym Mod4+Shift+Space floating toggle
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP
@@ -144,11 +145,17 @@ bindsym Mod4+Mod1+Down resize grow height 10px
 bindsym Mod4+Mod1+Up resize shrink height 10px
 bindsym Mod4+Mod1+Right resize grow width 10px
 
+# Swap focus Tiling/floating area
+bindsym Mod4+Space focus mode_toggle
+
+# Move focus to the parent container
+bindsym Mod4+a focus parent
+
 #---------------------------------------------------------------------
 ## STATUS BAR
 bar {
 	position top
-	status_command while date +'%a %d %b %Y %H:%M'; do sleep 1; done
+	status_command while ~/Script/sway-bar.sh; do sleep 1; done
 	colors {
 		statusline #d8d8d8
 		background #181818

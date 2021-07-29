@@ -37,6 +37,7 @@ alias mtp-unmount='fusermount -u $HOME/Mount/mtp'
 ## Default
 export EDITOR=nvim
 export VISUAL=nvim
+export BROWSER=firefox
 
 ## Tmux
 if [ -z "$TMUX" ]; then
