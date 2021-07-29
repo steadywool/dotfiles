@@ -113,6 +113,10 @@ bindsym Mod4+f fullscreen
 # Tiling/floating mode
 bindsym Mod4+s floating toggle
 
+# Horizontal/vertical splits
+bindsym Mod4+b splith
+bindsym Mod4+v splitv
+
 #---------------------------------------------------------------------
 ## FOCUS/SWAP
 # Focus the given workspace
