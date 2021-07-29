@@ -8,12 +8,10 @@ client.placeholder      #181818 #181818 #d8d8d8 #181818   #181818
 client.background       #181818
 
 # Wallpaper
-output * bg #7cafc2 solid_color
+output * bg #585858 solid_color
 
 #-----------------------------------------------------------------------
 ## SETTINGS
-# Monitor layout (swaymsg -t get_outputs)
-
 # set display/wayland_display in the systemd user env
 include /etc/sway/config.d/*
 
@@ -31,7 +29,7 @@ for_window [class="discord"] move container to workspace 5
 
 # Other
 gaps inner 10
-focus_follows_mouse no
+#focus_follows_mouse no
 default_border pixel 2
 default_floating_border pixel 2
 
@@ -44,11 +42,11 @@ exec discord
 # Clipboard support
 exec wl-paste -t text --watch clipman store
 
-# Idle or lock
+# Idle or/and lock
 exec {
 	swayidle -w \
 	timeout 300 'swaylock -f -c f7ca88' \
-	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 400 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c f7ca88'
 }
 

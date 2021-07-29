@@ -58,7 +58,7 @@ Create this file `/etc/hostname` and write the hostname of your choice.
 # usermod -a -G GROUP USER
 ```
 
-#### Keep keyboard config
+#### Keep keyboard config with X11
 ```
 # localectl set-x11-keymap LANG
 ```
@@ -78,15 +78,25 @@ HandlePowerKey=ignore
 ```
 
 #### Launch Firefox with wayland
-Edit this file `/etc/environment`:
+Add this environment variable (`/etc/environment` work as well):
 ```
 MOZ_ENABLE_WAYLAND=1
 ```
 
 #### Get rid of socket error with sway
-Edit this file `/etc/environment`:
+Add this environment variable:
 ```
 LIBSEAT_BACKEND=logind
+```
+
+#### Launch game bundled with old versions of SDL
+In Steam, `Proprietaries > GENERAL > LAUNCH OPTIONS` and add:
+```
+SDL_VIDEODRIVER=x11 %command%
+```
+Or add this environment variable:
+```
+SDL_VIDEODRIVER=x11
 ```
 
 ---
@@ -97,6 +107,8 @@ $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubuse
 ```
 
 - https://github.com/neoclide/coc.nvim
+
+- https://github.com/norcalli/nvim-colorizer.lua
 
 #### Zsh plugins:
 - https://github.com/zplug/zplug
