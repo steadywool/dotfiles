@@ -7,8 +7,17 @@ client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
 client.placeholder      #181818 #181818 #d8d8d8 #181818   #181818
 client.background       #181818
 
+# Font
+font Anonymous Pro Minus 10
+
+# Gaps & border
+gaps inner 10
+default_border pixel 2
+default_floating_border pixel 2
+titlebar_border_thickness 2
+
 # Wallpaper
-output * bg #585858 solid_color
+output * bg #a1b56c solid_color
 
 #-----------------------------------------------------------------------
 ## SETTINGS
@@ -26,12 +35,6 @@ input type:touchpad {
 # Assign class
 assign [app_id="firefox"] 3
 for_window [class="discord"] move container to workspace 5
-
-# Other
-gaps inner 10
-#focus_follows_mouse no
-default_border pixel 2
-default_floating_border pixel 2
 
 #-----------------------------------------------------------------------
 ## AUTOSTART
@@ -175,5 +178,4 @@ bar {
 		inactive_workspace #181818 #181818 #585858
 		urgent_workspace #181818 #181818 #ab4642
 	}
-	font pango:Anonymous Pro Minus 10
 }
