@@ -17,7 +17,7 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 
 # Wallpaper
-output * bg #a1b56c solid_color
+output * bg #585858 solid_color
 
 #-----------------------------------------------------------------------
 ## SETTINGS
@@ -48,8 +48,8 @@ exec wl-paste -t text --watch clipman store
 # Idle or/and lock
 exec {
 	swayidle -w \
-	timeout 300 'swaylock -f -c f7ca88' \
-	timeout 400 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	timeout 600 'swaylock -f -c f7ca88' \
+	timeout 700 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c f7ca88'
 }
 
@@ -170,6 +170,7 @@ bindsym Mod4+Space focus mode_toggle
 bar {
 	position top
 	status_command while ~/Script/sway-bar.sh; do sleep 1; done
+	tray_output none
 	colors {
 		statusline #d8d8d8
 		background #181818
