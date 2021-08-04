@@ -4,12 +4,12 @@ zsh / tmux / neovim / ranger / ufw / htop
 #### X11
 alacritty / bspwm / sxhkd / polybar / dunst / bemenu / i3lock
 
-feh / scrot / light / redshift / ly
+feh / scrot / light / redshift
 
 #### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / ly / clipman (wl-clipboard)
+light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
 git / paru / ttf-anonymous-pro / atool / android-file-transfer / imv / mpv
