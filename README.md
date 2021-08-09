@@ -78,7 +78,7 @@ HandlePowerKey=ignore
 ```
 
 #### Launch Firefox with wayland
-Add this environment variable (`/etc/environment` work as well):
+Add this environment variable (`/etc/environment` work well):
 ```
 MOZ_ENABLE_WAYLAND=1
 ```

@@ -1,11 +1,9 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
-client.focused_inactive #86c1b9 #181818 #d8d8d8 #86c1b9   #86c1b9
-client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
-client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
-client.placeholder      #181818 #181818 #d8d8d8 #181818   #181818
-client.background       #181818
+client.focused          #BA8BAF #181818 #D8D8D8 #BA8BAF   #BA8BAF
+client.focused_inactive #86C1B9 #181818 #D8D8D8 #86C1B9   #86C1B9
+client.unfocused        #585858 #181818 #D8D8D8 #585858   #585858
+client.urgent           #AB4642 #181818 #D8D8D8 #AB4642   #AB4642
 
 # Font
 font Anonymous Pro Minus 10
@@ -15,14 +13,18 @@ gaps inner 10
 default_border pixel 2
 default_floating_border pixel 2
 titlebar_border_thickness 2
+smart_gaps yes
 
 # Wallpaper
-output * bg #a1b56c solid_color
+output * bg #7CAFC2 solid_color
 
 #-----------------------------------------------------------------------
 ## SETTINGS
 # set display/wayland_display in the systemd user env
 include /etc/sway/config.d/*
+
+# Don't focus windows with mouse
+focus_follows_mouse no
 
 # Input devices
 input * xkb_layout "fr"
@@ -48,9 +50,9 @@ exec wl-paste -t text --watch clipman store
 # Idle or/and lock
 exec {
 	swayidle -w \
-	timeout 600 'swaylock -f -c f7ca88' \
+	timeout 600 'swaylock -c f7ca88' \
 	timeout 700 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c f7ca88'
+	before-sleep 'swaylock -c f7ca88'
 }
 
 # GTK theme
@@ -107,19 +109,15 @@ bindsym Mod4+q kill
 floating_modifier Mod4 normal
 
 #---------------------------------------------------------------------
-## LAYOUT STYLE
-# Tiling/tabbed layout
+## LAYOUT STYLE & MODE
+# Splited/tabbed layout
 bindsym Mod4+t layout toggle split tabbed
 
-# Tiling/fullscreen
+# Tiling/fullscreen mode
 bindsym Mod4+f fullscreen
 
 # Tiling/floating mode
 bindsym Mod4+s floating toggle
-
-# Horizontal/vertical splits
-bindsym Mod4+b splith
-bindsym Mod4+v splitv
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP
