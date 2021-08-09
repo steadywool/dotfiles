@@ -17,7 +17,7 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 
 # Wallpaper
-output * bg #585858 solid_color
+output * bg #a1b56c solid_color
 
 #-----------------------------------------------------------------------
 ## SETTINGS
@@ -66,6 +66,9 @@ exec_always {
 ## WM INDEPENDANT HOTKEYS
 # Ranger file manager
 bindsym Mod4+o exec alacritty -e ranger
+
+# Htop
+bindsym Mod4+Shift+q exec alacritty -e htop
 
 # Terminal
 bindsym Mod4+x exec alacritty
