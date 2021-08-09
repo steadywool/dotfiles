@@ -28,9 +28,9 @@ input type:touchpad {
 	natural_scroll enabled
 }
 
-# Assign class
-assign [app_id="firefox"] 3
-for_window [class="discord"] move container to workspace 5
+# Windows rules
+#assign [app_id="firefox"] 3
+#for_window [class="discord"] move container to workspace 5
 
 # Focused window follow mouse
 focus_follows_mouse no
@@ -184,6 +184,10 @@ bindsym Mod4+Mod1+l resize grow width 10px
 
 # Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
+
+# Send workspace to different output
+#bindsym Mod4+Control+h exec swaymsg move workspace to output left
+#bindsym Mod4+Control+l exec swaymsg move workspace to output right
 
 #---------------------------------------------------------------------
 ## STATUS BAR
