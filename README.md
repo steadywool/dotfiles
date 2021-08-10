@@ -34,7 +34,7 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 networkmanager / connman (alternative) / iwd / wpa_supplicant
 
 #### Sound
-pulseaudio{-alsa} / pipewire{-pulse,-alsa} (alternative)
+pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
 
 #### Other
 alsa-utils / iproute2 / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg / libmtp
@@ -97,6 +97,11 @@ SDL_VIDEODRIVER=x11 %command%
 Or add this environment variable:
 ```
 SDL_VIDEODRIVER=x11
+```
+
+#### Enable pipewire
+```
+$ systemctl --user enable pipewire.service pipewire-pulse.service
 ```
 
 ---
