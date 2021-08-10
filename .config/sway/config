@@ -1,7 +1,7 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
 client.focused          #BA8BAF #181818 #D8D8D8 #BA8BAF   #BA8BAF
-client.focused_inactive #86C1B9 #181818 #D8D8D8 #86C1B9   #86C1B9
+client.focused_inactive #585858 #181818 #D8D8D8 #585858   #585858
 client.unfocused        #585858 #181818 #D8D8D8 #585858   #585858
 client.urgent           #AB4642 #181818 #D8D8D8 #AB4642   #AB4642
 
@@ -29,8 +29,8 @@ input type:touchpad {
 }
 
 # Windows rules
-#assign [app_id="firefox"] 3
-#for_window [class="discord"] move container to workspace 5
+assign [app_id="firefox"] 3
+for_window [class="discord"] move container to workspace 5
 
 # Focused window follow mouse
 focus_follows_mouse no
@@ -59,9 +59,9 @@ workspace 10 output HDMI-A-1
 
 #-----------------------------------------------------------------------
 ## AUTOSTART
-exec dunst
+exec dunst &
 exec gammastep -P -O 3500 &
-exec discord
+exec discord &
 
 # Clipboard support
 exec wl-paste -t text --watch clipman store
@@ -128,15 +128,20 @@ bindsym Mod4+q kill
 floating_modifier Mod4 normal
 
 #---------------------------------------------------------------------
-## LAYOUT STYLE & MODE
+## LAYOUT STYLE
 # Splited/tabbed layout
-bindsym Mod4+t layout toggle split tabbed
+bindsym Mod4+t layout tabbed
+bindsym Mod4+e layout toggle split
 
 # Tiling/fullscreen mode
 bindsym Mod4+f fullscreen
 
 # Tiling/floating mode
 bindsym Mod4+s floating toggle
+
+# Split current object horizontaly/verticaly
+bindsym Mod4+b splith
+bindsym Mod4+v splitv
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP
@@ -185,9 +190,8 @@ bindsym Mod4+Mod1+l resize grow width 10px
 # Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
 
-# Send workspace to different output
-#bindsym Mod4+Control+h exec swaymsg move workspace to output left
-#bindsym Mod4+Control+l exec swaymsg move workspace to output right
+# Focus to parent container
+bindsym Mod4+a focus parent
 
 #---------------------------------------------------------------------
 ## STATUS BAR
