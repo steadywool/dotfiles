@@ -1,44 +1,35 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #BA8BAF #181818 #D8D8D8 #BA8BAF   #BA8BAF
-client.focused_inactive #585858 #181818 #D8D8D8 #585858   #585858
-client.unfocused        #585858 #181818 #D8D8D8 #585858   #585858
-client.urgent           #AB4642 #181818 #D8D8D8 #AB4642   #AB4642
+client.focused          #a1b56c #181818 #d8d8d8 #a1b56c   #a1b56c
+client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
+client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
+client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
 
 # Font
 font Anonymous Pro Minus 10
 
 # Gaps & border
-gaps inner 10
 default_border pixel 2
 default_floating_border pixel 2
 titlebar_border_thickness 2
-smart_gaps yes
 
 #-----------------------------------------------------------------------
 ## SETTINGS
 # set display/wayland_display in the systemd user env
 include /etc/sway/config.d/*
 
-# Input devices
-input * xkb_layout "fr"
-
-input type:touchpad {
-	tap enabled
-	natural_scroll enabled
-}
-
 # Windows rules
 assign [app_id="firefox"] 3
 for_window [class="discord"] move container to workspace 5
+for_window [shell=".*"] title_format "%title :: %shell"
 
 # Focused window follow mouse
 focus_follows_mouse no
 
 #-----------------------------------------------------------------------
-## DISPLAY CONFIGURATION
+## OUTPUT/INPUT CONFIGURATION
 # Wallpaper
-output * bg #7CAFC2 solid_color
+output * bg #ba8baf solid_color
 
 # Monitors settings
 output eDP-1 pos 1920 0 res 1366x768
@@ -57,6 +48,15 @@ workspace 8 output HDMI-A-1
 workspace 9 output HDMI-A-1
 workspace 10 output HDMI-A-1
 
+# Keyboard layout
+input * xkb_layout "fr"
+
+# Touchpad settings
+input type:touchpad {
+	tap enabled
+	natural_scroll enabled
+}
+
 #-----------------------------------------------------------------------
 ## AUTOSTART
 exec dunst &
@@ -68,10 +68,10 @@ exec wl-paste -t text --watch clipman store
 
 # Idle or/and lock
 exec {
-	swayidle -w \
-	timeout 600 'swaylock -c f7ca88' \
-	timeout 700 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -c f7ca88'
+	swayidle -w
+		timeout 600 'swaymsg "output * dpms off"'
+			resume 'swaymsg "output * dpms on"'
+		before-sleep 'swaylock -c f7ca88'
 }
 
 # GTK theme
@@ -200,11 +200,11 @@ bar {
 	status_command while ~/Script/sway-bar.sh; do sleep 1; done
 	tray_output none
 	colors {
-		statusline #D8D8D8
+		statusline #d8d8d8
 		background #181818
-		focused_workspace #181818 #181818 #D8D8D8
+		focused_workspace #181818 #181818 #d8d8d8
 		active_workspace #181818 #181818 #585858
 		inactive_workspace #181818 #181818 #585858
-		urgent_workspace #181818 #181818 #AB4642
+		urgent_workspace #181818 #181818 #ab4642
 	}
 }
