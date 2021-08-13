@@ -9,7 +9,7 @@ feh / scrot / light / redshift
 #### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / wl-clipboard
+light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
 ttf-anonymous-pro / tlp / atool / polkit-gnome / pulsemixer

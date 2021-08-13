@@ -19,7 +19,6 @@ titlebar_border_thickness 2
 include /etc/sway/config.d/*
 
 # Windows rules
-assign [app_id="firefox"] 3
 for_window [class="discord"] move container to workspace 5
 for_window [shell=".*"] title_format "%title :: %shell"
 
@@ -29,7 +28,7 @@ focus_follows_mouse no
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
 # Wallpaper
-output * bg #ba8baf solid_color
+output * bg #86c1b9 solid_color
 
 # Monitors settings
 output eDP-1 pos 1920 0 res 1366x768
@@ -59,20 +58,22 @@ input type:touchpad {
 
 #-----------------------------------------------------------------------
 ## AUTOSTART
-exec dunst &
-exec gammastep -P -O 3500 &
-exec discord &
+exec_always killall dunst; dunst
+exec gammastep -P -O 3500
+exec discord
 
 # Clipboard support
+#exec_always wl-paste -pw wl-copy
 exec wl-paste -t text --watch clipman store
 
 # Idle or/and lock
-exec {
-	swayidle -w
-		timeout 600 'swaymsg "output * dpms off"'
-			resume 'swaymsg "output * dpms on"'
-		before-sleep 'swaylock -c f7ca88'
-}
+exec swayidle -w \
+	timeout 500 'swaylock -f -c f7ca88' \
+	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c f7ca88'
+
+# Polkit
+exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # GTK theme
 exec_always {
@@ -80,7 +81,7 @@ exec_always {
 	gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'
 	gsettings set org.gnome.desktop.interface icon-theme 'Adwaita'
 	gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
-	gsettings set org.gnome.desktop.interface font-name 'DejaVu Sans 9'
+	gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
 }
 
 #-----------------------------------------------------------------------
@@ -95,10 +96,11 @@ bindsym Mod4+Shift+q exec alacritty -e htop
 bindsym Mod4+x exec alacritty
 
 # Bemenu
-bindsym Mod4+d exec bemenu-run --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
+#bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
+bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
 
 # clipboard history
-bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
+bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" -i --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
