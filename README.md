@@ -9,10 +9,10 @@ feh / scrot / light / redshift
 #### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / clipman (wl-clipboard)
+light / grim + slurp / gammastep / wl-clipboard
 
 #### Other
-git / paru / ttf-anonymous-pro / atool / android-file-transfer / imv / mpv
+ttf-anonymous-pro / tlp / atool
 
 ---
 #### Base
@@ -37,7 +37,7 @@ networkmanager / connman (alternative) / iwd / wpa_supplicant
 pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
 
 #### Other
-alsa-utils / iproute2 / imagemagick / man-db / ntp / tlp / udisks2 / xdg-user-dirs / ffmpeg / libmtp
+alsa-utils / man-db / ntp (alternative to systemd-timesyncd) / udisks2 / xdg-user-dirs / libmtp / git
 
 ---
 #### Change shell
@@ -76,6 +76,13 @@ HandlePowerKey=ignore
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+#### Enable os prober
+Edit `/etc/default/grub` and add/uncomment:
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+Then regenerate grub 2 config.
 
 #### Launch Firefox with wayland
 Add this environment variable (`/etc/environment` work well):

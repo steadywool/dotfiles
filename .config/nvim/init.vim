@@ -20,7 +20,7 @@ set clipboard=unnamedplus	"use the clipboard for all operations
 set termguicolors
 set background=dark
 colorscheme base16-default-dark
-lua require'colorizer'.setup()	"launch nvim-colorizer
+lua require'colorizer'.setup()
 
 " Syntax highlighting
 filetype plugin on	"load plugin files for specific file types
