@@ -12,7 +12,9 @@ alacritty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp / gammastep / wl-clipboard
 
 #### Other
-ttf-anonymous-pro / tlp / atool
+ttf-anonymous-pro / tlp / atool / polkit-gnome / pulsemixer
+
+mpv / imv / android-file-transfer / mupdf / firefox / libreoffice-still
 
 ---
 #### Base
