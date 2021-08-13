@@ -5,7 +5,7 @@ var+=("reboot")
 var+=("lock")
 var+=("exit sway")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642' -p 'power ')
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642' -p 'power ')
 
 
 if [ "$CHOICE" = "power off" ]; then

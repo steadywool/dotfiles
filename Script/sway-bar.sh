@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Show date & hour
-date_formatted=$(date +"%a %d %b %Y %H:%M:%S")
+date_formatted=$(date +"%a %d %b %Y %H:%M")
 
 # Show battery capacity
 battery_info=`cat /sys/class/power_supply/BAT0/capacity`

@@ -9,7 +9,7 @@ super + x
 
 # Bemenu
 super + d
-	bemenu-run --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
+	bemenu-run -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
 
 # Ranger file manager
 super + o
