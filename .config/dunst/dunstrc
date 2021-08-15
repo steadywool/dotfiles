@@ -51,7 +51,7 @@ history_length = 20
 always_run_script = true
 verbosity = mesg
 corner_radius = 0
-startup_notification = false
+startup_notification = true
 ignore_dbusclose = false
 
 ### Wayland ###
@@ -64,10 +64,6 @@ force_xinerama = false
 mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
-
-[play_sound]
-summary = "*"
-script = ~/Script/dunst-sound.sh
 
 [urgency_low]
 background = "#181818"

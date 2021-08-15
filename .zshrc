@@ -26,8 +26,8 @@ alias fetch='pacman -Q | wc -l'
 alias aping='ping -c 1 www.gentoo.org'
 
 # mtp mount & unmount
-alias mtp-mount='aft-mtp-mount $HOME/Mount/mtp'
-alias mtp-unmount='fusermount -u $HOME/Mount/mtp'
+alias mtp-mount='aft-mtp-mount $HOME/Mount'
+alias mtp-unmount='fusermount -u $HOME/Mount'
 
 #-----------------------------------------------------------------------------
 # ZSH

@@ -58,12 +58,11 @@ input type:touchpad {
 
 #-----------------------------------------------------------------------
 ## AUTOSTART
-exec_always killall dunst; dunst
+exec dunst
 exec gammastep -P -O 3500
 exec discord
 
 # Clipboard support
-#exec_always wl-paste -pw wl-copy
 exec wl-paste -t text --watch clipman store
 
 # Idle or/and lock
