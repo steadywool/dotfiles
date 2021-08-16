@@ -17,7 +17,7 @@ if [ "$CHOICE" = "reboot" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	swaylock -c f7ca88
+	swaylock -c fabd2f
 fi
 
 if [ "$CHOICE" = "exit sway" ]; then
