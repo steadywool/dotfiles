@@ -1,6 +1,6 @@
 "Plugins
 call plug#begin()
-Plug 'morhetz/gruvbox'
+Plug 'chriskempson/base16-vim'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
@@ -19,7 +19,7 @@ set clipboard=unnamedplus	"use the clipboard for all operations
 "set t_Co=256
 set termguicolors
 set background=dark
-colorscheme gruvbox
+colorscheme base16-default-dark
 lua require'colorizer'.setup()
 
 " Syntax highlighting

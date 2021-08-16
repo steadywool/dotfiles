@@ -1,9 +1,9 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #d79921 #282828 #ebdbb2 #d79921   #d79921
-client.focused_inactive #928374 #282828 #ebdbb2 #928374   #928374
-client.unfocused        #928374 #282828 #ebdbb2 #928374   #928374
-client.urgent           #cc241d #282828 #ebdbb2 #cc241d   #cc241d
+client.focused          #a1b56c #181818 #d8d8d8 #a1b56c   #a1b56c
+client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
+client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
+client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
 
 # Font
 font Anonymous Pro Minus 10
@@ -68,9 +68,9 @@ exec wl-paste -t text --watch clipman store
 
 # Idle or/and lock
 exec swayidle -w \
-	timeout 500 'swaylock -f -c fabd2f' \
+	timeout 500 'swaylock -f -c f7ca88' \
 	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c fabd2f'
+	before-sleep 'swaylock -f -c f7ca88'
 
 # Polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -96,11 +96,11 @@ bindsym Mod4+Shift+q exec alacritty -e htop
 bindsym Mod4+x exec alacritty
 
 # Bemenu
-#bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#282828' --tf='#ebdbb2' --fb='#282828' --nb='#282828' --nf='#ebdbb2' --hb='#282828' --hf='#cc241d'"
-bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#282828" --tf="#ebdbb2" --fb="#282828" --nb="#282828" --nf="#ebdbb2" --hb="#282828" --hf="#cc241d"
+#bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
+bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
 
 # clipboard history
-bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" -i --tb="#282828" --tf="#ebdbb2" --fb="#282828" --nb="#282828" --nf="#ebdbb2" --hb="#282828" --hf="#cc241d"'
+bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" -i --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
@@ -202,11 +202,11 @@ bar {
 	status_command while ~/Script/sway-bar.sh; do sleep 1; done
 	tray_output none
 	colors {
-		statusline #ebdbb2
-		background #282828
-		focused_workspace #282828 #282828 #ebdbb2
-		active_workspace #282828 #282828 #928374
-		inactive_workspace #282828 #282828 #928374
-		urgent_workspace #282828 #282828 #cc241d
+		statusline #d8d8d8
+		background #181818
+		focused_workspace #181818 #181818 #d8d8d8
+		active_workspace #181818 #181818 #585858
+		inactive_workspace #181818 #181818 #585858
+		urgent_workspace #181818 #181818 #ab4642
 	}
 }
