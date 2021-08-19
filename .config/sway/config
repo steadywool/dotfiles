@@ -20,6 +20,7 @@ gaps inner 10
 include /etc/sway/config.d/*
 
 # Windows rules
+for_window [app_id="org.keepassxc.KeePassXC"] move container to workspace 4, focus
 for_window [class="discord"] move container to workspace 5
 for_window [shell=".*"] title_format "%title :: %shell"
 
@@ -101,6 +102,9 @@ bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" -
 
 # clipboard history
 bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" -i --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
+
+# Clear clipboard history
+bindsym Mod4+y exec clipman clear --all
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
@@ -200,7 +204,7 @@ bindsym Mod4+a focus parent
 bar {
 	position top
 	status_command while ~/Script/sway-bar.sh; do sleep 1; done
-	tray_output none
+#	tray_output none
 	colors {
 		statusline #d8d8d8
 		background #181818
