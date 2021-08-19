@@ -1,4 +1,4 @@
-![](Screenshot/*)
+![](Screenshot/screenshot.jpg)
 
 ---
 #### CLI
