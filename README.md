@@ -1,3 +1,6 @@
+![](Screenshot/*)
+
+---
 #### CLI
 zsh / tmux / neovim / ranger / ufw / htop
 
