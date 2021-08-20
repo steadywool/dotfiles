@@ -15,9 +15,9 @@ alacritty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
-ttf-anonymous-pro / tlp / atool / polkit-gnome / pulsemixer
+ttf-anonymous-pro / tlp / atool / polkit-gnome
 
-mpv / imv / android-file-transfer / mupdf / firefox / libreoffice-still
+mpv / imv / android-file-transfer (libmtp) / mupdf / firefox / libreoffice-still
 
 ---
 #### Base
@@ -39,10 +39,10 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 networkmanager / connman (alternative) / iwd / wpa_supplicant
 
 #### Sound
-pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
+pipewire{-pulse,-alsa} (pipewire-jack-dropin) / pulseaudio{-alsa} (alternative)
 
 #### Other
-alsa-utils / man-db / ntp (alternative to systemd-timesyncd) / udisks2 / xdg-user-dirs / libmtp / git
+alsa-utils / man-db / udisks2 / xdg-user-dirs / git
 
 ---
 #### Change shell
@@ -68,15 +68,6 @@ Create this file `/etc/hostname` and write the hostname of your choice.
 # localectl set-x11-keymap LANG
 ```
 
-#### Coc.nvim plugin work
-Install nodejs & yarn (or npm)
-
-#### Disable power button
-Edit this setting `/etc/systemd/logind.conf`:
-```
-HandlePowerKey=ignore
-```
-
 #### Generate Grub 2 config
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg
@@ -90,23 +81,19 @@ GRUB_DISABLE_OS_PROBER=false
 Then regenerate grub 2 config.
 
 #### Launch Firefox with wayland
-Add this environment variable (`/etc/environment` work well):
+Use this environment variable (Add it to `/etc/environment` work well):
 ```
 MOZ_ENABLE_WAYLAND=1
 ```
 
 #### Get rid of socket error with sway
-Add this environment variable:
+Use this environment variable:
 ```
 LIBSEAT_BACKEND=logind
 ```
 
 #### Launch game bundled with old versions of SDL
-In Steam, `Proprietaries > GENERAL > LAUNCH OPTIONS` and add:
-```
-SDL_VIDEODRIVER=x11 %command%
-```
-Or add this environment variable:
+Use this environment variable:
 ```
 SDL_VIDEODRIVER=x11
 ```

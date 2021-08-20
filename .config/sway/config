@@ -20,9 +20,11 @@ gaps inner 10
 include /etc/sway/config.d/*
 
 # Windows rules
+for_window [shell=".*"] title_format "%title :: %shell"
+for_window [class="QjackCtl"] floating enable
+for_window [app_id="guitarix"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] move container to workspace 4, focus
 for_window [class="discord"] move container to workspace 5
-for_window [shell=".*"] title_format "%title :: %shell"
 
 # Focused window follow mouse
 focus_follows_mouse no
