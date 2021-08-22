@@ -67,7 +67,7 @@ exec gammastep -P -O 3500
 exec discord
 
 # Clipboard support
-exec wl-paste -t text --watch clipman store
+exec wl-paste -t text
 
 # Idle or/and lock
 exec swayidle -w \
@@ -101,12 +101,6 @@ bindsym Mod4+x exec alacritty
 # Bemenu
 #bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
 bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
-
-# clipboard history
-bindsym Mod4+c exec clipman pick -t bemenu -T'-p "clipboard" --fn "Anonymous Pro Minus 10" -i --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"'
-
-# Clear clipboard history
-bindsym Mod4+y exec clipman clear --all
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
@@ -205,7 +199,7 @@ bindsym Mod4+a focus parent
 ## STATUS BAR
 bar {
 	position top
-	status_command while ~/Script/sway-bar.sh; do sleep 1; done
+	status_command while ~/Script/sway-bar.sh; do sleep 0.5; done
 #	tray_output none
 	colors {
 		statusline #d8d8d8
