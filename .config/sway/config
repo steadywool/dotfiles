@@ -130,23 +130,24 @@ bindsym Mod4+q kill
 floating_modifier Mod4 normal
 
 #---------------------------------------------------------------------
-## LAYOUT STYLE
-# Splited/tabbed layout
-bindsym Mod4+t layout tabbed
+## LAYOUT STUFF
+# Layout styles
+bindsym Mod4+s layout stacking
+bindsym Mod4+w layout tabbed
 bindsym Mod4+e layout toggle split
 
 # Tiling/fullscreen mode
 bindsym Mod4+f fullscreen
 
 # Tiling/floating mode
-bindsym Mod4+s floating toggle
+bindsym Mod4+Shift+Space floating toggle
 
 # Split current object horizontaly/verticaly
 bindsym Mod4+b splith
 bindsym Mod4+v splitv
 
 #---------------------------------------------------------------------
-## FOCUS/SWAP
+## FOCUS/SWAP/RESIZE
 # Focus the given workspace
 bindsym Mod4+ampersand workspace number 1
 bindsym Mod4+eacute workspace number 2
@@ -177,11 +178,21 @@ bindsym Mod4+j focus Down
 bindsym Mod4+k focus Up
 bindsym Mod4+l focus Right
 
+bindsym Mod4+Left focus left
+bindsym Mod4+Down focus down
+bindsym Mod4+Up focus up
+bindsym Mod4+Right focus right
+
 # Swap the window
 bindsym Mod4+Shift+h move Left
 bindsym Mod4+Shift+j move Down
 bindsym Mod4+Shift+k move Up
 bindsym Mod4+Shift+l move Right
+
+bindsym Mod4+Shift+Left move left
+bindsym Mod4+Shift+Down move down
+bindsym Mod4+Shift+Up move up
+bindsym Mod4+Shift+Right move right
 
 # Resize window
 bindsym Mod4+Mod1+h resize shrink width 10px

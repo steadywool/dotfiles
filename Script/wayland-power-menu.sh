@@ -2,6 +2,7 @@
 
 var+=("power off")
 var+=("reboot")
+var+=("suspend")
 var+=("lock")
 var+=("exit sway")
 
@@ -14,6 +15,10 @@ fi
 
 if [ "$CHOICE" = "reboot" ]; then
 	reboot
+fi
+
+if [ "$CHOICE" = "suspend" ]; then
+	systemctl suspend
 fi
 
 if [ "$CHOICE" = "lock" ]; then
