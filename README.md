@@ -103,6 +103,13 @@ SDL_VIDEODRIVER=x11
 $ systemctl --user enable pipewire.service pipewire-pulse.service
 ```
 
+#### Setup firewall default
+Enter these default rules for a personal computer with UFW:
+```
+# ufw default deny incoming
+# ufw default allow outgoing
+```
+
 ---
 #### Vim plugins
 - https://github.com/junegunn/vim-plug
