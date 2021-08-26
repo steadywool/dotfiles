@@ -22,7 +22,6 @@ include /etc/sway/config.d/*
 # Windows rules
 for_window [shell=".*"] title_format "%title :: %shell"
 for_window [class="QjackCtl"] floating enable
-for_window [app_id="guitarix"] floating enable
 for_window [app_id="org.keepassxc.KeePassXC"] move container to workspace 4, focus
 for_window [class="discord"] move container to workspace 5
 
@@ -221,7 +220,7 @@ bindsym Mod4+a focus parent
 ## STATUS BAR
 bar {
 	position top
-	status_command while ~/Script/sway-bar.sh; do sleep 0.5; done
+	status_command while ~/Script/swaybar.sh; do sleep 0.5; done
 #	tray_output none
 	colors {
 		statusline #d8d8d8
