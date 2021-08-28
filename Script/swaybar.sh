@@ -14,7 +14,7 @@ mute=$(pactl list sinks | grep Mute | cut -c 7-)
 contrast=$(light -G)
 
 # Show linux version
-linux_version=$(uname -r)
+linux_version=$(uname -r | cut -d '-' -f1)
 
 # Echo command for sway-bar
 echo [VER $linux_version] [CONT $contrast%] [MUTE $mute] [VOL $volume] [BAT $battery_info%] [$date_formatted]
