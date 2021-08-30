@@ -115,7 +115,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_0e.0.anal
 
 # Screenshot
 bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
-bindsym Mod4+Shift+s exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
+bindsym Print+Shift exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
 
 #---------------------------------------------------------------------
 ## I3 HOTKEYS
@@ -144,6 +144,9 @@ bindsym Mod4+Shift+Space floating toggle
 # Split current object horizontaly/verticaly
 bindsym Mod4+b splith
 bindsym Mod4+v splitv
+
+# Sticky mode
+bindsym Mod4+Shift+s sticky toggle
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP/RESIZE
