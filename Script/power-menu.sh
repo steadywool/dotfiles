@@ -2,11 +2,12 @@
 
 var+=("power off")
 var+=("reboot")
+var+=("suspend")
 var+=("lock")
-var+=("exit i3")
-var+=("exit bspwm")
+var+=("exit sway")
 
 CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642' -p 'power ')
+
 
 if [ "$CHOICE" = "power off" ]; then
 	shutdown -h now
@@ -16,14 +17,14 @@ if [ "$CHOICE" = "reboot" ]; then
 	reboot
 fi
 
+if [ "$CHOICE" = "suspend" ]; then
+	systemctl suspend
+fi
+
 if [ "$CHOICE" = "lock" ]; then
-	i3lock -c f7ca88
+	swaylock -f -c 181818
 fi
 
-if [ "$CHOICE" = "exit i3" ]; then
-	i3-msg exit
-fi
-
-if [ "$CHOICE" = "exit bspwm" ]; then
-	bspc quit
+if [ "$CHOICE" = "exit sway" ]; then
+	swaymsg exit
 fi

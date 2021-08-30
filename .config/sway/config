@@ -102,7 +102,7 @@ bindsym Mod4+Return exec alacritty
 bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
 
 # Power menu
-bindsym Mod4+Shift+e exec $HOME/Script/wayland-power-menu.sh
+bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
 
 # Light control
 bindsym XF86MonBrightnessUp exec light -A 5

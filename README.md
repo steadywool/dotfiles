@@ -4,11 +4,6 @@
 #### CLI
 zsh / tmux / neovim / ranger / ufw / htop
 
-#### X11
-alacritty / bspwm / sxhkd / polybar / dunst / bemenu / i3lock
-
-feh / scrot / light / redshift
-
 #### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu
 
@@ -35,11 +30,8 @@ os-prober / efibootmgr (uefi) / grub (or other)
 #### Printer
 cups / hplip (for HP printer) / foomatic-db{-nonfree}
 
-#### Network
-networkmanager / connman (alternative) / iwd / wpa_supplicant
-
 #### Sound
-pipewire{-pulse,-alsa} (pipewire-jack-dropin) / pulseaudio{-alsa} (alternative)
+pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
 
 #### Other
 alsa-utils / man-db / udisks2 / xdg-user-dirs / git
@@ -61,11 +53,6 @@ Create this file `/etc/hostname` and write the hostname of your choice.
 #### Add a user to a group
 ```
 # usermod -a -G GROUP USER
-```
-
-#### Keep keyboard config with X11
-```
-# localectl set-x11-keymap LANG
 ```
 
 #### Generate Grub 2 config
