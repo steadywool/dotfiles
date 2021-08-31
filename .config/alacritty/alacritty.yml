@@ -61,8 +61,8 @@ font:
 background_opacity: 0.8
 
 scrolling:
-  history: 10000
-  auto_scroll: true
+  history: 1000
+  auto_scroll: false
 
 cursor:
   style:

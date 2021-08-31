@@ -30,10 +30,12 @@ alias amtp-unmount='fusermount -u $HOME/Mount'
 
 #-----------------------------------------------------------------------------
 # ZSH
-## Default
+## Export variables
 export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
+
+export LESS='--mouse'
 
 ## Sway
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
