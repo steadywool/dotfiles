@@ -45,14 +45,10 @@ if [ -z $TMUX ]; then
 	tmux attach -t S0 || tmux new -s S0
 fi
 
-# Vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
 ## History
 HISTFILE=~/.zsh_history
-HISTSIZE=500
-SAVEHIST=500
+HISTSIZE=1000
+SAVEHIST=1000
 
 ## completion
 autoload -Uz compinit

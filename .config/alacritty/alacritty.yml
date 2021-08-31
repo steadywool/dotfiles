@@ -48,17 +48,21 @@ colors:
 #-----------------------------------------------------
 font:
   normal:
-    family: Anonymous Pro Minus
+    family: Anonymous Pro
     style: Regular
   bold:
-    family: Anonymous Pro Minus
+    family: Anonymous Pro
     style: Bold
   italic:
-    family: Anonymous Pro Minus
+    family: Anonymous Pro
     style: Italic
   size: 11
 
 background_opacity: 0.8
+
+scrolling:
+  history: 10000
+  auto_scroll: true
 
 cursor:
   style:
