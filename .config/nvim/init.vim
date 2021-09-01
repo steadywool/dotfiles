@@ -38,4 +38,4 @@ set listchars=tab:\┊\ ,trail:•,nbsp:␣
 
 " Status Line
 set laststatus=2
-set statusline=\ %F\ [%n]%r%m%=%q%w%y\ %l:%c\ %p%%\ 
+set statusline=\ %F\ [%n]%r%m%=%w%y\ %l:%c\ %p%%\ 

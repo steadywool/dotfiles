@@ -1,6 +1,6 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #f7ca88 #181818 #d8d8d8 #f7ca88   #f7ca88
+client.focused          #7cafc2 #181818 #d8d8d8 #7cafc2   #7cafc2
 client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
 client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
 client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
@@ -115,7 +115,7 @@ bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_0e.0.anal
 
 # Screenshot
 bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
-bindsym Print+Shift exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
+bindsym Shift+Print exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
 
 #---------------------------------------------------------------------
 ## I3 HOTKEYS
