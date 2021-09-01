@@ -1,12 +1,12 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #7cafc2 #181818 #d8d8d8 #7cafc2   #7cafc2
+client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
 client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
 client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
 client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
 
 # Font
-font Anonymous Pro Minus 10
+font pango:Fira Code Regular 9
 
 # Gaps & border
 default_border pixel 2
@@ -89,17 +89,20 @@ exec_always {
 #-----------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
 # Ranger file manager
-bindsym Mod4+o exec alacritty -e ranger
+bindsym Mod4+o exec kitty -e ranger
+
+# Neovim
+bindsym Mod4+n exec kitty -e nvim
 
 # Htop
-bindsym Mod4+Shift+q exec alacritty -e htop
+bindsym Mod4+Shift+q exec kitty -e htop
 
 # Terminal
-bindsym Mod4+Return exec alacritty
+bindsym Mod4+Return exec kitty
 
 # Bemenu
 #bindsym Mod4+d exec j4-dmenu-desktop --dmenu="bemenu -i --fn 'Anonymous Pro Minus 10' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
-bindsym Mod4+d exec bemenu-run -i --fn "Anonymous Pro Minus 10" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
+bindsym Mod4+d exec bemenu-run -i --fn "Fira Code Regular 9" --tb="#181818" --tf="#d8d8d8" --fb="#181818" --nb="#181818" --nf="#d8d8d8" --hb="#181818" --hf="#ab4642"
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
