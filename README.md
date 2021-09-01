@@ -2,10 +2,10 @@
 
 ---
 #### CLI
-zsh / tmux / neovim / ranger / ufw / htop
+zsh / neovim / ranger / ufw / htop
 
 #### Wayland
-alacritty / sway{bg,idle,lock} / dunst / bemenu
+kitty / sway{bg,idle,lock} / dunst / bemenu
 
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
