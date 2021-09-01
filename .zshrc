@@ -42,11 +42,6 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 	exec sway
 fi
 
-## Tmux
-if [ -z $TMUX ]; then
-	tmux attach -t S0 || tmux new -s S0
-fi
-
 ## History
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
