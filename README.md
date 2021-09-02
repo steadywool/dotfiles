@@ -2,7 +2,7 @@
 
 ---
 #### CLI
-zsh / neovim / ranger / ufw / htop
+zsh / neovim / ranger / ufw / htop / git
 
 #### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
@@ -11,8 +11,6 @@ light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
 ttf-fira-code / tlp / atool / polkit-gnome
-
-mpv / imv / android-file-transfer (libmtp) / mupdf / firefox / libreoffice-still
 
 ---
 #### Base
@@ -34,7 +32,7 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
 
 #### Other
-alsa-utils / man-db / udisks2 / xdg-user-dirs / git
+alsa-utils / man-db / udisks2 / xdg-user-dirs / libmtp
 
 ---
 #### Change shell
