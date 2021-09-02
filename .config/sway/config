@@ -70,9 +70,9 @@ exec wl-paste -t text
 
 # Idle or/and lock
 exec swayidle -w \
-	timeout 500 'swaylock -f -c 181818' \
+	timeout 500 'swaylock -f -c 7cafc2' \
 	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 181818'
+	before-sleep 'swaylock -f -c 7cafc2'
 
 # Polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

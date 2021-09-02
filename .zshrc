@@ -35,8 +35,6 @@ export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
 
-export LESS='--mouse'
-
 ## Sway
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 	exec sway
@@ -44,17 +42,35 @@ fi
 
 ## History
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=5000
+SAVEHIST=5000
 
 ## completion
 autoload -Uz compinit
 compinit
 setopt COMPLETE_ALIASES
+
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
+
+## Vcs
+autoload -Uz vcs_info
+precmd() {vcs_info}
+setopt prompt_subst
+
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:*' check-for-changes true
 
 ## Prompt
 autoload -Uz promptinit
 promptinit
 PROMPT=$'%B%F{green}%n@%m%f %F{blue}%~%f $%b%E '
+RPROMPT='%B${vcs_info_msg_0_}%b'
+
+zstyle ':vcs_info:*' formats '%F{magenta}%b%f %F{green}%8.8i %c%u%f'
+zstyle ':vcs_info:*' actionformats '%F{magenta}%b%f %F{red}%a %c%u%f'
+zstyle ':vcs_info:*' stagedstr '%F{green}↑'
+zstyle ':vcs_info:*' unstagedstr '%F{red}↓'
+
+
