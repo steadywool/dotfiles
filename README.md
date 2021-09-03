@@ -10,7 +10,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
-ttf-fira-code / tlp / atool / polkit-gnome
+ttf-fira-code / tlp / atool / python-pillow (image preview for ranger+kitty) / polkit-gnome
 
 ---
 #### Base
