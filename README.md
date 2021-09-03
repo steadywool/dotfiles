@@ -10,7 +10,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
-ttf-fira-code / tlp / atool / python-pillow (image preview for ranger+kitty) / polkit-gnome
+ttf-fira-code / tlp / atool / polkit-gnome
 
 ---
 #### Base
@@ -32,7 +32,7 @@ cups / hplip (for HP printer) / foomatic-db{-nonfree}
 pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
 
 #### Other
-alsa-utils / man-db / udisks2 / xdg-user-dirs / libmtp
+alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / imagemagick / libmtp
 
 ---
 #### Change shell
