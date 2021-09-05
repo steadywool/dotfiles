@@ -50,6 +50,11 @@ $ chsh -s /bin/SHELL
 # usermod -a -G GROUP USER
 ```
 
+#### Generate Grub config
+```
+# grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 #### Enable os prober
 Edit `/etc/default/grub` and add/uncomment:
 ```
