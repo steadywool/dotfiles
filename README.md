@@ -10,7 +10,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
-ttf-fira-code / tlp / atool / polkit-gnome
+ttf-fira-code / tlp / atool / polkit-gnome / snapper
 
 ---
 #### Base
@@ -35,6 +35,35 @@ pipewire{-pulse,-alsa,-jack}
 alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / libmtp
 
 ---
+#### Generate Grub 2 config
+```
+# grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+#### Enable os prober
+Edit `/etc/default/grub` and add/uncomment:
+```
+GRUB_DISABLE_OS_PROBER=false
+```
+Then regenerate grub 2 config.
+
+#### Launch grub-btrfs
+```
+# systemctl enable grub-btrfs.path
+```
+
+#### My default subvolumes config
+```
+mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@ /dev/sda3 /mnt
+```
+
+#### Create subvolume for BTRFS
+Enter this command:
+```
+# mount -o subvolid=0 /dev/sda3 /mnt
+```
+And use the classic command to create btrfs subvolumes.
+
 #### Change shell
 ```
 $ chsh -s /bin/SHELL
@@ -49,18 +78,6 @@ $ chsh -s /bin/SHELL
 ```
 # usermod -a -G GROUP USER
 ```
-
-#### Generate Grub 2 config
-```
-# grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-#### Enable os prober
-Edit `/etc/default/grub` and add/uncomment:
-```
-GRUB_DISABLE_OS_PROBER=false
-```
-Then regenerate grub 2 config.
 
 #### Launch Firefox with wayland
 Use this environment variable (Add it to `/etc/environment` work well):
