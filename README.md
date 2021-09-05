@@ -14,34 +14,31 @@ ttf-fira-code / tlp / atool / polkit-gnome
 
 ---
 #### Base
-base / base-devel / linux-firmware / linux{-lts}
+base / base-devel / linux-firmware / linux{-lts} / intel-ucode
 
 #### Disks
-ntfs-3g / exfat-utils / dosfstools
+ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 
 #### Archiving
 zip / unzip / unrar / p7zip
 
 #### Boot loader
-os-prober / efibootmgr (uefi) / grub (or other)
+os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 #### Printer
 cups / hplip (for HP printer) / foomatic-db{-nonfree}
 
 #### Sound
-pipewire{-pulse,-alsa} / pulseaudio{-alsa} (alternative)
+pipewire{-pulse,-alsa,-jack}
 
 #### Other
-alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / imagemagick / libmtp
+alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / libmtp
 
 ---
 #### Change shell
 ```
 $ chsh -s /bin/SHELL
 ```
-
-#### Set Hostname
-Create this file `/etc/hostname` and write the hostname of your choice.
 
 #### Create a new user and add it to a group
 ```
