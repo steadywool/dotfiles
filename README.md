@@ -5,9 +5,11 @@
 zsh / neovim / ranger / ufw / htop / git
 
 #### Wayland
-kitty / sway{bg,idle,lock} / dunst / bemenu
+kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop
 
 light / grim + slurp / gammastep / clipman (wl-clipboard)
+
+imv / mpv / mupdf
 
 #### Other
 ttf-fira-code / tlp / atool / polkit-gnome / snapper
