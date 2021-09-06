@@ -22,7 +22,7 @@ base / base-devel / linux-firmware / linux{-lts} / intel-ucode
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 
 #### Archiving
-zip / unzip / unrar / p7zip
+zip / unzip / unrar / p7zip'
 
 #### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
