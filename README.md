@@ -9,10 +9,10 @@ kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop
 
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
-imv / mpv / mupdf
-
 #### Other
-ttf-fira-code / tlp / atool / polkit-gnome / snapper
+tlp / atool / polkit-gnome / rclone / snapper
+
+imv / mpv / mupdf
 
 ---
 #### Base
@@ -22,7 +22,7 @@ base / base-devel / linux-firmware / linux{-lts} / intel-ucode
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 
 #### Archiving
-zip / unzip / unrar / p7zip'
+zip / unzip / unrar / p7zip
 
 #### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs

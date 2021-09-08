@@ -28,14 +28,15 @@ alias aping='ping -c 1 www.gentoo.org'
 alias amtp-mount='aft-mtp-mount $HOME/Mount/mtp'
 alias amtp-unmount='fusermount -u $HOME/Mount/mtp'
 
+# rclone sync
+alias adrive='rclone sync -P $HOME/Mount/gdrive gdrive:'
+
 #-----------------------------------------------------------------------------
 # ZSH
 ## Export variables
 export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
-
-#export LESS='--mouse'
 
 ## Sway
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then

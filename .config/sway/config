@@ -1,4 +1,4 @@
-## APPEARANCE
+## SETTINGS
 # class                 border  backgr. text   indicator child_border
 client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
 client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
@@ -14,16 +14,10 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 gaps inner 10
 
-#-----------------------------------------------------------------------
-## SETTINGS
-# set display/wayland_display in the systemd user env
-include /etc/sway/config.d/*
-
 # Windows rules
-for_window [shell=".*"] title_format "%title :: %shell"
-for_window [class="QjackCtl"] floating enable
-for_window [class="KeePassXC"] move container to workspace 4, focus
-for_window [class="discord"] move container to workspace 5
+assign [app_id="firefox"] 3
+assign [class="KeePassXC"] 4
+assign [class="discord"] 5
 
 # Focused window follow mouse
 focus_follows_mouse no
@@ -237,3 +231,8 @@ bar {
 		urgent_workspace #181818 #181818 #ab4642
 	}
 }
+
+#---------------------------------------------------------------------
+## OTHER
+# set display/wayland_display in the systemd user env
+include /etc/sway/config.d/*
