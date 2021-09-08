@@ -25,11 +25,12 @@ alias afetch='pacman -Q | wc -l'
 alias aping='ping -c 1 www.gentoo.org'
 
 # mtp mount & unmount
-alias amtp-mount='aft-mtp-mount $HOME/Mount/mtp'
-alias amtp-unmount='fusermount -u $HOME/Mount/mtp'
+alias amtp-mount='aft-mtp-mount $HOME/Mount'
+alias amtp-unmount='fusermount -u $HOME/Mount'
 
-# rclone sync
-alias adrive='rclone sync -P $HOME/Mount/gdrive gdrive:'
+# rclone gdrive copy & sync
+alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
+alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
 #-----------------------------------------------------------------------------
 # ZSH
@@ -37,6 +38,8 @@ alias adrive='rclone sync -P $HOME/Mount/gdrive gdrive:'
 export EDITOR=nvim
 export VISUAL=nvim
 export BROWSER=firefox
+
+#export LESS='--mouse'
 
 ## Sway
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
