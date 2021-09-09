@@ -27,9 +27,6 @@ zip / unzip / unrar / p7zip
 #### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
-#### Printer
-cups / hplip (for HP printer) / foomatic-db{-nonfree}
-
 #### Sound
 pipewire{-pulse,-alsa,-jack}
 
