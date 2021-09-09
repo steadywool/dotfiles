@@ -1,4 +1,4 @@
-## SETTINGS
+## APPEARANCE
 # class                 border  backgr. text   indicator child_border
 client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
 client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
@@ -14,6 +14,8 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 gaps inner 10
 
+#-----------------------------------------------------------------------
+## SWAY SETTINGS
 # Windows rules
 assign [app_id="firefox"] 3
 assign [class="KeePassXC"] 4
@@ -115,8 +117,8 @@ bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s)
 bindsym Shift+Print exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
 
 #---------------------------------------------------------------------
-## I3 HOTKEYS
-# Reload i3
+## SWAY HOTKEYS
+# Reload Sway
 bindsym Mod4+Shift+r reload
 
 # kill window
@@ -144,6 +146,14 @@ bindsym Mod4+v splitv
 
 # Sticky mode
 bindsym Mod4+Shift+s sticky toggle
+
+#---------------------------------------------------------------------
+## SCRATCHPAD
+# Move focused window to scratchpad
+bindsym Mod4+Shift+parenright move scratchpad
+
+# Show next scratchpad window or hide focused scratchpad window
+bindsym Mod4+parenright scratchpad show
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP/RESIZE
