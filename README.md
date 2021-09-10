@@ -31,7 +31,7 @@ os-prober / efibootmgr (uefi) / grub / grub-btrfs
 pipewire{-pulse,-alsa,-jack}
 
 #### Other
-alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / libmtp
+alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / libmtp / libappindicator-gtk3
 
 ---
 #### Change shell
