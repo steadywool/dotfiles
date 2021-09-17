@@ -78,21 +78,10 @@ Use this environment variable (Add it to `/etc/environment` work well):
 MOZ_ENABLE_WAYLAND=1
 ```
 
-#### Get rid of socket error with sway
-Use this environment variable:
-```
-LIBSEAT_BACKEND=logind
-```
-
 #### Launch game bundled with old versions of SDL
 Use this environment variable:
 ```
 SDL_VIDEODRIVER=x11
-```
-
-#### Enable pipewire
-```
-$ systemctl --user enable pipewire.service pipewire-pulse.service
 ```
 
 #### Setup firewall default
@@ -109,9 +98,9 @@ Enter these default rules for a personal computer with UFW:
 $ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-- https://github.com/neoclide/coc.nvim
-
 - https://github.com/norcalli/nvim-colorizer.lua
+
+- https://github.com/neoclide/coc.nvim
 
 #### Zsh plugins:
 - https://github.com/zplug/zplug

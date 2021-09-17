@@ -2,7 +2,7 @@
 call plug#begin()
 Plug 'chriskempson/base16-vim'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim'
 call plug#end()
 
 "-----------------------------------------------------------------
@@ -14,13 +14,13 @@ set mouse=a
 set visualbell
 set hidden
 set clipboard=unnamedplus
+set noswapfile
 
 " Colors
 "set t_Co=256
 set termguicolors
 set background=dark
 colorscheme base16-default-dark
-lua require'colorizer'.setup()
 
 " Syntax highlighting
 filetype plugin on
@@ -32,10 +32,17 @@ set autoindent
 set smartindent
 
 " Tabs & spaces
-set nowrap
+set expandtab
+set tabstop=4
+set shiftwidth=4
 set list
-set listchars=tab:\┊\ ,trail:•,nbsp:␣
+set listchars=tab:\ \ ,trail:•,nbsp:␣
+set nowrap
 
 " Status Line
 set laststatus=2
 set statusline=\ %F\ [%n]%r%m%=%w%y\ %l:%c\ %p%%\ 
+
+"-----------------------------------------------------------------
+" Colorizer
+lua require'colorizer'.setup()
