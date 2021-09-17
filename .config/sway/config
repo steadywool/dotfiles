@@ -24,8 +24,6 @@ assign [app_id="firefox"] workspace 3
 assign [class="KeePassXC"] workspace 4
 assign [class="discord"] workspace 5
 
-for_window [class="KeepassXC"] focus
-
 # Focused window follow mouse
 focus_follows_mouse yes
 
