@@ -1,9 +1,11 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #ba8baf #181818 #d8d8d8 #ba8baf   #ba8baf
-client.focused_inactive #585858 #181818 #d8d8d8 #585858   #585858
-client.unfocused        #585858 #181818 #d8d8d8 #585858   #585858
-client.urgent           #ab4642 #181818 #d8d8d8 #ab4642   #ab4642
+client.focused          #d8d8d8 #7cafc2 #181818 #7cafc2   #7cafc2
+client.focused_inactive #282828 #282828 #d8d8d8 #585858   #282828
+client.unfocused        #282828 #181818 #d8d8d8 #282828   #282828
+client.urgent           #ab4642 #ab4642 #181818 #ab4642   #ab4642
+client.placeholder      #181818 #181818 #d8d8d8 #181818   #181818
+client.background       #f8f8f8
 
 # Font
 font pango:Fira Code Regular 9
@@ -22,8 +24,10 @@ assign [app_id="firefox"] workspace 3
 assign [class="KeePassXC"] workspace 4
 assign [class="discord"] workspace 5
 
+for_window [class="KeepassXC"] focus
+
 # Focused window follow mouse
-focus_follows_mouse no
+focus_follows_mouse yes
 
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
@@ -234,12 +238,14 @@ bar {
 	status_command while ~/Script/swaybar.sh; do sleep 0.5; done
 #	tray_output none
 	colors {
-		statusline #d8d8d8
 		background #181818
-		focused_workspace #181818 #181818 #d8d8d8
-		active_workspace #181818 #181818 #585858
-		inactive_workspace #181818 #181818 #585858
-		urgent_workspace #181818 #181818 #ab4642
+        separator  #282828
+        statusline #b8b8b8
+		focused_workspace  #d8d8d8 #7cafc2 #181818
+		active_workspace   #d8d8d8 #585858 #181818
+		inactive_workspace #585858 #282828 #d8d8d8
+		urgent_workspace   #ab4642 #ab4642 #181818
+        binding_mode       #181818 #f7ca88 #181818
 	}
 }
 
