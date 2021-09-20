@@ -13,6 +13,7 @@ default_border pixel 2
 default_floating_border pixel 2
 titlebar_border_thickness 2
 gaps inner 10
+smart_gaps on
 
 #-----------------------------------------------------------------------
 ## SWAY SETTINGS
@@ -31,7 +32,7 @@ output eDP-1 bg ~/Pictures/Wallpaper/wallpaper1.* fill
 output HDMI-A-1 bg ~/Pictures/Wallpaper/wallpaper2.* fill
 
 # Monitors settings
-output eDP-1 pos 1920 0 res 1366x768
+output eDP-1 pos 0 1080 res 1366x768
 output HDMI-A-1 pos 0 0 res 1920x1080
 
 # Bind workspace to monitor
@@ -109,9 +110,10 @@ bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
 # Pulseaudio
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.pci-0000_00_0e.0.analog-stereo -5%
-bindsym XF86AudioMute exec pactl set-sink-mute alsa_output.pci-0000_00_0e.0.analog-stereo toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Screenshot
 bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
