@@ -16,14 +16,14 @@ gaps inner 10
 smart_gaps on
 
 #-----------------------------------------------------------------------
-## SWAY SETTINGS
-# Windows rules
-assign [app_id="firefox"] workspace 3
+## APPLICATION DEFAULTS
+# Assign apps
+#assign [app_id="firefox"] workspace 3
 assign [class="KeePassXC"] workspace 4
 assign [class="discord"] workspace 5
 
-# Focused window follow mouse
-focus_follows_mouse yes
+# Window rules
+for_window [class="QjackCtl"] floating enable
 
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
