@@ -10,21 +10,21 @@ CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i --fn 'Fira Code Regular 9' --tb='
 
 
 if [ "$CHOICE" = "power off" ]; then
-	shutdown -h now
+    shutdown -h now
 fi
 
 if [ "$CHOICE" = "reboot" ]; then
-	reboot
+    reboot
 fi
 
 if [ "$CHOICE" = "suspend" ]; then
-	systemctl suspend
+    systemctl suspend
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-	swaylock -f -c 7cafc2
+    swaylock -f -c 7cafc2
 fi
 
 if [ "$CHOICE" = "exit sway" ]; then
-	swaymsg exit
+    swaymsg exit
 fi

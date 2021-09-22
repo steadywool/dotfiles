@@ -18,9 +18,6 @@ alias gm='git merge'
 alias gp='git push'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
-# pacman
-alias afetch='pacman -Q | wc -l'
-
 # ping
 alias aping='ping -c 1 www.gentoo.org'
 
@@ -43,7 +40,7 @@ export BROWSER=firefox
 
 ## Sway
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
-	exec sway
+    exec sway
 fi
 
 ## History

@@ -67,11 +67,6 @@ Useful for creating subvolumes:
 # mount -o subvolid=0 /dev/sda3 /mnt
 ```
 
-#### Mount BTRFS subvolume to directory
-```
-mount -o noatime,commit=120,compress=zstd,space_cache,subvol=@ /dev/sda3 /mnt
-```
-
 #### Launch Firefox with wayland
 Use this environment variable (Add it to `/etc/environment` work well):
 ```

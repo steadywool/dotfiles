@@ -53,8 +53,8 @@ input * xkb_layout "fr"
 
 # Touchpad settings
 input type:touchpad {
-	tap enabled
-	natural_scroll enabled
+    tap enabled
+    natural_scroll enabled
 }
 
 #-----------------------------------------------------------------------
@@ -68,20 +68,20 @@ exec wl-paste -t text
 
 # Idle or/and lock
 exec swayidle -w \
-	timeout 500 'swaylock -f -c 7cafc2' \
-	timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 7cafc2'
+    timeout 500 'swaylock -f -c 7cafc2' \
+    timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    before-sleep 'swaylock -f -c 7cafc2'
 
 # Polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 
 # GTK theme
 exec_always {
-	import-gsettings
-	gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
-	gsettings set org.gnome.desktop.interface icon-theme 'Breeze-Dark'
-	gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
-	gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
+    import-gsettings
+    gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
+    gsettings set org.gnome.desktop.interface icon-theme 'Breeze-Dark'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
 }
 
 #-----------------------------------------------------------------------
@@ -208,18 +208,18 @@ bindsym Mod4+Shift+Right move right
 
 # Resize window
 mode "resize" {
-	bindsym h resize shrink width 10px
-	bindsym j resize grow height 10px
-	bindsym k resize shrink height 10px
-	bindsym l resize grow width 10px
+    bindsym h resize shrink width 10px
+    bindsym j resize grow height 10px
+    bindsym k resize shrink height 10px
+    bindsym l resize grow width 10px
 
-	bindsym Left resize shrink width 10px
-	bindsym Down resize grow height 10px
-	bindsym Up resize shrink height 10px
-	bindsym Right resize grow width 10px
+    bindsym Left resize shrink width 10px
+    bindsym Down resize grow height 10px
+    bindsym Up resize shrink height 10px
+    bindsym Right resize grow width 10px
 
-	bindsym Return mode "default"
-	bindsym Escape mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 bindsym Mod4+r mode "resize"
 
@@ -232,17 +232,17 @@ bindsym Mod4+a focus parent
 #---------------------------------------------------------------------
 ## STATUS BAR
 bar {
-	position top
-	status_command while ~/Script/swaybar.sh; do sleep 0.5; done
-	colors {
-		background #181818
+    position top
+    status_command while ~/Script/swaybar.sh; do sleep 0.5; done
+    colors {
+        background #181818
         statusline #d8d8d8
-		focused_workspace  #181818 #181818 #d8d8d8
-		active_workspace   #181818 #181818 #585858
-		inactive_workspace #181818 #181818 #585858
-		urgent_workspace   #181818 #181818 #ab4642
+        focused_workspace  #181818 #181818 #d8d8d8
+        active_workspace   #181818 #181818 #585858
+        inactive_workspace #181818 #181818 #585858
+        urgent_workspace   #181818 #181818 #ab4642
         binding_mode       #181818 #181818 #f7ca88
-	}
+    }
 }
 
 #---------------------------------------------------------------------
