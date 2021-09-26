@@ -42,20 +42,15 @@ set nowrap
 " Status Line
 hi User1 guifg=#181818 guibg=#86c1b9
 hi User2 guifg=#d8d8d8 guibg=#383838
+hi User3 guifg=#d8d8d8 guibg=#282828
 
 set laststatus=2
 set statusline=
-set statusline+=%1*\ %f\ 
-set statusline+=%2*[%n]%r%m%=%w%y
+set statusline+=%1*\ %n\ 
+set statusline+=%2*\ %f\ 
+set statusline+=%3*\ %r%m%=%w%y\ 
 set statusline+=%1*\ %l:%c\ %p%%\ 
 
 "-----------------------------------------------------------------
 " Colorizer
 lua require'colorizer'.setup()
-
-"-----------------------------------------------------------------
-" Switching between panels
-nmap <A-h> <C-w>h
-nmap <A-j> <C-w>j
-nmap <A-k> <C-w>k
-nmap <A-l> <C-w>l
