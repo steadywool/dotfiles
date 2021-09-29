@@ -73,12 +73,6 @@ Use this environment variable (Add it to `/etc/environment` work well):
 MOZ_ENABLE_WAYLAND=1
 ```
 
-#### Launch game bundled with old versions of SDL
-Use this environment variable:
-```
-SDL_VIDEODRIVER=x11
-```
-
 #### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
