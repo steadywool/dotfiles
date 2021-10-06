@@ -1,7 +1,7 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
 client.focused          #282828 #282828 #7cafc2 #7cafc2   #7cafc2
-client.focused_inactive #282828 #282828 #f7ca88 #f7ca88   #f7ca88
+client.focused_inactive #282828 #282828 #585858 #585858   #585858
 client.unfocused        #383838 #383838 #585858 #585858   #585858
 client.urgent           #383838 #383838 #ab4642 #ab4642   #ab4642
 
@@ -18,7 +18,6 @@ smart_gaps on
 #-----------------------------------------------------------------------
 ## APPLICATION DEFAULTS
 # Assign apps
-#assign [app_id="firefox"] workspace 3
 assign [class="KeePassXC"] workspace 4
 assign [class="discord"] workspace 5
 
@@ -28,8 +27,8 @@ for_window [class="QjackCtl"] floating enable
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
 # Wallpaper
-output eDP-1 bg ~/Pictures/Wallpaper/wallpaper1.* fill
-output HDMI-A-1 bg ~/Pictures/Wallpaper/wallpaper2.* fill
+output eDP-1 bg #dc9656 solid_color
+output HDMI-A-1 bg #86c1b9 solid_color
 
 # Monitors settings
 output eDP-1 pos 0 0 res 1366x768
@@ -62,15 +61,16 @@ input type:touchpad {
 exec dunst
 exec gammastep -P -O 3500
 exec discord
+exec blueman
 
 # Clipboard support
 exec wl-paste -t text
 
 # Idle or/and lock
 exec swayidle -w \
-    timeout 500 'swaylock -f -c 7cafc2' \
+    timeout 500 'swaylock -f -c 282828' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 7cafc2'
+    before-sleep 'swaylock -f -c 282828'
 
 # Polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

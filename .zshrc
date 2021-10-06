@@ -18,6 +18,10 @@ alias gm='git merge'
 alias gp='git push'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
+
+# pacman
+alias afetch='pacman -Q | wc -l'
+
 # ping
 alias aping='ping -c 1 www.gentoo.org'
 
@@ -34,6 +38,7 @@ alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 ## Export variables
 export EDITOR=nvim
 export VISUAL=nvim
+export PAGER=less
 export BROWSER=firefox
 
 ## Vi mode
