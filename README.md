@@ -10,7 +10,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop
 light / grim + slurp / gammastep / clipman (wl-clipboard)
 
 #### Other
-tlp / atool / polkit-gnome / rclone / snapper
+tlp / atool / polkit-gnome / rclone / snapper / fzf
 
 imv / mpv / mupdf
 
@@ -79,26 +79,3 @@ Enter these default rules for a personal computer with UFW:
 # ufw default deny incoming
 # ufw default allow outgoing
 ```
-
----
-#### Vim plugins
-- https://github.com/junegunn/vim-plug
-```
-$ curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-- https://github.com/norcalli/nvim-colorizer.lua
-
-- https://github.com/neoclide/coc.nvim
-
-#### Zsh plugins:
-- https://github.com/zplug/zplug
-```
-$ curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-```
-
-- https://github.com/zsh-users/zsh-completions
-
-- https://github.com/zsh-users/zsh-syntax-highlighting
-
-- https://github.com/zsh-users/zsh-autosuggestions

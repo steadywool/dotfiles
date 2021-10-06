@@ -1,14 +1,19 @@
 "Plugins
 call plug#begin()
 Plug 'chriskempson/base16-vim'
+
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'neoclide/coc.nvim'
+Plug 'junegunn/fzf.vim'
+
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 "-----------------------------------------------------------------
 " General
 set encoding=utf8
 set number
+set relativenumber
 set cursorline
 set mouse=a
 set visualbell
@@ -54,3 +59,8 @@ set statusline+=%1*\ %l:%c\ %p%%\
 "-----------------------------------------------------------------
 " Colorizer
 lua require'colorizer'.setup()
+
+"-----------------------------------------------------------------
+" FZF
+nnoremap <C-n> :Files<CR>
+nnoremap <C-b> :Buffers<CR>
