@@ -4,8 +4,8 @@ vim.opt.hidden = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.completeopt = 'menu,menuone,noinsert'
-vim.opt.updatetime=300
-vim.opt.timeoutlen=500
+vim.opt.updatetime = 300
+vim.opt.timeoutlen = 500
 
 ----------------------------------------------------------------------------------
 -- UI
@@ -79,8 +79,6 @@ paq {'savq/paq-nvim', opt = true}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'arcticicestudio/nord-vim'}
 paq {'junegunn/fzf.vim'}
-
-paq {'sheerun/vim-polyglot'}
 
 paq {'neovim/nvim-lspconfig'}
 paq {'kabouzeid/nvim-lspinstall'}

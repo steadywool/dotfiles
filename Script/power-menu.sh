@@ -22,7 +22,7 @@ if [ "$CHOICE" = "suspend" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-    swaylock -f -c a3be8c
+    swaylock -f -c 4c566a
 fi
 
 if [ "$CHOICE" = "exit sway" ]; then
