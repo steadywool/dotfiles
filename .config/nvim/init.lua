@@ -17,7 +17,7 @@ vim.opt.cursorline = true
 -- COLORS
 vim.opt.termguicolors = true
 vim.opt.background = 'dark'
-vim.cmd('colorscheme base16-default-dark')
+vim.cmd('colorscheme nord')
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
@@ -50,9 +50,9 @@ end
 
 ----------------------------------------------------------------------------------
 -- STATUSLINE
-vim.cmd 'highlight Status1 guifg=#181818 guibg=#86c1b9'
-vim.cmd 'highlight Status1 guifg=#d8d8d8 guibg=#383838'
-vim.cmd 'highlight Status3 guifg=#d8d8d8 guibg=#282828'
+vim.cmd('highlight Status1 guifg=#2e3440 guibg=#8fbcbb')
+vim.cmd('highlight Status2 guifg=#d8dee9 guibg=#434c5e')
+vim.cmd('highlight Status3 guifg=#d8dee9 guibg=#3b4252')
 
 vim.opt.statusline = '%#Status1# %n %#Status2# %f %#Status3# %r%m %= %w%y %#Status1# %l:%c %p%% '
 
@@ -76,8 +76,8 @@ local paq = require('paq-nvim').paq
 -- PLUGINS
 paq {'savq/paq-nvim', opt = true}
 
-paq {'chriskempson/base16-vim'}
 paq {'norcalli/nvim-colorizer.lua'}
+paq {'arcticicestudio/nord-vim'}
 paq {'junegunn/fzf.vim'}
 
 paq {'sheerun/vim-polyglot'}

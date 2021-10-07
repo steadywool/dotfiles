@@ -6,7 +6,7 @@ var+=("suspend")
 var+=("lock")
 var+=("exit sway")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i --fn 'Fira Code Regular 9' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642' -p 'power ')
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i --fn 'Fira Code Regular 9' --tb='#2e3440' --tf='#d8dee9' --fb='#2e3440' --nb='#2e3440' --nf='#d8dee9' --hb='#2e3440' --hf='#bf616a' -p 'power ')
 
 
 if [ "$CHOICE" = "power off" ]; then
@@ -22,7 +22,7 @@ if [ "$CHOICE" = "suspend" ]; then
 fi
 
 if [ "$CHOICE" = "lock" ]; then
-    swaylock -f -c 282828
+    swaylock -f -c a3be8c
 fi
 
 if [ "$CHOICE" = "exit sway" ]; then

@@ -1,19 +1,19 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #282828 #282828 #7cafc2 #7cafc2   #7cafc2
-client.focused_inactive #282828 #282828 #585858 #585858   #585858
-client.unfocused        #383838 #383838 #585858 #585858   #585858
-client.urgent           #383838 #383838 #ab4642 #ab4642   #ab4642
+client.focused          #3b4252 #3b4252 #d8dee9 #d8dee9   #d8dee9
+client.focused_inactive #3b4252 #3b4252 #4c566a #4c566a   #4c566a
+client.unfocused        #434c5e #434c5e #4c566a #4c566a   #4c566a
+client.urgent           #434c5e #434c5e #bf616a #bf616a   #bf616a
 
 # Font
 font pango:Fira Code Regular 9
 
 # Gaps & border
-default_border pixel 2
-default_floating_border pixel 2
-titlebar_border_thickness 2
-gaps inner 10
-smart_gaps on
+default_border pixel 1
+default_floating_border pixel 1
+titlebar_border_thickness 1
+#gaps inner 0
+#smart_gaps on
 
 #-----------------------------------------------------------------------
 ## APPLICATION DEFAULTS
@@ -27,12 +27,12 @@ for_window [class="QjackCtl"] floating enable
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
 # Wallpaper
-output eDP-1 bg #dc9656 solid_color
-output HDMI-A-1 bg #86c1b9 solid_color
+output eDP-1 bg #a3be8c solid_color
+output HDMI-A-1 bg #ebcb8b solid_color
 
 # Monitors settings
-output eDP-1 pos 0 0 res 1366x768
-output HDMI-A-1 pos 0 -1080 res 1920x1080
+output eDP-1 pos 0 1080 res 1366x768
+output HDMI-A-1 pos 0 0 res 1920x1080
 
 # Bind workspace to monitor
 workspace 1 output eDP-1
@@ -68,9 +68,9 @@ exec wl-paste -t text
 
 # Idle or/and lock
 exec swayidle -w \
-    timeout 500 'swaylock -f -c 282828' \
+    timeout 500 'swaylock -f -c a3be8c' \
     timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-    before-sleep 'swaylock -f -c 282828'
+    before-sleep 'swaylock -f -c a3be8c'
 
 # Polkit
 exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -78,7 +78,7 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # GTK theme
 exec_always {
     import-gsettings
-    gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
+    gsettings set org.gnome.desktop.interface gtk-theme 'Arc-Dark'
     gsettings set org.gnome.desktop.interface icon-theme 'Breeze-Dark'
     gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
     gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
@@ -99,8 +99,8 @@ bindsym Mod4+Shift+q exec kitty -1 htop
 bindsym Mod4+Return exec kitty -1
 
 # Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i --fn 'Fira Code Regular 9' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'"
-bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#181818' --tf='#d8d8d8' --fb='#181818' --nb='#181818' --nf='#d8d8d8' --hb='#181818' --hf='#ab4642'
+bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i --fn 'Fira Code Regular 9' --tb='#2e3440' --tf='#d8dee9' --fb='#2e3440' --nb='#2e3440' --nf='#d8dee9' --hb='#2e3440' --hf='#bf616a'"
+bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#2e3440' --tf='#d8dee9' --fb='#2e3440' --nb='#2e3440' --nf='#d8dee9' --hb='#2e3440' --hf='#bf616a'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
@@ -235,13 +235,13 @@ bar {
     position top
     status_command while ~/Script/swaybar.sh; do sleep 0.5; done
     colors {
-        background #181818
-        statusline #d8d8d8
-        focused_workspace  #181818 #181818 #d8d8d8
-        active_workspace   #181818 #181818 #585858
-        inactive_workspace #181818 #181818 #585858
-        urgent_workspace   #181818 #181818 #ab4642
-        binding_mode       #181818 #181818 #f7ca88
+        background #2e3440
+        statusline #d8dee9
+        focused_workspace  #2e3440 #2e3440 #d8dee9
+        active_workspace   #2e3440 #2e3440 #4c566a
+        inactive_workspace #2e3440 #2e3440 #4c566a
+        urgent_workspace   #2e3440 #2e3440 #bf616a
+        binding_mode       #2e3440 #2e3440 #ebcb8b
     }
 }
 
