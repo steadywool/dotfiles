@@ -3,7 +3,7 @@ vim.opt.swapfile = false
 vim.opt.hidden = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
-vim.opt.completeopt = 'menuone,noinsert,noselect'
+vim.opt.completeopt = 'menu,menuone,noinsert'
 vim.opt.updatetime=300
 vim.opt.timeoutlen=500
 
@@ -75,9 +75,12 @@ local paq = require('paq-nvim').paq
 ----------------------------------------------------------------------------------
 -- PLUGINS
 paq {'savq/paq-nvim', opt = true}
+
 paq {'chriskempson/base16-vim'}
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'junegunn/fzf.vim'}
+
+paq {'sheerun/vim-polyglot'}
 
 paq {'neovim/nvim-lspconfig'}
 paq {'kabouzeid/nvim-lspinstall'}
@@ -87,3 +90,14 @@ paq {'kabouzeid/nvim-lspinstall'}
 -- Fzf
 vim.cmd('nnoremap <C-n> :Files<CR>')
 vim.cmd('nnoremap <C-b> :Buffers<CR>')
+
+-- Move to text buffer
+vim.cmd('nnoremap <TAB> :bnext<CR>')
+vim.cmd('nnoremap <S-TAB> :bprevious<CR>')
+
+-- Omnicompletion
+vim.cmd('inoremap <C-Space> <C-x><C-o>')
+
+-- Esc to JK & KJ
+vim.cmd('inoremap jk <Esc>')
+vim.cmd('inoremap kj <Esc>')
