@@ -50,7 +50,7 @@ end
 
 ----------------------------------------------------------------------------------
 -- STATUSLINE
-vim.cmd('highlight Status1 guifg=#2e3440 guibg=#8fbcbb')
+vim.cmd('highlight Status1 guifg=#2e3440 guibg=#b48ead')
 vim.cmd('highlight Status2 guifg=#d8dee9 guibg=#434c5e')
 vim.cmd('highlight Status3 guifg=#d8dee9 guibg=#3b4252')
 
