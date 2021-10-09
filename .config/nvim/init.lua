@@ -40,13 +40,9 @@ vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
 
 ----------------------------------------------------------------------------------
--- COMPLETION
+-- OMNICOMPLETION
 vim.cmd('autocmd FileType cpp set omnifunc=v:lua.vim.lsp.omnifunc')
-
-local on_attach = function(client, bufnr)
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-end
+vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 ----------------------------------------------------------------------------------
 -- STATUSLINE
@@ -57,44 +53,49 @@ vim.cmd('highlight Status3 guifg=#d8dee9 guibg=#3b4252')
 vim.opt.statusline = '%#Status1# %n %#Status2# %f %#Status3# %r%m %= %w%y %#Status1# %l:%c %p%% '
 
 ----------------------------------------------------------------------------------
+-- PLUGINS MANAGER
+-- Package manager
+vim.cmd('packadd paq-nvim')
+local paq = require('paq-nvim').paq
+paq {'savq/paq-nvim', opt = true}
+
+-- Theme & colors
+paq {'norcalli/nvim-colorizer.lua'}
+paq {'arcticicestudio/nord-vim'}
+
+-- Lsp server
+paq {'neovim/nvim-lspconfig'}
+paq {'kabouzeid/nvim-lspinstall'}
+
+--Autocompletion
+paq{'hrsh7th/nvim-cmp'}
+paq{'hrsh7th/cmp-nvim-lsp'}
+
+----------------------------------------------------------------------------------
 -- PLUGINS CONFIG
 -- Colorizer
 require'colorizer'.setup()
 
--- Lsp install
+-- Lsp server
 require'lspinstall'.setup()
 local servers = require'lspinstall'.installed_servers()
 for _, server in pairs(servers) do
     require'lspconfig'[server].setup{}
 end
 
--- Plugin Manager
-vim.cmd('packadd paq-nvim')
-local paq = require('paq-nvim').paq
-
-----------------------------------------------------------------------------------
--- PLUGINS
-paq {'savq/paq-nvim', opt = true}
-
-paq {'norcalli/nvim-colorizer.lua'}
-paq {'arcticicestudio/nord-vim'}
-paq {'junegunn/fzf.vim'}
-
-paq {'neovim/nvim-lspconfig'}
-paq {'kabouzeid/nvim-lspinstall'}
+-- Autocompletion
+local cmp = require'cmp'
+cmp.setup({
+    sources = {
+        { name = 'nvim_lsp' }
+    }
+})
 
 ----------------------------------------------------------------------------------
 -- REMAP
--- Fzf
-vim.cmd('nnoremap <C-n> :Files<CR>')
-vim.cmd('nnoremap <C-b> :Buffers<CR>')
-
 -- Move to text buffer
 vim.cmd('nnoremap <TAB> :bnext<CR>')
 vim.cmd('nnoremap <S-TAB> :bprevious<CR>')
-
--- Omnicompletion
-vim.cmd('inoremap <C-Space> <C-x><C-o>')
 
 -- Esc to JK & KJ
 vim.cmd('inoremap jk <Esc>')
