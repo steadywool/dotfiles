@@ -77,7 +77,10 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # GTK theme
 exec_always {
     import-gsettings
-    $HOME/Script/gtk-settings.sh
+    gsettings set org.gnome.desktop.interface gtk-theme 'Nordic'
+    gsettings set org.gnome.desktop.interface icon-theme 'Breeze-Dark'
+    gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
+    gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
     }
 
 #-----------------------------------------------------------------------
