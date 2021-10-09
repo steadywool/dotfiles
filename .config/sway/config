@@ -1,8 +1,8 @@
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #434c5e #434c5e #88c0d0 #a3be8c   #a3be8c
-client.focused_inactive #434c5e #434c5e #d8dee9 #4c566a   #4c566a
-client.unfocused        #3b4252 #3b4252 #d8dee9 #4c566a   #4c566a
+client.focused          #434c5e #434c5e #a3be8c #a3be8c   #a3be8c
+client.focused_inactive #434c5e #434c5e #4c566a #4c566a   #4c566a
+client.unfocused        #3b4252 #3b4252 #4c566a #4c566a   #4c566a
 client.urgent           #3b4252 #3b4252 #bf616a #bf616a   #bf616a
 
 # Font
@@ -77,11 +77,8 @@ exec_always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # GTK theme
 exec_always {
     import-gsettings
-    gsettings set org.gnome.desktop.interface gtk-theme 'Breeze-Dark'
-    gsettings set org.gnome.desktop.interface icon-theme 'Breeze-Dark'
-    gsettings set org.gnome.desktop.interface cursor-theme 'Adwaita'
-    gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
-}
+    $HOME/Script/gtk-settings.sh
+    }
 
 #-----------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
