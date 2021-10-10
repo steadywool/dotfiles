@@ -46,7 +46,7 @@ vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 ----------------------------------------------------------------------------------
 -- STATUSLINE
-vim.cmd('highlight Status1 guifg=#2e3440 guibg=#b48ead')
+vim.cmd('highlight Status1 guifg=#2e3440 guibg=#88c0d0')
 vim.cmd('highlight Status2 guifg=#d8dee9 guibg=#434c5e')
 vim.cmd('highlight Status3 guifg=#d8dee9 guibg=#3b4252')
 
@@ -62,6 +62,8 @@ paq {'savq/paq-nvim', opt = true}
 -- Theme & colors
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'arcticicestudio/nord-vim'}
+paq {'joshdick/onedark.vim'}
+paq {'sheerun/vim-polyglot'}
 
 -- Lsp server
 paq {'neovim/nvim-lspconfig'}
