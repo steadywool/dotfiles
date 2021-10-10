@@ -66,21 +66,21 @@ mouse_middle_click = do_action, close_current
 mouse_right_click = close_all
 
 [urgency_low]
-background = "#2e3440"
-foreground = "#d8dee9"
-frame_color = "#a3be8c"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#a1b56c"
 timeout = 5
 
 [urgency_normal]
-background = "#2e3440"
-foreground = "#d8dee9"
-frame_color = "#ebcb8b"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#f7ca88"
 timeout = 5
 
 [urgency_critical]
-background = "#2e3440"
-foreground = "#d8dee9"
-frame_color = "#bf616a"
+background = "#181818"
+foreground = "#d8d8d8"
+frame_color = "#ab4642"
 timeout = 0
 
 # vim: ft=cfg

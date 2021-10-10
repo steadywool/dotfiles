@@ -12,12 +12,8 @@ vim.opt.timeoutlen = 500
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
-
-----------------------------------------------------------------------------------
--- COLORS
 vim.opt.termguicolors = true
-vim.opt.background = 'dark'
-vim.cmd('colorscheme nord')
+vim.cmd('colorscheme base16-default-dark')
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
@@ -46,9 +42,9 @@ vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
 ----------------------------------------------------------------------------------
 -- STATUSLINE
-vim.cmd('highlight Status1 guifg=#2e3440 guibg=#88c0d0')
-vim.cmd('highlight Status2 guifg=#d8dee9 guibg=#434c5e')
-vim.cmd('highlight Status3 guifg=#d8dee9 guibg=#3b4252')
+vim.cmd('highlight Status1 guifg=#282828 guibg=#86c1b9')
+vim.cmd('highlight Status2 guifg=#d8d8d8 guibg=#383838')
+vim.cmd('highlight Status3 guifg=#d8d8d8 guibg=#282828')
 
 vim.opt.statusline = '%#Status1# %n %#Status2# %f %#Status3# %r%m %= %w%y %#Status1# %l:%c %p%% '
 
@@ -61,8 +57,7 @@ paq {'savq/paq-nvim', opt = true}
 
 -- Theme & colors
 paq {'norcalli/nvim-colorizer.lua'}
-paq {'arcticicestudio/nord-vim'}
-paq {'joshdick/onedark.vim'}
+paq {'chriskempson/base16-vim'}
 paq {'sheerun/vim-polyglot'}
 
 -- Lsp server

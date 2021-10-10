@@ -12,7 +12,7 @@ light / grim + slurp / gammastep / clipman (wl-clipboard)
 #### Other
 tlp / atool / polkit-gnome / rclone / snapper
 
-imv / mpv / mupdf / qt5ct
+imv / mpv / mupdf
 
 ---
 #### Base
@@ -71,12 +71,6 @@ Useful for creating subvolumes:
 Use this environment variable (Add it to `/etc/environment` work well):
 ```
 MOZ_ENABLE_WAYLAND=1
-```
-
-#### Use qt5ct for qt apps
-Use this environment variable:
-```
-QT_QPA_PLATFORMTHEME=qt5ct
 ```
 
 #### Setup firewall default
