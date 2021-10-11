@@ -64,6 +64,10 @@ paq {'sheerun/vim-polyglot'}
 paq {'neovim/nvim-lspconfig'}
 paq {'kabouzeid/nvim-lspinstall'}
 
+-- Snippet
+paq {'L3MON4D3/LuaSnip'}
+paq {'saadparwaiz1/cmp_luasnip'}
+
 --Autocompletion
 paq{'hrsh7th/nvim-cmp'}
 paq{'hrsh7th/cmp-nvim-lsp'}
@@ -82,11 +86,24 @@ for _, server in pairs(servers) do
     }
 end
 
+-- Snippet
+local luasnip = require 'luasnip'
+
 -- Autocompletion
 local cmp = require'cmp'
 cmp.setup({
+    snippet = {
+        expand = function(args)
+            require('luasnip').lsp_expand(args.body)
+        end,
+    },
+    mapping = {
+        ['<C-e>'] = cmp.mapping.close(),
+        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    },
     sources = {
-        { name = 'nvim_lsp' }
+        { name = 'nvim_lsp' },
+        { name = 'luasnip' },
     }
 })
 
