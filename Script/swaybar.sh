@@ -8,9 +8,9 @@ bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 bat_status=$(cat /sys/class/power_supply/BAT0/status)
 
 if [ $bat_status = "Charging" ]; then
-    bat_info="↑"
+    bat_info=" ↑"
 elif [ $bat_status = "Discharging" ]; then
-    bat_info="↓"
+    bat_info=" ↓"
 fi
 
 # Show volume and mute info
@@ -24,5 +24,5 @@ contrast=$(light -G)
 linux_version=$(uname -r | cut -d '-' -f1)
 
 # Echo command for sway-bar
-echo [VER $linux_version] [CONT $contrast%] [MUTE $mute] [VOL $volume] [BAT $bat_capacity% $bat_info] [$date_formatted]
+echo [VER $linux_version] [CONT $contrast%] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 

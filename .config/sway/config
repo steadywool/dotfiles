@@ -1,9 +1,14 @@
+## INCLUDE
+# set display/wayland_display in the systemd user env
+include /etc/sway/config.d/*
+
+#-----------------------------------------------------------------------
 ## APPEARANCE
 # class                 border  backgr. text   indicator child_border
-client.focused          #383838 #383838 #a1b56c #a1b56c   #a1b56c
-client.focused_inactive #383838 #383838 #585858 #585858   #585858
-client.unfocused        #282828 #282828 #585858 #585858   #585858
-client.urgent           #282828 #282828 #ab4642 #ab4642   #ab4642
+client.focused          #383838 #383838 #a1b56c #a1b56c #a1b56c
+client.focused_inactive #383838 #383838 #585858 #585858 #585858
+client.unfocused        #282828 #282828 #585858 #585858 #585858
+client.urgent           #282828 #282828 #ab4642 #ab4642 #ab4642
 
 # Font
 font pango:Fira Code Regular 9
@@ -14,14 +19,21 @@ default_floating_border pixel 2
 titlebar_border_thickness 2
 gaps inner 5
 
-#-----------------------------------------------------------------------
-## APPLICATION DEFAULTS
-# Assign apps
-assign [class="KeePassXC"] workspace 4
-assign [class="discord"] workspace 5
-
-# Window rules
-for_window [class="QjackCtl"] floating enable
+#---------------------------------------------------------------------
+## STATUS BAR
+bar {
+    position top
+    status_command while ~/Script/swaybar.sh; do sleep 0.5; done
+    colors {
+        background #181818
+        statusline #d8d8d8
+        focused_workspace  #181818 #181818 #d8d8d8
+        active_workspace   #181818 #181818 #585858
+        inactive_workspace #181818 #181818 #585858
+        urgent_workspace   #181818 #181818 #ab4642
+        binding_mode       #181818 #181818 #f7ca88
+    }
+}
 
 #-----------------------------------------------------------------------
 ## OUTPUT/INPUT CONFIGURATION
@@ -56,6 +68,15 @@ input type:touchpad {
 }
 
 #-----------------------------------------------------------------------
+## APPLICATION DEFAULTS
+# Assign apps
+assign [class="KeePassXC"] workspace 4
+assign [class="discord"] workspace 5
+
+# Window rules
+for_window [class="QjackCtl"] floating enable
+
+#-----------------------------------------------------------------------
 ## AUTOSTART
 exec killall dunst; dunst
 exec gammastep -P -O 3500
@@ -81,7 +102,7 @@ exec_always {
     gsettings set org.gnome.desktop.interface font-name 'Droid Sans Regular 10'
     }
 
-#-----------------------------------------------------------------------
+#---------------------------------------------------------------------
 ## WM INDEPENDANT HOTKEYS
 # Ranger file manager
 bindsym Mod4+o exec kitty -1 ranger
@@ -225,24 +246,3 @@ bindsym Mod4+Space focus mode_toggle
 
 # Focus to parent container
 bindsym Mod4+a focus parent
-
-#---------------------------------------------------------------------
-## STATUS BAR
-bar {
-    position top
-    status_command while ~/Script/swaybar.sh; do sleep 0.5; done
-    colors {
-        background #181818
-        statusline #d8d8d8
-        focused_workspace  #181818 #181818 #d8d8d8
-        active_workspace   #181818 #181818 #585858
-        inactive_workspace #181818 #181818 #585858
-        urgent_workspace   #181818 #181818 #ab4642
-        binding_mode       #181818 #181818 #f7ca88
-    }
-}
-
-#---------------------------------------------------------------------
-## OTHER
-# set display/wayland_display in the systemd user env
-include /etc/sway/config.d/*

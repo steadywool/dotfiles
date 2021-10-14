@@ -58,7 +58,7 @@ paq {'savq/paq-nvim', opt = true}
 -- Theme & colors
 paq {'norcalli/nvim-colorizer.lua'}
 paq {'chriskempson/base16-vim'}
-paq {'sheerun/vim-polyglot'}
+paq {'sheerun/vim-polyglot', opt = true}
 
 -- Lsp server
 paq {'neovim/nvim-lspconfig'}
