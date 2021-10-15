@@ -1,9 +1,14 @@
 # PLUGINS
-source ~/.zplug/init.zsh
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-autosuggestions"
-zplug load
+source ~/.zuse/zuse.zsh
+
+zuse zsh-users/zsh-autosuggestions
+source $ZPATH/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+zuse zsh-users/zsh-completions
+source $ZPATH/zsh-completions/zsh-completions.plugin.zsh
+
+zuse zsh-users/zsh-syntax-highlighting
+source $ZPATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #-----------------------------------------------------------------------------
 # ALIAS
@@ -85,9 +90,9 @@ fi
 
 ## Cursor shape
 function zle-keymap-select {
-    if [[ ${KEYMAP} == vicmd ]] || [[ $1 = 'block' ]]; then
+    if [ $KEYMAP == vicmd ] || [ $1 = 'block' ]; then
         echo -ne '\e[1 q'
-    elif [[ ${KEYMAP} == main ]] || [[ ${KEYMAP} == viins ]] || [[ ${KEYMAP} = '' ]] || [[ $1 = 'beam' ]]; then
+    elif [ $KEYMAP == main ] || [ $KEYMAP == viins ] || [ $KEYMAP = '' ] || [ $1 = 'beam' ]; then
         echo -ne '\e[5 q'
     fi
 }
