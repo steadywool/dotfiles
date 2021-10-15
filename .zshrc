@@ -23,7 +23,6 @@ alias gm='git merge'
 alias gp='git push'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
-
 # pacman
 alias afetch='pacman -Q | wc -l'
 
