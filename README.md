@@ -2,7 +2,7 @@
 
 ---
 #### CLI
-zsh / neovim / ranger / ufw / htop / git
+zsh / neovim / ranger / ufw / htop / git / npm
 
 #### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop
@@ -81,8 +81,8 @@ Enter these default rules for a personal computer with UFW:
 ```
 
 ---
-#### Paq-nvim
+#### Packer.nvim
 ```
-$ git clone --depth=1 https://github.com/savq/paq-nvim.git \
-    "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/pack/paqs/start/paq-nvim
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```

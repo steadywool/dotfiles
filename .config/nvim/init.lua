@@ -36,83 +36,10 @@ vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
 
 ----------------------------------------------------------------------------------
--- OMNICOMPLETION
-vim.cmd('autocmd FileType cpp set omnifunc=v:lua.vim.lsp.omnifunc')
-vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+-- Lua modules
+local keybinds = require('keybinds')
+local lsp = require('lsp')
+local plugins = require('plugins')
+local plugins_config = require('plugins_config')
+local statusline = require('statusline')
 
-----------------------------------------------------------------------------------
--- STATUSLINE
-vim.cmd('highlight Status1 guifg=#282828 guibg=#86c1b9')
-vim.cmd('highlight Status2 guifg=#d8d8d8 guibg=#383838')
-vim.cmd('highlight Status3 guifg=#d8d8d8 guibg=#282828')
-
-vim.opt.statusline = '%#Status1# %n %#Status2# %f %#Status3# %r%m %= %w%y %#Status1# %l:%c %p%% '
-
-----------------------------------------------------------------------------------
--- PLUGINS MANAGER
--- Package manager
-vim.cmd('packadd paq-nvim')
-local paq = require('paq-nvim').paq
-paq {'savq/paq-nvim', opt = true}
-
--- Theme & colors
-paq {'norcalli/nvim-colorizer.lua'}
-paq {'chriskempson/base16-vim'}
-paq {'sheerun/vim-polyglot', opt = true}
-
--- Lsp server
-paq {'neovim/nvim-lspconfig'}
-paq {'kabouzeid/nvim-lspinstall'}
-
--- Snippet
-paq {'L3MON4D3/LuaSnip'}
-paq {'saadparwaiz1/cmp_luasnip'}
-
---Autocompletion
-paq{'hrsh7th/nvim-cmp'}
-paq{'hrsh7th/cmp-nvim-lsp'}
-
-----------------------------------------------------------------------------------
--- PLUGINS CONFIG
--- Colorizer
-require'colorizer'.setup()
-
--- Lsp server
-require'lspinstall'.setup()
-local servers = require'lspinstall'.installed_servers()
-for _, server in pairs(servers) do
-    require'lspconfig'[server].setup{
-        capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-    }
-end
-
--- Snippet
-local luasnip = require 'luasnip'
-
--- Autocompletion
-local cmp = require'cmp'
-cmp.setup({
-    snippet = {
-        expand = function(args)
-            require('luasnip').lsp_expand(args.body)
-        end,
-    },
-    mapping = {
-        ['<C-e>'] = cmp.mapping.close(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
-    },
-    sources = {
-        { name = 'nvim_lsp' },
-        { name = 'luasnip' },
-    }
-})
-
-----------------------------------------------------------------------------------
--- REMAP
--- Move to text buffer
-vim.cmd('nnoremap <TAB> :bnext<CR>')
-vim.cmd('nnoremap <S-TAB> :bprevious<CR>')
-
--- Esc to JK & KJ
-vim.cmd('inoremap jk <Esc>')
-vim.cmd('inoremap kj <Esc>')

@@ -5,7 +5,7 @@ ZPATH=$HOME/.zuse/plugins
 
 # Download plugins
 zuse() {
-    url=$1 module=${1:t}
+    local url=$1 module=${1:t}
     local plugin_path=$ZPATH/$module
 
     # Create the installation path if needed
