@@ -2,17 +2,15 @@
 
 ---
 #### CLI
-zsh / neovim / ranger / ufw / htop / git / npm
+zsh / neovim / ranger / ufw / htop
 
 #### Wayland
-kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop
+kitty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / clipman (wl-clipboard)
+light / grim + slurp / gammastep / wl-clipboard
 
 #### Other
-tlp / atool / polkit-gnome / rclone / snapper
-
-imv / mpv / mupdf
+tlp / atool / polkit-gnome / rclone / snapper / libappindicator-gtk3
 
 ---
 #### Base
@@ -31,14 +29,9 @@ os-prober / efibootmgr (uefi) / grub / grub-btrfs
 pipewire{-pulse,-alsa,-jack}
 
 #### Other
-alsa-utils / man-db / udisks2 / xdg-user-dirs / ffmpeg / libmtp / libappindicator-gtk3
+man-db / udisks2 / xdg-user-dirs / libmtp
 
 ---
-#### Change shell
-```
-$ chsh -s /bin/SHELL
-```
-
 #### Create a new user and add it to a group
 ```
 # useradd -m -g GROUP USER
