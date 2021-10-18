@@ -13,7 +13,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.cmd('colorscheme base16-default-dark')
+vim.cmd('colorscheme everforest')
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
@@ -37,9 +37,8 @@ vim.opt.wrap = false
 
 ----------------------------------------------------------------------------------
 -- Lua modules
-local keybinds = require('keybinds')
-local lsp = require('lsp')
-local plugins = require('plugins')
-local plugins_config = require('plugins_config')
-local statusline = require('statusline')
-
+require('keybinds')
+require('lsp_config')
+require('plugins')
+require('plugins_config')
+require('statusline')
