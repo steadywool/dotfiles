@@ -3,7 +3,6 @@ vim.opt.swapfile = false
 vim.opt.hidden = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
-vim.opt.completeopt = 'menu,menuone,noinsert'
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 

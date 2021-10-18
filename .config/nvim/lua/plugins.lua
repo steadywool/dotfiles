@@ -4,7 +4,6 @@ return require('packer').startup(function()
 
     -- Theme & colors
     use 'norcalli/nvim-colorizer.lua'
-    use 'chriskempson/base16-vim'
     use {'sainnhe/everforest'}
 
     -- Lsp server
