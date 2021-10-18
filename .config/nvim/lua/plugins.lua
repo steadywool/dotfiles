@@ -5,7 +5,6 @@ return require('packer').startup(function()
     -- Theme & colors
     use 'norcalli/nvim-colorizer.lua'
     use 'chriskempson/base16-vim'
-    use {'sheerun/vim-polyglot', opt = true}
     use {'sainnhe/everforest'}
 
     -- Lsp server

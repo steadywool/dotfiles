@@ -38,7 +38,9 @@ vim.opt.wrap = false
 ----------------------------------------------------------------------------------
 -- Lua modules
 require('keybinds')
-require('lsp_config')
 require('plugins')
-require('plugins_config')
 require('statusline')
+
+require('plugins.lsp_server')
+require('plugins.completion')
+require('plugins.colorizer')
