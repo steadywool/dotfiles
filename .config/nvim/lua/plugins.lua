@@ -3,8 +3,8 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- Theme & colors
+    use 'chriskempson/base16-vim'
     use 'norcalli/nvim-colorizer.lua'
-    use {'sainnhe/everforest'}
 
     -- Lsp server
     use 'neovim/nvim-lspconfig'
