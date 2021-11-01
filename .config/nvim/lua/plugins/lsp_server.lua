@@ -1,5 +1,5 @@
  -- Lsp config
-local servers = { 'clangd', 'html', 'cssls', 'sumneko_lua', 'tsserver', 'jsonls', 'intelephense', 'bashls' }
+local servers = { 'clangd', 'denols', 'html', 'cssls', 'eslint', 'jsonls', 'sumneko_lua', 'intelephense', 'bashls' }
 for _, lsp in ipairs(servers) do
     require'lspconfig'[lsp].setup{
         capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())

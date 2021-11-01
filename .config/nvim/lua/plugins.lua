@@ -1,10 +1,16 @@
-return require('packer').startup(function()
+return require('packer').startup(function(use)
     -- Package manager
     use 'wbthomason/packer.nvim'
 
-    -- Theme & colors
+    -- Colorschemes
     use 'chriskempson/base16-vim'
+
+    -- Tools
     use 'norcalli/nvim-colorizer.lua'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = {'nvim-lua/plenary.nvim'}
+    }
 
     -- Lsp server
     use 'neovim/nvim-lspconfig'

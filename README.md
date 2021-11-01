@@ -1,16 +1,13 @@
-![](Screenshot/screenshot.jpg)
-
----
 #### CLI
 zsh / neovim / ranger / ufw / htop
 
 #### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp / gammastep / wl-clipboard
+light / gammastep / grim + slurp / wl-clipboard
 
 #### Other
-tlp / atool / polkit-gnome / rclone / snapper / libappindicator-gtk3
+tlp / atool / polkit-gnome / libappindicator-gtk3
 
 ---
 #### Base
@@ -54,12 +51,6 @@ GRUB_DISABLE_OS_PROBER=false
 ```
 Then regenerate grub 2 config.
 
-#### Mount BTRFS subvolumes
-Useful for creating subvolumes:
-```
-# mount -o subvolid=0 /dev/sda3 /mnt
-```
-
 #### Launch Firefox with wayland
 Use this environment variable (Add it to `/etc/environment` work well):
 ```
@@ -73,8 +64,7 @@ Enter these default rules for a personal computer with UFW:
 # ufw default allow outgoing
 ```
 
----
-#### Packer.nvim
+#### Install packer.nvim
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim

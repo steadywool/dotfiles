@@ -14,13 +14,19 @@ source $ZPATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ALIAS
 ## git
 alias g='git'
-alias ga='git add'
-alias gaa='git add --all'
-alias gav='git add --verbose'
-alias gc='git commit -v'
-alias gl='git pull'
-alias gm='git merge'
-alias gp='git push'
+
+alias gb='git branch --verbose'
+
+alias ga='git add --verbose'
+alias gaa='git add --all --verbose'
+
+alias gc='git commit -am'
+alias gca='git commit -a'
+
+alias gr='git reset --soft HEAD^'
+alias gcr='git commit --amend --verbose'
+
+alias gs='git status -s'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
 # pacman
