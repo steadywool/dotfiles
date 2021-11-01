@@ -14,8 +14,10 @@ source $ZPATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ALIAS
 ## git
 alias g='git'
+alias gp='git push --verbose'
 
 alias gb='git branch --verbose'
+alias gco='git checkout'
 
 alias ga='git add --verbose'
 alias gaa='git add --all --verbose'
