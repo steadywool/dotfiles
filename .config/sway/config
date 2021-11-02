@@ -74,6 +74,24 @@ bindsym Mod4+Shift+parenright move scratchpad
 bindsym Mod4+parenright scratchpad show
 
 #---------------------------------------------------------------------
+## OPACITY
+mode "opacity" {
+    bindsym h opacity plus 0.1
+    bindsym j opacity plus 0.1
+    bindsym k opacity minus 0.1
+    bindsym l opacity minus 0.1
+
+    bindsym Left opacity plus 0.1
+    bindsym Down opacity plus 0.1
+    bindsym Up opacity minus 0.1
+    bindsym Right opacity minus 0.1
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Mod4+p mode "opacity"
+
+#---------------------------------------------------------------------
 ## FOCUS/SWAP/RESIZE
 # Focus the given workspace
 bindsym Mod4+ampersand workspace number 1
