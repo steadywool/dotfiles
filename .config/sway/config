@@ -75,21 +75,8 @@ bindsym Mod4+parenright scratchpad show
 
 #---------------------------------------------------------------------
 ## OPACITY
-mode "opacity" {
-    bindsym h opacity plus 0.1
-    bindsym j opacity plus 0.1
-    bindsym k opacity minus 0.1
-    bindsym l opacity minus 0.1
-
-    bindsym Left opacity plus 0.1
-    bindsym Down opacity plus 0.1
-    bindsym Up opacity minus 0.1
-    bindsym Right opacity minus 0.1
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym Mod4+p mode "opacity"
+bindsym Mod4+p opacity minus 0.1
+bindsym Mod4+Shift+p opacity plus 0.1
 
 #---------------------------------------------------------------------
 ## FOCUS/SWAP/RESIZE

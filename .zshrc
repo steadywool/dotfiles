@@ -23,7 +23,7 @@ alias ga='git add --verbose'
 alias gaa='git add --all --verbose'
 
 alias gc='git commit -am'
-alias gca='git commit -a'
+alias gca='git commit -av'
 
 alias gr='git reset --soft HEAD^'
 alias gcr='git commit --amend --verbose'
