@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorschemes
-    use 'chriskempson/base16-vim'
+    use 'sainnhe/edge'
 
     -- Tools
     use 'norcalli/nvim-colorizer.lua'
@@ -22,4 +22,7 @@ return require('packer').startup(function(use)
     --Autocompletion
     use'hrsh7th/nvim-cmp'
     use'hrsh7th/cmp-nvim-lsp'
+
+    --Treesitter
+    use'nvim-treesitter/nvim-treesitter'
 end)

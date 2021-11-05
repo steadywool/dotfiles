@@ -12,7 +12,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.cmd('colorscheme base16-default-dark')
+vim.cmd('colorscheme edge')
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
@@ -43,3 +43,4 @@ require('statusline')
 require('plugins.lsp_server')
 require('plugins.completion')
 require('plugins.colorizer')
+require('plugins.treesitter')
