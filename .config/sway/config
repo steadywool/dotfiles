@@ -14,8 +14,8 @@ bindsym Mod4+o exec kitty -1 ranger
 bindsym Mod4+Shift+q exec kitty -1 htop
 
 # Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i --fn 'Fira Code Regular 9' --tb='#2c2e34' --tf='#c5cdd9' --fb='#2c2e34' --nb='#2c2e34' --nf='#c5cdd9' --hb='#2c2e34' --hf='#ec7279'"
-bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#2c2e34' --tf='#c5cdd9' --fb='#2c2e34' --nb='#2c2e34' --nf='#c5cdd9' --hb='#2c2e34' --hf='#ec7279'
+bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i --fn 'Fira Code Regular 9' --tb='#1d2021' --tf='#d4be98' --fb='#1d2021' --nb='#1d2021' --nf='#d4be98' --hb='#1d2021' --hf='#ea6962'"
+bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#1d2021' --tf='#d4be98' --fb='#1d2021' --nb='#1d2021' --nf='#d4be98' --hb='#1d2021' --hf='#ea6962'
 
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh

@@ -3,7 +3,7 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorschemes
-    use 'sainnhe/edge'
+    use 'sainnhe/gruvbox-material'
 
     -- Tools
     use 'norcalli/nvim-colorizer.lua'
