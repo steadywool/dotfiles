@@ -12,7 +12,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.cmd('colorscheme gruvbox-material')
+vim.cmd('colorscheme edge')
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
