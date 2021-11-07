@@ -15,7 +15,7 @@ zuse() {
 
     # Install plugins
     if [ ! -d $plugin_path ]; then
-        git clone --recursive https://github.com/$url.git $plugin_path
+        git clone --recursive https://$url.git $plugin_path
     fi
 }
 

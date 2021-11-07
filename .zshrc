@@ -1,13 +1,13 @@
 # PLUGINS
 source ~/.zuse/zuse.zsh
 
-zuse zsh-users/zsh-autosuggestions
+zuse github.com/zsh-users/zsh-autosuggestions
 source $ZPATH/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-zuse zsh-users/zsh-completions
+zuse github.com/zsh-users/zsh-completions
 source $ZPATH/zsh-completions/zsh-completions.plugin.zsh
 
-zuse zsh-users/zsh-syntax-highlighting
+zuse github.com/zsh-users/zsh-syntax-highlighting
 source $ZPATH/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 #-----------------------------------------------------------------------------

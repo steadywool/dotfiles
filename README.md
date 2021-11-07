@@ -1,70 +1,70 @@
-#### CLI
+### CLI
 zsh / neovim / ranger / ufw / htop
 
-#### Wayland
+### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
 
 light / gammastep / grim + slurp / wl-clipboard
 
-#### Other
+### Other
 tlp / atool / polkit-gnome / libappindicator-gtk3
 
 ---
-#### Base
+### Base
 base / base-devel / linux-firmware / linux{-lts} / intel-ucode
 
-#### Disks
+### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 
-#### Archiving
+### Archiving
 zip / unzip / unrar / p7zip
 
-#### Boot loader
+### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
-#### Sound
+### Sound
 pipewire{-pulse,-alsa,-jack}
 
-#### Other
+### Other
 man-db / udisks2 / xdg-user-dirs / libmtp
 
 ---
-#### Create a new user and add it to a group
+### Create a new user and add it to a group
 ```
 # useradd -m -g GROUP USER
 ```
 
-#### Add a user to a group
+### Add a user to a group
 ```
 # usermod -a -G GROUP USER
 ```
 
-#### Generate Grub config
+### Generate Grub config
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
-#### Enable os prober
+### Enable os prober
 Edit `/etc/default/grub` and add/uncomment:
 ```
 GRUB_DISABLE_OS_PROBER=false
 ```
 Then regenerate grub 2 config.
 
-#### Launch Firefox with wayland
+### Launch Firefox with wayland
 Use this environment variable (Add it to `/etc/environment` work well):
 ```
 MOZ_ENABLE_WAYLAND=1
 ```
 
-#### Setup firewall default
+### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
 # ufw default deny incoming
 # ufw default allow outgoing
 ```
 
-#### Install packer.nvim
+### Install packer.nvim
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
