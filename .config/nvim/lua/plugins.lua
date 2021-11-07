@@ -8,6 +8,9 @@ return require('packer').startup(function(use)
     -- Tools
     use 'norcalli/nvim-colorizer.lua'
     use 'kyazdani42/nvim-web-devicons'
+
+    -- Naviguation
+    use 'kyazdani42/nvim-tree.lua'
     use {
         'nvim-telescope/telescope.nvim',
         requires = {'nvim-lua/plenary.nvim'}
