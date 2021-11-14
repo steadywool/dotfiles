@@ -1,3 +1,6 @@
+--Replace selected text
+vim.cmd('vnoremap <M-r> "hy:%s/<C-r>h//gc<left><left><left>')
+
 -- Telescope
 vim.cmd('nnoremap <M-f> <cmd>Telescope find_files<CR>')
 vim.cmd('nnoremap <M-b> <cmd>Telescope buffers<CR>')

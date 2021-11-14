@@ -4,7 +4,7 @@ zsh / neovim / ranger / ufw / htop
 ### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
 
-light / gammastep / grim + slurp / wl-clipboard
+light / grim + slurp + jq / wl-clipboard
 
 ### Other
 tlp / atool / polkit-gnome / libappindicator-gtk3

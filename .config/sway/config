@@ -10,6 +10,9 @@ bindsym Mod4+Return exec kitty -1
 # Ranger
 bindsym Mod4+o exec kitty -1 ranger
 
+# Neovim
+bindsym Mod4+n exec kitty -1 nvim
+
 # Htop
 bindsym Mod4+Shift+q exec kitty -1 htop
 
@@ -20,6 +23,10 @@ bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#202023
 # Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
 
+# Screenshot
+bindsym Print exec $HOME/Script/screenshot-menu.sh
+bindsym Mod4+Shift+s exec $HOME/Script/screenshot-menu.sh
+
 # Light control
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
@@ -29,10 +36,6 @@ bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
-
-# Screenshot
-bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
-bindsym Shift+Print exec grim -t jpeg -g "$(slurp)" ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim+slurp" "Saved in $HOME/Pictures/Screenshot"
 
 #---------------------------------------------------------------------
 ## SWAY HOTKEYS
@@ -61,9 +64,6 @@ bindsym Mod4+Shift+Space floating toggle
 # Split current object horizontaly/verticaly
 bindsym Mod4+b splith
 bindsym Mod4+v splitv
-
-# Sticky mode
-bindsym Mod4+Shift+s sticky toggle
 
 #---------------------------------------------------------------------
 ## SCRATCHPAD
