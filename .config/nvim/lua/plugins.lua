@@ -2,19 +2,14 @@ return require('packer').startup(function(use)
     -- Package manager
     use 'wbthomason/packer.nvim'
 
-    -- Colorschemes
+    -- Appearance
     use 'sainnhe/edge'
+    use 'kyazdani42/nvim-web-devicons'
 
     -- Tools
     use 'norcalli/nvim-colorizer.lua'
-    use 'kyazdani42/nvim-web-devicons'
-
-    -- Naviguation
-    use 'kyazdani42/nvim-tree.lua'
-    use {
-        'nvim-telescope/telescope.nvim',
-        requires = {'nvim-lua/plenary.nvim'}
-    }
+    use 'nvim-telescope/telescope.nvim'
+    use 'nvim-lua/plenary.nvim'
 
     -- Lsp server
     use 'neovim/nvim-lspconfig'

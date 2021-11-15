@@ -1,13 +1,9 @@
---Replace selected text
-vim.cmd('vnoremap <M-r> "hy:%s/<C-r>h//gc<left><left><left>')
-
 -- Telescope
 vim.cmd('nnoremap <M-f> <cmd>Telescope find_files<CR>')
 vim.cmd('nnoremap <M-b> <cmd>Telescope buffers<CR>')
 vim.cmd('nnoremap <M-h> <cmd>Telescope command_history<CR>')
-
--- Nvim Tree
-vim.cmd('nnoremap <M-t> <cmd>NvimTreeToggle<CR>')
+vim.cmd('nnoremap <M-t> <cmd>Telescope file_browser<CR>')
+vim.cmd('nnoremap <M-g> <cmd>Telescope git_commits<CR>')
 
 -- Go to next/previous buffer in buffer list
 vim.cmd('nnoremap <TAB> :bnext<CR>')

@@ -6,6 +6,9 @@ vim.opt.mouse = 'a'
 vim.opt.updatetime = 300
 vim.opt.timeoutlen = 500
 
+vim.g['loaded_netrw'] = 1
+vim.g['loaded_netrwPlugin'] = 1
+
 ----------------------------------------------------------------------------------
 -- UI
 vim.opt.number = true
@@ -35,7 +38,7 @@ vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
 
 ----------------------------------------------------------------------------------
--- Lua modules
+-- LUA MODULES
 require('keybinds')
 require('plugins')
 require('statusline')
@@ -43,5 +46,5 @@ require('statusline')
 require('plugins.colorizer')
 require('plugins.completion')
 require('plugins.lsp_server')
-require('plugins.nvim_tree')
 require('plugins.treesitter')
+require('plugins.telescope')
