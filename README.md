@@ -51,12 +51,6 @@ GRUB_DISABLE_OS_PROBER=false
 ```
 Then regenerate grub 2 config.
 
-### Launch Firefox with wayland
-Use this environment variable (Add it to `/etc/environment` work well):
-```
-MOZ_ENABLE_WAYLAND=1
-```
-
 ### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
