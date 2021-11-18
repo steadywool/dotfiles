@@ -4,7 +4,6 @@ ZPLUG=$HOME/.zsh/plugins
 source $ZHOME/aliases.zsh
 source $ZHOME/script.zsh
 source $ZHOME/theme.zsh
-source $ZHOME/variables.zsh
 source $ZHOME/zuse.zsh
 
 zuse github.com/zsh-users/zsh-autosuggestions
