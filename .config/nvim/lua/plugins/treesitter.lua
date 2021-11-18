@@ -1,12 +1,7 @@
---require'nvim-treesitter.configs'.setup {
---    highlight = {
---        enable = true,
---        additional_vim_regex_highlighting = true,
---    },
---    incremental_selection = {
---        enable = true
---    },
---    indent = {
---        enable = true
---    },
---}
+require'nvim-treesitter.configs'.setup {
+    highlight = {
+        enable = true,
+        disable = { "html", "php" },
+        additional_vim_regex_highlighting = false
+    },
+}

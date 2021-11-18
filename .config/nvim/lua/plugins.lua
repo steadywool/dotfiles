@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     --Autocompletion
     use'hrsh7th/nvim-cmp'
     use'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-path'
 
     --Treesitter
     use'nvim-treesitter/nvim-treesitter'

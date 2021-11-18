@@ -7,7 +7,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp + jq / wl-clipboard
 
 ### Other
-tlp / atool / polkit-gnome / libappindicator-gtk3
+imv / man-db / udisks2 / xdg-user-dirs / libmtp / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring
 
 ---
 ### Base
@@ -22,23 +22,7 @@ zip / unzip / unrar / p7zip
 ### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
-### Sound
-pipewire{-pulse,-alsa,-jack}
-
-### Other
-man-db / udisks2 / xdg-user-dirs / libmtp
-
 ---
-### Create a new user and add it to a group
-```
-# useradd -m -g GROUP USER
-```
-
-### Add a user to a group
-```
-# usermod -a -G GROUP USER
-```
-
 ### Generate Grub config
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg

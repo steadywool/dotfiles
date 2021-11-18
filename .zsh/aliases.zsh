@@ -32,3 +32,5 @@ alias amtp-unmount='fusermount -u $HOME/Mount'
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
 alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
+# qemu ubuntu
+alias ubuntu='qemu-system-x86_64 -enable-kvm -m 2G -drive file=ubuntu.img,format=qcow2'
