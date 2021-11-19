@@ -17,7 +17,6 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.cmd('colorscheme edge')
 
-
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
 vim.cmd('filetype plugin on')

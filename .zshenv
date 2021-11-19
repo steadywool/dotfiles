@@ -1,3 +1,6 @@
+ZHOME=$HOME/.zsh
+ZPLUG=$HOME/.zsh/plugins
+
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less

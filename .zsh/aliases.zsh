@@ -3,7 +3,6 @@
 alias g='git'
 alias gp='git push --verbose'
 
-alias gb='git branch --verbose'
 alias gco='git checkout'
 
 alias ga='git add --verbose'
@@ -12,10 +11,9 @@ alias gaa='git add --all --verbose'
 alias gc='git commit -am'
 alias gca='git commit -av'
 
-alias gr='git reset --soft HEAD^'
-alias gcr='git commit --amend --verbose'
+alias gs='git stash'
+alias gsp='git stash pop'
 
-alias gs='git status -s'
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
 
 # pacman

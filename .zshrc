@@ -1,6 +1,3 @@
-ZHOME=$HOME/.zsh
-ZPLUG=$HOME/.zsh/plugins
-
 source $ZHOME/aliases.zsh
 source $ZHOME/script.zsh
 source $ZHOME/theme.zsh
@@ -31,6 +28,9 @@ compinit
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
+
+## Correct
+setopt correctall
 
 ## Vcs
 autoload -Uz vcs_info
