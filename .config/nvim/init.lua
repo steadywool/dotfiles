@@ -16,6 +16,7 @@ vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.cmd('colorscheme edge')
+vim.wo.colorcolumn = '99999'
 
 ----------------------------------------------------------------------------------
 -- SYNTAX HIGHLIGHTING
@@ -44,7 +45,7 @@ require('plugins')
 require('statusline')
 
 require('plugins.colorizer')
+require('plugins.completion')
 require('plugins.lsp_server')
 require('plugins.telescope')
-require('plugins.completion')
 require('plugins.treesitter')

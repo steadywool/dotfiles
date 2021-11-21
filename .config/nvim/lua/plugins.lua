@@ -5,11 +5,13 @@ return require('packer').startup(function(use)
     -- Appearance
     use 'sainnhe/edge'
     use 'kyazdani42/nvim-web-devicons'
+    use "lukas-reineke/indent-blankline.nvim"
 
     -- Tools
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
+    use 'iamcco/markdown-preview.nvim'
 
     -- Lsp server
     use 'neovim/nvim-lspconfig'
