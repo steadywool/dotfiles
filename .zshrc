@@ -1,5 +1,5 @@
 source $ZHOME/aliases.zsh
-source $ZHOME/script.zsh
+source $ZHOME/autostart.zsh
 source $ZHOME/theme.zsh
 source $ZHOME/zuse.zsh
 
@@ -11,6 +11,9 @@ source $ZPLUG/zsh-completions/zsh-completions.plugin.zsh
 
 zuse github.com/zsh-users/zsh-syntax-highlighting
 source $ZPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+zuse github.com/jeffreytse/zsh-vi-mode
+source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
 
 #-----------------------------------------------------------------
 ## Vi mode
@@ -28,9 +31,6 @@ compinit
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
-
-## Correct
-setopt correctall
 
 ## Vcs
 autoload -Uz vcs_info

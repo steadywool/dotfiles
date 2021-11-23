@@ -34,4 +34,4 @@ alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 alias ls='ls --color=auto'
 
 # qemu ubuntu
-alias ubuntu='qemu-system-x86_64 -enable-kvm -m 2G -drive file=ubuntu.img,format=qcow2'
+alias ubuntu='qemu-system-x86_64 -enable-kvm -m 2G -drive file=ubuntu.cow,format=qcow2'

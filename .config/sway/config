@@ -24,7 +24,7 @@ bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#202023
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
 
 # Screenshot
-bindsym Print exec $HOME/Script/screenshot-menu.sh
+bindsym Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
 bindsym Mod4+Shift+s exec $HOME/Script/screenshot-menu.sh
 
 # Light control
@@ -62,8 +62,8 @@ bindsym Mod4+f fullscreen
 bindsym Mod4+Shift+Space floating toggle
 
 # Split current object horizontaly/verticaly
-bindsym Mod4+b splith
-bindsym Mod4+v splitv
+bindsym Mod4+b splitv
+bindsym Mod4+v splith
 
 #---------------------------------------------------------------------
 ## SCRATCHPAD
