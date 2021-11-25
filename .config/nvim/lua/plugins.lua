@@ -1,31 +1,33 @@
 return require('packer').startup(function(use)
-    -- Package manager
+    -- PACKAGE MANAGER
     use 'wbthomason/packer.nvim'
 
-    -- Appearance
+    -- APPEARANCE
     use 'sainnhe/edge'
     use 'kyazdani42/nvim-web-devicons'
-    use "lukas-reineke/indent-blankline.nvim"
-
-    -- Tools
+    use 'lukas-reineke/indent-blankline.nvim'
     use 'norcalli/nvim-colorizer.lua'
+    use 'nvim-treesitter/nvim-treesitter'
+
+    -- LSP
+    use {
+        -- config
+        'neovim/nvim-lspconfig',
+
+        -- snippet
+        'L3MON4D3/LuaSnip',
+        'saadparwaiz1/cmp_luasnip',
+
+        --completion
+        'hrsh7th/nvim-cmp',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-buffer',
+    }
+
+    -- TOOLS
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'iamcco/markdown-preview.nvim'
 
-    -- Lsp server
-    use 'neovim/nvim-lspconfig'
-
-    -- Snippet
-    use 'L3MON4D3/LuaSnip'
-    use 'saadparwaiz1/cmp_luasnip'
-
-    --Autocompletion
-    use'hrsh7th/nvim-cmp'
-    use'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-buffer'
-
-    --Treesitter
-    use'nvim-treesitter/nvim-treesitter'
 end)

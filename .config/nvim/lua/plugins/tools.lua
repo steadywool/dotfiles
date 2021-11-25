@@ -1,3 +1,4 @@
+-- Telescope
 require('telescope').setup {
     pickers =  {
         file_browser = {
