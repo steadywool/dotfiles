@@ -45,6 +45,7 @@ require('plugins')
 require('statusline')
 
 require('plugins.colorizer')
+require('plugins.indent_blankline')
 require('plugins.completion')
 require('plugins.lsp_server')
 require('plugins.telescope')

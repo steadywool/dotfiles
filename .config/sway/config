@@ -62,8 +62,8 @@ bindsym Mod4+f fullscreen
 bindsym Mod4+Shift+Space floating toggle
 
 # Split current object horizontaly/verticaly
-bindsym Mod4+b splitv
-bindsym Mod4+v splith
+bindsym Mod4+b splith
+bindsym Mod4+v splitv
 
 #---------------------------------------------------------------------
 ## SCRATCHPAD
