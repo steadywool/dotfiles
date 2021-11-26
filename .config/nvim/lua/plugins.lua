@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
     use 'lukas-reineke/indent-blankline.nvim'
     use 'norcalli/nvim-colorizer.lua'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'lewis6991/gitsigns.nvim'
 
     -- LSP
     use {
@@ -29,5 +30,6 @@ return require('packer').startup(function(use)
     use 'nvim-telescope/telescope.nvim'
     use 'nvim-lua/plenary.nvim'
     use 'iamcco/markdown-preview.nvim'
+    use 'kyazdani42/nvim-tree.lua'
 
 end)

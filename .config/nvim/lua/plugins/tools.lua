@@ -1,11 +1,11 @@
 -- Telescope
-require('telescope').setup {
-    pickers =  {
-        file_browser = {
-            file_ignore_patterns = {
-                "git"
-            },
-            hidden = true,
-        }
+require'telescope'.setup {
+}
+
+-- Nvim Tree
+require'nvim-tree'.setup {
+   view = {
+        width = 25,
+        height = 25,
     }
 }
