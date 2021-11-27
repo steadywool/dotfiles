@@ -14,7 +14,7 @@ alias gca='git commit -av'
 alias gs='git stash'
 alias gsp='git stash pop'
 
-alias glog='git log --pretty="%h - %s - %ad" --relative-date -10'
+alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 
 # pacman
 alias afetch='pacman -Q | wc -l'
