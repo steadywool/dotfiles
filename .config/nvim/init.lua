@@ -28,6 +28,7 @@ vim.cmd('syntax enable')
 vim.cmd('filetype indent on')
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.cmd('autocmd FileType php setlocal autoindent')
 
 ----------------------------------------------------------------------------------
 -- TABS & SPACES

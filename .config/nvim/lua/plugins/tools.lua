@@ -12,14 +12,12 @@ require'nvim-tree'.setup {
 
 -- TreeSitter
 require'nvim-treesitter.configs'.setup {
+    autotag = {enable = true},
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false
+        additional_vim_regex_highlighting = false,
     }
 }
 
 -- Autopairs
 require'nvim-autopairs'.setup()
-
--- TS Autotag
-require'nvim-ts-autotag'.setup()
