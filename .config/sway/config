@@ -146,5 +146,6 @@ bindsym Mod4+r mode "resize"
 # Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
 
-# Focus to parent container
+# Focus to parent/child container
 bindsym Mod4+a focus parent
+bindsym Mod4+c focus child
