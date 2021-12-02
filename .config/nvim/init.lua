@@ -1,6 +1,5 @@
 -- GENERAL
 vim.opt.swapfile = false
-vim.opt.hidden = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.updatetime = 300
