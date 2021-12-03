@@ -22,10 +22,6 @@ alias afetch='pacman -Q | wc -l'
 # ping
 alias aping='ping -c 1 www.gentoo.org'
 
-# mtp mount & unmount
-alias amtp-mount='aft-mtp-mount $HOME/Mount'
-alias amtp-unmount='fusermount -u $HOME/Mount'
-
 # rclone gdrive copy & sync
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
 alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
