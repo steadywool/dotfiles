@@ -27,7 +27,8 @@ alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
 alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
 # ls
-alias ls='ls --color=auto'
+alias -g ls='ls --color=auto'
+alias lsa="ls -A"
 
 # qemu ubuntu
 alias ubuntu='qemu-system-x86_64 -enable-kvm -m 2G -drive file=ubuntu.cow,format=qcow2'

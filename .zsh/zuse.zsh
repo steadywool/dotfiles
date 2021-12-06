@@ -6,12 +6,12 @@ zuse() {
     local module_path=$ZPLUG/$module
 
     # Create the installation path if needed
-    if [ ! -d $ZPLUG ]; then
+    if [[ ! -d $ZPLUG ]]; then
         mkdir -p $ZPLUG
     fi
 
     # Install plugins
-    if [ ! -d $module_path ]; then
+    if [[ ! -d $module_path ]]; then
         git clone --recursive https://$url.git $module_path
     fi
 }
