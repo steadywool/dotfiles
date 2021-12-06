@@ -15,7 +15,6 @@ source $ZPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 zuse github.com/jeffreytse/zsh-vi-mode
 source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
 
-#-----------------------------------------------------------------
 ## Vi mode
 bindkey -v
 KEYTIMEOUT=5

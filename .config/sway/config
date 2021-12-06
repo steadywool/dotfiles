@@ -1,89 +1,76 @@
-## INCLUDE
+# INCLUDE
 include /etc/sway/config.d/*
 include ~/.config/sway/config.d/*
 
-#-----------------------------------------------------------------------
-## WM INDEPENDANT HOTKEYS
-# Kitty
+# WM INDEPENDANT HOTKEYS
+## Kitty
 bindsym Mod4+Return exec kitty -1
 
-# Ranger
+## Ranger
 bindsym Mod4+o exec kitty -1 ranger
 
-# Neovim
+## Neovim
 bindsym Mod4+n exec kitty -1 nvim
 
-# Htop
+## Htop
 bindsym Mod4+Shift+q exec kitty -1 htop
 
-# Bemenu
+## Bemenu
 bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i --fn 'Fira Code Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279'"
 bindsym Mod4+Shift+d exec bemenu-run -i --fn 'Fira Code Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279'
 
-# Power menu
+## Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
 
-# Screenshot
+## Screenshot
 bindsym Print exec $HOME/Script/screenshot-menu.sh
 bindsym Shift+Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
 
-# Light control
+## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
 
-# Pulseaudio
+## Pulseaudio
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
-#---------------------------------------------------------------------
-## SWAY HOTKEYS
-# Reload Sway
+# SWAY HOTKEYS
+## Reload Sway
 bindsym Mod4+Shift+r reload
 
-# kill window
+## kill window
 bindsym Mod4+q kill
 
-# Floating modifier
+## Floating modifier
 floating_modifier Mod4 normal
 
-#---------------------------------------------------------------------
-## LAYOUT STUFF
-# Layout styles
+# LAYOUT STUFF
+## Layout styles
 bindsym Mod4+s layout stacking
 bindsym Mod4+w layout tabbed
 bindsym Mod4+e layout toggle split
 
-# Tiling/fullscreen mode
+## Tiling/fullscreen mode
 bindsym Mod4+f fullscreen
 
-# Tiling/floating mode
+## Tiling/floating mode
 bindsym Mod4+Shift+Space floating toggle
 
-# Split current object horizontaly/verticaly
+## Split current object horizontaly/verticaly
 bindsym Mod4+b splith
 bindsym Mod4+v splitv
 
-# Sticky window
+## Sticky window
 bindsym Mod4+Shift+s sticky toggle
 
-#---------------------------------------------------------------------
-## SCRATCHPAD
-# Move focused window to scratchpad
+## Scratchpad
 bindsym Mod4+Shift+parenright move scratchpad
-
-# Show next scratchpad window or hide focused scratchpad window
 bindsym Mod4+parenright scratchpad show
 
-#---------------------------------------------------------------------
-## OPACITY
-bindsym Mod4+p opacity minus 0.1
-bindsym Mod4+Shift+p opacity plus 0.1
-
-#---------------------------------------------------------------------
-## FOCUS/SWAP/RESIZE
-# Focus the given workspace
+# FOCUS/SWAP/RESIZE
+## Focus the given workspace
 bindsym Mod4+ampersand workspace number 1
 bindsym Mod4+eacute workspace number 2
 bindsym Mod4+quotedbl workspace number 3
@@ -95,7 +82,7 @@ bindsym Mod4+underscore workspace number 8
 bindsym Mod4+ccedilla workspace number 9
 bindsym Mod4+agrave workspace number 10
 
-# Send window to the given workspace
+## Send window to the given workspace
 bindsym Mod4+Shift+ampersand move container to workspace number 1
 bindsym Mod4+Shift+eacute move container to workspace number 2
 bindsym Mod4+Shift+quotedbl move container to workspace number 3
@@ -107,7 +94,7 @@ bindsym Mod4+Shift+underscore move container to workspace number 8
 bindsym Mod4+Shift+ccedilla move container to workspace number 9
 bindsym Mod4+Shift+agrave move container to workspace number 10
 
-#Focus the window
+## Focus the window
 bindsym Mod4+h focus Left
 bindsym Mod4+j focus Down
 bindsym Mod4+k focus Up
@@ -118,7 +105,7 @@ bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 
-# Swap the window
+## Swap the window
 bindsym Mod4+Shift+h move Left
 bindsym Mod4+Shift+j move Down
 bindsym Mod4+Shift+k move Up
@@ -129,7 +116,7 @@ bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
-# Resize window
+## Resize window
 mode "resize" {
     bindsym h resize shrink width 10px
     bindsym j resize grow height 10px
@@ -146,9 +133,14 @@ mode "resize" {
 }
 bindsym Mod4+r mode "resize"
 
-# Swap focus Tiling/floating area
+## Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
 
-# Focus to parent/child container
+## Focus to parent/child container
 bindsym Mod4+a focus parent
 bindsym Mod4+c focus child
+
+## opacity
+bindsym Mod4+p opacity minus 0.1
+bindsym Mod4+Shift+p opacity plus 0.1
+
