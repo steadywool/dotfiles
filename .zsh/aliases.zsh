@@ -1,5 +1,4 @@
-# ALIAS
-## git
+# Git
 alias g='git'
 alias gp='git push --verbose'
 
@@ -16,19 +15,19 @@ alias gsp='git stash pop'
 
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 
-# pacman
+# Pacman
 alias afetch='pacman -Q | wc -l'
 
-# ping
+# Ping
 alias aping='ping -c 1 www.gentoo.org'
 
-# rclone gdrive copy & sync
+# Rclone Gdrive copy & sync
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
 alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
-# ls
+# Ls
 alias -g ls='ls --color=auto'
 alias lsa="ls -A"
 
-# qemu ubuntu
+# Qemu Ubuntu
 alias ubuntu='qemu-system-x86_64 -enable-kvm -m 2G -drive file=ubuntu.cow,format=qcow2'

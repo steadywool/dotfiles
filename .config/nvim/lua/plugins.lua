@@ -16,12 +16,13 @@ return require('packer').startup(function(use)
         'neovim/nvim-lspconfig',
 
         -- snippet
-        'L3MON4D3/LuaSnip',
-        'saadparwaiz1/cmp_luasnip',
+        'hrsh7th/vim-vsnip',
+        'hrsh7th/cmp-vsnip',
 
         --completion
         'hrsh7th/nvim-cmp',
         'hrsh7th/cmp-nvim-lsp',
+
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-buffer',
     }

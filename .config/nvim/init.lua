@@ -1,4 +1,4 @@
--- GENERAL
+-- General
 vim.opt.swapfile = false
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
@@ -13,20 +13,19 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.cmd('colorscheme edge')
 vim.wo.colorcolumn = '99999'
 
--- SYNTAX HIGHLIGHTING
+-- Syntax Higlighting
 vim.cmd('filetype plugin on')
 vim.cmd('syntax enable')
 
--- INDENTATION
+-- Indentation
 vim.cmd('filetype indent on')
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.cmd('autocmd FileType php setlocal autoindent')
 
--- TABS & SPACES
+-- Tabs & Spaces
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
@@ -34,11 +33,11 @@ vim.opt.list = true
 vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
 
--- LUA MODULES
+-- Lua Modules
+require('plugins.appearance')
+require('plugins.lsp')
+require('plugins.tools')
+
 require('keybinds')
 require('plugins')
 require('statusline')
-
-require('plugins.lsp')
-require('plugins.tools')
-require('plugins.appearance')

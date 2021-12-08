@@ -1,9 +1,9 @@
 [global]
-### Display ###
+# Display
 monitor = 0
 follow = keyboard
 
-### Geometry ###
+# Geometry
 width = 300
 height = 300
 origin = top-right
@@ -11,7 +11,7 @@ offset = 5x5
 scale = 0
 notification_limit = 0
 
-### Progress bar ###
+# Progress bar
 progress_bar = true
 progress_bar_height = 10
 progress_bar_frame_width = 1
@@ -30,7 +30,7 @@ separator_color = "#414550"
 sort = yes
 idle_threshold = 120
 
-### Text ###
+# Text
 font = Fira code Regular 9
 line_height = 0
 markup = full
@@ -44,30 +44,30 @@ stack_duplicates = true
 hide_duplicate_count = false
 show_indicators = yes
 
-### Icon ###
+# Icon
 icon_position = left
 min_icon_size = 0
 max_icon_size = 32
 icon_path = /usr/share/icons/breeze-dark/status/16/:/usr/share/icons/breeze-dark/devices/16/
 
-### History ###
+# History
 sticky_history = yes
 history_length = 20
 
-### Misc/Advanded ###
+# Misc/Advanded
 always_run_script = true
 title = Dunst
 class= Dunst
 corner_radius = 0
 ignore_dbusclose = false
 
-### Wayland ###
+# Wayland
 force_xwayland = false
 
-### Legacy ###
+# Legacy
 force_xinerama = false
 
-### Mouse ###
+# Mouse
 mouse_left_click = close_current
 mouse_middle_click = do_action, close_current
 mouse_right_click = close_all

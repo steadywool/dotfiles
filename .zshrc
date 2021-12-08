@@ -15,23 +15,23 @@ source $ZPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 zuse github.com/jeffreytse/zsh-vi-mode
 source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
 
-## Vi mode
+# Vi mode
 bindkey -v
 KEYTIMEOUT=5
 
-## History
+# History
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
-## completion
+# completion
 autoload -Uz compinit
 compinit
 setopt COMPLETE_ALIASES
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 
-## Vcs
+# Vcs
 autoload -Uz vcs_info
 precmd() {vcs_info}
 setopt prompt_subst

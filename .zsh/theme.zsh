@@ -1,4 +1,4 @@
-## Prompt
+# Prompt
 autoload -Uz promptinit
 promptinit
 zstyle ':vcs_info:*' formats '%F{magenta}%b%f %F{green}%8.8i %c%u%f'

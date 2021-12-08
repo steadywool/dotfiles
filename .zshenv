@@ -4,7 +4,7 @@ ZPLUG=$HOME/.zsh/plugins
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-export BROWSER=firefox
+export BROWSER=firefox-developer-edition
 
 #export http_proxy=http://172.23.9.254:3128/
 #export https_proxy=http://172.23.9.254:3128/
