@@ -27,8 +27,8 @@ vim.cmd('autocmd FileType php setlocal autoindent')
 
 -- Tabs & Spaces
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.tabstop = 2
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
 vim.opt.list = true
 vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
