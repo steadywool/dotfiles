@@ -20,7 +20,7 @@ cmp.setup({
     mapping = {
         ['<C-e>'] = cmp.mapping.close(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-Space>'] = cmp.mapping.complete({ 'i', 'c' }),
     },
     sources = {
         { name = 'nvim_lsp' },
