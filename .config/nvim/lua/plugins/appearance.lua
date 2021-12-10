@@ -5,11 +5,12 @@ vim.g['edge_better_performance'] = 1
 vim.cmd('colorscheme edge')
 
 -- Indent blankline
-vim.cmd('highlight IndentBlanklineContextChar guifg=#d38aea gui=nocombine')
+vim.cmd('highlight IndentBlanklineContextChar guifg=#deb974 gui=nocombine')
 require'indent_blankline'.setup {
     char = "▏",
     show_current_context = true,
-    show_current_context_start = true,
+    context_patterns = {'.'},
+    use_treesitter = false,
 }
 
 -- Colorizer

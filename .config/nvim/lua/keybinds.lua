@@ -11,8 +11,8 @@ vim.cmd('nnoremap <M-t> <cmd>NvimTreeToggle<CR>')
 vim.cmd('nnoremap <M-m> <cmd>MarkdownPreviewToggle<CR>')
 
 -- Go to next/previous buffer in buffer list
---vim.cmd('nnoremap <TAB> <cmd>bnext<CR>')
---vim.cmd('nnoremap <S-TAB> <cmd>bprevious<CR>')
+vim.cmd('nnoremap <TAB> <cmd>bnext<CR>')
+vim.cmd('nnoremap <S-TAB> <cmd>bprevious<CR>')
 
 -- Use jk or kj to escape
 vim.cmd ('inoremap jk <Esc>')
