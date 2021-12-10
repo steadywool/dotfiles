@@ -42,7 +42,7 @@ Enter these default rules for a personal computer with UFW:
 # ufw default allow outgoing
 ```
 
-### Install packer.nvim
+### Install Packer.nvim
 ```
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
