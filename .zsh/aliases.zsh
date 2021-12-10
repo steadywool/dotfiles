@@ -7,8 +7,8 @@ alias gco='git checkout'
 alias ga='git add --verbose'
 alias gaa='git add --all --verbose'
 
-alias gc='git commit -am'
-alias gca='git commit -av'
+alias gc='git commit -Sam'
+alias gca='git commit -Sav'
 
 alias gs='git stash'
 alias gsp='git stash pop'
