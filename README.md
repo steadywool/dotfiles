@@ -23,6 +23,9 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ---
+### Enabling wayland support in Electron
+Add `--enable-features=UseOzonePlatform --ozone-platform=wayland` flags.
+
 ### Generate Grub config
 ```
 # grub-mkconfig -o /boot/grub/grub.cfg

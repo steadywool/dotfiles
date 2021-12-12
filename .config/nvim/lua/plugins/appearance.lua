@@ -10,7 +10,7 @@ require'indent_blankline'.setup {
     char = "▏",
     show_current_context = true,
     context_patterns = {'.'},
-    use_treesitter = false,
+    use_treesitter = true,
 }
 
 -- Colorizer
