@@ -1,6 +1,8 @@
 ZHOME=$HOME/.zsh
 ZPLUG=$HOME/.zsh/plugins
 
+HISTFILE=$HOME/.zsh_history
+
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less

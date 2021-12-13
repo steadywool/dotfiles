@@ -1,5 +1,4 @@
 source $ZHOME/aliases.zsh
-source $ZHOME/autostart.zsh
 source $ZHOME/theme.zsh
 source $ZHOME/zuse.zsh
 
@@ -20,7 +19,6 @@ bindkey -v
 KEYTIMEOUT=5
 
 # History
-HISTFILE=$HOME/.zsh_history
 HISTSIZE=5000
 SAVEHIST=5000
 
