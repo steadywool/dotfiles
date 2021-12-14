@@ -23,21 +23,6 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ---
-### Enabling wayland support in Electron
-Add `--enable-features=UseOzonePlatform --ozone-platform=wayland` flags.
-
-### Generate Grub config
-```
-# grub-mkconfig -o /boot/grub/grub.cfg
-```
-
-### Enable os prober
-Edit `/etc/default/grub` and add/uncomment:
-```
-GRUB_DISABLE_OS_PROBER=false
-```
-Then regenerate grub 2 config.
-
 ### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
