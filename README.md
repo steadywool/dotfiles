@@ -6,9 +6,6 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 
 light / grim + slurp + jq / wl-clipboard
 
-### Other
-imv / man-db / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez + bluez-utils
-
 ---
 ### Base
 base / base-devel / linux-firmware / linux{-lts} / intel-ucode
@@ -21,6 +18,10 @@ zip / unzip / unrar / p7zip
 
 ### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
+
+---
+### Other
+imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
 
 ---
 ### Setup firewall default
