@@ -15,19 +15,19 @@ fi
 
 # Show volume and mute info
 volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
-mute=$(pactl list sinks | grep Mute | cut -c 8-)
+mute=$(pactl list sinks | grep Mute | cut -c 8- | sed 's/no/✗/g' | sed 's/yes/✓/g')
 
 # Show if we are connected or not
 device=$(nmcli device show | grep "(connected)")
 if [ -z $device ]; then
-    network="no"
+    network="✗"
 else
-    network="yes"
+    network="✓"
 fi
 
 # Show linux version
 linux_version=$(uname -r | cut -d '-' -f1)
 
 # Echo command for sway-bar
-echo "[VER $linux_version] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]"
+echo [VER $linux_version] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 
