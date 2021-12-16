@@ -18,8 +18,9 @@ volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
 mute=$(pactl list sinks | grep Mute | cut -c 8- | sed 's/no/✗/g' | sed 's/yes/✓/g')
 
 # Show if we are connected or not
-device=$(nmcli device show | grep "(connected)")
-if [ -z $device ]; then
+route=$(ip route show)
+
+if [ -z $route ]; then
     network="✗"
 else
     network="✓"
