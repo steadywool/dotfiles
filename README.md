@@ -4,7 +4,7 @@ zsh / neovim / ranger / ufw / htop
 ### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
 
-light / grim + slurp + jq / wl-clipboard
+light / grim + slurp + jq / wl-clipboard / gammastep
 
 ---
 ### Base
@@ -21,7 +21,7 @@ os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ---
 ### Other
-imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
+imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db / geoclue
 
 ---
 ### Setup firewall default
