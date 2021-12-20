@@ -13,8 +13,8 @@ cmp.setup({
         completeopt = 'menu,menuone,noinsert',
     },
     snippet = {
-       expand = function(args)
-          vim.fn["vsnip#anonymous"](args.body)
+        expand = function(args)
+            vim.fn["vsnip#anonymous"](args.body)
         end,
     },
     mapping = {
