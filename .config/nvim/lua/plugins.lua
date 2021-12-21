@@ -3,11 +3,14 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- APPEARANCE
-    use 'sainnhe/edge'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'lukas-reineke/indent-blankline.nvim'
-    use 'norcalli/nvim-colorizer.lua'
-    use 'lewis6991/gitsigns.nvim'
+    use {
+        'sainnhe/edge',
+
+        'kyazdani42/nvim-web-devicons',
+        'lukas-reineke/indent-blankline.nvim',
+        'norcalli/nvim-colorizer.lua',
+        'lewis6991/gitsigns.nvim',
+    }
 
     -- LSP
     use {
@@ -27,10 +30,17 @@ return require('packer').startup(function(use)
     }
 
     -- TOOLS
-    use 'nvim-telescope/telescope.nvim'
-    use 'iamcco/markdown-preview.nvim'
-    use 'kyazdani42/nvim-tree.lua'
-    use 'nvim-treesitter/nvim-treesitter'
-    use 'nvim-lua/plenary.nvim'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+
+        'iamcco/markdown-preview.nvim',
+
+        'kyazdani42/nvim-tree.lua',
+        'nvim-telescope/telescope.nvim',
+        'nvim-lua/plenary.nvim',
+
+        'windwp/nvim-ts-autotag',
+        'windwp/nvim-autopairs',
+    }
 
 end)
