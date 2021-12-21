@@ -22,7 +22,7 @@ KEYTIMEOUT=5
 HISTSIZE=5000
 SAVEHIST=5000
 
-# completion
+# Completion
 autoload -Uz compinit
 compinit
 setopt COMPLETE_ALIASES
