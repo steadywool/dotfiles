@@ -29,6 +29,9 @@ fi
 # Show linux version
 linux_version=$(uname -r | cut -d '-' -f1)
 
+# Storage
+storage=$(df -h ~/ | tail -n1 | cut -d ' ' -f15)
+
 # Echo command for sway-bar
-echo [VER $linux_version] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
+echo [HOME $storage] [VER $linux_version] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 
