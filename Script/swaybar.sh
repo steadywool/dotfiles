@@ -15,7 +15,7 @@ fi
 
 # Show volume and mute info
 volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
-mute=$(pactl list sinks | grep Mute | cut -c 8- | sed 's/no/✗/g' | sed 's/yes/✓/g')
+mute=$(pactl list sinks | grep Mute | cut -f2 | sed 's/Mute: no/✗/g' | sed 's/Mute: yes/✓/g')
 
 # Show if we are connected or not
 route=$(ip route show)
@@ -26,6 +26,9 @@ else
     network="✓"
 fi
 
+# Get current brightness
+brightness=$(light -G | cut -d '.' -f1)
+
 # Show linux version
 linux_version=$(uname -r | cut -d '-' -f1)
 
@@ -33,5 +36,5 @@ linux_version=$(uname -r | cut -d '-' -f1)
 storage=$(df -h --output=avail ~/ | tail -n1 | sed 's/ //g')
 
 # Echo command for sway-bar
-echo [HOME $storage] [VER $linux_version] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
+echo [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 
