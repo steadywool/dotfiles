@@ -34,7 +34,8 @@ linux_version=$(uname -r | cut -d '-' -f1)
 
 # Storage
 storage=$(df -h --output=avail ~/ | tail -n1 | sed 's/ //g')
+root_storage=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
 
 # Echo command for sway-bar
-echo [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
+echo [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 
