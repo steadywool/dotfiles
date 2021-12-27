@@ -16,6 +16,7 @@ return require('packer').startup(function(use)
     use {
         -- config
         'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
 
         -- snippet
         'hrsh7th/vim-vsnip',

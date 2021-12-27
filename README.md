@@ -1,5 +1,5 @@
 ### CLI
-zsh / neovim / ranger / ufw / htop / cronie
+zsh / neovim / ranger / ufw / htop / cronie / snapper
 
 ### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu
@@ -21,7 +21,7 @@ os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ---
 ### Other
-imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db / geoclue
+imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
 
 ---
 ### Setup firewall default
