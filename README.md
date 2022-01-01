@@ -7,7 +7,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Font
-ttf-hack / ttf-droid
+ttf-hack / ttf-roboto
 
 ---
 ### Base
