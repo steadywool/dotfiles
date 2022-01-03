@@ -18,16 +18,12 @@ alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 # Pacman
 alias afetch='echo "Packages:" `pacman -Q | wc -l`'
 
-# Ping
-alias aping='ping -c 1 www.gentoo.org'
-
 # Rclone Gdrive copy & sync
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Gdrive'
 alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
 # Ls
 alias -g ls='ls --color=auto'
-alias lsa="ls -A"
 
 # Udiskie
 alias uda='udiskie-umount -a'

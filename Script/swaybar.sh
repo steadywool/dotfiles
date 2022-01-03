@@ -15,7 +15,7 @@ fi
 
 # Show volume and mute info
 volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
-mute=$(pactl list sinks | grep Mute | cut -f2 | sed 's/Mute: no/✗/g' | sed 's/Mute: yes/✓/g')
+mute=$(pactl list sinks | grep Mute | awk '{print $2}' | sed 's/no/✗/g' | sed 's/yes/✓/g')
 
 # Show if we are connected or not
 route=$(ip route show)
@@ -36,6 +36,9 @@ linux_version=$(uname -r | cut -d '-' -f1)
 storage=$(df -h --output=avail ~/ | tail -n1 | sed 's/ //g')
 root_storage=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
 
+# CPU
+cpu_usage=$(top -bn1 | grep "%Cpu" | awk '{print $2}')
+
 # Echo command for sway-bar
-echo [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
+echo [CPU $cpu_usage%] [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
 
