@@ -38,7 +38,7 @@ root_storage=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
 
 # CPU
 cpu_usage=$(top -bn1 | grep "%Cpu" | awk '{print $2}')
+cpu_temp=$(cat /sys/class/thermal/thermal_zone6/temp | cut -c1,2)
 
 # Echo command for sway-bar
-echo [CPU $cpu_usage%] [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]
-
+echo [TEMP $cpu_temp\°C] [CPU $cpu_usage\%] [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness\%] [NET $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
