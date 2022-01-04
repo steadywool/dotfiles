@@ -1,5 +1,5 @@
 ### CLI
-zsh / neovim / ranger / ufw / htop / cronie / snapper / tmux / udiskie
+zsh / neovim / ranger / ufw / htop / cronie / snapper / tmux
 
 ### Wayland
 kitty / sway{bg,idle,lock} / dunst / bemenu

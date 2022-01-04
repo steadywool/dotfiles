@@ -24,6 +24,3 @@ alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
 # Ls
 alias -g ls='ls --color=auto'
-
-# Udiskie
-alias uda='udiskie-umount -a'
