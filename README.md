@@ -7,7 +7,7 @@ kitty / sway{bg,idle,lock} / dunst / bemenu
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Theme
-breeze-gtk / breeze-icons / xcursor-breeze<small>AUR</small> / ttf-hack / ttf-roboto
+breeze-gtk / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto
 
 ---
 ### Base
