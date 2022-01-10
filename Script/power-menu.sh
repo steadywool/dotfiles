@@ -6,7 +6,7 @@ var+=("suspend")
 var+=("lock")
 var+=("exit sway")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i -H '20' --fn 'Fira Code Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279' -p 'power ')
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i -H '20' --fn 'Hack Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279' -p 'power ')
 
 if [ "$CHOICE" = "power off" ]; then
     shutdown -h now
