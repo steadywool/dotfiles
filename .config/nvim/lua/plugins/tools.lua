@@ -1,6 +1,7 @@
 -- Telescope
 require'telescope'.setup {}
 
+-- Autopairs
 require'nvim-autopairs'.setup {
     check_ts = true,
 }
