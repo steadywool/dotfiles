@@ -5,7 +5,7 @@ vim.cmd('nnoremap <M-h> <cmd>Telescope command_history<CR>')
 vim.cmd('nnoremap <M-c> <cmd>Telescope git_commits<CR>')
 
 -- Nvim Tree
-vim.cmd('nnoremap <M-t> <cmd>NvimTreeToggle<CR>')
+vim.cmd('nnoremap <M-t> <cmd>Telescope file_browser<CR>')
 
 -- Preview Markdown
 vim.cmd('nnoremap <M-m> <cmd>MarkdownPreviewToggle<CR>')

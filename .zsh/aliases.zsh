@@ -24,3 +24,7 @@ alias gdrive-sync='rclone sync -P $HOME/Gdrive gdrive:'
 
 # Ls
 alias -g ls='ls --color=auto'
+
+# LEMP Server
+alias -g server-start='systemctl start nginx php-fpm mariadb'
+alias -g server-stop='systemctl stop nginx php-fpm mariadb'

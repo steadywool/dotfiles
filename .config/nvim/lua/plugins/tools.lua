@@ -1,14 +1,6 @@
 -- Telescope
 require'telescope'.setup {}
 
--- Nvim Tree
-require'nvim-tree'.setup {
-   view = {
-        width = 30,
-        height = 30,
-    }
-}
-
 require'nvim-autopairs'.setup {
     check_ts = true,
 }

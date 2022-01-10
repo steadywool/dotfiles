@@ -6,7 +6,6 @@ return require('packer').startup(function(use)
     use {
         'sainnhe/edge',
 
-        'kyazdani42/nvim-web-devicons',
         'lukas-reineke/indent-blankline.nvim',
         'norcalli/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
@@ -36,7 +35,6 @@ return require('packer').startup(function(use)
 
         'iamcco/markdown-preview.nvim',
 
-        'kyazdani42/nvim-tree.lua',
         'nvim-telescope/telescope.nvim',
         'nvim-lua/plenary.nvim',
 
