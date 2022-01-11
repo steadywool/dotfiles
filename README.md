@@ -26,13 +26,9 @@ os-prober / efibootmgr (uefi) / grub / grub-btrfs
 ### Other
 imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
+/ docker
 
 ---
-### Change default web browser with xdg
-```
-$ xdg-settings set default-web-browser
-```
-
 ### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
