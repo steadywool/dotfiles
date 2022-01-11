@@ -28,6 +28,11 @@ imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk
 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
 
 ---
+### Change default web browser with xdg
+```
+$ xdg-settings set default-web-browser
+```
+
 ### Setup firewall default
 Enter these default rules for a personal computer with UFW:
 ```
@@ -37,6 +42,6 @@ Enter these default rules for a personal computer with UFW:
 
 ### Install Packer.nvim
 ```
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+$ git clone --depth 1 https://github.com/wbthomason/packer.nvim \
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
