@@ -1,12 +1,12 @@
-ZHOME=$HOME/.zsh
-ZPLUG=$HOME/.zsh/plugins
+ZHOME=$HOME/.config/zsh
+ZPLUG=$HOME/.config/zsh/plugins
 
 HISTFILE=$HOME/.zhistory
 
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-#export BROWSER=firefox-developer-edition
+export BROWSER=firefox-developer-edition
 
 export SSH_AUTH_SOCK
 
