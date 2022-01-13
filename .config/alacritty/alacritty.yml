@@ -71,6 +71,10 @@ font:
     family: Hack
     style: Italic
 
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+
   size: 9.5
 
 cursor:
@@ -80,6 +84,4 @@ cursor:
 
   unfocused_hollow: true
 
-scale_with_dpi: true
-window.dynamic_title: true
 live_config_reload: true
