@@ -23,11 +23,8 @@ alias gdrive-copy='rclone copy -P gdrive: $HOME/Documents/Cours'
 alias gdrive-sync='rclone sync -P $HOME/Documents/Cours gdrive:'
 
 # Ls
-alias -g ls='ls --color=auto'
+alias ls='ls --color=auto'
 
 # LEMP Server
 alias -g server-start='systemctl start nginx php-fpm mariadb'
 alias -g server-stop='systemctl stop nginx php-fpm mariadb'
-
-# YAY !
-alias meh='yay'

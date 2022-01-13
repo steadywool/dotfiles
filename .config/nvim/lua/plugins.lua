@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
 
     -- APPEARANCE
     use {
-        'sainnhe/edge',
+        'shaunsingh/nord.nvim',
 
         'kyazdani42/nvim-web-devicons',
 

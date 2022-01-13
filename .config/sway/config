@@ -4,20 +4,20 @@ include ~/.config/sway/config.d/*
 
 # WM INDEPENDANT HOTKEYS
 ## Kitty
-bindsym Mod4+Return exec kitty -1
+bindsym Mod4+Return exec alacritty
 
 ## Ranger
-bindsym Mod4+o exec kitty -1 ranger
+bindsym Mod4+o exec alacritty -e ranger
 
 ## Neovim
-bindsym Mod4+n exec kitty -1 nvim
+bindsym Mod4+n exec alacritty -e nvim
 
 ## Htop
-bindsym Mod4+Shift+q exec kitty -1 htop
+bindsym Mod4+Shift+q exec alacritty -e htop
 
 ## Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -i -H '20' --fn 'Hack Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279'"
-bindsym Mod4+Shift+d exec bemenu-run -i -H '20' --fn 'Hack Regular 9' --tb='#202023' --tf='#c5cdd9' --fb='#202023' --nb='#202023' --nf='#c5cdd9' --hb='#202023' --hf='#ec7279'
+bindsym Mod4+d exec j4-dmenu-desktop --term="alacritty" --no-generic --dmenu="bemenu -i -H '20' --fn 'Hack Regular 9' --tb='#2e3440' --tf='#d8dee9' --fb='#2e3440' --nb='#2e3440' --nf='#d8dee9' --hb='#2e3440' --hf='#88c0d0'"
+bindsym Mod4+Shift+d exec bemenu-run -i -H '20' --fn 'Hack Regular 9' --tb='#2e3440' --tf='#d8dee9' --fb='#2e3440' --nb='#2e3440' --nf='#d8dee9' --hb='#2e3440' --hf='#88c0d0'
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
