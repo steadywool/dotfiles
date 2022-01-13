@@ -60,15 +60,15 @@ colors:
 
 font:
   normal:
-    family: Hack Nerd Font Mono
+    family: Hack
     style: Regular
 
   bold:
-    family: Hack Nerd Font Mono
+    family: Hack
     style: Bold
 
   italic:
-    family: Hack Nerd Font Mono
+    family: Hack
     style: Italic
 
   size: 9.5
