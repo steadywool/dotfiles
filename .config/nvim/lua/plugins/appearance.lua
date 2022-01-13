@@ -1,4 +1,4 @@
--- Edge Theme
+-- Nord Theme
 vim.cmd('colorscheme nord')
 
 -- Indent blankline
