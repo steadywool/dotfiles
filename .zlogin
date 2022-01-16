@@ -5,8 +5,6 @@ fi
 
 # Launch Tmux
 #
-if [ -n $SSH_CONNECTION ]; then
-    if [ -z $TMUX ]; then
-	    tmux attach || tmux new
-    fi
+if [[ -n $PS1 ]] && [[ -z $TMUX ]] && [[ -n $SSH_CONNECTION ]]; then
+    tmux attach || tmux new
 fi
