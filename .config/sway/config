@@ -69,36 +69,58 @@ bindsym Mod4+Shift+s sticky toggle
 bindsym Mod4+Shift+parenright move scratchpad
 bindsym Mod4+parenright scratchpad show
 
-# FOCUS/SWAP/RESIZE
+# FOCUS/MOVE/RESIZE
 ## Focus the given workspace
-bindsym Mod4+ampersand workspace number 1
-bindsym Mod4+eacute workspace number 2
-bindsym Mod4+quotedbl workspace number 3
-bindsym Mod4+apostrophe workspace number 4
-bindsym Mod4+parenleft workspace number 5
-bindsym Mod4+minus workspace number 6
-bindsym Mod4+egrave workspace number 7
-bindsym Mod4+underscore workspace number 8
-bindsym Mod4+ccedilla workspace number 9
-bindsym Mod4+agrave workspace number 10
+bindsym Mod4+ampersand workspace 1
+bindsym Mod4+eacute workspace 2
+bindsym Mod4+quotedbl workspace 3
+bindsym Mod4+apostrophe workspace 4
+bindsym Mod4+parenleft workspace 5
+bindsym Mod4+minus workspace 6
+bindsym Mod4+egrave workspace 7
+bindsym Mod4+underscore workspace 8
+bindsym Mod4+ccedilla workspace 9
+bindsym Mod4+agrave workspace 10
 
 ## Focus the next/previous workspace on current output
 bindsym Mod4+Tab workspace next_on_output
 bindsym Mod4+Shift+Tab workspace prev_on_output
 
 ## Send window to the given workspace
-bindsym Mod4+Shift+ampersand move container to workspace number 1
-bindsym Mod4+Shift+eacute move container to workspace number 2
-bindsym Mod4+Shift+quotedbl move container to workspace number 3
-bindsym Mod4+Shift+apostrophe move container to workspace number 4
-bindsym Mod4+Shift+parenleft move container to workspace number 5
-bindsym Mod4+Shift+minus move container to workspace number 6
-bindsym Mod4+Shift+egrave move container to workspace number 7
-bindsym Mod4+Shift+underscore move container to workspace number 8
-bindsym Mod4+Shift+ccedilla move container to workspace number 9
-bindsym Mod4+Shift+agrave move container to workspace number 10
+bindsym Mod4+Shift+ampersand move container to workspace 1
+bindsym Mod4+Shift+eacute move container to workspace 2
+bindsym Mod4+Shift+quotedbl move container to workspace 3
+bindsym Mod4+Shift+apostrophe move container to workspace 4
+bindsym Mod4+Shift+parenleft move container to workspace 5
+bindsym Mod4+Shift+minus move container to workspace 6
+bindsym Mod4+Shift+egrave move container to workspace 7
+bindsym Mod4+Shift+underscore move container to workspace 8
+bindsym Mod4+Shift+ccedilla move container to workspace 9
+bindsym Mod4+Shift+agrave move container to workspace 10
 
-## Focus the window
+## Focus workspace
+bindsym Mod4+Ctrl+h focus output left
+bindsym Mod4+Ctrl+j focus output down
+bindsym Mod4+Ctrl+k focus output up
+bindsym Mod4+Ctrl+l focus output right
+
+bindsym Mod4+Ctrl+Left focus output left
+bindsym Mod4+Ctrl+Down focus output down
+bindsym Mod4+Ctrl+Up focus output up
+bindsym Mod4+Ctrl+Right focus output right
+
+## Move workspace
+bindsym Mod4+Ctrl+Shift+h move workspace to output left
+bindsym Mod4+Ctrl+Shift+j move workspace to output down
+bindsym Mod4+Ctrl+Shift+k move workspace to output up
+bindsym Mod4+Ctrl+Shift+l move workspace to output right
+
+bindsym Mod4+Ctrl+Shift+Left move workspace to output left
+bindsym Mod4+Ctrl+Shift+Down move workspace to output down
+bindsym Mod4+Ctrl+Shift+Up move workspace to output up
+bindsym Mod4+Ctrl+Shift+Right move workspace to output right
+
+## Focus window
 bindsym Mod4+h focus Left
 bindsym Mod4+j focus Down
 bindsym Mod4+k focus Up
@@ -109,7 +131,7 @@ bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 
-## Swap the window
+## Move window
 bindsym Mod4+Shift+h move Left
 bindsym Mod4+Shift+j move Down
 bindsym Mod4+Shift+k move Up
