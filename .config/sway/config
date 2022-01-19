@@ -98,28 +98,6 @@ bindsym Mod4+Shift+underscore move container to workspace 8
 bindsym Mod4+Shift+ccedilla move container to workspace 9
 bindsym Mod4+Shift+agrave move container to workspace 10
 
-## Focus workspace
-bindsym Mod4+Ctrl+h focus output left
-bindsym Mod4+Ctrl+j focus output down
-bindsym Mod4+Ctrl+k focus output up
-bindsym Mod4+Ctrl+l focus output right
-
-bindsym Mod4+Ctrl+Left focus output left
-bindsym Mod4+Ctrl+Down focus output down
-bindsym Mod4+Ctrl+Up focus output up
-bindsym Mod4+Ctrl+Right focus output right
-
-## Move workspace
-bindsym Mod4+Ctrl+Shift+h move workspace to output left
-bindsym Mod4+Ctrl+Shift+j move workspace to output down
-bindsym Mod4+Ctrl+Shift+k move workspace to output up
-bindsym Mod4+Ctrl+Shift+l move workspace to output right
-
-bindsym Mod4+Ctrl+Shift+Left move workspace to output left
-bindsym Mod4+Ctrl+Shift+Down move workspace to output down
-bindsym Mod4+Ctrl+Shift+Up move workspace to output up
-bindsym Mod4+Ctrl+Shift+Right move workspace to output right
-
 ## Focus window
 bindsym Mod4+h focus Left
 bindsym Mod4+j focus Down
