@@ -82,9 +82,9 @@ bindsym Mod4+underscore workspace 8
 bindsym Mod4+ccedilla workspace 9
 bindsym Mod4+agrave workspace 10
 
-## Focus the next/previous workspace on current output
-bindsym Mod4+Tab workspace next_on_output
-bindsym Mod4+Shift+Tab workspace prev_on_output
+## Focus the next/previous workspace
+bindsym Mod4+Tab workspace next
+bindsym Mod4+Shift+Tab workspace prev
 
 ## Send window to the given workspace
 bindsym Mod4+Shift+ampersand move container to workspace 1
@@ -109,7 +109,7 @@ bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 
-## Move window
+## Swap window
 bindsym Mod4+Shift+h move Left
 bindsym Mod4+Shift+j move Down
 bindsym Mod4+Shift+k move Up
