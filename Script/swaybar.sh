@@ -15,10 +15,10 @@ fi
 
 # Show volume and mute info
 volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
-mute=$(pactl list sinks | grep Mute | awk '{print $2}' | sed 's/no/✗/g' | sed 's/yes/✓/g')
+mute=$(pactl list sinks | grep -o Mute | sed 's/no/✗/g' | sed 's/yes/✓/g')
 
 # Show if we are connected or not
-route=$(ip route show)
+route=$(ip route show | sed '/docker/d')
 
 if [ -z $route ]; then
     network="✗"
