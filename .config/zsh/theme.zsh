@@ -6,14 +6,11 @@ zstyle ':vcs_info:*' actionformats '%F{magenta}%b%f %F{red}%a %c%u%f'
 zstyle ':vcs_info:*' stagedstr '%F{green}↑'
 zstyle ':vcs_info:*' unstagedstr '%F{red}↓'
 
-if [[ $UID != 0 ]]; then
-    PROMPT=$'%B%F{green}%n@%m%f %F{blue}%~%f $%b%E '
-elif [[ $UID == 0 ]]; then
-    PROMPT=$'%B%F{red}%n@%m%f %F{blue}%~%f #%b%E '
-fi
+PS1='%B%F{green}%n@%m%f %F{blue}%~%f %(#.#.$)%b%E '
+PS2='%B%F{cyan}%_%f >%b%E '
+PS3='%B%F{yellow}?%f >%b%E '
+PS4='%B%F{red}%N%f %F{yellow}%i%f >%b%E '
 
-RPROMPT=$'%B${vcs_info_msg_0_}%b'
+RPS1='%B${vcs_info_msg_0_}%b%E'
 
-PROMPT2=$'%B%F{cyan}%_%f >%b%E '
-PROMPT3=$'%B%F{yellow}?%f >%b%E '
-PROMPT4=$'%B%F{red}%N%f %F{yellow}%i%f >%b%E '
+unset RPS2 RPROMPT2
