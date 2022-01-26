@@ -5,7 +5,7 @@ var+=("current_output")
 var+=("current_window")
 var+=("area")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i -H '21' --fn 'Hack Regular 9' --tb='#000000' --tf='#d8dee9' --fb='#000000' --nb='#000000' --nf='#d8dee9' --hb='#000000' --hf='#bf616a' -p 'screenshot ')
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -i -H '21' --fn 'Hack Regular 9' --tb='#131619' --tf='#d8dee9' --fb='#131619' --nb='#131619' --nf='#d8dee9' --hb='#131619' --hf='#bf616a' -p 'screenshot ')
 
 # Screenshot of every screen with grim
 if [ "$CHOICE" = "all" ]; then
