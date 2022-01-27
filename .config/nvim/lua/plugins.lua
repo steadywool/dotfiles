@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
 
     -- APPEARANCE
     use {
-        'shaunsingh/nord.nvim',
+        --'shaunsingh/nord.nvim',
         'andersevenrud/nordic.nvim',
 
         'lukas-reineke/indent-blankline.nvim',
@@ -16,7 +16,7 @@ return require('packer').startup(function(use)
     use {
         -- config
         'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
+        --'williamboman/nvim-lsp-installer',
 
         -- snippet
         'hrsh7th/vim-vsnip',

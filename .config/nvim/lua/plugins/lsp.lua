@@ -1,14 +1,23 @@
--- Lsp config/installer
+-- Lsp config
 local capabilities = require'cmp_nvim_lsp'.update_capabilities(vim.lsp.protocol.make_client_capabilities())
-
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
-require'nvim-lsp-installer'.on_server_ready(function(server)
-    local opts = {
-        capabilities = capabilities
+local servers = {
+    'clangd',
+    'html', 'cssls', 'jsonls', 'eslint',
+    'emmet_ls',
+    'tailwindcss',
+    'intelephense',
+    'bashls',
+    'tsserver'
+}
+
+for _, lsp in pairs(servers) do
+    require'lspconfig'[lsp].setup {
+        capabilities = capabilities,
+        flags = { debounce_text_changes = 150 },
     }
-    server:setup(opts)
-end)
+end
 
 -- Completion
 local cmp = require'cmp'
