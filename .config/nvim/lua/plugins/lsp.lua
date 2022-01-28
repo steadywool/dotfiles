@@ -9,7 +9,8 @@ local servers = {
     'tailwindcss',
     'intelephense',
     'bashls',
-    'tsserver'
+    'tsserver',
+    'sumneko_lua',
 }
 
 for _, lsp in pairs(servers) do
@@ -18,6 +19,17 @@ for _, lsp in pairs(servers) do
         flags = { debounce_text_changes = 150 },
     }
 end
+
+-- Sumneko
+require'lspconfig'.sumneko_lua.setup {
+    settings = {
+        Lua = {
+            diagnostics = { globals = 'vim' },
+            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            telemetry = { enable = false },
+        },
+    },
+}
 
 -- Completion
 local cmp = require'cmp'
@@ -33,7 +45,7 @@ require'cmp'.setup ({
     mapping = {
         ['<C-e>'] = cmp.mapping.close(),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete({ 'i', 'c' }),
+        ['<C-Space>'] = cmp.mapping.complete( 'i', 'c' ),
     },
     sources = {
         { name = 'nvim_lsp' },
@@ -42,3 +54,4 @@ require'cmp'.setup ({
         { name = 'buffer' },
     }
 })
+
