@@ -6,7 +6,6 @@ local servers = {
     'clangd',
     'html', 'cssls', 'jsonls', 'eslint',
     'emmet_ls',
-    'tailwindcss',
     'intelephense',
     'bashls',
     'tsserver',
