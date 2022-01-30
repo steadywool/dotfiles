@@ -1,5 +1,5 @@
 ### CLI
-zsh / neovim / ranger / ufw / htop / cronie / snapper / tmux / ripgrep
+zsh / neovim / ranger / htop / cronie / snapper / tmux / ripgrep
 
 ### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
@@ -22,6 +22,9 @@ zip / unzip / unrar / p7zip
 ### Boot loader
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
+### Security
+apparmor / ufw
+
 ---
 ### Other
 imv / udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3
@@ -34,6 +37,12 @@ Enter these default rules for a personal computer with UFW:
 ```
 # ufw default deny incoming
 # ufw default allow outgoing
+```
+
+### Enable AppArmor as default security model
+Add these line to `/etc/default/grub`:
+```
+GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
 ```
 
 ### Install Packer.nvim
