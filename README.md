@@ -29,7 +29,7 @@ apparmor / ufw
 ### Other
 udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
-/ docker / mupdf / imv
+/ docker / mupdf / imv / mpv
 
 ---
 ### Setup firewall default
