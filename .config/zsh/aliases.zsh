@@ -31,6 +31,5 @@ alias -g server-start='systemctl start nginx php-fpm mariadb'
 alias -g server-stop='systemctl stop nginx php-fpm mariadb'
 
 # QEMU server
-alias debian-start='qemu-system-x86_64 -vnc none -k fr -net nic -net user,hostfwd=tcp::60022-:22 -enable-kvm -m 1G -drive file=debian.cow,format=qcow2'
-
-alias ubuntu-start='qemu-system-x86_64 -vnc none -k fr -net nic -net user,hostfwd=tcp::60023-:22 -enable-kvm -m 1G -drive file=ubuntu.cow,format=qcow2'
+alias debian-start='qemu-system-x86_64 -vnc none -monitor stdio -k fr -net nic -net user,hostfwd=tcp::60022-:22 -enable-kvm -m 1G -drive file=debian.cow,format=qcow2'
+alias ubuntu-start='qemu-system-x86_64 -vnc none -monitor stdio -k fr -net nic -net user,hostfwd=tcp::60023-:22 -enable-kvm -m 1G -drive file=ubuntu.cow,format=qcow2'
