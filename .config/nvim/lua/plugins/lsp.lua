@@ -30,6 +30,11 @@ require'lspconfig'.sumneko_lua.setup {
     },
 }
 
+-- eslint
+require'lspconfig'.eslint.setup {
+    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "html" }
+}
+
 -- Completion
 local cmp = require'cmp'
 require'cmp'.setup ({

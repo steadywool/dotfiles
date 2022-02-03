@@ -2,9 +2,7 @@
 require'telescope'.setup {}
 
 -- Autopairs
-require'nvim-autopairs'.setup {
-    check_ts = true,
-}
+require'nvim-autopairs'.setup {}
 
 -- TreeSitter
 require'nvim-treesitter.configs'.setup {
