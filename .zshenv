@@ -6,7 +6,6 @@ HISTFILE=$HOME/.zhistory
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-export BROWSER=firefox-developer-edition
 
 export SSH_AUTH_SOCK
 
@@ -15,4 +14,4 @@ export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export LIBSEAT_BACKEND=logind
 
-export BEMENU_OPTS="-i -H '21' --fn 'Hack Regular 9' --tb '#131619' --tf '#d8dee9' --fb '#131619' --nb '#131619' --nf '#d8dee9' --hb '#131619' --hf '#bf616a'"
+export BEMENU_OPTS="-w -i -H '21' --fn 'Hack Regular 9' --tb '#131619' --tf '#d8dee9' --fb '#131619' --nb '#131619' --nf '#d8dee9' --hb '#131619' --hf '#bf616a'"

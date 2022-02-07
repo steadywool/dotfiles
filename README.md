@@ -11,7 +11,7 @@ breeze-gtk / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto
 
 ---
 ### Base
-base / base-devel / linux-firmware / linux{-lts} / intel-ucode
+base / base-devel / linux-firmware / linux-hardened / intel-ucode
 
 ### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
@@ -23,7 +23,7 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / ufw
+apparmor / ufw / arch-audit
 
 ---
 ### Other
@@ -44,6 +44,13 @@ Add these line to `/etc/default/grub`:
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
 ```
+
+### Mount Options
+For /home partition (ext4), use `nodev` & `nosuid`
+For / partition (btrfs), use `defaults`, `compress=zstd` & `noatime` in addition of `subvol=`
+
+### Btrfs Subvolumes
+create subvolumes of `@`, `@srv`, `@.snapshots`, `@tmp` & `@root`
 
 ### Install Packer.nvim
 ```
