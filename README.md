@@ -23,7 +23,7 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / firejail / nftables / firewalld / arch-audit
+apparmor / nftables / firewalld / arch-audit / bubblewrap-suid
 
 ---
 ### Other
