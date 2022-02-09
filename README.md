@@ -39,9 +39,11 @@ GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
 ```
 
 ### Mount Options
-For / (btrfs) root partition, use `defaults`, `compress=zstd` & `noatime` in addition of `subvol=`
-For /tmp (tmpfs) partition, use `nodev`, `nosuid` & `noexec`
-For /home (ext4) partition, use `nodev` & `nosuid`
+root partition (btrfs) use `defaults`, `compress=zstd` & `noatime` in addition of `subvol=`
+
+/tmp partition (tmpfs) & /boot partition (vfat) use `nodev`, `nosuid` & `noexec`
+
+/home partition (ext4) use `nodev` & `nosuid`
 
 ### Install Packer.nvim
 ```
