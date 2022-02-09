@@ -1,5 +1,5 @@
 ### CLI
-zsh / neovim / ranger / htop / cronie / snapper / tmux / ripgrep
+zsh / neovim / ranger / htop / cronie / tmux / ripgrep
 
 ### Wayland
 alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
@@ -23,22 +23,15 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / ufw / arch-audit
+apparmor / firejail / nftables / firewalld / arch-audit
 
 ---
 ### Other
 udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
-/ docker / mupdf / imv / mpv
+/ docker / mupdf / imv / mpv / snapper
 
 ---
-### Setup firewall default
-Enter these default rules for a personal computer with UFW:
-```
-# ufw default deny incoming
-# ufw default allow outgoing
-```
-
 ### Enable AppArmor as default security model
 Add these line to `/etc/default/grub`:
 ```
