@@ -1,6 +1,6 @@
 #!/bin/bash
 
-config="$HOME/.config/gtk-3.0/settings.ini"
+config="$HOME/.config/gtk-4.0/settings.ini"
 
 if [ -f $config ]; then
     gtk_theme=$(grep 'gtk-theme-name' $config | cut -d '=' -f2)
