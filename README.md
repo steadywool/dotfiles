@@ -7,7 +7,7 @@ alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Theme
-arc-gtk-theme / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto / qt5ct / kvantum
+arc-gtk-theme / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto / kvantum
 
 ---
 ### Base
