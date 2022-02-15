@@ -18,7 +18,7 @@ elif [ "$CHOICE" = "suspend" ]; then
     systemctl suspend
 
 elif [ "$CHOICE" = "lock" ]; then
-    swaylock -f -c 2e3440
+    swaylock -c 131619
 
 elif [ "$CHOICE" = "exit sway" ]; then
     swaymsg exit
