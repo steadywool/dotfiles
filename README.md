@@ -23,12 +23,12 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / firewalld / arch-audit / bubblewrap-suid
+apparmor / tpm2-tools / nftables / firewalld / arch-audit / bubblewrap-suid
 
 ---
 ### Other
-udisks2 / xdg-user-dirs / tlp / atool / polkit-gnome / libappindicator-gtk3
-/ gnome-keyring / android-tools / bluez{-utils} / inetutils / imagemagick / man-db
+udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
+/ gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
 / docker / mupdf / imv / mpv / snapper
 
 ---
@@ -41,9 +41,9 @@ GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
 ### Mount Options
 root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
 
-/tmp & /boot partition use `nodev`, `nosuid` & `noexec`
+/tmp & /boot use `nodev`, `nosuid` & `noexec`
 
-/home partition use `nodev` & `nosuid`
+/home encrypted partition use `nodev` & `nosuid`
 
 ### Install Packer.nvim
 ```
