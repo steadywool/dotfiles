@@ -29,7 +29,7 @@ apparmor / tpm2-tools / nftables / firewalld / arch-audit / bubblewrap-suid
 ### Other
 udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ docker / mupdf / imv / mpv / snapper
+/ docker / mupdf / imv / mpv
 
 ---
 ### Enable AppArmor as default security model
