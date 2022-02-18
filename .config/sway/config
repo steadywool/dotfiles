@@ -23,8 +23,8 @@ bindsym Mod4+Shift+d exec bemenu-run
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
 
 ## Screenshot
+bindsym Mod4+Shift+s exec $HOME/Script/screenshot-menu.sh
 bindsym Print exec $HOME/Script/screenshot-menu.sh
-bindsym Shift+Print exec grim -t jpeg ~/Pictures/Screenshot/$(date +%Y-%m-%d_%H-%m-%s).jpg && notify-send "grim" "Saved in $HOME/Pictures/Screenshot"
 
 ## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
@@ -63,7 +63,7 @@ bindsym Mod4+b splith
 bindsym Mod4+v splitv
 
 ## Sticky window
-bindsym Mod4+Shift+s sticky toggle
+bindsym Mod4+Shift+f sticky toggle
 
 ## Scratchpad
 bindsym Mod4+Shift+parenright move scratchpad
