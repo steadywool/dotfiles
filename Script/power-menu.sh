@@ -1,11 +1,11 @@
 #!/bin/bash
 
-var+=("power off")
+var+=("power-off")
 var+=("reboot")
 var+=("hibernate")
 var+=("suspend")
 var+=("lock")
-var+=("exit sway")
+var+=("exit-sway")
 
 CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'power ')
 
