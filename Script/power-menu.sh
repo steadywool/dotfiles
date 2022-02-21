@@ -9,7 +9,7 @@ var+=("exit-sway")
 
 CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'power ')
 
-if [[ $CHOICE = "power off" ]]; then
+if [[ $CHOICE = "power-off" ]]; then
     shutdown -h now
 
 elif [[ $CHOICE = "reboot" ]]; then
@@ -24,6 +24,6 @@ elif [[ $CHOICE = "suspend" ]]; then
 elif [[ $CHOICE = "lock" ]]; then
     swaylock -c 131619
 
-elif [[ $CHOICE = "exit sway" ]]; then
+elif [[ $CHOICE = "exit-sway" ]]; then
     swaymsg exit
 fi
