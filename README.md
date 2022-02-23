@@ -23,13 +23,13 @@ zip / unzip / unrar / p7zip
 os-prober / efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / tpm2-tools / nftables / firewalld / arch-audit / bubblewrap-suid
+apparmor / nftables / firewalld / bubblewrap-suid / fail2jan
 
 ---
 ### Other
 udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ docker / mupdf / imv / mpv
+/ docker / mupdf / imv / mpv / arch-audit
 
 ---
 ### Enable AppArmor as default security model

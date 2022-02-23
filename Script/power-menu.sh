@@ -3,6 +3,7 @@
 var+=("power-off")
 var+=("reboot")
 var+=("hibernate")
+var+=("hybrid-sleep")
 var+=("suspend")
 var+=("lock")
 var+=("exit-sway")
@@ -13,10 +14,13 @@ if [[ $CHOICE = "power-off" ]]; then
     shutdown -h now
 
 elif [[ $CHOICE = "reboot" ]]; then
-    reboot
+    shutdown -r now
 
 elif [[ $CHOICE = "hibernate" ]]; then
     systemctl hibernate
+
+elif [[ $CHOICE = "hybrid-sleep" ]]; then
+    systemctl hybrid-sleep
 
 elif [[ $CHOICE = "suspend" ]]; then
     systemctl suspend
