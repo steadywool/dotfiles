@@ -2,7 +2,7 @@
 zsh / neovim / ranger / htop / cronie / tmux / ripgrep
 
 ### Wayland
-foot / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp + jq / wl-clipboard / gammastep
 
@@ -20,16 +20,16 @@ ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 zip / unzip / unrar / p7zip
 
 ### Boot loader
-os-prober / efibootmgr (uefi) / grub / grub-btrfs
+efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / firewalld / bubblewrap-suid / fail2jan
+apparmor / nftables / firewalld / bubblewrap-suid / fail2jan / flatpak
 
 ---
 ### Other
 udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ docker / mupdf / imv / mpv / arch-audit
+/ docker / mupdf / imv / mpv / arch-audit / bmon
 
 ---
 ### Enable AppArmor as default security model

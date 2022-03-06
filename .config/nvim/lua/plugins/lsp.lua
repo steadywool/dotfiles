@@ -10,6 +10,7 @@ local servers = {
     'bashls',
     'tsserver',
     'sumneko_lua',
+    'arduino_language_server',
 }
 
 for _, lsp in pairs(servers) do
@@ -30,9 +31,19 @@ require'lspconfig'.sumneko_lua.setup {
     },
 }
 
--- eslint
+-- Eslint
 require'lspconfig'.eslint.setup {
     filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "html" }
+}
+
+-- Arduino
+require'lspconfig'.arduino_language_server.setup {
+    cmd =  {
+	    "arduino-language-server",
+		"-cli-config", "$HOME/.arduino15/arduino-cli.yaml",
+		"-cli", "/bin/arduino_language_server",
+		"-clangd", "/bin/clangd"
+	}
 }
 
 -- Completion

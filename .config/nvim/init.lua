@@ -22,13 +22,16 @@ vim.cmd('syntax enable')
 -- Indentation
 vim.cmd('filetype indent on')
 vim.opt.autoindent = true
-vim.opt.smartindent = true
-vim.cmd('autocmd FileType php setlocal autoindent')
+
+-- Folding
+vim.opt.foldmethod = 'expr'
+vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable = true
 
 -- Tabs & Spaces
 vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
 vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.list = true
 vim.opt.listchars = {tab = '▶ ',trail = '•',nbsp = '␣'}
 vim.opt.wrap = false
@@ -41,3 +44,4 @@ require('plugins.tools')
 require('keybinds')
 require('plugins')
 require('statusline')
+

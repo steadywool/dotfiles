@@ -12,5 +12,5 @@ vim.cmd('nnoremap <TAB> <cmd>bnext<CR>')
 vim.cmd('nnoremap <S-TAB> <cmd>bprevious<CR>')
 
 -- Use jk or kj to escape
-vim.cmd ('inoremap jk <Esc>')
-vim.cmd ('inoremap kj <Esc>')
+vim.cmd('inoremap jk <Esc>')
+vim.cmd('inoremap kj <Esc>')
