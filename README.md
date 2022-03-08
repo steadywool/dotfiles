@@ -7,7 +7,7 @@ alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Theme
-arc-gtk-theme / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto / kvantum
+arc-gtk-theme / breeze-icons / xcursor-breeze<sup>AUR</sup> / ttf-hack / ttf-roboto
 
 ---
 ### Base
@@ -23,13 +23,14 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / firewalld / bubblewrap-suid / fail2jan / flatpak
+apparmor / nftables / bubblewrap-suid / fail2ban / flatpak
 
 ---
 ### Other
 udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ docker / mupdf / imv / mpv / arch-audit / bmon
+/ docker / mupdf / imv / mpv / arch-audit
+bmon / tcpdump
 
 ---
 ### Enable AppArmor as default security model

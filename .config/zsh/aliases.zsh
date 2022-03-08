@@ -15,9 +15,6 @@ alias gsp='git stash pop'
 
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 
-# Pacman
-alias afetch='echo "Packages:" `pacman -Q | wc -l`'
-
 # Rclone Gdrive copy & sync
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Documents/Cours'
 alias gdrive-sync='rclone sync -P $HOME/Documents/Cours gdrive:'
