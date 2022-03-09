@@ -29,8 +29,7 @@ apparmor / nftables / bubblewrap-suid / fail2ban / flatpak
 ### Other
 udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
 / gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ docker / mupdf / imv / mpv / arch-audit
-bmon / tcpdump
+/ mupdf / imv / mpv / arch-audit / gnome-keyring / bmon / tcpdump / nmap
 
 ---
 ### Enable AppArmor as default security model

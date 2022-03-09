@@ -9,8 +9,6 @@ export PAGER=less
 
 export SSH_AUTH_SOCK
 
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 export MOZ_DBUS_REMOTE=1
 export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1

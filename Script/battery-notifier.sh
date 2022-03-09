@@ -4,6 +4,6 @@
 bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 bat_status=$(cat /sys/class/power_supply/BAT0/status)
 
-if [[ $bat_status = "Discharging" ]] && [[ $bat_capacity -lt 25 ]]; then
+if [[ $bat_status = "Discharging" ]] && [[ $bat_capacity -lt 20 ]]; then
     notify-send --urgency=critical "Battery capacity" "$bat_capacity% remaining"
 fi
