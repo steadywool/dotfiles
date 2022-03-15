@@ -4,7 +4,7 @@ return require('packer').startup(function(use)
 
     -- APPEARANCE
     use {
-        'shaunsingh/nord.nvim',
+        'andersevenrud/nordic.nvim',
 
         'lukas-reineke/indent-blankline.nvim',
         'norcalli/nvim-colorizer.lua',

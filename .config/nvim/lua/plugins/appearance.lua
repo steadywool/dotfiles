@@ -1,8 +1,11 @@
--- Nord Theme
-vim.g.nord_contrast = true
-vim.g.nord_borders = true
-
-vim.cmd('colorscheme nord')
+-- Nordic Theme
+require('nordic').colorscheme({
+    underline_option = 'none',
+    italic = false,
+    italic_comments = true,
+    minimal_mode = false,
+    alternate_backgrounds = false
+})
 
 -- Indent blankline
 vim.cmd('highlight IndentBlanklineContextChar guifg=#ebcb8b gui=nocombine')

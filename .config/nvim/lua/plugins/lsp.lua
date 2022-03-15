@@ -31,11 +31,6 @@ require'lspconfig'.sumneko_lua.setup {
     },
 }
 
--- Eslint
-require'lspconfig'.eslint.setup {
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "vue", "html" }
-}
-
 -- Arduino
 require'lspconfig'.arduino_language_server.setup {
     cmd =  {

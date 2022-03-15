@@ -23,13 +23,15 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / bubblewrap-suid / fail2ban / flatpak
+apparmor / nftables / bubblewrap-suid / fail2ban / usbguard / arch-audit
 
 ---
 ### Other
-udisks2 / xdg-user-dirs / tlp / polkit-gnome / libappindicator-gtk3
-/ gnome-keyring / android-tools / bluez{-utils} / imagemagick / man-db
-/ mupdf / imv / mpv / arch-audit / gnome-keyring / bmon / tcpdump / nmap
+udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils}
+
+mupdf / imv / mpv / gnome-keyring / polkit-gnome / gnome-keyring / libappindicator-gtk3
+
+bmon / tcpdump / gnu-netcat / strace / man-db
 
 ---
 ### Enable AppArmor as default security model

@@ -3,6 +3,8 @@ ZPLUG=$HOME/.config/zsh/plugins
 
 HISTFILE=$HOME/.zhistory
 
+export TMOUT=300
+
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less

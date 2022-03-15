@@ -143,7 +143,3 @@ bindsym Mod4+Space focus mode_toggle
 ## Focus to parent/child container
 bindsym Mod4+a focus parent
 bindsym Mod4+c focus child
-
-## Opacity
-bindsym Mod4+p opacity plus 0.05
-bindsym Mod4+Shift+p opacity minus 0.05
