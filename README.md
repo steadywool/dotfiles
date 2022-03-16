@@ -69,6 +69,9 @@ password_pbkdf2 USER PASSWORD_HASH
 ### Use Nftables with Docker
 Replace `iptables` package by `iptables-nft`
 
+### Nftables configuration
+copy the contents of this [gist](https://gist.github.com/Kaniville/959e35f27cc783dc89ed46deedcd82d1) file into `/etc/nftables.conf`
+
 ### Mount Options
 root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
 
