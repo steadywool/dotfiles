@@ -23,15 +23,15 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / bubblewrap-suid / fail2ban / usbguard / rkhunter / arch-audit
+apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
 ---
 ### Other
-udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils}
+udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils} / man-db / lsof
 
 mupdf / imv / mpv / gnome-keyring / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
-bmon / tcpdump / lsof / nmap / man-db
+rkhunter / arch-audit / nmap
 
 ---
 ### Enable AppArmor as default security model
@@ -65,6 +65,9 @@ Then, add these lines to `/etc/grub.d/40_custom`:
 set superusers="USER"
 password_pbkdf2 USER PASSWORD_HASH
 ```
+
+### Use Nftables with Docker
+Replace `iptables` package by `iptables-nft`
 
 ### Mount Options
 root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
