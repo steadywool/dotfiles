@@ -31,7 +31,7 @@ udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils}
 
 mupdf / imv / mpv / gnome-keyring / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
-tcpdump / gnu-netcat / strace / man-db
+bmon / tcpdump / lsof / nmap / man-db
 
 ---
 ### Enable AppArmor as default security model
