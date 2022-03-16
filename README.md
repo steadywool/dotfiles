@@ -23,7 +23,7 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub / grub-btrfs
 
 ### Security
-apparmor / nftables / bubblewrap-suid / fail2ban / usbguard / arch-audit
+apparmor / nftables / bubblewrap-suid / fail2ban / usbguard / rkhunter / arch-audit
 
 ---
 ### Other
@@ -31,13 +31,39 @@ udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils}
 
 mupdf / imv / mpv / gnome-keyring / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
-bmon / tcpdump / gnu-netcat / strace / man-db
+tcpdump / gnu-netcat / strace / man-db
 
 ---
 ### Enable AppArmor as default security model
-Add these line to `/etc/default/grub`:
+Add this line to `/etc/default/grub`:
 ```
 GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
+```
+
+### Ssh configuration
+Add these lines to `/etc/ssh/sshd_config`:
+```
+Protocol 2
+PermitRootLogin no
+```
+And this line to `/etc/ssh/ssh_config`:
+```
+PasswordAuthentication no
+```
+
+### Generate usbguard rules
+```
+# usbguard generate-policy > /etc/usbguard/rules.conf
+```
+
+### Add password to Grub2
+```
+# grub-mkpasswd-pbkdf2
+```
+Then, add these lines to `/etc/grub.d/40_custom`:
+```
+set superusers="USER"
+password_pbkdf2 USER PASSWORD_HASH
 ```
 
 ### Mount Options
