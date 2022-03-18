@@ -22,6 +22,13 @@ KEYTIMEOUT=5
 HISTSIZE=5000
 SAVEHIST=5000
 
+# Clipboard
+zvm_vi_yank () {
+	zvm_yank
+	printf %s "${CUTBUFFER}" | wl-copy
+	zvm_exit_visual_mode
+}
+
 # Completion
 autoload -Uz compinit
 compinit
