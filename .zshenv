@@ -16,6 +16,6 @@ export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export LIBSEAT_BACKEND=logind
 
-export ZVM_TERM=xterm-256color
-
 export BEMENU_OPTS="-w -i -H '21' --fn 'Hack Regular 9' --tb '#131619' --tf '#d8dee9' --fb '#131619' --nb '#131619' --nf '#d8dee9' --hb '#131619' --hf '#bf616a'"
+
+export ZSH_SYSTEM_CLIPBOARD_USE_WL_CLIPBOARD=1

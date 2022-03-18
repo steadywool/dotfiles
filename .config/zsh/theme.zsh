@@ -16,3 +16,8 @@ PS4='%B%F{red}%N%f %F{yellow}%i%f >%b%E '
 RPS1='%B${vcs_info_msg_0_}%b%E'
 
 unset RPS2 RPROMPT2
+
+# Vi mode
+ZVM_VI_HIGHLIGHT_FOREGROUND=black
+ZVM_VI_HIGHLIGHT_BACKGROUND=red
+ZVM_VI_HIGHLIGHT_EXTRASTYLE=bold

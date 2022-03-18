@@ -11,6 +11,9 @@ source $ZPLUG/zsh-completions/zsh-completions.plugin.zsh
 zuse github.com/zsh-users/zsh-syntax-highlighting
 source $ZPLUG/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+zuse github.com/kutsan/zsh-system-clipboard
+source $ZPLUG/zsh-system-clipboard/zsh-system-clipboard.zsh
+
 zuse github.com/jeffreytse/zsh-vi-mode
 source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
 
