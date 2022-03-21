@@ -2,7 +2,7 @@
 zsh / neovim / ranger / htop / cronie / tmux / ripgrep
 
 ### Wayland
-alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+foot / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp + jq / wl-clipboard / gammastep
 
