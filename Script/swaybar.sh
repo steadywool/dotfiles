@@ -40,4 +40,4 @@ root_storage=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
 cpu_usage=$(top -bn1 | grep "%Cpu" | awk '{print $2}')
 
 # Echo command for sway-bar
-echo [CPU $cpu_usage\%] [ROOT $root_storage] [HOME $storage] [VER $linux_version] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
+echo [CPU $cpu_usage\%] [/ $root_storage] [$USER $storage] [VER $linux_version] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
