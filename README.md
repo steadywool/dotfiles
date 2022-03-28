@@ -27,11 +27,11 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
 ---
 ### Other
-udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils} / man-db / lsof
+udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils} / man-db / rkhunter
 
 mupdf / imv / mpv / gnome-keyring / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
-rkhunter / arch-audit / nmap
+arch-audit / nmap / tcpdump / lsof / bmon
 
 ---
 ### Enable AppArmor as default security model
