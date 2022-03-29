@@ -79,6 +79,12 @@ root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
 
 /home encrypted partition use `nodev` & `nosuid`
 
+### TLP and USB keys
+Edit `/etc/tlp.conf` and replace `1` by `0`:
+```
+USB_AUTOSUSPEND=0
+```
+
 ### Install Packer.nvim
 ```
 $ mkdir ~/.local/share/nvim/site/pack/packer/start && \
