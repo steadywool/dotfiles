@@ -26,7 +26,7 @@ vim.opt.autoindent = true
 -- Folding
 vim.opt.foldmethod = 'expr'
 vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
-vim.opt.foldenable = true
+vim.opt.foldenable = false
 
 -- Tabs & Spaces
 vim.opt.expandtab = true
@@ -38,10 +38,10 @@ vim.opt.wrap = false
 
 -- Lua Modules
 require('plugins.appearance')
+require('plugins.completion')
 require('plugins.lsp')
 require('plugins.tools')
 
 require('keybinds')
 require('plugins')
 require('statusline')
-

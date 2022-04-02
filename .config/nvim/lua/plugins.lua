@@ -1,8 +1,8 @@
 return require('packer').startup(function(use)
-    -- PACKAGE MANAGER
+    -- Package manager
     use 'wbthomason/packer.nvim'
 
-    -- APPEARANCE
+    -- Appearance
     use {
         'andersevenrud/nordic.nvim',
 
@@ -15,7 +15,11 @@ return require('packer').startup(function(use)
     use {
         -- config
         'neovim/nvim-lspconfig',
+        'williamboman/nvim-lsp-installer',
+    }
 
+    -- Completion
+    use {
         -- snippet
         'hrsh7th/vim-vsnip',
         'hrsh7th/cmp-vsnip',
@@ -28,7 +32,7 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-buffer',
     }
 
-    -- TOOLS
+    -- Tools
     use {
         'nvim-treesitter/nvim-treesitter',
 
