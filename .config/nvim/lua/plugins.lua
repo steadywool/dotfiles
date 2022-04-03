@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
     use {
         'andersevenrud/nordic.nvim',
 
+        'kyazdani42/nvim-web-devicons',
         'lukas-reineke/indent-blankline.nvim',
         'norcalli/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
@@ -15,7 +16,6 @@ return require('packer').startup(function(use)
     use {
         -- config
         'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
     }
 
     -- Completion
