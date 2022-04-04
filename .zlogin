@@ -4,7 +4,6 @@ if [[ -z $DISPLAY ]] && [[ "$(tty)" = "/dev/tty1" ]]; then
 fi
 
 # Launch Tmux
-#
-if [[ -n $PS1 ]] && [[ -z $TMUX ]] && [[ -n $SSH_CONNECTION ]]; then
+if [[ -n $PS1 ]] && [[ -z $TMUX ]]; then
     tmux attach || tmux new
 fi
