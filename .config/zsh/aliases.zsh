@@ -19,6 +19,9 @@ alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 alias gdrive-copy='rclone copy -P gdrive: $HOME/Documents/Cours'
 alias gdrive-sync='rclone sync -P $HOME/Documents/Cours gdrive:'
 
+# Tmux
+alias tm='tmux attach || tmux new'
+
 # Colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
