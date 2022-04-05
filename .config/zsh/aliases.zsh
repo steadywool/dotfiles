@@ -15,9 +15,9 @@ alias gsp='git stash pop'
 
 alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
 
-# Rclone Gdrive copy & sync
-alias gdrive-copy='rclone copy -P gdrive: $HOME/Documents/Cours'
-alias gdrive-sync='rclone sync -P $HOME/Documents/Cours gdrive:'
+# Rclone copy & sync
+alias backup-copy='rclone copy -P backup: $HOME/Documents/Cours'
+alias backup-sync='rclone sync -P $HOME/Documents/Cours backup:'
 
 # Tmux
 alias tm='tmux attach || tmux new'
