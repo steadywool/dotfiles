@@ -1,6 +1,3 @@
--- Comment
-require'Comment'.setup()
-
 -- Indent blankline
 vim.cmd('highlight IndentBlanklineContextChar guifg=#ebcb8b gui=nocombine')
 require'indent_blankline'.setup {

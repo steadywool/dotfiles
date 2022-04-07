@@ -28,7 +28,6 @@ return require('packer').startup(function(use)
 
     -- Tools
     use {
-        'numToStr/Comment.nvim',
         'lukas-reineke/indent-blankline.nvim',
         'norcalli/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
