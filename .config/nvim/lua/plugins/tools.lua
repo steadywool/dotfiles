@@ -1,16 +1,18 @@
+-- Comment
+require'Comment'.setup()
+
+-- Indent blankline
+vim.cmd('highlight IndentBlanklineContextChar guifg=#ebcb8b gui=nocombine')
+require'indent_blankline'.setup {
+    char = "▏",
+    show_current_context = true,
+}
+
 -- Telescope
-require'telescope'.setup {}
+require'telescope'.setup()
 
 -- Autopairs
-require'nvim-autopairs'.setup {}
+require'nvim-autopairs'.setup()
 
--- TreeSitter
-require'nvim-treesitter.configs'.setup {
-    autotag = { enable = true },
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = 'php',
-    },
-    indent = { enable = true },
-    incremental_selection = { enable = true },
-}
+-- Colorizer
+require'colorizer'.setup()

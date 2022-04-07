@@ -1,25 +1,8 @@
 return require('packer').startup(function(use)
-    -- Package manager
+    -- Plugin manager
     use 'wbthomason/packer.nvim'
 
-    -- Appearance
-    use {
-        'andersevenrud/nordic.nvim',
-
-        'nvim-treesitter/nvim-treesitter',
-
-        'lukas-reineke/indent-blankline.nvim',
-        'norcalli/nvim-colorizer.lua',
-        'lewis6991/gitsigns.nvim',
-    }
-
-    -- LSP
-    use {
-        -- config
-        'neovim/nvim-lspconfig',
-    }
-
-    -- Completion
+    -- Auto-completion
     use {
         -- snippet
         'hrsh7th/vim-vsnip',
@@ -33,15 +16,34 @@ return require('packer').startup(function(use)
         'hrsh7th/cmp-buffer',
     }
 
+    -- LSP
+    use {
+        'neovim/nvim-lspconfig',
+    }
+
+    -- Themes
+    use {
+        'andersevenrud/nordic.nvim',
+    }
+
     -- Tools
     use {
+        'numToStr/Comment.nvim',
+        'lukas-reineke/indent-blankline.nvim',
+        'norcalli/nvim-colorizer.lua',
+        'lewis6991/gitsigns.nvim',
+
         'iamcco/markdown-preview.nvim',
 
         'nvim-telescope/telescope.nvim',
         'nvim-lua/plenary.nvim',
 
-        'windwp/nvim-ts-autotag',
         'windwp/nvim-autopairs',
+        'windwp/nvim-ts-autotag',
     }
 
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+    }
 end)
