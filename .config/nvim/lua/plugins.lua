@@ -6,6 +6,8 @@ return require('packer').startup(function(use)
     use {
         'andersevenrud/nordic.nvim',
 
+        'nvim-treesitter/nvim-treesitter',
+
         'lukas-reineke/indent-blankline.nvim',
         'norcalli/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
@@ -33,8 +35,6 @@ return require('packer').startup(function(use)
 
     -- Tools
     use {
-        'nvim-treesitter/nvim-treesitter',
-
         'iamcco/markdown-preview.nvim',
 
         'nvim-telescope/telescope.nvim',
