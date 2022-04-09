@@ -6,8 +6,8 @@ alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp + jq / wl-clipboard / gammastep
 
-### Theme
-gnome-themes-extra / ttf-hack / ttf-roboto
+### Appearance
+ttf-hack / ttf-roboto
 
 ---
 ### Base
