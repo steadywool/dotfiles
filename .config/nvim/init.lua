@@ -15,6 +15,9 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 vim.wo.colorcolumn = '99999'
 
+-- Statusline
+vim.opt.statusline = '%#search# %n %#statusline# %F %#statuslineNC# %r%m %= %w%y %#statusline# %l:%c %p%% '
+
 -- Syntax Higlighting
 vim.cmd('filetype plugin on')
 vim.cmd('syntax enable')
@@ -45,4 +48,3 @@ require('plugins.treesitter')
 
 require('keybinds')
 require('plugins')
-require('statusline')

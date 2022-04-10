@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     -- Themes
     use {
         'andersevenrud/nordic.nvim',
+        'sainnhe/gruvbox-material',
     }
 
     -- Tools
