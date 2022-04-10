@@ -77,20 +77,20 @@ per_monitor_dpi = false
 
 [urgency_low]
 background = "#000000"
-foreground = "#cfcfcf"
-frame_color = "#88bbbb"
+foreground = "#e8e8e8"
+frame_color = "#86c1b9"
 timeout = 5
 
 [urgency_normal]
 background = "#000000"
-foreground = "#cfcfcf"
-frame_color = "#aabb88"
+foreground = "#e8e8e8"
+frame_color = "#a1b56c"
 timeout = 10
 
 [urgency_critical]
 background = "#000000"
-foreground = "#cfcfcf"
-frame_color = "#bb8888"
+foreground = "#e8e8e8"
+frame_color = "#ab4642"
 timeout = 25
 
 # vim: ft=cfg
