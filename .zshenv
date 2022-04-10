@@ -18,4 +18,4 @@ export MOZ_ENABLE_WAYLAND=1
 export _JAVA_AWT_WM_NONREPARENTING=1
 export LIBSEAT_BACKEND=logind
 
-export BEMENU_OPTS="-w -i -H '21' --fn 'Hack Regular 9' --tb '#000000' --tf '#e8e8e8' --fb '#000000' --nb '#000000' --nf '#e8e8e8' --hb '#000000' --hf '#ab4642'"
+export BEMENU_OPTS="-w -i -H '21' --fn 'Hack Regular 9' --tb '#000000' --tf '#d8dee9' --fb '#000000' --nb '#000000' --nf '#d8dee9' --hb '#000000' --hf '#bf616a'"
