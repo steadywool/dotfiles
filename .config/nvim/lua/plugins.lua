@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
     -- Appearance
     use {
         'andersevenrud/nordic.nvim',
-        'sainnhe/gruvbox-material',
     }
 
     -- Auto-completion
@@ -25,7 +24,6 @@ return require('packer').startup(function(use)
     -- LSP
     use {
         'neovim/nvim-lspconfig',
-        'williamboman/nvim-lsp-installer',
     }
 
     -- Tools
