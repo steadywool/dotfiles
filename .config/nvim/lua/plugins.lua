@@ -2,6 +2,12 @@ return require('packer').startup(function(use)
     -- Plugin manager
     use 'wbthomason/packer.nvim'
 
+    -- Appearance
+    use {
+        'andersevenrud/nordic.nvim',
+        'sainnhe/gruvbox-material',
+    }
+
     -- Auto-completion
     use {
         -- snippet
@@ -19,12 +25,7 @@ return require('packer').startup(function(use)
     -- LSP
     use {
         'neovim/nvim-lspconfig',
-    }
-
-    -- Themes
-    use {
-        'andersevenrud/nordic.nvim',
-        'sainnhe/gruvbox-material',
+        'williamboman/nvim-lsp-installer',
     }
 
     -- Tools
