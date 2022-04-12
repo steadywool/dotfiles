@@ -85,6 +85,12 @@ Edit `/etc/tlp.conf` and replace `1` by `0`:
 USB_AUTOSUSPEND=0
 ```
 
+### Ranger devicons
+```
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+
+```
+
 ### Install Packer.nvim
 ```
 $ mkdir ~/.local/share/nvim/site/pack/packer/start && \
