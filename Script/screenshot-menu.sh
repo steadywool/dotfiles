@@ -24,22 +24,22 @@ fi
 
 # Screenshot of every outputs
 if [[ $CHOICE = "save-all" ]]; then
-    grim $SCREENSHOT/$(date +%d-%m-%Y_%H-%M-%S).jpg \
+    grim $SCREENSHOT/$(date +%Y%m%d-%H%M%S_all).jpg \
     && notify-send --urgency=low "Saved in $SCREENSHOT"
 
 # Screenshot of current output
 elif [[ $CHOICE = "save-output" ]]; then
-    grim -o "$output" $SCREENSHOT/$(date +%d-%m-%Y_%H-%M-%S).jpg \
+    grim -o "$output" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_output).jpg \
     && notify-send --urgency=low "Saved in $SCREENSHOT"
 
 # Screenshot of current window
 elif [[ $CHOICE = "save-window" ]]; then
-    grim -g "$window" $SCREENSHOT/$(date +%d-%m-%Y_%H-%M-%S).jpg \
+    grim -g "$window" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_window).jpg \
     && notify-send --urgency=low "Saved in $SCREENSHOT"
 
 # Screenshot of selected area
 elif [[ $CHOICE = "save-area" ]]; then
-    grim -g "$(slurp)" $SCREENSHOT/$(date +%d-%m-%Y_%H-%M-%S).jpg \
+    grim -g "$(slurp)" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_area).jpg \
     && notify-send --urgency=low "Saved in $SCREENSHOT"
 fi
 

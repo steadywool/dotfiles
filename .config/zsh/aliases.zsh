@@ -22,6 +22,9 @@ alias backup-sync='rclone sync -P $HOME/Documents/Cours backup:'
 # Tmux
 alias tm='tmux attach || tmux new'
 
+# Create snapshot
+alias -g snap-create='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_snapshot`'
+
 # Colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
