@@ -7,6 +7,17 @@ require'indent_blankline'.setup {
 -- Telescope
 require'telescope'.setup()
 
+-- Nvim-tree
+require'nvim-tree'.setup {
+    open_on_setup_file = true,
+    view = {
+    width = 30,
+    height = 30,
+    side = "right",
+    },
+}
+
+
 -- Autopairs
 require'nvim-autopairs'.setup()
 

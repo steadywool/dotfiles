@@ -2,12 +2,12 @@
 zsh / neovim / ranger / htop / cronie / tmux / ripgrep
 
 ### Wayland
-alacritty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+alacritty || Kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Appearance
-ttf-hack / ttf-roboto
+ttf-fira-code / ttf-roboto / nerd-fonts-fira-code<sup>AUR</sup>
 
 ---
 ### Base

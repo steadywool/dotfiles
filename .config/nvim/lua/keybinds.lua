@@ -3,7 +3,9 @@ vim.cmd('nnoremap <M-f> <cmd>Telescope find_files<CR>')
 vim.cmd('nnoremap <M-r> <cmd>Telescope live_grep<CR>')
 vim.cmd('nnoremap <M-e> <cmd>Telescope buffers<CR>')
 vim.cmd('nnoremap <M-c> <cmd>Telescope lsp_code_actions<CR>')
-vim.cmd('nnoremap <M-h> <cmd>Telescope command_history<CR>')
+
+-- Nvim-tree
+vim.cmd('nnoremap <M-t> <cmd>lua require"nvim-tree".toggle(false, true)<CR>')
 
 -- Go to next/previous buffer in buffer list
 vim.cmd('nnoremap <TAB> <cmd>bnext<CR>')

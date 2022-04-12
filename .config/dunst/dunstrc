@@ -30,7 +30,7 @@ sort = yes
 idle_threshold = 120
 
 # Text
-font = Hack Regular 9
+font = Fira Code Regular 9
 line_height = 0
 markup = full
 format = "<b>%s</b>\n%b"
@@ -47,7 +47,6 @@ show_indicators = yes
 icon_position = left
 min_icon_size = 0
 max_icon_size = 32
-icon_path = /usr/share/icons/breeze-dark/status/16/:/usr/share/icons/breeze-dark/devices/16/
 
 # History
 sticky_history = yes

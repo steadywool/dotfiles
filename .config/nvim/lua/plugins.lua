@@ -5,6 +5,7 @@ return require('packer').startup(function(use)
     -- Appearance
     use {
         'andersevenrud/nordic.nvim',
+        'kyazdani42/nvim-web-devicons',
     }
 
     -- Auto-completion
@@ -36,6 +37,8 @@ return require('packer').startup(function(use)
 
         'nvim-telescope/telescope.nvim',
         'nvim-lua/plenary.nvim',
+
+        'kyazdani42/nvim-tree.lua',
 
         'windwp/nvim-autopairs',
         'windwp/nvim-ts-autotag',

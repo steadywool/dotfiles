@@ -4,19 +4,19 @@ include ~/.config/sway/config.d/*
 
 # WM INDEPENDANT HOTKEYS
 ## Kitty
-bindsym Mod4+Return exec alacritty
+bindsym Mod4+Return exec kitty -1
 
 ## Ranger
-bindsym Mod4+o exec alacritty -e ranger
+bindsym Mod4+o exec kitty -1 ranger
 
 ## Neovim
-bindsym Mod4+n exec alacritty -e nvim
+bindsym Mod4+n exec kitty -1 nvim
 
 ## Htop
-bindsym Mod4+Shift+q exec alacritty -e htop
+bindsym Mod4+Shift+q exec kitty -1 htop
 
 ## Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="alacritty" --no-generic --dmenu="bemenu"
+bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu"
 bindsym Mod4+Shift+d exec bemenu-run
 
 ## Power menu
