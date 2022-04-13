@@ -13,7 +13,7 @@ alias gca='git commit -S -av'
 alias gs='git stash'
 alias gsp='git stash pop'
 
-alias glog='git log --pretty="%h - %s - %ad" --relative-date -20'
+alias glog='git log --pretty='%h - %s - %ad' --relative-date -20'
 
 # Rclone copy & sync
 alias backup-copy='rclone copy -P backup: $HOME/Documents/Cours'

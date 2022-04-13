@@ -8,7 +8,7 @@ var+=("suspend")
 var+=("lock")
 var+=("exit-sway")
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'power ')
+CHOICE=$(printf "%s\n" "${var[@]}" | bemenu -p "power ")
 
 if [[ $CHOICE = "power-off" ]]; then
     shutdown -h now
