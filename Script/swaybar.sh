@@ -33,11 +33,11 @@ brightness=$(light -G | cut -d '.' -f1)
 linux_version=$(uname -r | cut -d '-' -f1)
 
 # Storage
-storage=$(df -h --output=avail ~/ | tail -n1 | sed 's/ //g')
-root_storage=$(df -h --output=avail / | tail -n1 | sed 's/ //g')
+storage=$(df -h --output=pcent ~/ | tail -n1 | sed 's/ //g')
+root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # CPU
 cpu_usage=$(top -bn1 | grep '%Cpu' | awk '{print $2}')
 
 # Echo command for sway-bar
-echo [CPU $cpu_usage\%] [/ $root_storage] [$USER $storage] [VER $linux_version] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
+echo [CPU $cpu_usage\%] [/ $root_storage] [/home $storage] [VER $linux_version] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
