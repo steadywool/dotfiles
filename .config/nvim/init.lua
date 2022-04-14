@@ -1,5 +1,5 @@
 -- General
-vim.opt.swapfile = false
+vim.opt.swapfile = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = "a"
 vim.opt.updatetime = 300

@@ -7,7 +7,7 @@ alacritty || Kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>
 light / grim + slurp + jq / wl-clipboard / gammastep
 
 ### Appearance
-ttf-fira-code / ttf-roboto / nerd-fonts-fira-code<sup>AUR</sup>
+ttf-fira-code / ttf-roboto / nerd-fonts-fira-code<sup>AUR</sup> / gnome-themes-extra
 
 ---
 ### Base
@@ -29,9 +29,9 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 ### Other
 udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils} / man-db / rkhunter
 
-mupdf / imv / mpv / mate-polkit / gnome-keyring / libappindicator-gtk3
+mupdf / imv / mpv / mate-polkit / gnome-keyring / libappindicator-gtk3 / calcurse
 
-arch-audit / nmap / tcpdump / lsof / bmon / realtime-privileges
+arch-audit / nmap / tcpdump / lsof / bmon / realtime-privileges / qpwgraph / pulsemixer
 
 ---
 ### Enable AppArmor as default security model

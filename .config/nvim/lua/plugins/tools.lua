@@ -17,6 +17,8 @@ require("nvim-tree").setup {
     },
 }
 
+-- Gitsigns
+require("gitsigns").setup()
 
 -- Autopairs
 require("nvim-autopairs").setup()
