@@ -5,21 +5,27 @@ return require("packer").startup(function(use)
     -- Appearance
     use {
         "andersevenrud/nordic.nvim",
+        "sainnhe/gruvbox-material",
+        "sainnhe/everforest",
+
         "kyazdani42/nvim-web-devicons",
+
+        "andweeb/presence.nvim",
     }
 
     -- Auto-completion
     use {
-        -- snippet
-        "hrsh7th/vim-vsnip",
-        "hrsh7th/cmp-vsnip",
+        -- Snippet
+        "L3MON4D3/LuaSnip",
+        "saadparwaiz1/cmp_luasnip",
 
-        --completion
+        -- Completion
         "hrsh7th/nvim-cmp",
         "hrsh7th/cmp-nvim-lsp",
 
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-buffer",
+        "hrsh7th/cmp-calc",
     }
 
     -- LSP

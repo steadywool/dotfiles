@@ -40,7 +40,6 @@ vim.opt.listchars = {tab = "▶ ", trail = "•", nbsp = "␣"}
 vim.opt.wrap = false
 
 -- Lua Modules
-
 require("keybinds")
 require("plugins")
 
