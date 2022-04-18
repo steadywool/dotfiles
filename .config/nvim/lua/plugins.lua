@@ -15,7 +15,7 @@ return require("packer").startup(function(use)
 
     -- Auto-completion
     use {
-        -- Snippet
+        -- Snippets
         "L3MON4D3/LuaSnip",
         "saadparwaiz1/cmp_luasnip",
 

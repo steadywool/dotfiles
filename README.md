@@ -2,7 +2,7 @@
 zsh / neovim / ranger / htop / cronie / tmux / ripgrep
 
 ### Wayland
-alacritty || Kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp + jq / wl-clipboard / gammastep
 
@@ -26,12 +26,15 @@ efibootmgr (uefi) / grub / grub-btrfs
 apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
 ---
-### Other
-udisks2 / xdg-user-dirs / tlp / android-tools / bluez{-utils} / man-db / rkhunter
+### Tools
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
-mupdf / imv / mpv / mate-polkit / gnome-keyring / libappindicator-gtk3 / calcurse
+khunter / arch-audit / realtime-privileges
 
-arch-audit / nmap / tcpdump / lsof / bmon / realtime-privileges / qpwgraph / pulsemixer
+nmap / tcpdump / lsof / bmon / qpwgraph
+
+### Others
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
 ---
 ### Enable AppArmor as default security model
@@ -85,13 +88,12 @@ Edit `/etc/tlp.conf` and replace `1` by `0`:
 USB_AUTOSUSPEND=0
 ```
 
-### Ranger devicons
+### Install "Ranger devicons"
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-
 ```
 
-### Install Packer.nvim
+### Install "Packer.nvim"
 ```
 $ mkdir ~/.local/share/nvim/site/pack/packer/start && \
 git clone --depth 1 https://github.com/wbthomason/packer.nvim \
