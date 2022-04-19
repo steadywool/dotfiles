@@ -1,10 +1,10 @@
 ### CLI
-zsh / neovim / ranger / htop / cronie / tmux / ripgrep
+zsh / neovim / ranger / htop / cronie / tmux
 
 ### Wayland
 alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
-light / grim + slurp + jq / wl-clipboard / gammastep
+light / grim + slurp + jq / gammastep / wl-clipboard
 
 ### Appearance
 ttf-fira-code / ttf-roboto / nerd-fonts-fira-code<sup>AUR</sup> / arc-gtk-theme / breeze-icons
@@ -20,7 +20,7 @@ ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 zip / unzip / unrar / p7zip
 
 ### Boot loader
-efibootmgr (uefi) / grub / grub-btrfs
+efibootmgr (uefi) / grub
 
 ### Security
 apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
@@ -29,9 +29,9 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 ### Tools
 udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
-khunter / arch-audit / realtime-privileges
+khunter / arch-audit / realtime-privileges / docker
 
-nmap / tcpdump / lsof / bmon / qpwgraph
+nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep
 
 ### Others
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
@@ -71,9 +71,6 @@ password_pbkdf2 USER PASSWORD_HASH
 
 ### Use Nftables with Docker
 Replace `iptables` package by `iptables-nft`
-
-### Nftables configuration
-copy the contents of this [gist](https://gist.github.com/Kaniville/959e35f27cc783dc89ed46deedcd82d1) file into `/etc/nftables.conf`
 
 ### Mount Options
 root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
