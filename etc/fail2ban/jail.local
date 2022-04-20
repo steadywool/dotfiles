@@ -3,6 +3,8 @@ banaction = nftables
 banaction_allports = nftables[type=allports]
 
 bantime = 1d
+findtime = 600
+maxretry = 3
 
 [sshd]
 enabled = true

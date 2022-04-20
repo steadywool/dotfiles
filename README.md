@@ -22,6 +22,10 @@ zip / unzip / unrar / p7zip
 ### Boot loader
 efibootmgr (uefi) / grub
 
+### Multimedia
+pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber /
+gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
+
 ### Security
 apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
