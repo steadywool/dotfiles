@@ -1,33 +1,33 @@
 #!/bin/bash
 
-var+=("power-off")
-var+=("reboot")
-var+=("hibernate")
-var+=("hybrid-sleep")
-var+=("suspend")
-var+=("lock")
-var+=("exit-sway")
+var+=('power-off')
+var+=('reboot')
+var+=('hibernate')
+var+=('hybrid-sleep')
+var+=('suspend')
+var+=('lock')
+var+=('exit-sway')
 
-CHOICE=$(printf "%s\n" "${var[@]}" | bemenu -p "power ")
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'power ')
 
-if [[ $CHOICE = "power-off" ]]; then
+if [[ $CHOICE = 'power-off' ]]; then
     shutdown -h now
 
-elif [[ $CHOICE = "reboot" ]]; then
+elif [[ $CHOICE = 'reboot' ]]; then
     shutdown -r now
 
-elif [[ $CHOICE = "hibernate" ]]; then
+elif [[ $CHOICE = 'hibernate' ]]; then
     systemctl hibernate
 
-elif [[ $CHOICE = "hybrid-sleep" ]]; then
+elif [[ $CHOICE = 'hybrid-sleep' ]]; then
     systemctl hybrid-sleep
 
-elif [[ $CHOICE = "suspend" ]]; then
+elif [[ $CHOICE = 'suspend' ]]; then
     systemctl suspend
 
-elif [[ $CHOICE = "lock" ]]; then
+elif [[ $CHOICE = 'lock' ]]; then
     swaylock -c 000000
 
-elif [[ $CHOICE = "exit-sway" ]]; then
+elif [[ $CHOICE = 'exit-sway' ]]; then
     swaymsg exit
 fi
