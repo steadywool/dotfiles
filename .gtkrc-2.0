@@ -3,3 +3,4 @@ gtk-icon-theme-name="breeze-dark"
 gtk-font-name="Roboto 10"
 gtk-cursor-theme-name="default"
 gtk-cursor-theme-size=0
+gtk-application-prefer-dark-theme="true"

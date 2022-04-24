@@ -1,3 +1,4 @@
+# Plugins
 source $ZHOME/aliases.zsh
 source $ZHOME/theme.zsh
 source $ZHOME/zuse.zsh
