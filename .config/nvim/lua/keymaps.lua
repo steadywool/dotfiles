@@ -9,7 +9,7 @@ vim.keymap.set("n", "<M-t>", "<cmd>lua require('nvim-tree').toggle(false, true)<
 
 -- Go to next/previous buffer in buffer list
 vim.keymap.set("n", "<TAB>", "<cmd>bnext<cr>")
-vim.keymap.set("n", "<STAB>", "<cmd>bprevious<cr>")
+vim.keymap.set("n", "<S-TAB>", "<cmd>bprevious<cr>")
 
 -- Use jk or kj to escape
 vim.keymap.set("i", "jk", "<Esc>")
