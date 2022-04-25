@@ -25,4 +25,4 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export LIBSEAT_BACKEND=logind
 
 # Bemenu
-export BEMENU_OPTS="-w -i -H '21' --fn 'Fira Code Regular 9' --tb '#000000' --tf '#d8dee9' --fb '#000000' --nb '#000000' --nf '#d8dee9' --hb '#bf616a' --hf '#000000'"
+export BEMENU_OPTS="-w -i -H '22' --fn 'Fira Code Regular 9' --tb '#000000' --tf '#d8dee9' --fb '#000000' --nb '#000000' --nf '#d8dee9' --hb '#bf616a' --hf '#000000'"

@@ -35,7 +35,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / docker
 
-nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep
+nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep / task
 
 ### Others
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
