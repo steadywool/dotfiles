@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Show date & hour
-date_formatted=$(date +'%a %d %b %Y %H:%M')
+date_formatted=$(date +'%Y-%m-%d %H:%M')
 
 # Show battery capacity & status
 bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
@@ -29,15 +29,15 @@ fi
 # Get current brightness
 brightness=$(light -G | cut -d '.' -f1)
 
-# Show linux version
-linux_version=$(uname -r | cut -d '-' -f1)
-
 # Storage
 storage=$(df -h --output=pcent ~/ | tail -n1 | sed 's/ //g')
 root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # CPU
-cpu_usage=$(top -bn1 | grep '%Cpu' | awk '{print $2}')
+cpu_usage=$(top -ibn1 | grep '%Cpu' | awk '{print $2}')
+
+# Task
+task=$(task status:pending count)
 
 # Echo command for sway-bar
-echo [CPU $cpu_usage\%] [/ $root_storage] [/home $storage] [VER $linux_version] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]
+echo [TASK $task] [CPU $cpu_usage\%] [/ $root_storage] [/home $storage] [LIGHT $brightness\%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity\%$bat_info] [$date_formatted]

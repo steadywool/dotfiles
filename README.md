@@ -1,5 +1,5 @@
 ### CLI
-zsh / neovim / ranger / htop / cronie / tmux
+zsh / neovim / ranger / htop / cronie / tmux / task
 
 ### Wayland
 alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
@@ -35,7 +35,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / docker
 
-nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep / task
+nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep
 
 ### Others
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
