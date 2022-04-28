@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
         "sainnhe/gruvbox-material",
         "sainnhe/everforest",
         "navarasu/onedark.nvim",
+        "tiagovla/tokyodark.nvim",
 
         "kyazdani42/nvim-web-devicons",
 

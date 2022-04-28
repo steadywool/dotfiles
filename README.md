@@ -7,7 +7,7 @@ alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>
 light / grim + slurp + jq / gammastep / wl-clipboard
 
 ### Appearance
-ttf-fira-code / ttf-roboto / nerd-fonts-fira-code<sup>AUR</sup> / arc-gtk-theme / breeze-icons
+ttf-jetbrains-mono / ttf-roboto / arc-gtk-theme / breeze-icons
 
 ---
 ### Base
