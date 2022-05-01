@@ -23,7 +23,8 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub
 
 ### Multimedia
-pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber /
+pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
+
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
 
 ### Security
@@ -33,12 +34,12 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 ### Tools
 udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
-khunter / arch-audit / realtime-privileges / docker
+khunter / arch-audit / realtime-privileges / docker / flatpak
 
 nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep
 
 ### Others
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3 / gamemode
 
 ---
 ### Enable AppArmor as default security model

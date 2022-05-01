@@ -33,11 +33,6 @@ require("lspconfig").sumneko_lua.setup {
     },
 }
 
--- Emmet_ls
-require("lspconfig").emmet_ls.setup {
-    filetypes = {"html", "css", "php"}
-}
-
 -- html
 require("lspconfig").html.setup {
     filetypes = {"html", "php"}
