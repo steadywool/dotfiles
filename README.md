@@ -32,7 +32,7 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
 ---
 ### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / cpupower
 
 khunter / arch-audit / realtime-privileges / docker / flatpak
 
@@ -88,6 +88,11 @@ root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
 Edit `/etc/tlp.conf` and replace `1` by `0`:
 ```
 USB_AUTOSUSPEND=0
+```
+
+### Add languages to Flatpak
+```
+# flatpak config languages --set "en;fr"
 ```
 
 ### Install "Ranger devicons"
