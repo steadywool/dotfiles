@@ -7,7 +7,6 @@ local servers = {
     "html", --HTML
     "cssls", --CSS
     "jsonls", --Json
-    "emmet_ls",
     "intelephense", --PHP
     "bashls", --Bash
     "eslint", --Javascript/Typescript
@@ -31,9 +30,4 @@ require("lspconfig").sumneko_lua.setup {
             telemetry = {enable = false},
         },
     },
-}
-
--- html
-require("lspconfig").html.setup {
-    filetypes = {"html", "php"}
 }

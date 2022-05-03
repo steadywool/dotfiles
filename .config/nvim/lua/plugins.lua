@@ -11,8 +11,6 @@ return require("packer").startup(function(use)
         "tiagovla/tokyodark.nvim",
 
         "kyazdani42/nvim-web-devicons",
-
-        "andweeb/presence.nvim",
     }
 
     -- Auto-completion
