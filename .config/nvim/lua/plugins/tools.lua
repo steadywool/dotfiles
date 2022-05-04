@@ -11,9 +11,9 @@ require("telescope").setup()
 require("nvim-tree").setup {
     open_on_setup_file = true,
     view = {
-    width = 35,
-    height = 35,
-    side = "right",
+        width = 35,
+        height = 35,
+        side = "right",
     },
 }
 

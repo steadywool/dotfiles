@@ -9,15 +9,15 @@ local servers = {
     "jsonls", --Json
     "intelephense", --PHP
     "bashls", --Bash
-    "eslint", --Javascript/Typescript
-    "tsserver", --Javascript/Typescript
     "sumneko_lua", --Lua
+    "tsserver", --Javascript/Typescript
+    "eslint", -- Javascript Linter
 }
 
 for _, lsp in pairs(servers) do
     require("lspconfig")[lsp].setup {
         capabilities = capabilities,
-        flags = {debounce_text_changes = 150},
+        flags = { debounce_text_changes = 150 },
     }
 end
 
@@ -25,9 +25,9 @@ end
 require("lspconfig").sumneko_lua.setup {
     settings = {
         Lua = {
-            diagnostics = {globals = "vim"},
-            workspace = {library = vim.api.nvim_get_runtime_file("", true)},
-            telemetry = {enable = false},
+            diagnostics = { globals = "vim" },
+            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            telemetry = { enable = false },
         },
     },
 }

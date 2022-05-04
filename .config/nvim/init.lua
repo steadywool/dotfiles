@@ -38,8 +38,11 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.list = true
-vim.opt.listchars = {tab = "▶ ", trail = "•", nbsp = "␣"}
+vim.opt.listchars = { tab = "▶ ", trail = "•", nbsp = "␣" }
 vim.opt.wrap = false
+
+vim.cmd("autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2")
+vim.cmd("autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2")
 
 -- Lua Modules
 require("keymaps")
