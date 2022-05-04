@@ -4,7 +4,7 @@ ZPLUG=$HOME/.config/zsh/plugins
 
 HISTFILE=$HOME/.zhistory
 
-export TMOUT=300
+export TMOUT=900
 
 # Themes
 #export QT_QPA_PLATFORMTHEME=qt5ct

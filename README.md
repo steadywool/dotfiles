@@ -7,7 +7,7 @@ alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>
 light / grim + slurp + jq / gammastep / wl-clipboard
 
 ### Appearance
-ttf-jetbrains-mono / ttf-roboto / arc-gtk-theme / breeze-icons
+ttf-jetbrains-mono / noto-fonts{-emoji} / arc-gtk-theme / breeze-icons
 
 ---
 ### Base
@@ -32,14 +32,14 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 
 ---
 ### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / cpupower
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / docker / flatpak
 
-nmap / tcpdump / lsof / bmon / qpwgraph / ripgrep
+nmap / ripgrep / prettier / cpupower / gamemode
 
 ### Others
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3 / gamemode
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
 ---
 ### Enable AppArmor as default security model
@@ -73,6 +73,7 @@ Then, add these lines to `/etc/grub.d/40_custom`:
 set superusers="USER"
 password_pbkdf2 USER PASSWORD_HASH
 ```
+Don't forget to regenerate Grub's config.
 
 ### Use Nftables with Docker
 Replace `iptables` package by `iptables-nft`
@@ -97,12 +98,12 @@ USB_AUTOSUSPEND=0
 
 ### Install "Ranger devicons"
 ```
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
+git clone https://github.com/alexanderjeurissen/ranger_devicons \
+~/.config/ranger/plugins/ranger_devicons
 ```
 
 ### Install "Packer.nvim"
 ```
-$ mkdir ~/.local/share/nvim/site/pack/packer/start && \
-git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+git clone https://github.com/wbthomason/packer.nvim \
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```

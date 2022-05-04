@@ -4,13 +4,10 @@ return require("packer").startup(function(use)
 
     -- Appearance
     use {
-        "andersevenrud/nordic.nvim",
-        "sainnhe/gruvbox-material",
-        "sainnhe/everforest",
-        "navarasu/onedark.nvim",
-        "tiagovla/tokyodark.nvim",
-
         "kyazdani42/nvim-web-devicons",
+
+        -- Themes
+        "andersevenrud/nordic.nvim",
     }
 
     -- Auto-completion
@@ -34,19 +31,25 @@ return require("packer").startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
+    -- Library
+    use {
+        "nvim-lua/plenary.nvim",
+    }
+
     -- Tools
     use {
         "lukas-reineke/indent-blankline.nvim",
         "norcalli/nvim-colorizer.lua",
         "lewis6991/gitsigns.nvim",
+        "sbdchd/neoformat",
 
         "iamcco/markdown-preview.nvim",
 
+        -- File explorers
         "nvim-telescope/telescope.nvim",
-        "nvim-lua/plenary.nvim",
-
         "kyazdani42/nvim-tree.lua",
 
+        -- Autotag/Autopairs
         "windwp/nvim-autopairs",
         "windwp/nvim-ts-autotag",
     }
