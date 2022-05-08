@@ -7,7 +7,7 @@ alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>
 light / grim + slurp + jq / gammastep / wl-clipboard
 
 ### Appearance
-ttf-jetbrains-mono / noto-fonts{-emoji} / arc-gtk-theme / breeze-icons
+ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / arc-gtk-theme / breeze-icons
 
 ---
 ### Base
@@ -36,7 +36,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / docker / flatpak
 
-nmap / ripgrep / prettier / cpupower / gamemode
+nmap / ripgrep / cpupower / gamemode
 
 ### Others
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3

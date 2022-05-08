@@ -8,6 +8,9 @@ return require("packer").startup(function(use)
 
         -- Themes
         "andersevenrud/nordic.nvim",
+        "marko-cerovac/material.nvim",
+        "ellisonleao/gruvbox.nvim",
+        "rmehri01/onenord.nvim",
     }
 
     -- Auto-completion
