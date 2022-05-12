@@ -8,8 +8,6 @@ return require("packer").startup(function(use)
 
         -- Themes
         "andersevenrud/nordic.nvim",
-        "marko-cerovac/material.nvim",
-        "ellisonleao/gruvbox.nvim",
         "rmehri01/onenord.nvim",
     }
 
@@ -26,7 +24,6 @@ return require("packer").startup(function(use)
 
         "hrsh7th/cmp-path",
         "hrsh7th/cmp-buffer",
-        "hrsh7th/cmp-calc",
     }
 
     -- LSP
@@ -45,11 +42,7 @@ return require("packer").startup(function(use)
         "norcalli/nvim-colorizer.lua",
         "lewis6991/gitsigns.nvim",
 
-        "iamcco/markdown-preview.nvim",
-
-        -- File explorers
         "nvim-telescope/telescope.nvim",
-        "kyazdani42/nvim-tree.lua",
 
         -- Autotag/Autopairs
         "windwp/nvim-autopairs",

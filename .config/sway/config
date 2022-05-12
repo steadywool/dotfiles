@@ -16,8 +16,8 @@ bindsym Mod4+n exec kitty -1 nvim
 bindsym Mod4+Shift+q exec kitty -1 htop
 
 ## Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -l '15'"
-bindsym Mod4+Shift+d exec bemenu-run -l '15'
+bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -l '20'"
+bindsym Mod4+Shift+d exec bemenu-run -l '20'
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
