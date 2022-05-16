@@ -9,11 +9,11 @@ if [ -z $route ]; then
     if [ -f '/tmp/wallpaper.jpg' ]; then
         swaymsg output "*" bg /tmp/wallpaper.jpg fill
     else
-        swaymsg output "*" color 4c566a
+        swaymsg output "*" bg \#4c566a solid_color
     fi
 
 else
     # Download a wallpaper
-    wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1366x768/?nature,water
+    wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1366x768/?nature,water,mountain,snow
     swaymsg output "*" bg /tmp/wallpaper.jpg fill
 fi
