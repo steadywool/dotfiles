@@ -23,9 +23,4 @@ alias grep='grep --color=auto'
 alias snap-create='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_snapshot`'
 
 # Flatpak
-alias flatpak-rm='rm /usr/local/bin/*'
-alias flatpak-ln='ln -s /var/lib/flatpak/exports/bin/* /usr/local/bin'
-
-# QEMU server
-alias debian-start='qemu-system-x86_64 -vnc none -monitor stdio -k fr -net nic -net user,hostfwd=tcp::50022-:22,hostfwd=tcp::50080-:80,hostfwd=tcp::58080-:8080 -enable-kvm -m 1G -drive file=debian.cow,format=qcow2'
-alias ubuntu-start='qemu-system-x86_64 -vnc none -monitor stdio -k fr -net nic -net user,hostfwd=tcp::60022-:22,hostfwd=tcp::60080-:80,hostfwd=tcp::68080-:8080 -enable-kvm -m 1G -drive file=ubuntu.cow,format=qcow2'
+alias flatpak-ln='bash -c "rm /usr/local/bin/* && ln -s /var/lib/flatpak/exports/bin/* /usr/local/bin"'

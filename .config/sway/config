@@ -5,6 +5,7 @@ include ~/.config/sway/config.d/*
 # WM INDEPENDANT HOTKEYS
 ## Kitty
 bindsym Mod4+Return exec kitty -1
+bindsym Mod4+Shift+Return exec kitty -1 bash -c "tmux attach || tmux new"
 
 ## Ranger
 bindsym Mod4+o exec kitty -1 ranger

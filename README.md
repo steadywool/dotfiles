@@ -23,7 +23,7 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub
 
 ### Multimedia
-pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
+pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / pipewire-media-session
 
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
 
@@ -34,7 +34,7 @@ apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
 ### Tools
 udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
-khunter / arch-audit / realtime-privileges / docker / flatpak
+khunter / arch-audit / realtime-privileges / flatpak
 
 nmap / ripgrep / cpupower / gamemode
 

@@ -41,6 +41,7 @@ return require("packer").startup(function(use)
         "lukas-reineke/indent-blankline.nvim",
         "norcalli/nvim-colorizer.lua",
         "lewis6991/gitsigns.nvim",
+        "iamcco/markdown-preview.nvim",
 
         "nvim-telescope/telescope.nvim",
 
