@@ -12,6 +12,6 @@ if [ -z $route ]; then
 
 else
     # Download a wallpaper
-    wget -O /tmp/wallpaper.jpg https://source.unsplash.com/3840x2160/?nature
+    wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
     swaymsg output "*" bg /tmp/wallpaper.jpg fill
 fi
