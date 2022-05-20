@@ -45,7 +45,7 @@ mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 ### Enable AppArmor as default security model
 Add this line to `/etc/default/grub`:
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="apparmor=1 security=apparmor"
+GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
 ### Ssh configuration
@@ -59,7 +59,7 @@ And this line to `/etc/ssh/ssh_config`:
 PasswordAuthentication no
 ```
 
-### Generate usbguard rules
+### Usbguard configuration
 ```
 # usbguard generate-policy > /etc/usbguard/rules.conf
 ```
@@ -76,15 +76,10 @@ root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`.
 
 Don't forget to create the Swap partition.
 
-### TLP and USB keys
+### TLP configuration
 Edit `/etc/tlp.conf` and replace `1` by `0`:
 ```
 USB_AUTOSUSPEND=0
-```
-
-### Add languages to Flatpak
-```
-# flatpak config languages --set "en;fr"
 ```
 
 ### Install "Ranger devicons"
