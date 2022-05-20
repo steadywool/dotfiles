@@ -48,6 +48,13 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
+### Max number of processes
+Add these lines to `/etc/security/limits.conf`:
+```
+* soft nproc 1000
+* hard nproc 1500
+```
+
 ### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
 ```
@@ -62,6 +69,11 @@ PasswordAuthentication no
 ### Usbguard configuration
 ```
 # usbguard generate-policy > /etc/usbguard/rules.conf
+```
+
+### Disable root account
+```
+# passwd --lock root
 ```
 
 ### Use Nftables instead of Iptables
@@ -84,12 +96,12 @@ USB_AUTOSUSPEND=0
 
 ### Install "Ranger devicons"
 ```
-git clone https://github.com/alexanderjeurissen/ranger_devicons \
+$ git clone https://github.com/alexanderjeurissen/ranger_devicons \
 ~/.config/ranger/plugins/ranger_devicons
 ```
 
 ### Install "Paq-nvim"
 ```
-git clone https://github.com/savq/paq-nvim.git \
+$ git clone https://github.com/savq/paq-nvim.git \
 ~/.local/share/nvim/site/pack/paqs/start/paq-nvim
 ```
