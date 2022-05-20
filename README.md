@@ -28,7 +28,7 @@ pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / pipewire-media-sessi
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
 
 ### Security
-apparmor / nftables / bubblewrap-suid / fail2ban / usbguard
+apparmor / nftables / bubblewrap-suid / usbguard
 
 ---
 ### Tools
@@ -64,26 +64,17 @@ PasswordAuthentication no
 # usbguard generate-policy > /etc/usbguard/rules.conf
 ```
 
-### Add password to Grub2
-```
-# grub-mkpasswd-pbkdf2
-```
-Then, add these lines to `/etc/grub.d/40_custom`:
-```
-set superusers="USER"
-password_pbkdf2 USER PASSWORD_HASH
-```
-Don't forget to regenerate Grub's config.
-
-### Use Nftables with Docker
+### Use Nftables instead of Iptables
 Replace `iptables` package by `iptables-nft`
 
 ### Mount Options
-root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`
+root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`.
 
-/tmp & /boot use `nodev`, `nosuid` & `noexec`
+/boot use `nodev`, `nosuid` & `noexec`.
 
-/home encrypted partition use `nodev` & `nosuid`
+/home encrypted partition use `nodev` & `nosuid`.
+
+Don't forget to create the Swap partition.
 
 ### TLP and USB keys
 Edit `/etc/tlp.conf` and replace `1` by `0`:
@@ -102,8 +93,8 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons \
 ~/.config/ranger/plugins/ranger_devicons
 ```
 
-### Install "Packer.nvim"
+### Install "Paq-nvim"
 ```
-git clone https://github.com/wbthomason/packer.nvim \
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
+git clone https://github.com/savq/paq-nvim.git \
+~/.local/share/nvim/site/pack/paqs/start/paq-nvim
 ```
