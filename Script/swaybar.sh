@@ -7,10 +7,12 @@ date_formatted=$(date +'%Y-%m-%d %H:%M')
 bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 bat_status=$(cat /sys/class/power_supply/BAT0/status)
 
-if [ $bat_status = 'Charging' ]; then
+if [[ $bat_status = 'Charging' ]]; then
     bat_info=' ↑'
-elif [ $bat_status = 'Discharging' ]; then
+elif [[ $bat_status = 'Discharging' ]]; then
     bat_info=' ↓'
+elif [[ $bat_status = 'Unknown' ]]; then
+    bat_info=' ?'
 fi
 
 # Show volume and mute info
@@ -20,7 +22,7 @@ mute=$(pactl list sinks | grep Mute | awk '{print $2}' | sed 's/no/✗/g' | sed 
 # Show if we are connected or not
 route=$(ip route show | grep -o 'default')
 
-if [ -z $route ]; then
+if [[ -z $route ]]; then
     network='✗'
 else
     network='✓'
