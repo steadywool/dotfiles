@@ -1,11 +1,5 @@
--- Nordic
---require("nordic").colorscheme {
---    underline_option = "none",
---    italic = false,
---    italic_comments = true,
---    minimal_mode = false,
---    alternate_backgrounds = true
---}
+-- Gruvbox-material
+vim.g["gruvbox_material_better_performance"] = 1
+vim.g["gruvbox_material_background"] = "hard"
 
--- OneNord
-require("onenord").setup()
+vim.cmd("colorscheme gruvbox-material")

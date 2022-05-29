@@ -5,8 +5,7 @@ require("paq") {
     -- Appearance
     "kyazdani42/nvim-web-devicons";
 
-    "andersevenrud/nordic.nvim";
-    "rmehri01/onenord.nvim";
+    "sainnhe/gruvbox-material";
 
     -- Auto-completion
     "L3MON4D3/LuaSnip";

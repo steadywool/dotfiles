@@ -19,6 +19,8 @@ if [[ -z `ls -A $WALLPAPER` ]]; then
         wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
         swaymsg output "*" bg /tmp/wallpaper.jpg fill
 
+    else
+        swaymsg output "*" bg "#000000" solid_color
     fi
 
 else
