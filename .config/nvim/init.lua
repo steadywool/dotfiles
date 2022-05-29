@@ -19,7 +19,7 @@ vim.opt.termguicolors = true
 vim.wo.colorcolumn = "99999"
 
 -- Statusline
-vim.opt.statusline = "%#normalmode# %n %#statusline# %F %#statuslineNC# %r%m %= %w%y %#normalmode# %l:%c %p%% "
+vim.opt.statusline = "%#search# %n %#statusline# %F %#statuslineNC# %r%m %= %w%y %#normalmode# %l:%c %p%% "
 
 -- Syntax Higlighting
 vim.cmd("filetype plugin on")
