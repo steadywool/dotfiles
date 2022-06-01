@@ -46,6 +46,9 @@ temperature=$(($temp_info / 1000))
 pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
 
+# Scratchpad
+scratch=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
+
 # Echo command for sway-bar
-echo "[TASK !$overdue_task/$pending_task] [TEMP $temperature°C] [CPU $cpu_usage%] [/ $root_storage] [/home $storage] \
+echo "[SCRATCH $scratch] [TASK !$overdue_task/$pending_task] [TEMP $temperature°C] [CPU $cpu_usage%] [/ $root_storage] [/home $storage] \
 [LIGHT $brightness%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]"

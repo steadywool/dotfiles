@@ -4,7 +4,7 @@ zsh / neovim / ranger / htop / cronie / tmux / task
 ### Wayland
 alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
-light / grim + slurp + jq / gammastep / wl-clipboard
+light / grim + slurp / gammastep / wl-clipboard
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / pop-gtk-theme / papirus-icon-theme
@@ -36,9 +36,8 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / flatpak
 
-nmap / ripgrep / cpupower / gamemode
+nmap / ripgrep / cpupower / gamemode / jq
 
-### Others
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
 ---
