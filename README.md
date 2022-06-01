@@ -28,7 +28,7 @@ pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / pipewire-media-sessi
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
 
 ### Security
-apparmor / nftables / bubblewrap-suid / usbguard
+apparmor / nftables / bubblewrap-suid / usbguard / libpwquality
 
 ---
 ### Tools
