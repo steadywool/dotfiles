@@ -6,8 +6,8 @@ follow = keyboard
 # Geometry
 width = 300
 height = 300
-origin = top-right
-offset = 5x5
+origin = top-left
+offset = 14x2
 scale = 0
 notification_limit = 0
 
