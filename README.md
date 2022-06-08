@@ -36,7 +36,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
 khunter / arch-audit / realtime-privileges / flatpak
 
-nmap / ripgrep / cpupower / gamemode / jq
+nmap / ripgrep / cpupower / gamemode / jq / imagemagick
 
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
