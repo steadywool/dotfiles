@@ -25,5 +25,12 @@ if [[ -z `ls -A $WALLPAPER` ]]; then
 
 else
     # Select a random wallpaper from $WALLPAPER directory
-    swaymsg output "*" bg $(find $WALLPAPER -type f | shuf -n1) fill
+    cp $(find $WALLPAPER -type f | shuf -n1) /tmp/wallpaper.jpg
+
+    swaymsg output "*" bg /tmp/wallpaper.jpg fill
+fi
+
+# Blur the wallpaper for the screenlocker if there is a wallpaper
+if [[ -f /tmp/wallpaper.jpg ]]; then
+    convert -scale 5% -blur 0x2.5 -resize 1000% /tmp/wallpaper.jpg /tmp/blurred_wallpaper.jpg
 fi

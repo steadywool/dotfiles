@@ -26,7 +26,7 @@ elif [[ $CHOICE = 'suspend' ]]; then
     systemctl suspend
 
 elif [[ $CHOICE = 'lock' ]]; then
-    swaylock -c 000000
+    $HOME/Script/lockscreen.sh
 
 elif [[ $CHOICE = 'exit-sway' ]]; then
     swaymsg exit
