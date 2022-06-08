@@ -22,44 +22,58 @@ if [[ ! -d $SCREENSHOT ]]; then
     mkdir -p $SCREENSHOT
 fi
 
-# Screenshot of every outputs
-if [[ $CHOICE = 'save-all' ]]; then
-    grim $SCREENSHOT/$(date +%Y%m%d-%H%M%S_all).jpg \
-    && notify-send --urgency=low "Saved in $SCREENSHOT"
+# Save screenshot
+case $CHOICE in
 
-# Screenshot of current output
-elif [[ $CHOICE = 'save-output' ]]; then
-    grim -o "$output" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_output).jpg \
-    && notify-send --urgency=low "Saved in $SCREENSHOT"
+    # Screenshot of every outputs
+    'save-all')
+        grim $SCREENSHOT/$(date +%Y%m%d-%H%M%S_all).jpg \
+        && notify-send --urgency=low "Saved in $SCREENSHOT"
+    ;;
 
-# Screenshot of current window
-elif [[ $CHOICE = 'save-window' ]]; then
-    grim -g "$window" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_window).jpg \
-    && notify-send --urgency=low "Saved in $SCREENSHOT"
+    # Screenshot of current output
+    'save-output')
+        grim -o "$output" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_output).jpg \
+        && notify-send --urgency=low "Saved in $SCREENSHOT"
+    ;;
 
-# Screenshot of selected area
-elif [[ $CHOICE = 'save-area' ]]; then
-    grim -g "$(slurp)" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_area).jpg \
-    && notify-send --urgency=low "Saved in $SCREENSHOT"
-fi
+    # Screenshot of current window
+    'save-window')
+        grim -g "$window" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_window).jpg \
+        && notify-send --urgency=low "Saved in $SCREENSHOT"
+    ;;
 
-# Copy of every outputs
-if [[ $CHOICE = 'copy-all' ]]; then
-    grim - | wl-copy \
-    && notify-send --urgency=low 'Saved in clipboard'
+    # Screenshot of selected area
+    'save-area')
+        grim -g "$(slurp)" $SCREENSHOT/$(date +%Y%m%d-%H%M%S_area).jpg \
+        && notify-send --urgency=low "Saved in $SCREENSHOT"
+    ;;
+esac
 
-# Copy of current output
-elif [[ $CHOICE = 'copy-output' ]]; then
-    grim -o "$output" - | wl-copy \
-    && notify-send --urgency=low 'Saved in clipboard'
+# Copy screenshot to clipboard
+case $CHOICE in
 
-# Copy of current window
-elif [[ $CHOICE = 'copy-window' ]]; then
-    grim -g "$window" - | wl-copy \
-    && notify-send --urgency=low 'Saved in clipboard'
+    # Copy of every outputs
+    'copy-all')
+        grim - | wl-copy \
+        && notify-send --urgency=low 'Saved in clipboard'
+    ;;
 
-# Copy of selected area
-elif [[ $CHOICE = 'copy-area' ]]; then
-    grim -g "$(slurp)" - | wl-copy \
-    && notify-send --urgency=low 'Saved in clipboard'
-fi
+    # Copy of current output
+    'copy-output')
+        grim -o "$output" - | wl-copy \
+        && notify-send --urgency=low 'Saved in clipboard'
+    ;;
+
+    # Copy of current window
+    'copy-window')
+        grim -g "$window" - | wl-copy \
+        && notify-send --urgency=low 'Saved in clipboard'
+    ;;
+
+    # Copy of selected area
+    'copy-area')
+        grim -g "$(slurp)" - | wl-copy \
+        && notify-send --urgency=low 'Saved in clipboard'
+    ;;
+esac

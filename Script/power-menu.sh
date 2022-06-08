@@ -10,24 +10,33 @@ var+=('exit-sway')
 
 CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'power ')
 
-if [[ $CHOICE = 'power-off' ]]; then
-    shutdown -h now
+case $CHOICE in
 
-elif [[ $CHOICE = 'reboot' ]]; then
-    shutdown -r now
+    'power-off')
+        shutdown -h now
+    ;;
 
-elif [[ $CHOICE = 'hibernate' ]]; then
-    systemctl hibernate
+    'reboot')
+        shutdown -r now
+    ;;
 
-elif [[ $CHOICE = 'hybrid-sleep' ]]; then
-    systemctl hybrid-sleep
+    'hibernate')
+        systemctl hibernate
+    ;;
 
-elif [[ $CHOICE = 'suspend' ]]; then
-    systemctl suspend
+    'hybrid-sleep')
+        systemctl hybrid-sleep
+    ;;
 
-elif [[ $CHOICE = 'lock' ]]; then
-    $HOME/Script/lockscreen.sh
+    'suspend')
+        systemctl suspend
+    ;;
 
-elif [[ $CHOICE = 'exit-sway' ]]; then
-    swaymsg exit
-fi
+    'lock')
+        $HOME/Script/lockscreen.sh
+    ;;
+
+    'exit-sway')
+        swaymsg exit
+    ;;
+esac

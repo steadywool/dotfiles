@@ -9,7 +9,7 @@ if [[ ! -d $WALLPAPER ]]; then
     mkdir -p $WALLPAPER
 fi
 
-# If there is no wallpaper in $WALLPAPER
+# If there is NO wallpaper in $WALLPAPER
 if [[ -z `ls -A $WALLPAPER` ]]; then
 
     # If there is a connection
@@ -19,10 +19,12 @@ if [[ -z `ls -A $WALLPAPER` ]]; then
         wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
         swaymsg output "*" bg /tmp/wallpaper.jpg fill
 
+    # If there is NO connection
     else
         swaymsg output "*" bg "#000000" solid_color
     fi
 
+# If there is wallpaper(s) in $WALLPAPER
 else
     # Select a random wallpaper from $WALLPAPER directory
     cp $(find $WALLPAPER -type f | shuf -n1) /tmp/wallpaper.jpg
