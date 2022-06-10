@@ -33,7 +33,7 @@ case $CHOICE in
     ;;
 
     'lock')
-        swaylock -e -f -c 83a598
+        swaylock -e -u -f -c 83a598
     ;;
 
     'exit-sway')

@@ -38,10 +38,6 @@ root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 # CPU
 cpu_usage=$(top -ibn1 | grep '%Cpu' | awk '{print $2}')
 
-# TEMP (Use x86_pkg_temp)
-temp_info=$(cat /sys/class/thermal/thermal_zone6/temp)
-temperature=$(($temp_info / 1000))
-
 # Task
 pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
@@ -50,5 +46,5 @@ overdue_task=$(task +OVERDUE count)
 scratch=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for sway-bar
-echo "[# $scratch] [TASK !$overdue_task/$pending_task] [TEMP $temperature°C] [CPU $cpu_usage%] [/ $root_storage] [/home $storage] \
+echo "[# $scratch] [TASK !$overdue_task/$pending_task] [CPU $cpu_usage%] [/ $root_storage] [/home $storage] \
 [LIGHT $brightness%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]"
