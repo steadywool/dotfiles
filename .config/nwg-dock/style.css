@@ -1,0 +1,29 @@
+window {
+  background: #1d2021;
+  border-radius: 2px;
+}
+
+#box {
+  padding: 4px;
+}
+
+button, image {
+	background: none;
+	border-style: none;
+	box-shadow: none;
+}
+
+button {
+	padding: 4px;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+button:focus {
+	box-shadow: 0 0 2px;
+}

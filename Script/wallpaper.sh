@@ -1,16 +1,10 @@
 #!/bin/bash
 
 WALLPAPER=$HOME/Pictures/Wallpaper
-TMP_WALLPAPER=/tmp/Wallpaper
 
 # Create wallpaper folder if there is none
 if [[ ! -d $WALLPAPER ]]; then
     mkdir -p $WALLPAPER
-fi
-
-# Create tmp wallpaper folder if there is none
-if [[ ! -d $TMP_WALLPAPER ]]; then
-    mkdir -p $TMP_WALLPAPER
 fi
 
 # If there is NO wallpaper in $WALLPAPER
@@ -20,8 +14,8 @@ if [[ -z $(ls -A $WALLPAPER) ]]; then
     if [[ ! -z $(ip route show | grep -o 'default') ]]; then
 
         # Download a wallpaper
-        wget -O $TMP_WALLPAPER/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
-        swaymsg output "*" bg $TMP_WALLPAPER/wallpaper.jpg fill
+        wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
+        swaymsg output "*" bg /tmp/wallpaper.jpg fill
 
     # If there is NO connection
     else
@@ -31,7 +25,5 @@ if [[ -z $(ls -A $WALLPAPER) ]]; then
 # If there is wallpaper(s) in $WALLPAPER
 else
     # Select a random wallpaper from $WALLPAPER directory
-    cp $(find $WALLPAPER -type f | shuf -n1) $TMP_WALLPAPER/wallpaper.jpg
-
-    swaymsg output "*" bg $TMP_WALLPAPER/wallpaper.jpg fill
+    swaymsg output "*" bg $(find $WALLPAPER -type f | shuf -n1) fill
 fi

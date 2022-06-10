@@ -4,7 +4,7 @@ zsh / neovim / ranger / htop / cronie / tmux / task
 ### Wayland
 alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
-light / grim + slurp / gammastep / wl-clipboard
+light / grim + slurp / gammastep / wl-clipboard / nwg-dock<sup>AUR</sup>
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / pop-gtk-theme / papirus-icon-theme

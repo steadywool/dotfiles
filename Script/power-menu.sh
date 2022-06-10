@@ -33,7 +33,7 @@ case $CHOICE in
     ;;
 
     'lock')
-        $HOME/Script/lockscreen.sh
+        swaylock -e -f -c 83a598
     ;;
 
     'exit-sway')
