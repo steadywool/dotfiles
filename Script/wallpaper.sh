@@ -10,7 +10,13 @@ fi
 # If there is NO wallpaper in $WALLPAPER
 if [[ -z $(ls -A $WALLPAPER) ]]; then
 
-    swaymsg output "*" bg "#1d2021" solid_color
+    # Download a wallpaper
+    if [[ $(ip route show | grep -o 'default') ]]; then
+        wget -O /tmp/wallpaper.jpg https://source.unsplash.com/1920x1080/?nature
+        swaymsg output "*" bg /tmp/wallpaper.jpg fill
+    else
+        swaymsg output "*" bg "#1d2021" solid_color
+    fi
 
 # If there is wallpaper(s) in $WALLPAPER
 else

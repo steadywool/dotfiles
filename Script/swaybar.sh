@@ -32,7 +32,7 @@ fi
 brightness=$(light -G | cut -d '.' -f1)
 
 # Storage
-storage=$(df -h --output=pcent ~/ | tail -n1 | sed 's/ //g')
+storage=$(df -h --output=pcent $HOME | tail -n1 | sed 's/ //g')
 root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # CPU
@@ -46,5 +46,5 @@ overdue_task=$(task +OVERDUE count)
 scratch=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for sway-bar
-echo "[# $scratch] [TASK !$overdue_task/$pending_task] [CPU $cpu_usage%] [/ $root_storage] [/home $storage] \
+echo "[# $scratch] [TASK !$overdue_task/$pending_task] [CPU $cpu_usage%] [/ $root_storage] [$USER $storage] \
 [LIGHT $brightness%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]"

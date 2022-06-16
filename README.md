@@ -2,7 +2,7 @@
 zsh / neovim / ranger / htop / cronie / tmux / task
 
 ### Wayland
-alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 
 light / grim + slurp / gammastep / wl-clipboard
 
@@ -28,15 +28,16 @@ pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / pipewire-media-sessi
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
 
 ### Security
-apparmor / nftables / bubblewrap-suid / usbguard / libpwquality
+apparmor / nftables / bubblewrap-suid / usbguard
 
 ---
+### Network
+nmap / tcpdump / lsof / bmon / iproute2
+
 ### Tools
 udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
 
-khunter / arch-audit / realtime-privileges / flatpak
-
-nmap / ripgrep / cpupower / gamemode / jq
+khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq
 
 mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
 
