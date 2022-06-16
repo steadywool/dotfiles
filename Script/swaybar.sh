@@ -38,6 +38,9 @@ root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 # CPU
 cpu_usage=$(top -ibn1 | grep '%Cpu' | awk '{print $2}')
 
+# Process number
+process_number=$(ps -e | wc -l)
+
 # Task
 pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
@@ -46,5 +49,5 @@ overdue_task=$(task +OVERDUE count)
 scratch=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for sway-bar
-echo "[# $scratch] [TASK !$overdue_task/$pending_task] [CPU $cpu_usage%] [/ $root_storage] [$USER $storage] \
+echo "[# $scratch] [TASK !$overdue_task/$pending_task] [PROC $process_number] [CPU $cpu_usage%] [/ $root_storage] [$USER $storage] \
 [LIGHT $brightness%] [ROUTE $network] [MUTE $mute] [VOL $volume] [BAT $bat_capacity%$bat_info] [$date_formatted]"
