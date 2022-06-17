@@ -2,28 +2,28 @@
 
 LOCK_ARGS=""
 
-# If grim is not installed
-if [[ ! $(which grim) ]]; then
-    swaylock -e -f -c 1d2021
+# For each connected output, do this
+for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
 
-# Else if grim is installed
-else
+    screenshot=/tmp/$output.jpg
 
-    # For each connected output, do this
-    for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
+    # Take the screenshot of each outputs
+    grim -o $output $screenshot
 
-        screenshot=/tmp/$output.jpg
-
-        # Take the screenshot of each outputs
-        grim -o $output $screenshot
+    # If grim OK
+    if [[ $? -eq 0 ]]; then
 
         # Pixelize each screenshots
         convert $screenshot -scale 10% -scale 1000% $screenshot
 
         # Add arguments of each output to a variable
-        LOCK_ARGS="$LOCK_ARGS --image $output:$screenshot"
-    done
+        LOCK_ARGS="$LOCK_ARGS -i $output:$screenshot"
 
-    # Lock
-    swaylock $LOCK_ARGS
-fi
+    # If grim NOT OK
+    else
+        LOCK_ARGS="-c 1d2021"
+    fi
+
+done
+
+swaylock $LOCK_ARGS
