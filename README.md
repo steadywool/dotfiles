@@ -48,21 +48,11 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
-### Max number of processes
-Add these lines to `/etc/security/limits.conf`:
-```
-* soft nproc 1000
-* hard nproc 1500
-```
-
 ### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
 ```
 Protocol 2
 PermitRootLogin no
-```
-And this line to `/etc/ssh/ssh_config`:
-```
 PasswordAuthentication no
 ```
 
@@ -74,6 +64,11 @@ PasswordAuthentication no
 ### Disable root account
 ```
 # passwd --lock root
+```
+
+### Create the default user (with "users" & "wheel" groups and zsh)
+```
+# useradd -g users -G wheel -s /bin/zsh kani
 ```
 
 ### Use Nftables instead of Iptables
