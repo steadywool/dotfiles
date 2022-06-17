@@ -17,7 +17,7 @@ bindsym Mod4+n exec kitty -1 nvim
 bindsym Mod4+Shift+q exec kitty -1 htop
 
 ## Bemenu
-set $bemenu -w -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#8ec07c' --hf '#1d2021'
+set $bemenu -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#8ec07c' --hf '#1d2021'
 
 bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bemenu -l '20' $bemenu_custom"
 bindsym Mod4+Shift+d exec bemenu-run -l '20' $bemenu_custom

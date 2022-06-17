@@ -66,7 +66,7 @@ PasswordAuthentication no
 # passwd --lock root
 ```
 
-### Create the default user (with "users" & "wheel" groups and zsh)
+### Create the default user
 ```
 # useradd -g users -G wheel -s /bin/zsh kani
 ```
