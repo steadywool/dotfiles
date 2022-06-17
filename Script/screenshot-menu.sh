@@ -12,7 +12,7 @@ var+=('copy-output')
 var+=('copy-window')
 var+=('copy-area')
 
-CHOICE=$(printf '%s\n' "${var[@]}" | bemenu $bemenu_custom -p 'screenshot ' -w -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#8ec07c' --hf '#1d2021')
+CHOICE=$(printf '%s\n' "${var[@]}" | bemenu -p 'screenshot ' -w -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#8ec07c' --hf '#1d2021')
 
 output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 window=$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')
