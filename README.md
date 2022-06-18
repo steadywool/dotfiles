@@ -1,7 +1,3 @@
-![](src/screenshot1.jpg)
-![](src/screenshot2.jpg)
-
----
 ### CLI
 zsh / neovim / ranger / htop / cronie / tmux / task
 
