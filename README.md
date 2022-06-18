@@ -95,8 +95,8 @@ $ git clone https://github.com/alexanderjeurissen/ranger_devicons \
 ~/.config/ranger/plugins/ranger_devicons
 ```
 
-### Install "Paq-nvim"
+### Install "Packer.nvim"
 ```
-$ git clone https://github.com/savq/paq-nvim.git \
-~/.local/share/nvim/site/pack/paqs/start/paq-nvim
+$ git clone https://github.com/wbthomason/packer.nvim \
+~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
