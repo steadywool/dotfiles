@@ -22,8 +22,9 @@ export SSH_AUTH_SOCK
 # GPG
 export GPG_TTY=$(tty)
 
-# Flatpak
+# PATH
 export PATH=$PATH:/var/lib/flatpak/exports/bin
+export PATH=$PATH:$HOME/.local/bin
 
 # Proxy
 #export http_proxy=

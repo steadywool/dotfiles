@@ -33,7 +33,7 @@ case $CHOICE in
     ;;
 
     'lock')
-        $HOME/Script/lockscreen.sh
+        $HOME/.local/bin/lockscreen.sh
     ;;
 
     'exit-sway')

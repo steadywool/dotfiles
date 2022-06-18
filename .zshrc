@@ -12,9 +12,6 @@ source $ZPLUG/zsh-completions/zsh-completions.plugin.zsh
 zuse github.com/zdharma-continuum/fast-syntax-highlighting
 source $ZPLUG/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
-zuse github.com/jeffreytse/zsh-vi-mode
-source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
-
 # Vi mode
 bindkey -v
 KEYTIMEOUT=5

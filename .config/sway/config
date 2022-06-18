@@ -1,6 +1,6 @@
 # INCLUDE
 include /etc/sway/config.d/*
-include ~/.config/sway/config.d/*
+include $HOME/.config/sway/config.d/*
 
 # WM INDEPENDANT HOTKEYS
 ## Kitty
@@ -23,11 +23,11 @@ bindsym Mod4+d exec j4-dmenu-desktop --term="kitty -1" --no-generic --dmenu="bem
 bindsym Mod4+Shift+d exec bemenu-run -l '15' $bemenu_custom
 
 ## Power menu
-bindsym Mod4+Shift+e exec $HOME/Script/power-menu.sh
+bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 
 ## Screenshot
-bindsym Mod4+Shift+s exec $HOME/Script/screenshot-menu.sh
-bindsym Print exec $HOME/Script/screenshot-menu.sh
+bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
+bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
 ## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
