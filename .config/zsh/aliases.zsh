@@ -21,6 +21,3 @@ alias grep='grep --color=auto'
 
 # Create snapshot
 alias snap-create='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_snapshot`'
-
-# Flatpak
-alias flatpak-ln='bash -c "rm /usr/local/bin/* && ln -s /var/lib/flatpak/exports/bin/* /usr/local/bin"'

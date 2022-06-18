@@ -9,6 +9,7 @@ export TMOUT=900
 # Themes
 #export QT_QPA_PLATFORMTHEME=qt5ct
 export GTK_THEME=$(grep 'gtk-theme-name' "$HOME/.config/gtk-4.0/settings.ini" | cut -d '=' -f2)
+export XDG_CURRENT_DESKTOP=Unity
 
 # Variables
 export EDITOR=nvim
@@ -17,6 +18,12 @@ export PAGER=less
 
 # SSH
 export SSH_AUTH_SOCK
+
+# GPG
+export GPG_TTY=$(tty)
+
+# Flatpak
+export PATH=$PATH:/var/lib/flatpak/exports/bin
 
 # Proxy
 #export http_proxy=
