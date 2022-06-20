@@ -1,17 +1,26 @@
+-- Lsp installer
+require("nvim-lsp-installer").setup {}
+
 -- Lsp config
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 local servers = {
     "clangd", --C/C++
+
+    -- Vscode Language Extracted
     "html", --HTML
     "cssls", --CSS
     "jsonls", --Json
+    "eslint", -- Javascript Linter
+
     "intelephense", --PHP
     "bashls", --Bash
     "sumneko_lua", --Lua
     "tsserver", --Javascript/Typescript
-    "eslint", -- Javascript Linter
+    "tailwindcss", -- Tailwind
+    "dockerls", -- Docker
+    "marksman", -- Markdown
 }
 
 for _, lsp in pairs(servers) do
