@@ -35,11 +35,11 @@ apparmor / nftables / bubblewrap-suid / usbguard
 nmap / tcpdump / lsof / bmon / iproute2
 
 ### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool
 
-khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq
+khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libappindicator-gtk3
+mupdf / imv / mpv / polkit-gnome / gnome-keyring
 
 ---
 ### Enable AppArmor as default security model
