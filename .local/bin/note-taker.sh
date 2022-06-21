@@ -13,6 +13,4 @@ if [[ ! -f $note_filename ]]; then
 fi
 
 nvim -c "norm Go" \
-    -c "norm Go## $(date +%H:%M)" \
-    -c "norm G2o" \
     -c "startinsert" $note_filename
