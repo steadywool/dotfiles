@@ -12,4 +12,5 @@ if [[ -f $config ]]; then
     gsettings set org.gnome.desktop.interface icon-theme "$icon_theme"
     gsettings set org.gnome.desktop.interface cursor-theme "$cursor_theme"
     gsettings set org.gnome.desktop.interface font-name "$font_name"
+    gsettings set org.gnome.desktop.wm.preferences button-layout :
 fi
