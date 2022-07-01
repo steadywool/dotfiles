@@ -1,23 +1,23 @@
 # Plugins
-source $ZHOME/aliases.zsh
-source $ZHOME/theme.zsh
-source $ZHOME/zuse.zsh
+source ${ZHOME}/aliases.zsh
+source ${ZHOME}/theme.zsh
+source ${ZHOME}/zuse.zsh
 
 zuse github.com/zsh-users/zsh-autosuggestions
-source $ZPLUG/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 zuse github.com/zsh-users/zsh-completions
-source $ZPLUG/zsh-completions/zsh-completions.plugin.zsh
+source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
 
 zuse github.com/zdharma-continuum/fast-syntax-highlighting
-source $ZPLUG/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 zuse github.com/jeffreytse/zsh-vi-mode
-source $ZPLUG/zsh-vi-mode/zsh-vi-mode.zsh
+source ${ZPLUG}/zsh-vi-mode/zsh-vi-mode.zsh
 
 # Vi mode
 bindkey -v
-KEYTIMEOUT=5
+KEYTIMEOUT=1
 
 # History
 HISTSIZE=5000

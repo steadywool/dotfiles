@@ -3,21 +3,21 @@
 LOCK_ARGS=""
 
 # For each connected output, do this
-for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
+for output in "$(swaymsg -t get_outputs | jq -r '.[] | .name')"; do
 
-    screenshot=/tmp/$output.jpg
+    screenshot="/tmp/${output}.jpg"
 
     # Take the screenshot of each outputs
-    grim -o $output $screenshot
+    grim -o ${output} ${screenshot}
 
     # If grim OK
-    if [[ $? -eq 0 ]]; then
+    if [[ ${?} -eq 0 ]]; then
 
         # Pixelize each screenshots
-        convert $screenshot -scale 10% -scale 1000% $screenshot
+        convert ${screenshot} -scale 10% -scale 1000% ${screenshot}
 
         # Add arguments of each output to a variable
-        LOCK_ARGS="$LOCK_ARGS -i $output:$screenshot"
+        LOCK_ARGS="${LOCK_ARGS} -i ${output}:{$screenshot}"
 
     # If grim NOT OK
     else
@@ -26,4 +26,4 @@ for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
 
 done
 
-swaylock $LOCK_ARGS
+swaylock ${LOCK_ARGS}

@@ -2,17 +2,17 @@
 
 # Download plugins
 zuse() {
-    local url=$1 module=${1:t}
-    local module_path=$ZPLUG/$module
+    local url=${1} module=${1:t}
+    local module_path=${ZPLUG}/${module}
 
     # Create the installation path if needed
-    if [[ ! -d $ZPLUG ]]; then
-        mkdir -p $ZPLUG
+    if [[ ! -d ${ZPLUG} ]]; then
+        mkdir -p ${ZPLUG}
     fi
 
     # Install plugins
-    if [[ ! -d $module_path ]]; then
-        git clone --recursive https://$url.git $module_path
+    if [[ ! -d ${module_path} ]]; then
+        git clone --recursive https://${url}.git ${module_path}
     fi
 }
 

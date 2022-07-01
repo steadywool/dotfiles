@@ -1,14 +1,14 @@
 # ZSH
-ZHOME=$HOME/.config/zsh
-ZPLUG=$HOME/.config/zsh/plugins
+ZHOME=${HOME}/.config/zsh
+ZPLUG=${HOME}/.config/zsh/plugins
 
-HISTFILE=$HOME/.zhistory
+HISTFILE=${HOME}/.zhistory
 
 export TMOUT=900
 
 # Themes
 #export QT_QPA_PLATFORMTHEME=qt5ct
-export GTK_THEME=$(grep 'gtk-theme-name' "$HOME/.config/gtk-4.0/settings.ini" | cut -d '=' -f2)
+export GTK_THEME="$(grep 'gtk-theme-name' "${HOME}/.config/gtk-4.0/settings.ini" | cut -d '=' -f2)"
 export XDG_CURRENT_DESKTOP=Unity
 
 # Variables
@@ -20,11 +20,11 @@ export PAGER=less
 export SSH_AUTH_SOCK
 
 # GPG
-export GPG_TTY=$(tty)
+export GPG_TTY="$(tty)"
 
 # PATH
-export PATH=$PATH:/var/lib/flatpak/exports/bin
-export PATH=$PATH:$HOME/.local/bin
+export PATH=${PATH}:/var/lib/flatpak/exports/bin
+export PATH=${PATH}:${HOME}/.local/bin
 
 # Proxy
 #export http_proxy=

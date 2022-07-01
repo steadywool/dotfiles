@@ -18,6 +18,10 @@ alias sudo='sudo '
 # Colors
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ip='ip --color'
 
 # Create snapshot
 alias snap-create='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_snapshot`'
+
+# Scarab (Hollow Knight)
+alias scarab='/opt/scarab/Scarab'
