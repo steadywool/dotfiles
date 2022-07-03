@@ -25,5 +25,5 @@ if [[ -z "$(ls -A ${WALLPAPER})" ]]; then
 # If there is wallpaper(s) in $WALLPAPER
 else
     # Select a random wallpaper from $WALLPAPER directory
-    swaymsg output '*' bg "$(find ${WALLPAPER} -type f | shuf -n1)" fill
+    swaymsg output '*' bg $(find ${WALLPAPER} -type f | shuf -n1) fill
 fi

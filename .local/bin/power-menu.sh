@@ -8,7 +8,7 @@ var+=('suspend')
 var+=('lock')
 var+=('exit-sway')
 
-CHOICE="$(printf '%s\n' "${var[@]}" | bemenu -p 'power ' -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#d3869b' --hf '#1d2021')"
+CHOICE=$(printf '%s\n' ${var[@]} | bemenu -p 'power ' -i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --nb '#1d2021' --nf '#ebdbb2' --hb '#d3869b' --hf '#1d2021')
 
 case ${CHOICE} in
 

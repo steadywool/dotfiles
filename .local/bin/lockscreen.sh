@@ -3,7 +3,7 @@
 LOCK_ARGS=""
 
 # For each connected output, do this
-for output in "$(swaymsg -t get_outputs | jq -r '.[] | .name')"; do
+for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
 
     screenshot="/tmp/${output}.jpg"
 
