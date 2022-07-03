@@ -13,6 +13,3 @@ require("colorizer").setup()
 
 -- Autopairs
 require("nvim-autopairs").setup()
-
--- Autotag
-require("nvim-ts-autotag").setup()
