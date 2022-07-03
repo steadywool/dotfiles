@@ -17,7 +17,7 @@ for output in "$(swaymsg -t get_outputs | jq -r '.[] | .name')"; do
         convert ${screenshot} -scale 10% -scale 1000% ${screenshot}
 
         # Add arguments of each output to a variable
-        LOCK_ARGS="${LOCK_ARGS} -i ${output}:{$screenshot}"
+        LOCK_ARGS="${LOCK_ARGS} -i ${output}:${screenshot}"
 
     # If grim NOT OK
     else

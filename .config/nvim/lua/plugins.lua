@@ -8,6 +8,7 @@ return require("packer").startup(function(use)
     -- Appearance
     use {
         "sainnhe/gruvbox-material",
+        "sainnhe/everforest",
         "kyazdani42/nvim-web-devicons",
     }
 

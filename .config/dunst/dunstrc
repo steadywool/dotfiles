@@ -74,21 +74,21 @@ mouse_right_click = close_all
 per_monitor_dpi = false
 
 [urgency_low]
-background = "#1d2021"
-foreground = "#83a598"
-frame_color = "#1d2021"
+background = "#2b3339"
+foreground = "#7fbbb3"
+frame_color = "#2b3339"
 timeout = 5
 
 [urgency_normal]
-background = "#1d2021"
-foreground = "#b8bb26"
-frame_color = "#1d2021"
+background = "#2b3339"
+foreground = "#a7c080"
+frame_color = "#2b3339"
 timeout = 10
 
 [urgency_critical]
-background = "#1d2021"
-foreground = "#fb4934"
-frame_color = "#1d2021"
+background = "#2b3339"
+foreground = "#e67e80"
+frame_color = "#2b3339"
 timeout = 25
 
 # vim: ft=cfg

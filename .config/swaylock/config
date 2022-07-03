@@ -4,32 +4,32 @@ daemonize
 indicator-radius=50
 indicator-thickness=20
 
-key-hl-color=#1d2021
-bs-hl-color=#1d2021
+key-hl-color=#2b3339
+bs-hl-color=#2b3339
 
 font=JetBrains Mono
 font-size=14
 
-inside-color=#83a598
-inside-clear-color=#fabd2f
-inside-caps-lock-color=#83a598
-inside-ver-color=#b8bb26
-inside-wrong-color=#fb4934
+inside-color=#7fbbb3
+inside-clear-color=#dbbc7f
+inside-caps-lock-color=#7fbbb3
+inside-ver-color=#a7c080
+inside-wrong-color=#e67e80
 
 line-uses-inside
 
-ring-color=#1d2021
-ring-clear-color=#1d2021
-ring-caps-lock-color=#1d2021
-ring-ver-color=#1d2021
-ring-wrong-color=#1d2021
+ring-color=#2b3339
+ring-clear-color=#2b3339
+ring-caps-lock-color=#2b3339
+ring-ver-color=#2b3339
+ring-wrong-color=#2b3339
 
-separator-color=#1d2021
+separator-color=#2b3339
 
-text-color=#1d2021
-text-clear-color=#1d2021
-text-caps-lock-color=#1d2021
-text-ver-color=#1d2021
-text-wrong-color=#1d2021
+text-color=#2b3339
+text-clear-color=#2b3339
+text-caps-lock-color=#2b3339
+text-ver-color=#2b3339
+text-wrong-color=#2b3339
 
 # vim: ft=conf
