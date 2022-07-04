@@ -36,18 +36,20 @@ autoload -Uz compinit
 compinit
 setopt AUTO_MENU
 
+zstyle ':completion:*' verbose yes
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
 zstyle ':completion::complete:*' gain-privileges 1
 
 zstyle ':completion:*' completer _extensions _complete _approximate
-zstyle ':completion:*' file-list all
 zstyle ':completion:*' group-name ''
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Vcs
 autoload -Uz vcs_info
 precmd() {vcs_info}
 setopt prompt_subst
+
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:*' get-revision true
 zstyle ':vcs_info:*' check-for-changes true
