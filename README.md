@@ -39,7 +39,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-im
 
 khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / jrnl / libnotify
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone
 
 ---
 ### Enable AppArmor as default security model
