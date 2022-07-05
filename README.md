@@ -7,11 +7,11 @@ kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
 light / grim + slurp / gammastep / wl-clipboard
 
 ### Appearance
-ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / pop-gtk-theme / papirus-icon-theme
+ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-theme-extra / papirus-icon-theme
 
 ---
 ### Base
-base / base-devel / linux-firmware / linux-hardened / intel-ucode
+base / base-devel / linux-firmware / linux-{hardened,lts} / intel-ucode
 
 ### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
@@ -23,9 +23,9 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub
 
 ### Multimedia
-pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / pipewire-media-session
+pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
 
-gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,bad,ugly}
+gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
 apparmor / nftables / bubblewrap-suid / usbguard
@@ -39,7 +39,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-im
 
 khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / cpupower
 
 ---
 ### Enable AppArmor as default security model
