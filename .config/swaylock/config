@@ -4,6 +4,8 @@ daemonize
 indicator-radius=50
 indicator-thickness=20
 
+color=#1d2021
+
 key-hl-color=#1d2021
 bs-hl-color=#1d2021
 

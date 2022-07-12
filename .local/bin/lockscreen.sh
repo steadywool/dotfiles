@@ -18,10 +18,6 @@ for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
 
         # Add arguments of each output to a variable
         LOCK_ARGS="${LOCK_ARGS} -i ${output}:${screenshot}"
-
-    # If grim NOT OK
-    else
-        LOCK_ARGS="-c 1d2021"
     fi
 
 done
