@@ -2,7 +2,6 @@
 source ${ZHOME}/aliases.zsh
 source ${ZHOME}/theme.zsh
 source ${ZHOME}/zuse.zsh
-source ${ZHOME}/command_not_found.zsh
 
 zuse github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -35,16 +34,17 @@ zvm_vi_yank () {
 # Completion
 autoload -Uz compinit
 compinit
-setopt AUTO_MENU
 
-zstyle ':completion:*' verbose yes
+unsetopt menu_complete
+setopt auto_menu
+setopt complete_in_word
+setopt always_to_end
+
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
-zstyle ':completion::complete:*' gain-privileges 1
-
+zstyle ':completion:*' verbose true
 zstyle ':completion:*' completer _extensions _complete _approximate
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
 # Vcs
 autoload -Uz vcs_info

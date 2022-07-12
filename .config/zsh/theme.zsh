@@ -20,7 +20,7 @@ RPS1='%B${vcs_info_msg_0_}%b%E'
 unset RPS2 RPROMPT2
 
 # Completion
-zstyle ':completion:*' format '%B%F{cyan}-- %d --%f%b'
+zstyle ':completion:*:descriptions' format '%B%F{yellow}-- %d --%f%b'
 
 # Vi mode
 ZVM_VI_HIGHLIGHT_FOREGROUND=black
