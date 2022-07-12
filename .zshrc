@@ -2,6 +2,7 @@
 source ${ZHOME}/aliases.zsh
 source ${ZHOME}/theme.zsh
 source ${ZHOME}/zuse.zsh
+source ${ZHOME}/command_not_found.zsh
 
 zuse github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh

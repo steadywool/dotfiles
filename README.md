@@ -11,7 +11,7 @@ ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji
 
 ---
 ### Base
-base / base-devel / linux-firmware / linux-{hardened,lts} / intel-ucode
+base / base-devel / linux-firmware / linux-hardened / intel-ucode
 
 ### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs

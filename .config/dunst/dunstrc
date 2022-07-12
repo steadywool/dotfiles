@@ -20,11 +20,12 @@ progress_bar_max_width = 300
 
 indicate_hidden = yes
 transparency = 0
-separator_height = 1
+separator_height = 2
 padding = 8
 horizontal_padding = 8
 text_icon_padding = 0
-frame_width = 1
+frame_width = 3
+gaps_size = 0
 separator_color = frame
 sort = yes
 idle_threshold = 120
@@ -44,9 +45,11 @@ hide_duplicate_count = false
 show_indicators = yes
 
 # Icon
+enable_recursive_icon_lookup = true
+icon_theme = Papirus-Dark
 icon_position = left
-min_icon_size = 0
-max_icon_size = 32
+min_icon_size = 32
+max_icon_size = 128
 
 # History
 sticky_history = yes
@@ -61,8 +64,10 @@ class= Dunst
 corner_radius = 0
 ignore_dbusclose = false
 
+# Wayland
 force_xwayland = false
 
+# Legacy
 force_xinerama = false
 
 # Mouse
@@ -77,7 +82,7 @@ per_monitor_dpi = false
 background = "#1d2021"
 foreground = "#83a598"
 frame_color = "#1d2021"
-timeout = 5
+timeout = 10
 
 [urgency_normal]
 background = "#1d2021"
@@ -89,6 +94,6 @@ timeout = 10
 background = "#1d2021"
 foreground = "#fb4934"
 frame_color = "#1d2021"
-timeout = 25
+timeout = 20
 
 # vim: ft=cfg

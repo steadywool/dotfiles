@@ -8,7 +8,7 @@ if [[ ! -d ${WALLPAPER} ]]; then
 fi
 
 # If there is NO wallpaper in $WALLPAPER
-if [[ -z "$(ls -A ${WALLPAPER})" ]]; then
+if [[ -z $(ls -A ${WALLPAPER}) ]]; then
 
     # Download the wallpaper
     wget -O /tmp/wallpaper.jpg 'https://source.unsplash.com/1920x1080/?nature'
