@@ -10,6 +10,6 @@ if [[ ${bat_status} = 'Discharging' ]] && [[ ${bat_capacity} -lt 20 ]]; then
 fi
 
 # Send a notification with cronie when the battery is charged at ~80%
-if [[ ${bat_status} = 'Charging' ]] && [[ ${bat_capacity} -gt 80 ]]; then
+if [[ ${bat_status} = 'Charging' ]] && [[ ${bat_capacity} -gt 80 ]] && [[ ${bat_capacity} -lt 90 ]]; then
     notify-send --urgency=low 'Battery capacity' "${bat_capacity}% charged"
 fi
