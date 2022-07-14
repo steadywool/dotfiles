@@ -88,22 +88,22 @@ bindsym Mod4+Tab workspace next_on_output
 bindsym Mod4+Shift+Tab workspace prev_on_output
 
 ## Send window to the given workspace
-bindsym Mod4+Shift+ampersand move container to workspace 1
-bindsym Mod4+Shift+eacute move container to workspace 2
-bindsym Mod4+Shift+quotedbl move container to workspace 3
-bindsym Mod4+Shift+apostrophe move container to workspace 4
-bindsym Mod4+Shift+parenleft move container to workspace 5
-bindsym Mod4+Shift+minus move container to workspace 6
-bindsym Mod4+Shift+egrave move container to workspace 7
-bindsym Mod4+Shift+underscore move container to workspace 8
-bindsym Mod4+Shift+ccedilla move container to workspace 9
-bindsym Mod4+Shift+agrave move container to workspace 10
+bindsym Mod4+Shift+ampersand move container workspace 1
+bindsym Mod4+Shift+eacute move container workspace 2
+bindsym Mod4+Shift+quotedbl move container workspace 3
+bindsym Mod4+Shift+apostrophe move container workspace 4
+bindsym Mod4+Shift+parenleft move container workspace 5
+bindsym Mod4+Shift+minus move container workspace 6
+bindsym Mod4+Shift+egrave move container workspace 7
+bindsym Mod4+Shift+underscore move container workspace 8
+bindsym Mod4+Shift+ccedilla move container workspace 9
+bindsym Mod4+Shift+agrave move container workspace 10
 
 ## Focus window
-bindsym Mod4+h focus Left
-bindsym Mod4+j focus Down
-bindsym Mod4+k focus Up
-bindsym Mod4+l focus Right
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
 
 bindsym Mod4+Left focus left
 bindsym Mod4+Down focus down
@@ -111,15 +111,26 @@ bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 
 ## Swap window
-bindsym Mod4+Shift+h move Left
-bindsym Mod4+Shift+j move Down
-bindsym Mod4+Shift+k move Up
-bindsym Mod4+Shift+l move Right
+bindsym Mod4+Shift+h move left
+bindsym Mod4+Shift+j move down
+bindsym Mod4+Shift+k move up
+bindsym Mod4+Shift+l move right
 
 bindsym Mod4+Shift+Left move left
 bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
+
+## Swap workspace
+#bindsym Mod4+Ctrl+h move workspace output left
+#bindsym Mod4+Ctrl+j move workspace output down
+#bindsym Mod4+Ctrl+k move workspace output up
+#bindsym Mod4+Ctrl+l move workspace output right
+
+#bindsym Mod4+Ctrl+Left move workspace output left
+#bindsym Mod4+Ctrl+Down move workspace output down
+#bindsym Mod4+Ctrl+Up move workspace output up
+#bindsym Mod4+Ctrl+Right move workspace output right
 
 ## Resize window
 mode "resize" {
