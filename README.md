@@ -11,7 +11,7 @@ ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji
 
 ---
 ### Base
-base / base-devel / linux-firmware / linux-hardened / intel-ucode
+base / base-devel / linux-{firmware,hardened,hardened-headers} / intel-ucode
 
 ### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
@@ -39,7 +39,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-im
 
 khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / cpupower
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / cpupower / scrcpy
 
 ---
 ### Enable AppArmor as default security model
