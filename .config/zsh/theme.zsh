@@ -1,14 +1,15 @@
 # Vcs
-zstyle ':vcs_info:*' formats '%F{magenta}%b%f %F{green}%8.8i %c%u%f'
-zstyle ':vcs_info:*' actionformats '%F{magenta}%b%f %F{red}%a %c%u%f'
-zstyle ':vcs_info:*' stagedstr '%F{green}↑'
-zstyle ':vcs_info:*' unstagedstr '%F{red}↓'
+zstyle ':vcs_info:*' formats '%F{blue}(%s: %b)%f %F{yellow}%8.8i%f %m%c%u'
+zstyle ':vcs_info:*' actionformats '%F{blue}(%s: %b)%f %F{yellow}%8.8i%f %F{cyan}(%a)%f %m%c%u'
+zstyle ':vcs_info:*' stagedstr '%F{green}*'
+zstyle ':vcs_info:*' unstagedstr '%F{red}+'
+
 
 # Prompt
 autoload -Uz promptinit
 promptinit
 
-PS1='┌%B%F{green}%n@%m%f %F{blue}%~%f%b
+PS1='┌%B%F{green}%n@%m%f %F{blue}%~%f
 └%(#.#.$)%b%E '
 
 PS2='%B%F{cyan}%_%f >%b%E '
@@ -20,7 +21,7 @@ RPS1='%B${vcs_info_msg_0_}%b%E'
 unset RPS2 RPROMPT2
 
 # Completion
-zstyle ':completion:*:descriptions' format '%B%F{yellow}-- %d --%f%b'
+zstyle ':completion:*:descriptions' format '%B%F{magenta}-- %d --%f%b'
 
 # Vi mode
 ZVM_VI_HIGHLIGHT_FOREGROUND=black
