@@ -1,15 +1,30 @@
 #!/bin/bash
 
-# Send a notification with cronie when there is not much battery remaining
+# Cronjob exemple:
+# */5 * * * * /path/to/battery-notifier.sh
+
 bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 bat_status=$(cat /sys/class/power_supply/BAT0/status)
 
-# Send a notification with cronie when the battery is low
-if [[ ${bat_status} = 'Discharging' ]] && [[ ${bat_capacity} -lt 20 ]]; then
-    notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% remaining"
+# Notify-send & Cron don't work without this line
+export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+
+# If the battery is charging
+if [[ ${bat_status} = 'Charging' ]]; then
+
+    # If the battery capacity is greater than 80%, send a notification
+    if [[ ${bat_capacity} -gt 80 ]]; then
+        notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% charged"
+    fi
+
 fi
 
-# Send a notification with cronie when the battery is charged at ~80%
-if [[ ${bat_status} = 'Charging' ]] && [[ ${bat_capacity} -gt 80 ]] && [[ ${bat_capacity} -lt 90 ]]; then
-    notify-send --urgency=low 'Battery capacity' "${bat_capacity}% charged"
+# If the battery is discharging
+if [[ ${bat_status} = 'Discharging' ]]; then
+
+    # If the battery capacity is lower than 30%, send a notification
+    if [[ ${bat_capacity} -lt 30 ]]; then
+        notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% remaining"
+    fi
+
 fi
