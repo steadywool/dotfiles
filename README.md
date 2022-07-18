@@ -28,7 +28,7 @@ pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / nftables / bubblewrap-suid / usbguard
+apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard
 
 ---
 ### Network
@@ -70,9 +70,6 @@ PasswordAuthentication no
 ```
 # useradd -g users -G wheel -s /bin/zsh kani
 ```
-
-### Use Nftables instead of Iptables
-Replace `iptables` package by `iptables-nft`
 
 ### Mount Options
 root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`.
