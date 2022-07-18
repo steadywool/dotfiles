@@ -15,9 +15,14 @@ elif [[ ${bat_status} = 'Unknown' ]]; then
     bat_info=' ?'
 fi
 
-# Show volume and mute info
-volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
-mute=$(pactl list sinks | grep Mute | awk '{print $2}' | sed 's/no/✗/g' | sed 's/yes/✓/g')
+# Show the volume or if the sound is muted
+mute=$(pactl list sinks | grep Mute | head -n1 | awk '{print $2}')
+
+if [[ ${mute} = 'yes' ]]; then
+    volume='muted'
+else
+    volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
+fi
 
 # Show if we are connected or not
 route=$(ip route show | grep -o 'default')
@@ -32,22 +37,19 @@ fi
 brightness=$(light -G | cut -d '.' -f1)
 
 # Storage
-storage=$(df -h --output=pcent ${HOME} | tail -n1 | sed 's/ //g')
+home_storage=$(df -h --output=pcent ${HOME} | tail -n1 | sed 's/ //g')
 root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # CPU
-cpu_usage=$(top -ibn1 | grep '%Cpu' | awk '{print $2}')
-
-# Process number
-process_number=$(ps -e | wc -l)
+cpu_usage=$(top -bn1 | grep "%Cpu" | awk '{print $2}')
 
 # Task
 pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
 
 # Scratchpad
-scratch=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
+scratchpad=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
-# Echo command for sway-bar
-echo "[# ${scratch}] [TASK !${overdue_task}/${pending_task}] [PROC ${process_number}] [CPU ${cpu_usage}%] [/ ${root_storage}] [${USER} ${storage}] \
-[LIGHT ${brightness}%] [ROUTE ${network}] [MUTE ${mute}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
+# Echo command for swaybar
+echo "[# ${scratchpad}] [!${overdue_task}/${pending_task}] [CPU ${cpu_usage}%] [/ ${root_storage}] [/home ${home_storage}] \
+[LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
