@@ -1,4 +1,3 @@
--- TreeSitter
 require("nvim-treesitter.configs").setup {
     autotag = { enable = true },
     highlight = {
@@ -6,5 +5,4 @@ require("nvim-treesitter.configs").setup {
         additional_vim_regex_highlighting = "php",
     },
     indent = { enable = true },
-    incremental_selection = { enable = true },
 }

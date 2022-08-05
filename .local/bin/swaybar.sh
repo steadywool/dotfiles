@@ -16,12 +16,15 @@ elif [[ ${bat_status} = 'Unknown' ]]; then
 fi
 
 # Show the volume or if the sound is muted
-mute=$(pactl list sinks | grep Mute | head -n1 | awk '{print $2}')
+mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
 
 if [[ ${mute} = 'yes' ]]; then
     volume='muted'
 else
-    volume=$(pactl list sinks | grep Volume | head -n1 | awk '{print $5}')
+    left_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
+    right_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
+
+    volume="${left_volume} ${right_volume}"
 fi
 
 # Show if we are connected or not

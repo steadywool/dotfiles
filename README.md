@@ -9,6 +9,13 @@ light / grim + slurp / gammastep / wl-clipboard
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-theme-extra / papirus-icon-theme
 
+### Tools
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool
+
+realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3 / scrcpy / cpupower
+
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / smbclient
+
 ---
 ### Base
 base / base-devel / linux-{firmware,hardened,hardened-headers} / intel-ucode
@@ -28,18 +35,10 @@ pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard
+apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit
 
----
 ### Network
-nmap / tcpdump / lsof / bmon / iproute2
-
-### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool
-
-khunter / arch-audit / realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3
-
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / cpupower / scrcpy
+nmap / tcpdump / lsof
 
 ---
 ### Enable AppArmor as default security model

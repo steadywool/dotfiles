@@ -23,7 +23,7 @@ fi
 if [[ ${bat_status} = 'Discharging' ]]; then
 
     # If the battery capacity is lower than 30%, send a notification
-    if [[ ${bat_capacity} -lt 30 ]]; then
+    if [[ ${bat_capacity} -lt 20 ]]; then
         notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% remaining"
     fi
 

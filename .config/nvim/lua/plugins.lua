@@ -1,13 +1,15 @@
 return require("packer").startup(function(use)
 
-    -- Plugin Manager
+    -- Plugin/Package Manager
     use {
         "wbthomason/packer.nvim",
+        "williamboman/mason.nvim",
     }
 
     -- Appearance
     use {
         "sainnhe/gruvbox-material",
+        "sainnhe/everforest",
         "kyazdani42/nvim-web-devicons",
     }
 
@@ -24,10 +26,14 @@ return require("packer").startup(function(use)
         "hrsh7th/cmp-buffer",
     }
 
-    -- Lsp
+    -- LSP
     use {
         "neovim/nvim-lspconfig",
-        "williamboman/nvim-lsp-installer",
+    }
+
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
     }
 
     -- Library
@@ -46,10 +52,5 @@ return require("packer").startup(function(use)
 
         "windwp/nvim-autopairs",
         "windwp/nvim-ts-autotag",
-    }
-
-    -- Treesitter
-    use {
-        "nvim-treesitter/nvim-treesitter",
     }
 end)

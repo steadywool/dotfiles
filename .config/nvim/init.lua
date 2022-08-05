@@ -51,8 +51,6 @@ vim.cmd("autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabs
 require("keymaps")
 require("plugins")
 
-require("plugins.appearance")
-require("plugins.completion")
-require("plugins.lsp")
-require("plugins.tools")
-require("plugins.treesitter")
+for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config')..'/lua/plugins')) do
+    require('plugins.'..file:gsub('%.lua$', ''))
+end
