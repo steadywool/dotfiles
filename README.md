@@ -70,21 +70,6 @@ PasswordAuthentication no
 # useradd -g users -G wheel -s /bin/zsh kani
 ```
 
-### Mount Options
-root partition use `defaults`, `compress=zstd`, `noatime` & `subvol=SUBVOLUME`.
-
-/boot use `nodev`, `nosuid` & `noexec`.
-
-/home encrypted partition use `nodev` & `nosuid`.
-
-Don't forget to create the Swap partition.
-
-### TLP configuration
-Edit `/etc/tlp.conf` and replace `1` by `0`:
-```
-USB_AUTOSUSPEND=0
-```
-
 ### Install "Ranger devicons"
 ```
 $ git clone https://github.com/alexanderjeurissen/ranger_devicons \
