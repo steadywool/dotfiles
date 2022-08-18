@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FFvita
+Comment=Show PSVita screen
+Exec=ffplay /dev/video0
+Terminal=false
+Type=Application
+Categories=Utility;

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Scrcpy
+Comment=Show android screen through ADB (USB)
+Exec=scrcpy -d --turn-screen-off --stay-awake
+Terminal=false
+Type=Application
+Categories=Utility;

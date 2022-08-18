@@ -14,7 +14,7 @@ udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-im
 
 realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3 / scrcpy / cpupower
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rsync / rclone / smbclient
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone
 
 ---
 ### Base
@@ -30,7 +30,7 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub
 
 ### Multimedia
-pipewire / pipewire-alsa / pipewire-jack / pipewire-pulse / wireplumber
+pipewire{-alsa,-jack,-pulse} / wireplumber
 
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
