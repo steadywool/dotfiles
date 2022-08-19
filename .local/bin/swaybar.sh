@@ -40,11 +40,8 @@ fi
 brightness=$(light -G | cut -d '.' -f1)
 
 # Storage
-home_storage=$(df -h --output=pcent ${HOME} | tail -n1 | sed 's/ //g')
-root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
-
-# CPU
-cpu_usage=$(top -bn1 | grep "%Cpu" | awk '{print $2}')
+btrfs_storage=$(btrfs filesystem usage / | grep Free | awk '{print $3}' | head -n1)
+#root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # Task
 pending_task=$(task +PENDING count)
@@ -54,5 +51,4 @@ overdue_task=$(task +OVERDUE count)
 scratchpad=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for swaybar
-echo "[# ${scratchpad}] [!${overdue_task}/${pending_task}] [CPU ${cpu_usage}%] [/ ${root_storage}] [/home ${home_storage}] \
-[LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
+echo " [# ${scratchpad}] [!${overdue_task}/${pending_task}] [/ ${btrfs_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
