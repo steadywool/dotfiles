@@ -15,4 +15,5 @@ if [[ -f ${CONFIG} ]]; then
     gsettings set org.gnome.desktop.interface cursor-theme "${cursor_theme}"
     gsettings set org.gnome.desktop.interface cursor-size "${cursor_size}"
     gsettings set org.gnome.desktop.wm.preferences button-layout :
+    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 fi

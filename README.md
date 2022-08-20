@@ -18,7 +18,7 @@ mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone / python-i
 
 ---
 ### Base
-base / base-devel / linux-{firmware,hardened,hardened-headers} / intel-ucode
+base / base-devel / linux-{firmware,hardened,hardened-headers} / dkms / intel-ucode
 
 ### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
@@ -35,7 +35,7 @@ pipewire{-alsa,-jack,-pulse} / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / firejail
+apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / firejail / lkrg-dkms<sup>AUR</sup>
 
 ### Network
 nmap / tcpdump / lsof / networkmanager
