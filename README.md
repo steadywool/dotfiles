@@ -10,11 +10,11 @@ light / grim + slurp / gammastep / wl-clipboard
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
 
 ### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool / git
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool / git / udiskie
 
-realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3 / scrcpy / cpupower / imagemagick
+realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3 / scrcpy / cpupower / imagemagick / wget
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone / python-i3ipc / npm / wget
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone / python-i3ipc / npm
 
 ---
 ### Base
@@ -35,7 +35,7 @@ pipewire{-alsa,-jack,-pulse} / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit
+apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / firejail
 
 ### Network
 nmap / tcpdump / lsof / networkmanager
