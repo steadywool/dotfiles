@@ -21,7 +21,8 @@ alias grep='grep --color=auto'
 alias ip='ip -color'
 
 # Create snapshot
-alias snap-create='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_snapshot`'
+alias snap-root='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_root`'
+alias snap-home='btrfs subvolume snapshot /home /.snapshots/`date +%Y%m%d-%H%M%S_home`'
 
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'

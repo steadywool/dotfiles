@@ -10,11 +10,11 @@ light / grim + slurp / gammastep / wl-clipboard
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
 
 ### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool / git / udiskie
+udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool / git / wget / npm
 
-realtime-privileges / flatpak / ripgrep / jq / libappindicator-gtk3 / scrcpy / cpupower / imagemagick / wget
+realtime-privileges / flatpak / ripgrep / jq / scrcpy / cpupower / imagemagick / python-i3ipc
 
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone / python-i3ipc / npm
+mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone
 
 ---
 ### Base

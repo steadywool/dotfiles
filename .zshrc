@@ -44,7 +44,6 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' verbose true
 zstyle ':completion:*' completer _extensions _complete _approximate
-zstyle ':completion:*' group-name ''
 
 # Vcs
 autoload -Uz vcs_info

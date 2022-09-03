@@ -16,8 +16,11 @@ for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
         # Pixelize each screenshots
         convert ${screenshot} -scale 10% -scale 1000% ${screenshot}
 
-        # Add arguments of each output to a variable
-        LOCK_ARGS="${LOCK_ARGS} -i ${output}:${screenshot}"
+        # If imagemagick OK
+        if [[ ${?} -eq 0 ]]; then
+            # Add arguments of each output to a variable
+            LOCK_ARGS="${LOCK_ARGS} -i ${output}:${screenshot}"
+        fi
     fi
 
 done
