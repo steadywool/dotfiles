@@ -1,20 +1,17 @@
 ### CLI
-zsh / neovim / ranger / htop / cronie / tmux / task
+udisks2 / tlp / rclone / bluez{-utils} / git / wget / flatpak / docker / cpupower / scrcpy / android-tools / cronie / zsh / htop /
+tmux / neovim /ranger / task / light
 
 ### Wayland
-kitty / sway{bg,idle,lock} / dunst / bemenu / j4-dmenu-desktop<sup>AUR</sup>
+alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop<sup>AUR</sup> / grim + slurp / wl-clipboard
 
-light / grim + slurp / gammastep / wl-clipboard
+mupdf / imv /mpv / polkit-gnome / gnome-keyring / gammastep
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
 
-### Tools
-udisks2 / android-tools / bluez{-utils} / man-db / tlp / xdg-user-dirs / perl-image-exiftool / git / wget / npm
-
-realtime-privileges / flatpak / ripgrep / jq / scrcpy / cpupower / imagemagick / python-i3ipc
-
-mupdf / imv / mpv / polkit-gnome / gnome-keyring / libnotify / rclone
+### Other
+libnotify / xdg-user-dirs / perl-image-exiftool / realtime-privileges / python-i3ipc / ripgrep / man-db / jq / npm
 
 ---
 ### Base
@@ -57,17 +54,12 @@ GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:luksroot"
 
 ### Load LKRG at boot
 Create `lkrg.conf` at `/etc/modules-load.d/` and add:
-```conf
-# Load LKRG at boot
+```
 lkrg
 ```
 
 ### Disabling Avahi
-```
-# systemctl mask avahi-daemon.service
-# systemctl mask avahi-daemon.socket
-# systemctl mask avahi-dnsconfd.service
-```
+Mask `avahi-daemon.service`, `avahi-daemon.socket` & `avahi-dnsconfd.service` with systemctl
 
 ### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
@@ -78,7 +70,7 @@ PasswordAuthentication no
 ```
 
 ### Usbguard configuration
-```conf
+```
 # usbguard generate-policy > /etc/usbguard/rules.conf
 ```
 

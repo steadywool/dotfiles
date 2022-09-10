@@ -33,7 +33,7 @@ case ${CHOICE} in
     ;;
 
     'lock')
-        ${HOME}/.local/bin/lockscreen.sh
+        swaylock
     ;;
 
     'exit-sway')
