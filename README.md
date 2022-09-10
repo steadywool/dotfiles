@@ -1,17 +1,17 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / cpupower / scrcpy / android-tools / cronie / zsh / htop /
-tmux / neovim /ranger / task / light
+udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / cpupower / android-tools / cronie / zsh / htop / tmux / neovim /
+ranger / task / light
 
 ### Wayland
 alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop<sup>AUR</sup> / grim + slurp / wl-clipboard
 
-mupdf / imv /mpv / polkit-gnome / gnome-keyring / gammastep
+mupdf / imv /mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
 
 ### Other
-libnotify / xdg-user-dirs / perl-image-exiftool / realtime-privileges / python-i3ipc / ripgrep / man-db / jq / npm
+libnotify / xdg-user-dirs / perl-image-exiftool / realtime-privileges / python-i3ipc / ripgrep / man-db / jq
 
 ---
 ### Base
