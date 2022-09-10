@@ -1,5 +1,5 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / wget / flatpak / docker / cpupower / scrcpy / android-tools / cronie / zsh / htop /
+udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / cpupower / scrcpy / android-tools / cronie / zsh / htop /
 tmux / neovim /ranger / task / light
 
 ### Wayland
@@ -32,7 +32,7 @@ pipewire{-alsa,-jack,-pulse} / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / firejail / lkrg-dkms<sup>AUR</sup>
+apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / flatpak / firejail / lkrg-dkms<sup>AUR</sup>
 
 ### Network
 nmap / tcpdump / lsof / networkmanager
