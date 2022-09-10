@@ -55,6 +55,20 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:luksroot"
 ```
 
+### Load LKRG at boot
+Create `lkrg.conf` at `/etc/modules-load.d/` and add:
+```conf
+# Load LKRG at boot
+lkrg
+```
+
+### Disabling Avahi
+```
+# systemctl mask avahi-daemon.service
+# systemctl mask avahi-daemon.socket
+# systemctl mask avahi-dnsconfd.service
+```
+
 ### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
 ```
@@ -64,7 +78,7 @@ PasswordAuthentication no
 ```
 
 ### Usbguard configuration
-```
+```conf
 # usbguard generate-policy > /etc/usbguard/rules.conf
 ```
 

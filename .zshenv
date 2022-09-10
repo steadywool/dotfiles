@@ -4,7 +4,7 @@ ZPLUG=${HOME}/.config/zsh/plugins
 
 HISTFILE=${HOME}/.zhistory
 
-export TMOUT=900
+#export TMOUT=900
 
 # Variables
 export EDITOR=nvim
