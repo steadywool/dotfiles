@@ -2,6 +2,8 @@
 source ${ZHOME}/aliases.zsh
 source ${ZHOME}/theme.zsh
 source ${ZHOME}/zuse.zsh
+source ${ZHOME}/clipboard.zsh
+source ${ZHOME}/cursor.zsh
 
 zuse github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -9,40 +11,25 @@ source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
 zuse github.com/zsh-users/zsh-completions
 source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
 
-zuse github.com/jeffreytse/zsh-vi-mode
-source ${ZPLUG}/zsh-vi-mode/zsh-vi-mode.zsh
-
 zuse github.com/zdharma-continuum/fast-syntax-highlighting
 source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Vi mode
 bindkey -v
+bindkey "^?" backward-delete-char
 KEYTIMEOUT=1
 
 # History
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=2500
+SAVEHIST=2500
 setopt inc_append_history
-
-# Clipboard
-zvm_vi_yank () {
-	zvm_yank
-	printf %s ${CUTBUFFER} | wl-copy -n
-	zvm_exit_visual_mode
-}
 
 # Completion
 autoload -Uz compinit
 compinit
 
-unsetopt menu_complete
-setopt auto_menu
-setopt complete_in_word
-setopt always_to_end
-
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
-zstyle ':completion:*' verbose true
 zstyle ':completion:*' completer _extensions _complete _approximate
 
 # Vcs

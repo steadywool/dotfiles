@@ -1,3 +1,5 @@
+#!/bin/zsh
+
 # Git
 alias g='git'
 alias gp='git push --verbose'
