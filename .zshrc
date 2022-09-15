@@ -1,6 +1,6 @@
 # Plugins
 source ${ZHOME}/aliases.zsh
-source ${ZHOME}/theme.zsh
+source ${ZHOME}/prompt.zsh
 source ${ZHOME}/zuse.zsh
 source ${ZHOME}/clipboard.zsh
 source ${ZHOME}/cursor.zsh
@@ -20,8 +20,8 @@ bindkey "^?" backward-delete-char
 KEYTIMEOUT=1
 
 # History
-HISTSIZE=2500
-SAVEHIST=2500
+HISTSIZE=5000
+SAVEHIST=5000
 setopt inc_append_history
 
 # Completion

@@ -11,7 +11,7 @@ zstyle ':vcs_info:*' unstagedstr '%F{red}+'
 autoload -Uz promptinit
 promptinit
 
-PS1='┌%B%F{green}%n@%m%f %F{blue}%~%f
+PS1='┌%B%F{green}%n@%m%f %F{blue}%~%f %F{magenta}[%T]%f
 └%(#.#.$)%b%E '
 
 PS2='%B%F{cyan}%_%f >%b%E '
