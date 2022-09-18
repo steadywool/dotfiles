@@ -32,7 +32,7 @@ pipewire{-alsa,-jack,-pulse} / wireplumber
 gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / bubblewrap-suid / usbguard / rkhunter / arch-audit / flatpak / firejail / lkrg-dkms<sup>AUR</sup>
+apparmor / iptables-nft / nftables / usbguard / rkhunter / arch-audit / flatpak / firejail / lkrg-dkms<sup>AUR</sup>
 
 ### Network
 nmap / tcpdump / lsof / networkmanager
@@ -53,9 +53,15 @@ GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:luksroot"
 ```
 
 ### Load LKRG at boot
-Create `lkrg.conf` at `/etc/modules-load.d/` and add:
+Create `*.conf` at `/etc/modules-load.d/` and add:
 ```
 lkrg
+```
+
+### Enable unprivileged user namespace
+Create `*.conf` at `/etc/sysctl.d/` and add:
+```
+kernel.unprivileged_userns_clone=1
 ```
 
 ### Disabling Avahi
