@@ -29,6 +29,12 @@ return require('packer').startup(function(use)
     -- LSP
     use {
         'neovim/nvim-lspconfig',
+        'jose-elias-alvarez/null-ls.nvim',
+    }
+
+    -- DAP
+    use {
+        'mfussenegger/nvim-dap',
     }
 
     -- Treesitter
@@ -44,7 +50,7 @@ return require('packer').startup(function(use)
     -- Tools
     use {
         'lukas-reineke/indent-blankline.nvim',
-        'norcalli/nvim-colorizer.lua',
+        'NvChad/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
         'iamcco/markdown-preview.nvim',
 

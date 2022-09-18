@@ -16,7 +16,6 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.termguicolors = true
-vim.wo.colorcolumn = '99999'
 
 -- Statusline
 vim.opt.statusline = '%#search# %n %#statusline# %F %#statuslineNC# %r%m %= %w%y %#normalmode# %l:%c %p%% '
@@ -45,12 +44,14 @@ vim.opt.wrap = false
 vim.cmd('autocmd Filetype c setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 vim.cmd('autocmd Filetype cpp setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 vim.cmd('autocmd Filetype arduino setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
+vim.cmd('autocmd Filetype html setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
+vim.cmd('autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 vim.cmd('autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 
 -- Lua Modules
 require('keymaps')
 require('plugins')
 
-for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config')..'/lua/plugins')) do
-    require('plugins.'..file:gsub('%.lua$', ''))
+for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config') .. '/lua/plugins')) do
+    require('plugins.' .. file:gsub('%.lua$', ''))
 end

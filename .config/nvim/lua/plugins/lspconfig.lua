@@ -13,7 +13,6 @@ local servers = {
     'bashls', --Bash
     'sumneko_lua', --Lua
     'tsserver', --Javascript/Typescript
-    'tailwindcss', --CSS
     'dockerls', --Dockerfile
     'marksman', --Markdown
     'pyright', --Python
