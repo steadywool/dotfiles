@@ -2,6 +2,7 @@
 vim.keymap.set('n', '<M-f>', '<cmd>Telescope find_files<CR>')
 vim.keymap.set('n', '<M-r>', '<cmd>Telescope live_grep<CR>')
 vim.keymap.set('n', '<M-e>', '<cmd>Telescope buffers<CR>')
+vim.keymap.set('n', '<M-t>', '<cmd>Telescope file_browser<CR>')
 
 -- Go to next/previous buffer in buffer list
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
