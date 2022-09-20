@@ -18,7 +18,7 @@ vim.opt.cursorline = true
 vim.opt.termguicolors = true
 
 -- Statusline
-vim.opt.statusline = '%#search# %n %#statusline# %F %#statuslineNC# %r%m %= %w%y %#normalmode# %l:%c %p%% '
+vim.opt.statusline = '%#search# %n %#statusline# %F %r%m %= %w%y %l:%c %p%% '
 
 -- Syntax Higlighting
 vim.cmd('filetype plugin on')
