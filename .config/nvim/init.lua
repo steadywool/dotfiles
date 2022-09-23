@@ -2,8 +2,6 @@
 vim.opt.swapfile = true
 vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
-vim.opt.updatetime = 300
-vim.opt.timeoutlen = 500
 vim.opt.undofile = true
 
 vim.g["loaded_python3_provider"] = 0

@@ -17,8 +17,8 @@ bindsym Mod4+n exec alacritty -e nvim
 bindsym Mod4+Shift+q exec alacritty -e htop
 
 ## Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="alacritty" --no-generic --dmenu="bemenu"
-bindsym Mod4+Shift+d exec bemenu-run
+bindsym Mod4+d exec j4-dmenu-desktop --term="alacritty" --no-generic --dmenu="bemenu -l 16"
+bindsym Mod4+Shift+d exec bemenu-run -l 16
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
@@ -84,8 +84,8 @@ bindsym Mod4+ccedilla workspace 9
 bindsym Mod4+agrave workspace 10
 
 ## Focus the next/previous workspace
-bindsym Mod4+Tab workspace next_on_output
-bindsym Mod4+Shift+Tab workspace prev_on_output
+bindsym Mod4+Tab workspace next
+bindsym Mod4+Shift+Tab workspace prev
 
 ## Send window to the given workspace
 bindsym Mod4+Shift+ampersand move container workspace 1
@@ -110,6 +110,10 @@ bindsym Mod4+Down focus down
 bindsym Mod4+Up focus up
 bindsym Mod4+Right focus right
 
+## Focus to parent/child container
+bindsym Mod4+a focus parent
+bindsym Mod4+c focus child
+
 ## Swap window
 bindsym Mod4+Shift+h move left
 bindsym Mod4+Shift+j move down
@@ -122,15 +126,18 @@ bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
 ## Swap workspace
-#bindsym Mod4+Ctrl+h move workspace output left
-#bindsym Mod4+Ctrl+j move workspace output down
-#bindsym Mod4+Ctrl+k move workspace output up
-#bindsym Mod4+Ctrl+l move workspace output right
+bindsym Mod4+Ctrl+h move workspace output left
+bindsym Mod4+Ctrl+j move workspace output down
+bindsym Mod4+Ctrl+k move workspace output up
+bindsym Mod4+Ctrl+l move workspace output right
 
-#bindsym Mod4+Ctrl+Left move workspace output left
-#bindsym Mod4+Ctrl+Down move workspace output down
-#bindsym Mod4+Ctrl+Up move workspace output up
-#bindsym Mod4+Ctrl+Right move workspace output right
+bindsym Mod4+Ctrl+Left move workspace output left
+bindsym Mod4+Ctrl+Down move workspace output down
+bindsym Mod4+Ctrl+Up move workspace output up
+bindsym Mod4+Ctrl+Right move workspace output right
+
+## Swap focus Tiling/floating area
+bindsym Mod4+Space focus mode_toggle
 
 ## Resize window
 mode "resize" {
@@ -148,10 +155,3 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym Mod4+r mode "resize"
-
-## Swap focus Tiling/floating area
-bindsym Mod4+Space focus mode_toggle
-
-## Focus to parent/child container
-bindsym Mod4+a focus parent
-bindsym Mod4+c focus child

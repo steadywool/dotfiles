@@ -28,3 +28,6 @@ alias snap-home='btrfs subvolume snapshot /home /.snapshots/`date +%Y%m%d-%H%M%S
 
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'
+
+# Picocom
+alias cisco='picocom -b 9600 /dev/ttyUSB0'

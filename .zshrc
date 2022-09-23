@@ -16,7 +16,8 @@ source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Vi mode
 bindkey -v
-bindkey "^?" backward-delete-char
+bindkey -M viins '^?' backward-delete-char
+bindkey -M viins '^H' backward-delete-char
 KEYTIMEOUT=1
 
 # History
