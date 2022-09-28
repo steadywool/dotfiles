@@ -4,10 +4,6 @@ ZPLUG=${HOME}/.config/zsh/plugins
 
 HISTFILE=${HOME}/.zhistory
 
-# Theming
-gtk_theme=$(grep 'gtk-theme-name' "${HOME}/.config/gtk-4.0/settings.ini" | cut -d '=' -f2)
-export GTK_THEME=${gtk_theme}
-
 # Variables
 export EDITOR=nvim
 export VISUAL=nvim

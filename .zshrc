@@ -1,9 +1,7 @@
-# Plugins
-source ${ZHOME}/aliases.zsh
-source ${ZHOME}/prompt.zsh
-source ${ZHOME}/zuse.zsh
-source ${ZHOME}/clipboard.zsh
-source ${ZHOME}/cursor.zsh
+# Source configuration & plugins
+for FILE in ${ZHOME}/*; do
+    source ${FILE}
+done
 
 zuse github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -25,6 +23,9 @@ HISTSIZE=5000
 SAVEHIST=5000
 setopt inc_append_history
 
+# Correct
+setopt correctall
+
 # Completion
 autoload -Uz compinit
 compinit
@@ -32,12 +33,3 @@ compinit
 zstyle ':completion:*' menu select
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' completer _extensions _complete _approximate
-
-# Vcs
-autoload -Uz vcs_info
-precmd() {vcs_info}
-setopt prompt_subst
-
-zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:*' get-revision true
-zstyle ':vcs_info:*' check-for-changes true
