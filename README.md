@@ -3,7 +3,7 @@ udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / cpupower / androi
 ranger / task / light
 
 ### Wayland
-alacritty || kitty / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop<sup>AUR</sup> / grim + slurp / wl-clipboard / kanshi
+alacritty || foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop<sup>AUR</sup> / grim + slurp / wl-clipboard / kanshi
 
 mupdf / imv /mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
 

@@ -4,20 +4,20 @@ include $HOME/.config/sway/config.d/*
 
 # WM INDEPENDANT HOTKEYS
 ## Terminal
-bindsym Mod4+Return exec alacritty -e bash -c "tmux attach || tmux new"
-bindsym Mod4+Shift+Return exec alacritty
+bindsym Mod4+Return exec footclient bash -c "tmux attach || tmux new"
+bindsym Mod4+Shift+Return exec footclient
 
 ## Ranger
-bindsym Mod4+o exec alacritty -e ranger
+bindsym Mod4+o exec footclient ranger
 
 ## Neovim
-bindsym Mod4+n exec alacritty -e nvim
+bindsym Mod4+n exec footclient nvim
 
 ## Htop
-bindsym Mod4+Shift+q exec alacritty -e htop
+bindsym Mod4+Shift+q exec footclient htop
 
 ## Bemenu
-bindsym Mod4+d exec j4-dmenu-desktop --term="alacritty" --no-generic --dmenu="bemenu -l 16"
+bindsym Mod4+d exec j4-dmenu-desktop --term="footclient" --no-generic --dmenu="bemenu -l 16"
 bindsym Mod4+Shift+d exec bemenu-run -l 16
 
 ## Power menu

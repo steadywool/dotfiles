@@ -22,9 +22,9 @@ if [[ ${mute} = 'yes' ]]; then
     volume='muted'
 else
     left_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
-    right_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
+    #right_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
 
-    volume="${left_volume} ${right_volume}"
+    volume="${left_volume}"
 fi
 
 # Show if we are connected or not
@@ -40,7 +40,7 @@ fi
 brightness=$(light -G | cut -d '.' -f1)
 
 # Storage
-btrfs_storage=$(btrfs filesystem usage / | grep Free | awk '{print $3}' | head -n1)
+root_storage=$(btrfs filesystem usage / | grep Free | awk '{print $3}' | head -n1)
 #root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
 # Task
@@ -51,4 +51,4 @@ overdue_task=$(task +OVERDUE count)
 scratchpad=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for swaybar
-echo "[# ${scratchpad}] [!${overdue_task}/${pending_task}] [/ ${btrfs_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
+echo "[# ${scratchpad}] [!${overdue_task}/${pending_task}] [/ ${root_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
