@@ -24,7 +24,7 @@ SAVEHIST=5000
 setopt inc_append_history
 
 # Correct
-setopt correctall
+#setopt correctall
 
 # Completion
 autoload -Uz compinit

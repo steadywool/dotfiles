@@ -13,11 +13,14 @@ vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('i', 'kj', '<Esc>')
 
 -- LSP Config
-vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-vim.keymap.set('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>')
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<space>e', vim.diagnostic.open_float, opts)
 
-vim.keymap.set('n', '<C-h>', '<cmd>lua vim.lsp.buf.hover()<CR>')
-vim.keymap.set('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>')
+vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
 
-vim.keymap.set('n', '<space>a', '<cmd>lua vim.lsp.buf.code_action()<CR>')
-vim.keymap.set('n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>')
+vim.keymap.set('n', '<C-h>', vim.lsp.buf.hover, opts)
+vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+
+vim.keymap.set('n', '<space>a', vim.lsp.buf.code_action, opts)
+vim.keymap.set('n', '<space>f', function() vim.lsp.buf.format { async = true } end, opts)
