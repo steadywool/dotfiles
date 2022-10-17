@@ -27,7 +27,6 @@ else
     volume="${left_volume}"
 fi
 
-# Show if we are connected or not
 route=$(ip route show | grep -o 'default')
 
 if [[ -z ${route} ]]; then
@@ -43,12 +42,8 @@ brightness=$(light -G | cut -d '.' -f1)
 root_storage=$(btrfs filesystem usage / | grep Free | awk '{print $3}' | head -n1)
 #root_storage=$(df -h --output=pcent / | tail -n1 | sed 's/ //g')
 
-# Task
-pending_task=$(task +PENDING count)
-overdue_task=$(task +OVERDUE count)
-
 # Scratchpad
 scratchpad=$(swaymsg -t get_tree | jq -r '.nodes[] | select(.name == "__i3").nodes[] | select(.name == "__i3_scratch").floating_nodes | length')
 
 # Echo command for swaybar
-echo "[# ${scratchpad}] [!${overdue_task}/${pending_task}] [/ ${root_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
+echo "[# ${scratchpad}] [/ ${root_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"

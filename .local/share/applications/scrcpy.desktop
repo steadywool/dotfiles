@@ -1,4 +1,4 @@
 [Desktop Entry]
 Name=Scrcpy
-Exec=scrcpy -d --turn-screen-off --stay-awake
+Exec=scrcpy -d
 Terminal=false

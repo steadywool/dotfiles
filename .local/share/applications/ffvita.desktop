@@ -1,4 +1,0 @@
-[Desktop Entry]
-Name=FFvita
-Exec=ffplay /dev/video2
-Terminal=false

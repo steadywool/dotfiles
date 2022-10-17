@@ -27,6 +27,9 @@ bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
+## Reload Wallpaper
+bindsym Mod4+t exec $HOME/.local/bin/wallpaper.sh
+
 ## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5
@@ -87,7 +90,7 @@ bindsym Mod4+agrave workspace 10
 bindsym Mod4+Tab workspace next
 bindsym Mod4+Shift+Tab workspace prev
 
-## Send window to the given workspace
+## Move window to the given workspace
 bindsym Mod4+Shift+ampersand move container workspace 1
 bindsym Mod4+Shift+eacute move container workspace 2
 bindsym Mod4+Shift+quotedbl move container workspace 3
@@ -114,7 +117,7 @@ bindsym Mod4+Right focus right
 bindsym Mod4+a focus parent
 bindsym Mod4+c focus child
 
-## Swap window
+## Move window
 bindsym Mod4+Shift+h move left
 bindsym Mod4+Shift+j move down
 bindsym Mod4+Shift+k move up
@@ -125,19 +128,25 @@ bindsym Mod4+Shift+Down move down
 bindsym Mod4+Shift+Up move up
 bindsym Mod4+Shift+Right move right
 
-## Swap workspace
-bindsym Mod4+Ctrl+h move workspace output left
-bindsym Mod4+Ctrl+j move workspace output down
-bindsym Mod4+Ctrl+k move workspace output up
-bindsym Mod4+Ctrl+l move workspace output right
-
-bindsym Mod4+Ctrl+Left move workspace output left
-bindsym Mod4+Ctrl+Down move workspace output down
-bindsym Mod4+Ctrl+Up move workspace output up
-bindsym Mod4+Ctrl+Right move workspace output right
-
 ## Swap focus Tiling/floating area
 bindsym Mod4+Space focus mode_toggle
+
+## Move workspace
+mode "move workspace" {
+    bindsym h move workspace output left
+    bindsym j move workspace output down
+    bindsym k move workspace output up
+    bindsym l move workspace output right
+
+    bindsym Left move workspace output left
+    bindsym Down move workspace output down
+    bindsym Up move workspace output up
+    bindsym Right move workspace output right
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym Mod4+Shift+w mode "move workspace"
 
 ## Resize window
 mode "resize" {
