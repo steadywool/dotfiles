@@ -1,8 +1,10 @@
 #!/bin/zsh
 
 # Clipboard
-zvm_vi_yank () {
-	zvm_yank
-	printf %s ${CUTBUFFER} | wl-copy -n
-	zvm_exit_visual_mode
+function vi-yank-wl {
+    zle vi-yank
+   echo "$CUTBUFFER" | wl-copy -n
 }
+
+zle -N vi-yank-wl
+bindkey -M vicmd 'y' vi-yank-wl

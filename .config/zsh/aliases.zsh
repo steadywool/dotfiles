@@ -31,7 +31,7 @@ alias snap_home='btrfs subvolume snapshot /home /.snapshots/`date +%Y%m%d-%H%M%S
 alias cpu_performance='echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_powersave='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_schedutil='echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias cpu_freq='watch -n 1 "cat /proc/cpuinfo | grep \"cpu MHz\""'
+alias cpu_freq='watch -n 1 "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor && cat /proc/cpuinfo | grep \"cpu MHz\""'
 
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'

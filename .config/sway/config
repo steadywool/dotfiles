@@ -28,7 +28,7 @@ bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
 ## Reload Wallpaper
-bindsym Mod4+t exec $HOME/.local/bin/wallpaper.sh
+bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh
 
 ## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
@@ -143,10 +143,21 @@ mode "move workspace" {
     bindsym Up move workspace output up
     bindsym Right move workspace output right
 
+    bindsym ampersand workspace 1
+    bindsym eacute workspace 2
+    bindsym quotedbl workspace 3
+    bindsym apostrophe workspace 4
+    bindsym parenleft workspace 5
+    bindsym minus workspace 6
+    bindsym egrave workspace 7
+    bindsym underscore workspace 8
+    bindsym ccedilla workspace 9
+    bindsym agrave workspace 10
+
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym Mod4+Shift+w mode "move workspace"
+bindsym Mod4+t mode "move workspace"
 
 ## Resize window
 mode "resize" {
