@@ -33,5 +33,8 @@ alias cpu_powersave='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpuf
 alias cpu_schedutil='echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
 alias cpu_freq='watch -n 1 "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor && cat /proc/cpuinfo | grep \"cpu MHz\""'
 
+# Usbguard
+alias usb_list='usbguard list-devices -t'
+
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'
