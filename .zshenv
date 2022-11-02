@@ -31,4 +31,4 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export LIBSEAT_BACKEND=logind
 
 # Bemenu
-export BEMENU_OPTS="-i -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --ff '#ebdbb2' --cf '#ebdbb2' --nb '#1d2021' --nf '#ebdbb2' --ab '#32302f' --af '#ebdbb2' --hb '#83a598' --hf '#1d2021'"
+export BEMENU_OPTS="-i -w -H '23' --fn 'JetBrains Mono Regular 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --ff '#ebdbb2' --cf '#ebdbb2' --nb '#1d2021' --nf '#ebdbb2' --ab '#32302f' --af '#ebdbb2' --hb '#83a598' --hf '#1d2021'"
