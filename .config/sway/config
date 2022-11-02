@@ -23,6 +23,9 @@ bindsym Mod4+Shift+d exec bemenu-run -l 16
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 
+## Emoji menu
+bindsym Mod4+p exec $HOME/.local/bin/emoji-menu.sh
+
 ## Screenshot
 bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
