@@ -35,6 +35,7 @@ alias cpu_freq='watch -n 1 "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_gov
 
 # Usbguard
 alias usb_list='usbguard list-devices -t'
+alias usb_allow='usbguat allow-device'
 
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'

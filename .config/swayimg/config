@@ -1,0 +1,6 @@
+sway = no
+
+font=JetBrains Mono
+font-size=9
+
+# vim: ft=conf

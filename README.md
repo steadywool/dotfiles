@@ -4,7 +4,7 @@ udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / android-tools / c
 ### Wayland
 alacritty || foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim + slurp / wl-clipboard / kanshi
 
-mupdf / imv /mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
+mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
