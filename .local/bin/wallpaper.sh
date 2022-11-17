@@ -11,13 +11,13 @@ fi
 if [[ -z $(ls -A ${WALLPAPER}) ]]; then
 
     # Download the wallpaper
-    wget -O /tmp/wallpaper.jpg 'https://source.unsplash.com/1920x1080/?nature'
+    curl -o /tmp/wallpaper.jpg 'https://source.unsplash.com/1920x1080/?nature'
 
-    # If wget OK
+    # If curl OK
     if [[ ${?} -eq 0 ]]; then
         swaymsg output '*' bg /tmp/wallpaper.jpg fill
 
-    # If wget NOT OK
+    # If curl NOT OK
     else
         swaymsg output '*' bg '#1d2021' solid_color
     fi

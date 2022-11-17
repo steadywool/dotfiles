@@ -1,8 +1,8 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / wget / docker / android-tools / cronie / zsh / htop / tmux / neovim / ranger / light
+udisks2 / tlp / rclone / bluez{-utils} / git / docker / android-tools / cronie / zsh / htop / tmux / neovim / ranger / light
 
 ### Wayland
-alacritty || foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim + slurp / wl-clipboard / kanshi
+foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim + slurp / wl-clipboard / kanshi
 
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
 
