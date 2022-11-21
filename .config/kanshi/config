@@ -11,3 +11,8 @@ profile home {
     output eDP-1 mode 1366x768 position 0,1080
     output 'Unknown S2-TEK TV SN-000000001' mode 1920x1080 position 0,0
 }
+
+profile TV {
+    output eDP-1 mode 1366x768 position 0,1080
+    output 'Toshiba America Info Systems Inc TOSHIBA-TV 0x00000101' mode 1920x1080 position 0,0
+}
