@@ -9,6 +9,11 @@ alias gaa='git add --all --verbose'
 alias gc='git commit -S -am'
 alias gca='git commit -S -av'
 
+# Tmux
+alias ta='tmux attach'
+alias td='tmux detach'
+alias tn='tmux new'
+
 # Rclone copy & sync
 alias mega_copy='rclone copy -P backup: $HOME/Documents/Cours'
 alias mega_sync='rclone sync -P $HOME/Documents/Cours backup:'
@@ -20,8 +25,6 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color'
-
-alias ll='ls --color=auto -l'
 
 # Create snapshot
 alias snap_root='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_root`'
@@ -35,7 +38,7 @@ alias cpu_freq='watch -n 1 "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_gov
 
 # Usbguard
 alias usb_list='usbguard list-devices -t'
-alias usb_allow='usbguat allow-device'
+alias usb_allow='usbguard allow-device'
 
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'
