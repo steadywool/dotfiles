@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
         'NvChad/nvim-colorizer.lua',
         'lewis6991/gitsigns.nvim',
         'iamcco/markdown-preview.nvim',
+        'akinsho/bufferline.nvim',
 
         'nvim-telescope/telescope.nvim',
         'nvim-telescope/telescope-file-browser.nvim',
