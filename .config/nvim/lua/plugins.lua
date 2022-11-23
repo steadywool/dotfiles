@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
     use {
         'sainnhe/gruvbox-material',
         'sainnhe/everforest',
+
         'kyazdani42/nvim-web-devicons',
     }
 
