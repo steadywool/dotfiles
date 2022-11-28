@@ -7,7 +7,7 @@ foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim +
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
 
 ### Appearance
-ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / gnome-themes-extra / papirus-icon-theme
+ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 ### Other
 libnotify / xdg-user-dirs / perl-image-exiftool / realtime-privileges / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3
