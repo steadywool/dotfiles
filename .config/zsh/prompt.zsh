@@ -18,7 +18,7 @@ zstyle ':vcs_info:*' unstagedstr '%F{red}✚%f'
 autoload -Uz promptinit
 promptinit
 
-PS1='┌%B%F{green}%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}
-└%(#.#.$)%b%E '
+PS1='┌%B%(!.%F{red}.%F{green})%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}
+└❯%b%E '
 
 RPS1='%B%F{red}%(?..[%? ⨯] )%f%F{magenta}[%T]%f%b%E'
