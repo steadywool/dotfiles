@@ -24,7 +24,7 @@ min_icon_size = 32
 max_icon_size = 64
 
 # Misc/Advanded
-dmenu = /usr/bin/bemenu -p 'dunst'
+dmenu = fuzzel -d
 
 [urgency_low]
 background = "#1d2021"

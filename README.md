@@ -10,7 +10,7 @@ mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 ### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / ffmpeg
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3
 
 ---
 ### Base
