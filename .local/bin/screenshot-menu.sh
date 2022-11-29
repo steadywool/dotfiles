@@ -12,7 +12,7 @@ var+=('copy-output')
 var+=('copy-window')
 var+=('copy-area')
 
-CHOICE=$(printf '%s\n' ${var[@]} | bemenu -p 'screenshot')
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d)
 
 output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 window=$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')

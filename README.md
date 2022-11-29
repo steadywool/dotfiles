@@ -2,7 +2,7 @@
 udisks2 / tlp / rclone / bluez{-utils} / git / docker / android-tools / cronie / zsh / htop / tmux / neovim / ranger / light / task
 
 ### Wayland
-foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim + slurp / wl-clipboard / kanshi
+foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
 
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 

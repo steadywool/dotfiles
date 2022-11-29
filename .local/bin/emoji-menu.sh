@@ -29,6 +29,6 @@ case ${1} in
     # emoji-menu.sh
     *)
         # We copy the chosen emoji with Bemenu and Wl-clipboard
-        cat ${EMOJI} | bemenu -p "emoji" -l 16 --no-exec | cut -d ' ' -f1 | wl-copy
+        cat ${EMOJI} | fuzzel -d | cut -d ' ' -f1 | wl-copy
     ;;
 esac
