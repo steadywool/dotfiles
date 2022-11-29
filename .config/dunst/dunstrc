@@ -14,7 +14,7 @@ separator_color = frame
 idle_threshold = 120
 
 # Text
-font = JetBrains Mono Regular 9
+font = monospace 9
 
 # Icon
 enable_recursive_icon_lookup = true

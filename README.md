@@ -4,13 +4,13 @@ udisks2 / tlp / rclone / bluez{-utils} / git / docker / android-tools / cronie /
 ### Wayland
 foot / sway{bg,idle,lock} / dunst / bemenu{-wayland} / j4-dmenu-desktop / grim + slurp / wl-clipboard / kanshi
 
-mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep / scrcpy
+mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 ### Other
-libnotify / xdg-user-dirs / perl-image-exiftool / realtime-privileges / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / ffmpeg
 
 ---
 ### Base
