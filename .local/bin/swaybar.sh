@@ -46,4 +46,5 @@ pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
 
 # Echo command for swaybar
-echo "[TASK !${overdue_task}/${pending_task}] [/ ${root_storage}] [LIGHT ${brightness}%] [NET ${network}] [VOL ${volume}] [BAT ${bat_capacity}%${bat_info}] [${date_formatted}]"
+echo "[📋 !${overdue_task}/${pending_task}] [🖥️ ${root_storage}] [💡 ${brightness}%] [🌐 ${network}] [🔊 ${volume}] [🔋 ${bat_capacity}%${bat_info}] [${date_formatted}]"
+
