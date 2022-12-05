@@ -1,42 +1,42 @@
 #!/bin/bash
 
-var+=('power-off')
-var+=('reboot')
-var+=('hibernate')
-var+=('hybrid-sleep')
-var+=('suspend')
-var+=('lock')
-var+=('exit-sway')
+var+=('⏻ power-off')
+var+=('勒 reboot')
+var+=('⏾ hibernate')
+var+=('⏾ hybrid-sleep')
+var+=('⏾ suspend')
+var+=(' lock')
+var+=(' exit-sway')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 7)
 
 case ${CHOICE} in
 
-    'power-off')
+    '⏻ power-off')
         shutdown -h now
     ;;
 
-    'reboot')
+    '勒 reboot')
         shutdown -r now
     ;;
 
-    'hibernate')
+    '⏾ hibernate')
         systemctl hibernate
     ;;
 
-    'hybrid-sleep')
+    '⏾ hybrid-sleep')
         systemctl hybrid-sleep
     ;;
 
-    'suspend')
+    '⏾ suspend')
         systemctl suspend
     ;;
 
-    'lock')
+    ' lock')
         swaylock
     ;;
 
-    'exit-sway')
+    ' exit-sway')
         swaymsg exit
     ;;
 esac

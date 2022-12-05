@@ -2,17 +2,17 @@
 
 SCREENSHOT="${HOME}/Pictures/Screenshot"
 
-var+=('save-all')
-var+=('save-output')
-var+=('save-window')
-var+=('save-area')
+var+=(' save-all')
+var+=(' save-output')
+var+=(' save-window')
+var+=(' save-area')
 
-var+=('copy-all')
-var+=('copy-output')
-var+=('copy-window')
-var+=('copy-area')
+var+=(' copy-all')
+var+=(' copy-output')
+var+=(' copy-window')
+var+=(' copy-area')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 8)
 
 output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 window=$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')
@@ -26,25 +26,25 @@ fi
 case ${CHOICE} in
 
     # Screenshot of every outputs
-    'save-all')
+    ' save-all')
         grim ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_all).jpg \
         && notify-send --urgency=low "Saved in ${SCREENSHOT}"
     ;;
 
     # Screenshot of current output
-    'save-output')
+    ' save-output')
         grim -o "${output}" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_output).jpg \
         && notify-send --urgency=low "Saved in ${SCREENSHOT}"
     ;;
 
     # Screenshot of current window
-    'save-window')
+    ' save-window')
         grim -g "${window}" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_window).jpg \
         && notify-send --urgency=low "Saved in $SCREENSHOT"
     ;;
 
     # Screenshot of selected area
-    'save-area')
+    ' save-area')
         grim -g "$(slurp)" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_area).jpg \
         && notify-send --urgency=low "Saved in ${SCREENSHOT}"
     ;;
@@ -54,25 +54,25 @@ esac
 case ${CHOICE} in
 
     # Copy of every outputs
-    'copy-all')
+    ' copy-all')
         grim - | wl-copy \
         && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of current output
-    'copy-output')
+    ' copy-output')
         grim -o "${output}" - | wl-copy \
         && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of current window
-    'copy-window')
+    ' copy-window')
         grim -g "${window}" - | wl-copy \
         && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of selected area
-    'copy-area')
+    ' copy-area')
         grim -g "$(slurp)" - | wl-copy \
         && notify-send --urgency=low 'Saved in clipboard'
     ;;
