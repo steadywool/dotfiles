@@ -19,16 +19,6 @@ export GPG_TTY=$(tty)
 export PATH=${PATH}:/var/lib/flatpak/exports/bin
 export PATH=${PATH}:${HOME}/.local/bin
 
-# Proxy
-#export http_proxy=
-#export https_proxy=
-
 # Wayland / Sway
 export XDG_CURRENT_DESKTOP=sway
-export MOZ_DBUS_REMOTE=1
 export MOZ_ENABLE_WAYLAND=1
-export _JAVA_AWT_WM_NONREPARENTING=1
-export LIBSEAT_BACKEND=logind
-
-# Bemenu
-#export BEMENU_OPTS="-i -w -H '23' --fn 'monospace 9' --tb '#1d2021' --tf '#ebdbb2' --fb '#1d2021' --ff '#ebdbb2' --cf '#ebdbb2' --nb '#1d2021' --nf '#ebdbb2' --ab '#32302f' --af '#ebdbb2' --hb '#83a598' --hf '#1d2021'"

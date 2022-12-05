@@ -14,7 +14,6 @@ source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Options
 setopt autocd
-setopt interactivecomments
 
 # Vi mode
 bindkey -v
@@ -28,7 +27,6 @@ SAVEHIST=5000
 setopt inc_append_history
 setopt hist_expire_dups_first
 setopt hist_ignore_dups
-setopt hist_ignore_space
 
 # Completion
 autoload -Uz compinit
