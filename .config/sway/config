@@ -4,20 +4,20 @@ include $HOME/.config/sway/config.d/*
 
 # WM INDEPENDANT HOTKEYS
 ## Terminal
-bindsym Mod4+Return exec footclient bash -c "tmux attach || tmux new"
-bindsym Mod4+Shift+Return exec footclient
+bindsym Mod4+Return exec $term bash -c "tmux attach || tmux new"
+bindsym Mod4+Shift+Return exec $term
 
 ## Ranger
-bindsym Mod4+o exec footclient ranger
+bindsym Mod4+o exec $term ranger
 
 ## Neovim
-bindsym Mod4+n exec footclient nvim
+bindsym Mod4+n exec $term nvim
 
 ## Htop
-bindsym Mod4+Shift+q exec footclient htop
+bindsym Mod4+Shift+q exec $term htop
 
 ## Launcher
-bindsym Mod4+d exec fuzzel
+bindsym Mod4+d exec $menu
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
@@ -89,8 +89,8 @@ bindsym Mod4+ccedilla workspace 9
 bindsym Mod4+agrave workspace 10
 
 ## Focus the next/previous workspace
-bindsym Mod4+Tab workspace next
-bindsym Mod4+Shift+Tab workspace prev
+bindsym Mod4+Tab workspace next_on_output
+bindsym Mod4+Shift+Tab workspace prev_on_output
 
 ## Move window to the given workspace
 bindsym Mod4+Shift+ampersand move container workspace 1

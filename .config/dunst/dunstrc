@@ -23,9 +23,6 @@ icon_position = left
 min_icon_size = 32
 max_icon_size = 64
 
-# Misc/Advanded
-dmenu = fuzzel -d
-
 [urgency_low]
 background = "#1d2021"
 foreground = "#83a598"
