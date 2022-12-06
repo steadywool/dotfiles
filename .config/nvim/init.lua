@@ -30,8 +30,8 @@ vim.cmd('filetype indent on')
 vim.opt.autoindent = true
 
 -- Folding
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldmethod = 'manual'
+--vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.opt.foldenable = false
 
 -- Tabs & Spaces

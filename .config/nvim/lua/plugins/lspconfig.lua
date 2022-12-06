@@ -1,5 +1,4 @@
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-capabilities.textDocument.completion.completionItem.snippetSupport = true
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local servers = {
     'html', --HTML
@@ -8,8 +7,7 @@ local servers = {
     'eslint', --Javascript/Typescript
 
     'clangd', --C++
-    --'omnisharp', --C#
-    'csharp_ls', --C#
+    'omnisharp', --C#
     'intelephense', --PHP
     'bashls', --Bash
     'sumneko_lua', --Lua
@@ -39,16 +37,14 @@ require('lspconfig').sumneko_lua.setup {
 }
 
 -- Omnisharp
---require('lspconfig').omnisharp.setup {
---
---    cmd = { 'dotnet', '/home/kani/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll' },
---    enable_editorconfig_support = true,
---    enable_ms_build_load_projects_on_demand = false,
---    enable_roslyn_analyzers = false,
---    organize_imports_on_format = false,
---    enable_import_completion = false,
---    sdk_include_prereleases = true,
---    analyze_open_documents_only = false,
---    useModernNet = false,
---    monoPath = "/usr/bin/mono",
---}
+require('lspconfig').omnisharp.setup {
+    cmd = { 'dotnet', '/home/kani/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll' },
+    enable_editorconfig_support = true,
+    enable_ms_build_load_projects_on_demand = false,
+    enable_roslyn_analyzers = false,
+    organize_imports_on_format = false,
+    enable_import_completion = false,
+    sdk_include_prereleases = true,
+    analyze_open_documents_only = false,
+    useModernNet = false,
+}
