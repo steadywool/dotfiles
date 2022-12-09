@@ -10,7 +10,7 @@ mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 ### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / perl-image-exiftool
 
 ---
 ### Base
@@ -28,7 +28,7 @@ efibootmgr (uefi) / grub
 ### Multimedia
 pipewire{-alsa,-jack,-pulse} / wireplumber
 
-gst-plugin-pipewire / gst-libav / gst-plugins-{base,good,ugly}
+gstreamer / gst-{plugin-pipewire,libav} / gst-plugins-{base,good,ugly}
 
 ### Security
 apparmor / iptables-nft / nftables / usbguard / arch-audit / flatpak / firejail / lkrg-dkms<sup>AUR</sup>

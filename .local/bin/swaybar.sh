@@ -15,20 +15,24 @@ elif [[ ${bat_status} = 'Unknown' ]]; then
     bat_info=' ?'
 fi
 
-# Show the volume or if the sound is muted
-mute=$(pactl get-sink-mute @DEFAULT_SINK@ | awk '{print $2}')
-
-if [[ ${mute} = 'yes' ]]; then
-    volume='muted'
+# Show default sink volume
+mute=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')
+if [[ ${mute} -eq '' ]]; then
+    sink_volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}')
 else
-    left_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $5}')
-    #right_volume=$(pactl get-sink-volume @DEFAULT_SINK@ | awk '{print $12}')
-
-    volume="${left_volume}"
+    sink_volume="muted"
 fi
 
-route=$(ip route show | grep -o 'default')
+# Show default source volume
+mute=$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}')
+if [[ ${mute} -eq '' ]]; then
+    source_volume=$(wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2}')
+else
+    source_volume="muted"
+fi
 
+# Show if there is a default route
+route=$(ip route show | grep -o 'default')
 if [[ -z ${route} ]]; then
     network='✗'
 else
@@ -46,5 +50,5 @@ pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
 
 # Echo command for swaybar
-echo "[ !${overdue_task}/${pending_task}] [ ${root_storage}] [ ${brightness}%] [ﯱ ${network}] [ ${volume}] [ ${bat_capacity}%${bat_info}] [${date_formatted}]"
+echo "[ !${overdue_task}/${pending_task}] [ ${root_storage}] [ ${brightness}%] [ﯱ ${network}] [ ${source_volume}] [ ${sink_volume}] [ ${bat_capacity}%${bat_info}] [${date_formatted}]"
 
