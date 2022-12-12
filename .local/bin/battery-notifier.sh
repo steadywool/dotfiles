@@ -1,13 +1,7 @@
 #!/bin/bash
 
-# Cronjob exemple:
-# */5 * * * * /path/to/battery-notifier.sh
-
 bat_capacity=$(cat /sys/class/power_supply/BAT0/capacity)
 bat_status=$(cat /sys/class/power_supply/BAT0/status)
-
-# Notify-send & Cron don't work without this line
-export DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
 
 # If the battery is charging
 if [[ ${bat_status} = 'Charging' ]]; then

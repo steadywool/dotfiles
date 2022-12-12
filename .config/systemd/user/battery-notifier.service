@@ -1,0 +1,9 @@
+[Unit]
+Description=Send a notification when the battery is too low or too high
+
+[Service]
+Type=simple
+ExecStart=/home/kani/.local/bin/battery-notifier.sh
+
+[Install]
+WantedBy=default.target

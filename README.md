@@ -1,5 +1,5 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / docker / android-tools / cronie / zsh / htop / tmux / neovim / ranger / light / task
+udisks2 / tlp / rclone / bluez{-utils} / git / docker / android-tools / zsh / htop / tmux / neovim / ranger / light / task
 
 ### Wayland
 foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
