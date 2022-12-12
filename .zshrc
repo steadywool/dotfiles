@@ -25,19 +25,21 @@ KEYTIMEOUT=1
 HISTSIZE=5000
 SAVEHIST=5000
 setopt inc_append_history
-setopt hist_expire_dups_first
 setopt hist_ignore_dups
 
 # Completion
 autoload -Uz compinit
 compinit
 
-zstyle ':completion:*' menu default
-zstyle ':completion:*' completer _expand _complete  _approximate
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' use-cache true
-zstyle ':completion:*' verbose true
 zstyle ':completion:*' rehash true
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*:*:*:*:descriptions' format '%B%F{blue}%d%f%b'
+
+# Now tab does only completion, not expansion
+bindkey '^i' complete-word
 
 # Vcs
 autoload -Uz vcs_info

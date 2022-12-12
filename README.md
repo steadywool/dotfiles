@@ -63,9 +63,6 @@ Create `*.conf` at `/etc/sysctl.d/` and add:
 kernel.unprivileged_userns_clone=1
 ```
 
-### Disabling Avahi
-Mask `avahi-daemon.service`, `avahi-daemon.socket` & `avahi-dnsconfd.service` with systemctl
-
 ### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
 ```
