@@ -50,6 +50,7 @@ vim.cmd('autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabs
 vim.cmd('autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 
 -- Lua Modules
+require('functions')
 require('keymaps')
 require('plugins')
 

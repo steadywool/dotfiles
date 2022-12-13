@@ -36,7 +36,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:
 zstyle ':completion:*' use-cache true
 zstyle ':completion:*' rehash true
 zstyle ':completion:*' group-name ''
-zstyle ':completion:*:*:*:*:descriptions' format '%B%F{blue}%d%f%b'
+zstyle ':completion:*:*:*:*:descriptions' format '%B%F{blue}-- %d --%f%b'
 
 # Now tab does only completion, not expansion
 bindkey '^i' complete-word
