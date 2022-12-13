@@ -43,6 +43,12 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
+### Enable Kernel Lockdown
+Add this line to `/etc/default/grub`:
+```
+GRUB_CMDLINE_LINUX="lockdown=confidentiality"
+```
+
 ### Use encrypted /
 Add `keyboard`, `keymap` & `encrypt` hooks to `/etc/mkinitcpio.conf`
 
