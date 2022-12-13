@@ -1,30 +1,29 @@
 return require('packer').startup(function(use)
-
     -- Plugin/Package Manager
-    use {
-        'wbthomason/packer.nvim',
-        'williamboman/mason.nvim',
-    }
+    use 'wbthomason/packer.nvim'
+    use 'williamboman/mason.nvim'
 
     -- Appearance
-    use {
-        'sainnhe/gruvbox-material',
-        'sainnhe/everforest',
+    use 'sainnhe/gruvbox-material'
+    use 'sainnhe/everforest'
+    use 'kyazdani42/nvim-web-devicons'
 
-        'kyazdani42/nvim-web-devicons',
+    -- Completion
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            'hrsh7th/cmp-nvim-lsp',
+            'saadparwaiz1/cmp_luasnip',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-buffer',
+            'hrsh7th/cmp-cmdline',
+        }
     }
 
-    -- Auto-completion
+    -- Snippets
     use {
         'L3MON4D3/LuaSnip',
-        'saadparwaiz1/cmp_luasnip',
         'rafamadriz/friendly-snippets',
-
-        'hrsh7th/nvim-cmp',
-        'hrsh7th/cmp-nvim-lsp',
-
-        'hrsh7th/cmp-path',
-        'hrsh7th/cmp-buffer',
     }
 
     -- LSP
@@ -33,32 +32,26 @@ return require('packer').startup(function(use)
         'jose-elias-alvarez/null-ls.nvim',
     }
 
-    -- DAP
-    use {
-        'mfussenegger/nvim-dap',
-    }
-
     -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-    }
-
-    -- Library
-    use {
-        'nvim-lua/plenary.nvim',
-    }
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- Tools
+    use 'lukas-reineke/indent-blankline.nvim'
+    use 'NvChad/nvim-colorizer.lua'
+    use 'lewis6991/gitsigns.nvim'
+    use 'iamcco/markdown-preview.nvim'
+
+    -- Search
     use {
-        'lukas-reineke/indent-blankline.nvim',
-        'NvChad/nvim-colorizer.lua',
-        'lewis6991/gitsigns.nvim',
-        'iamcco/markdown-preview.nvim',
-        'akinsho/bufferline.nvim',
-
         'nvim-telescope/telescope.nvim',
-        'nvim-telescope/telescope-file-browser.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope-file-browser.nvim',
+        }
+    }
 
+    -- Autopair & autotag
+    use {
         'windwp/nvim-autopairs',
         'windwp/nvim-ts-autotag',
     }
