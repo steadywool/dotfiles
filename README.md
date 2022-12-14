@@ -50,7 +50,7 @@ GRUB_CMDLINE_LINUX="lockdown=[confidentiality|integrity|none]"
 ```
 
 ### Use encrypted /
-Add `keyboard`, `keymap` & `encrypt` hooks to `/etc/mkinitcpio.conf`
+Add `encrypt` hooks to `/etc/mkinitcpio.conf`
 
 Add this line to `/etc/default/grub`:
 ```
