@@ -43,10 +43,10 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
-### Enable Kernel Lockdown
+### Enable/Disable Kernel Lockdown
 Add this line to `/etc/default/grub`:
 ```
-GRUB_CMDLINE_LINUX="lockdown=confidentiality"
+GRUB_CMDLINE_LINUX="lockdown=[confidentiality|integrity|none]"
 ```
 
 ### Use encrypted /
