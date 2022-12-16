@@ -1,5 +1,6 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task
+udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task /
+distrobox<sup>AUR</sup> / docker
 
 ### Wayland
 foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
@@ -10,8 +11,7 @@ mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 ### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / perl-image-exiftool /
-distrobox<sup>AUR</sup> / docker
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / perl-image-exiftool
 
 ---
 ### Base
