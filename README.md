@@ -1,11 +1,13 @@
 ### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task /
-distrobox<sup>AUR</sup> / docker
+udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task
 
 ### Wayland
 foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
 
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
+
+### Sandbox & containers
+distrobox<sup>AUR</sup> / docker / flatpak / firejail
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
@@ -32,7 +34,7 @@ pipewire{-alsa,-jack,-pulse} / wireplumber
 gstreamer / gst-{plugin-pipewire,libav} / gst-plugins-{base,good,ugly}
 
 ### Security
-apparmor / iptables-nft / nftables / usbguard / arch-audit / flatpak / firejail / lkrg-dkms<sup>AUR</sup>
+apparmor / iptables-nft / nftables / usbguard / arch-audit / lkrg-dkms<sup>AUR</sup>
 
 ### Network
 nmap / tcpdump / lsof / networkmanager

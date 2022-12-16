@@ -43,8 +43,5 @@ alias usb_allow='usbguard allow-device'
 # Scarab (Hollow Knight)
 alias scarab='/opt/scarab/Scarab'
 
-# Distrobox
-alias archlinux_distrobox='distrobox-enter --root archlinux-distrobox -- bash -l'
-
 # Pacman
 alias pacman_explicit='pacman -Qqe | grep -vxf <(pacman -Qqg base-devel)'
