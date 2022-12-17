@@ -1,58 +1,65 @@
-### CLI
+# Archlinux dotfiles 🐧
+
+Configuration and tools that I use in my daily life.
+
+![](./src/screenshot.jpg)
+
+## Installation
+#### CLI
 udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task
 
-### Wayland
+#### Wayland
 foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
 
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 
-### Sandbox & containers
+#### Sandbox & containers
 distrobox<sup>AUR</sup> / podman / flatpak
 
-### Appearance
+#### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
-### Other
+#### Other
 libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / ripgrep / man-db / jq / libappindicator-gtk3 / perl-image-exiftool
 
 ---
-### Base
+#### Base
 base / base-devel / linux-{firmware,hardened,hardened-headers} / dkms / intel-ucode
 
-### Disks
+#### Disks
 ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
 
-### Archiving
+#### Archiving
 zip / unzip / unrar / p7zip
 
-### Boot loader
+#### Boot loader
 efibootmgr (uefi) / grub
 
-### Multimedia
+#### Multimedia
 pipewire{-alsa,-jack,-pulse} / wireplumber
 
 gstreamer / gst-{plugin-pipewire,libav} / gst-plugins-{base,good,ugly}
 
-### Security
+#### Security
 apparmor / iptables-nft / nftables / usbguard / arch-audit / lkrg-dkms<sup>AUR</sup>
 
-### Network
+#### Network
 nmap / tcpdump / lsof / networkmanager
 
----
-### Enable AppArmor as default security model
+## Configuration
+#### Enable AppArmor as default security model
 Add this line to `/etc/default/grub`:
 ```
 GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
 ```
 
-### Enable/Disable Kernel Lockdown
+#### Enable/Disable Kernel Lockdown
 Add this line to `/etc/default/grub`:
 ```
 GRUB_CMDLINE_LINUX="lockdown=[confidentiality|integrity|none]"
 ```
 
-### Use encrypted /
+#### Use encrypted /
 Add `encrypt` hooks to `/etc/mkinitcpio.conf`
 
 Add this line to `/etc/default/grub`:
@@ -60,19 +67,19 @@ Add this line to `/etc/default/grub`:
 GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:luksroot"
 ```
 
-### Load LKRG at boot
+#### Load LKRG at boot
 Create `*.conf` at `/etc/modules-load.d/` and add:
 ```
 lkrg
 ```
 
-### Enable unprivileged user namespace
+#### Enable unprivileged user namespace
 Create `*.conf` at `/etc/sysctl.d/` and add:
 ```
 kernel.unprivileged_userns_clone=1
 ```
 
-### Ssh configuration
+#### Ssh configuration
 Add these lines to `/etc/ssh/sshd_config`:
 ```
 Protocol 2
@@ -80,22 +87,22 @@ PermitRootLogin no
 PasswordAuthentication no
 ```
 
-### Usbguard configuration
+#### Usbguard configuration
 ```
 # usbguard generate-policy > /etc/usbguard/rules.conf
 ```
 
-### Disable root account
+#### Disable root account
 ```
 # passwd --lock root
 ```
 
-### Create the default user
+#### Create the default user
 ```
 # useradd -g users -G wheel -s /bin/zsh kani
 ```
 
-### Mount options
+#### Mount options
 - `/dev/sda1` (FAT-32) is `/boot` and use `nodev`, `noexec` & `nosuid`
 
 - `/dev/sda2` is the `swap`
@@ -104,13 +111,13 @@ PasswordAuthentication no
 
 - Subvolumes are `/`, `/home`, `/var/log`, `/.snapshots` & `/var/cache/pacman`
 
-### Install "Ranger devicons"
+#### Install "Ranger devicons"
 ```
 $ git clone https://github.com/alexanderjeurissen/ranger_devicons \
 ~/.config/ranger/plugins/ranger_devicons
 ```
 
-### Install "Packer.nvim"
+#### Install "Packer.nvim"
 ```
 $ git clone https://github.com/wbthomason/packer.nvim \
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
