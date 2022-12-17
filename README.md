@@ -7,7 +7,7 @@ foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kansh
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 
 ### Sandbox & containers
-distrobox<sup>AUR</sup> / docker / flatpak / firejail
+distrobox<sup>AUR</sup> / podman / flatpak
 
 ### Appearance
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
