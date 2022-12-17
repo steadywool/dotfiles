@@ -1,16 +1,15 @@
-# Source configuration & plugins
+# Source configuration
 for FILE in ${ZHOME}/*; do
     source ${FILE}
 done
 
+# Autosuggestions
 zuse github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Custom completion
 zuse github.com/zsh-users/zsh-completions
 source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
-
-zuse github.com/zdharma-continuum/fast-syntax-highlighting
-source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Options
 setopt autocd
@@ -63,3 +62,8 @@ PS1='┌%B%(!.%F{red}.%F{green})%n@%m%f %F{blue}%~%f ${vcs_info_msg_0_}
 └❯%b%E '
 
 RPS1='%B%F{red}%(?..[%? ⨯] )%f%F{magenta}[%T]%f%b%E'
+
+# Syntax highlighting
+zuse github.com/zdharma-continuum/fast-syntax-highlighting
+source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+
