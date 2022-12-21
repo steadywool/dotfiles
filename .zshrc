@@ -11,9 +11,6 @@ source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
 zuse github.com/zsh-users/zsh-completions
 source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
 
-# Options
-setopt autocd
-
 # Vi mode
 bindkey -v
 bindkey -M viins '^?' backward-delete-char
