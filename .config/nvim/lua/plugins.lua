@@ -40,6 +40,7 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
     use 'iamcco/markdown-preview.nvim'
+    use 'romgrk/barbar.nvim'
 
     -- Search
     use {
