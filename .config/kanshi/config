@@ -7,6 +7,11 @@ profile bts_snir {
     output 'Philips Consumer Electronics Company PHL 241B4 AU11639002573' mode 1920x1080 position 0,0
 }
 
+profile bts_snir_keke {
+    output eDP-1 mode 1366x768 position 0,1080
+    output 'Philips Consumer Electronics Company PHL 241B4 AU11639002034' mode 1920x1080 position 0,0
+}
+
 profile home {
     output eDP-1 mode 1366x768 position 0,1080
     output 'Unknown S2-TEK TV SN-000000001' mode 1920x1080 position 0,0

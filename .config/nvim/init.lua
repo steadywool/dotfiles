@@ -21,6 +21,9 @@ vim.opt.termguicolors = true
 -- Statusline
 vim.opt.statusline = '%#search# %n %#statusline# %F %r%m %= %w%y %#incsearch# %l:%c %p%% '
 
+-- Completion
+vim.opt.completeopt = {'menu','menuone','noselect'}
+
 -- Syntax Higlighting
 vim.cmd('filetype plugin on')
 vim.cmd("syntax enable")
