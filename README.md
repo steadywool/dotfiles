@@ -9,7 +9,7 @@ Configuration and tools that I use in my daily life.
 udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task
 
 #### Wayland
-foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard / kanshi
+foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard
 
 mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
 

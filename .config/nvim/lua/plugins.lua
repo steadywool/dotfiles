@@ -5,7 +5,6 @@ return require('packer').startup(function(use)
 
     -- Appearance
     use 'sainnhe/gruvbox-material'
-    use 'sainnhe/everforest'
     use 'kyazdani42/nvim-web-devicons'
 
     -- Completion
