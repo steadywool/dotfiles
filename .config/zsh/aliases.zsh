@@ -2,10 +2,8 @@
 # Git
 alias g='git'
 alias gp='git push --verbose'
-
 alias ga='git add --verbose'
 alias gaa='git add --all --verbose'
-
 alias gc='git commit -S -am'
 alias gca='git commit -S -av'
 
@@ -27,21 +25,8 @@ alias grep='grep --color=auto'
 alias ip='ip -color'
 
 # Create snapshot
-alias snap_root='btrfs subvolume snapshot / /.snapshots/`date +%Y%m%d-%H%M%S_root`'
-alias snap_home='btrfs subvolume snapshot /home /.snapshots/`date +%Y%m%d-%H%M%S_home`'
-
-# Performance
-alias cpu_performance='echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias cpu_powersave='echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias cpu_schedutil='echo schedutil | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'
-alias cpu_freq='watch -n 1 "cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor && cat /proc/cpuinfo | grep \"cpu MHz\""'
-
-# Usbguard
-alias usb_list='usbguard list-devices -t'
-alias usb_allow='usbguard allow-device'
-
-# Scarab (Hollow Knight)
-alias scarab='/opt/scarab/Scarab'
+alias snap_root='btrfs subvolume snapshot -r / /.snapshots/`date +%s_root`'
+alias snap_home='btrfs subvolume snapshot -r /home /.snapshots/`date +%s_home`'
 
 # Pacman
 alias pacman_explicit='pacman -Qqe | grep -vxf <(pacman -Qqg base-devel)'

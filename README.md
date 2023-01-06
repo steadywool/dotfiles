@@ -20,7 +20,7 @@ distrobox<sup>AUR</sup> / podman / flatpak
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 #### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / man-db / jq / libappindicator-gtk3 / perl-image-exiftool
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / man-db / jq
 
 ---
 #### Base

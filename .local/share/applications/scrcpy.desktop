@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Scrcpy
-Icon=appimagekit-guiscrcpy
-Exec=scrcpy -d
-Terminal=false

@@ -27,26 +27,22 @@ case ${CHOICE} in
 
     # Screenshot of every outputs
     ' save-all')
-        grim ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_all).jpg \
-        && notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim ${SCREENSHOT}/$(date +%s_all).png \
     ;;
 
     # Screenshot of current output
     ' save-output')
-        grim -o "${output}" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_output).jpg \
-        && notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim -o "${output}" ${SCREENSHOT}/$(date +%s_output).png \
     ;;
 
     # Screenshot of current window
     ' save-window')
-        grim -g "${window}" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_window).jpg \
-        && notify-send --urgency=low "Saved in $SCREENSHOT"
+        grim -g "${window}" ${SCREENSHOT}/$(date +%s_window).png \
     ;;
 
     # Screenshot of selected area
     ' save-area')
-        grim -g "$(slurp)" ${SCREENSHOT}/$(date +%Y%m%d-%H%M%S_area).jpg \
-        && notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim -g "$(slurp)" ${SCREENSHOT}/$(date +%s_area).png \
     ;;
 esac
 
@@ -56,24 +52,20 @@ case ${CHOICE} in
     # Copy of every outputs
     ' copy-all')
         grim - | wl-copy \
-        && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of current output
     ' copy-output')
         grim -o "${output}" - | wl-copy \
-        && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of current window
     ' copy-window')
         grim -g "${window}" - | wl-copy \
-        && notify-send --urgency=low 'Saved in clipboard'
     ;;
 
     # Copy of selected area
     ' copy-area')
         grim -g "$(slurp)" - | wl-copy \
-        && notify-send --urgency=low 'Saved in clipboard'
     ;;
 esac
