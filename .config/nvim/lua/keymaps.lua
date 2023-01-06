@@ -1,5 +1,6 @@
 -- Telescope
 vim.keymap.set('n', '<M-f>', '<cmd>Telescope find_files<CR>')
+vim.keymap.set('n', '<M-g>', '<cmd>Telescope live_grep<CR>')
 vim.keymap.set('n', '<M-e>', '<cmd>Telescope buffers<CR>')
 vim.keymap.set('n', '<M-t>', '<cmd>Telescope file_browser<CR>')
 
