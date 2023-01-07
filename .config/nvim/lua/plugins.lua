@@ -31,13 +31,24 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter
-    use 'nvim-treesitter/nvim-treesitter'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        'nvim-treesitter/nvim-treesitter-textobjects',
+    }
+
+    -- Surround
+    use 'kylechui/nvim-surround'
 
     -- Tools
     use 'lukas-reineke/indent-blankline.nvim'
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
-    use 'iamcco/markdown-preview.nvim'
+
+    -- Markdown preview
+    use {
+        'iamcco/markdown-preview.nvim',
+        run = function() vim.fn['mkdp#util#install']() end,
+    }
 
     -- Search
     use {
@@ -46,11 +57,5 @@ return require('packer').startup(function(use)
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope-file-browser.nvim',
         }
-    }
-
-    -- Autopair & autotag
-    use {
-        'windwp/nvim-autopairs',
-        'windwp/nvim-ts-autotag',
     }
 end)
