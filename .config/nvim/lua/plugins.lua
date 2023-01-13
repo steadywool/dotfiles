@@ -1,6 +1,8 @@
 return require('packer').startup(function(use)
-    -- Plugin/Package Manager
+    -- Plugin manager
     use 'wbthomason/packer.nvim'
+
+    -- Mason
     use 'williamboman/mason.nvim'
 
     -- Appearance
@@ -31,16 +33,10 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        'nvim-treesitter/nvim-treesitter-textobjects',
-    }
-
-    -- Surround
-    use 'kylechui/nvim-surround'
+    use 'nvim-treesitter/nvim-treesitter'
 
     -- Tools
-    use 'lukas-reineke/indent-blankline.nvim'
+    use 'kylechui/nvim-surround'
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
 

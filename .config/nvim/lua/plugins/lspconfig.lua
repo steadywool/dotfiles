@@ -15,12 +15,12 @@ local servers = {
     'dockerls', --Dockerfile
     'marksman', --Markdown
     'pyright', --Python
+    'arduino_language_server', --Arduino
 }
 
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         capabilities = capabilities,
-        flags = { debounce_text_changes = 150 },
     }
 end
 
