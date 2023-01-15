@@ -33,7 +33,10 @@ return require('packer').startup(function(use)
     }
 
     -- Treesitter
-    use 'nvim-treesitter/nvim-treesitter'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate',
+    }
 
     -- Tools
     use 'kylechui/nvim-surround'
