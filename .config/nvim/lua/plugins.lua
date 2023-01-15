@@ -42,6 +42,7 @@ return require('packer').startup(function(use)
     use 'kylechui/nvim-surround'
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
+    use 'lukas-reineke/indent-blankline.nvim'
 
     -- Markdown preview
     use {
