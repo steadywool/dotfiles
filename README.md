@@ -6,7 +6,7 @@ Configuration and tools that I use in my daily life.
 
 ## Installation
 #### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task
+udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task / man-db
 
 #### Wayland
 foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard
@@ -20,7 +20,7 @@ distrobox<sup>AUR</sup> / podman / flatpak
 ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
 
 #### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / man-db / jq
+libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / jq
 
 ---
 #### Base
@@ -37,8 +37,6 @@ efibootmgr (uefi) / grub
 
 #### Multimedia
 pipewire{-alsa,-jack,-pulse} / wireplumber
-
-gstreamer / gst-{plugin-pipewire,libav} / gst-plugins-{base,good,ugly}
 
 #### Security
 apparmor / iptables-nft / nftables / usbguard / arch-audit / lkrg-dkms<sup>AUR</sup>

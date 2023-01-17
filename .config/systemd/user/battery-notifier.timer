@@ -3,7 +3,7 @@ Description=Timer to run battery-notifier.service
 
 [Timer]
 Unit=battery-notifier.service
-OnCalendar=*:0/5
+OnCalendar=*:0/10
 
 [Install]
 WantedBy=timers.target

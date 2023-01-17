@@ -13,7 +13,6 @@ export PAGER=less
 export GPG_TTY=$(tty)
 
 # PATH
-export PATH=${PATH}:/var/lib/flatpak/exports/bin
 export PATH=${PATH}:${HOME}/.local/bin
 
 # Wayland / Sway

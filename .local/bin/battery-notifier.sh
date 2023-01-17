@@ -11,10 +11,7 @@ if [[ ${bat_status} = 'Charging' ]]; then
         notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% charged"
     fi
 
-fi
-
-# If the battery is discharging
-if [[ ${bat_status} = 'Discharging' ]]; then
+else
 
     # If the battery capacity is lower than 20%, send a notification
     if [[ ${bat_capacity} -lt 20 ]]; then

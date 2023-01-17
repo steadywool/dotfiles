@@ -1,5 +1,0 @@
-[Desktop Entry]
-Name=Ncpamixer
-Icon=org.pulseaudio.pavucontrol
-Exec=ncpamixer
-Terminal=true
