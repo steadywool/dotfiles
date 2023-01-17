@@ -1,17 +1,14 @@
 -- Leader key
 vim.g.mapleader = ';'
 
--- Completion
-vim.opt.completeopt = {'menu','menuone','noselect'}
-
--- Lua Modules
+-- Autocmds, functions & keymaps
 require('autocmds')
+require('functions')
 require('keymaps')
-require('plugins')
 
-for _, file in ipairs(vim.fn.readdir(vim.fn.stdpath('config') .. '/lua/plugins')) do
-require('plugins.' .. file:gsub('%.lua$', ''))
-end
+-- Plugins
+require('plugins')
+require_plugins()
 
 -- Files
 vim.opt.swapfile = true
