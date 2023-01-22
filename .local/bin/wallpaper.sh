@@ -11,7 +11,7 @@ fi
 if [[ -z $(ls -A ${WALLPAPER}) ]]; then
 
     # Download the wallpaper
-    curl -o /tmp/wallpaper.jpg 'https://source.unsplash.com/1920x1080/?nature'
+    curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080'
 
     # If curl OK
     if [[ ${?} -eq 0 ]]; then
