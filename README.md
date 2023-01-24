@@ -36,7 +36,7 @@ zip / unzip / unrar / p7zip
 efibootmgr (uefi) / grub
 
 #### Multimedia
-pipewire{-alsa,-jack,-pulse} / wireplumber
+pipewire{-alsa,-jack,-pulse} / wireplumber / alsa-utils
 
 #### Security
 apparmor / iptables-nft / nftables / usbguard / arch-audit / lkrg-dkms<sup>AUR</sup>
@@ -108,6 +108,9 @@ PasswordAuthentication no
 - `/dev/sda3` (LUKS+BTRFS) is an encrypted `/` and use `noatime`, `compress=zstd` & `space_cache=v2`
 
 - Subvolumes are `/`, `/home`, `/var/log`, `/.snapshots` & `/var/cache/pacman`
+
+#### Use Focusrite Scarlett
+https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module
 
 #### Install "Ranger devicons"
 ```
