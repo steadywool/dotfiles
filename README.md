@@ -32,7 +32,7 @@ ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji ttf-liberation
 
 #### Services
 ```
-udisks2 tlp bluez networkmanager pipewire{-alsa,-jack,-pulse} wireplumber apparmor nftables usbguard
+udisks2 tlp bluez networkmanager pipewire{-alsa,-jack,-pulse} wireplumber apparmor nftables usbguard cups
 ```
 
 #### Terminal
@@ -52,7 +52,7 @@ distrobox podman qemu-base swayimg mpv flatpak mupdf
 
 #### Tools
 ```
-libnotify xdg-{utils,user-dirs} python-i3ipc jq rclone alsa-utils man-db bluez-utils light
+libnotify xdg-{utils,user-dirs} python-i3ipc jq rclone alsa-utils man-db bluez-utils light wget ghostscript
 ```
 
 ## Configuration
@@ -71,7 +71,7 @@ kernel.unprivileged_userns_clone=1
 
 ### Systemd services
 ```
-systemd-timesyncd systemd-resolved tlp bluetooth NetworkManager apparmor nftables
+systemd-timesyncd systemd-resolved tlp bluetooth NetworkManager apparmor nftables cups
 ```
 
 ## Help
