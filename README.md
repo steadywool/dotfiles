@@ -4,122 +4,81 @@ Configuration and tools that I use in my daily life.
 
 ![](./src/screenshot.jpg)
 
-## Installation
-#### CLI
-udisks2 / tlp / rclone / bluez{-utils} / git / android-tools / zsh / htop / tmux / neovim / ranger / light / task / man-db
-
-#### Wayland
-foot / sway{bg,idle,lock} / dunst / fuzzel / grim + slurp / wl-clipboard
-
-mupdf / swayimg / mpv / polkit-gnome / gnome-keyring / gammastep
-
-#### Sandbox & containers
-distrobox<sup>AUR</sup> / podman / flatpak
-
-#### Appearance
-ttf-jetbrains-mono / nerd-fonts-jetbrains-mono<sup>AUR</sup> / noto-fonts{-emoji} / otf-ipafont / papirus-icon-theme
-
-#### Other
-libnotify / xdg-user-dirs / xdg-utils / python-i3ipc / jq
-
----
+## Packages
 #### Base
-base / base-devel / linux-{firmware,hardened,hardened-headers} / dkms / intel-ucode
+```
+base base-devel linux-{firmware,hardened} intel-ucode btrfs-progs zip unzip unrar p7zip efibootmgr grub
+```
 
-#### Disks
-ntfs-3g / exfat-utils / dosfstools / mtools / btrfs-progs
+#### Fonts
+```
+ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji ttf-liberation
+```
 
-#### Archiving
-zip / unzip / unrar / p7zip
+#### Services
+```
+udisks2 tlp bluez networkmanager light pipewire{-alsa,-jack,-pulse} wireplumber apparmor nftables usbguard
+```
 
-#### Boot loader
-efibootmgr (uefi) / grub
+#### Terminal
+```
+git android-tools zsh htop tmux neovim ranger task wl-clipboard
+```
 
-#### Multimedia
-pipewire{-alsa,-jack,-pulse} / wireplumber / alsa-utils
+#### Desktop
+```
+foot sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring papirus-icon-theme
+```
 
-#### Security
-apparmor / iptables-nft / nftables / usbguard / arch-audit / lkrg-dkms<sup>AUR</sup>
+#### Applications
+```
+distrobox podman qemu-base swayimg mpv flatpak mupdf
+```
 
-#### Network
-nmap / tcpdump / lsof / networkmanager
+#### Tools
+```
+libnotify xdg-{utils,user-dirs} python-i3ipc jq rclone alsa-utils man-db bluez-utils
+```
 
 ## Configuration
-#### Enable AppArmor as default security model
-Add this line to `/etc/default/grub`:
+See https://wiki.archlinux.org/title/Installation_guide.
+
+#### Partitions
+| Partition               | Mount Options                                   | Filesystem     | Mount Point         |
+|-------------------------|-------------------------------------------------|----------------|---------------------|
+| `/dev/sda1`             |`nodev,noexec,nosuid`                            | FAT-32         | `/boot`             |
+| `/dev/sda2`             |                                                 | Swap           | [SWAP]              |
+| `/dev/sda3`             |                                                 | Luks2          |                     |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@`                 | Btrfs          | `/`                 |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@home`             | Btrfs          | `/home`             |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@.snapshots`       | Btrfs          | `/.snapshots`       |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var_log`          | Btrfs          | `/var/log`          |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var_cache_pacman` | Btrfs          | `/var/cache/pacman` |
+
+#### Kernel parameters
 ```
-GRUB_CMDLINE_LINUX="lsm=landlock,lockdown,yama,apparmor,bpf"
+lsm=landlock,lockdown,yama,apparmor,bpf
+lockdown=confidentiality
+cryptdevice=/dev/sda3:luks_sda3
 ```
 
-#### Enable/Disable Kernel Lockdown
-Add this line to `/etc/default/grub`:
-```
-GRUB_CMDLINE_LINUX="lockdown=[confidentiality|integrity|none]"
-```
-
-#### Use encrypted /
-Add `encrypt` hooks to `/etc/mkinitcpio.conf`
-
-Add this line to `/etc/default/grub`:
-```
-GRUB_CMDLINE_LINUX="cryptdevice=/dev/sda3:luksroot"
-```
-
-#### Load LKRG at boot
-Create `*.conf` at `/etc/modules-load.d/` and add:
-```
-lkrg
-```
-
-#### Enable unprivileged user namespace
-Create `*.conf` at `/etc/sysctl.d/` and add:
+#### Kernel modules
 ```
 kernel.unprivileged_userns_clone=1
 ```
 
-#### Ssh configuration
-Add these lines to `/etc/ssh/sshd_config`:
-```
-Protocol 2
-PermitRootLogin no
-PasswordAuthentication no
-```
-
-#### Usbguard configuration
-```
-# usbguard generate-policy > /etc/usbguard/rules.conf
-```
-
-#### Disable root account
-```
-# passwd --lock root
-```
-
-#### Create the default user
-```
-# useradd -g users -G wheel -s /bin/zsh kani
-```
-
-#### Mount options
-- `/dev/sda1` (FAT-32) is `/boot` and use `nodev`, `noexec` & `nosuid`
-
-- `/dev/sda2` is the `swap`
-
-- `/dev/sda3` (LUKS+BTRFS) is an encrypted `/` and use `noatime`, `compress=zstd` & `space_cache=v2`
-
-- Subvolumes are `/`, `/home`, `/var/log`, `/.snapshots` & `/var/cache/pacman`
-
+## Help
 #### Use Focusrite Scarlett
 https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module
 
 #### Install "Ranger devicons"
 ```
-$ git clone https://github.com/alexanderjeurissen/ranger_devicons \
+git clone https://github.com/alexanderjeurissen/ranger_devicons \
 ~/.config/ranger/plugins/ranger_devicons
 ```
 
 #### Install "Packer.nvim"
 ```
-$ git clone https://github.com/wbthomason/packer.nvim \
+git clone https://github.com/wbthomason/packer.nvim \
 ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
