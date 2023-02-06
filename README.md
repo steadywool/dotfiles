@@ -27,7 +27,7 @@ base base-devel linux-{firmware,hardened} intel-ucode btrfs-progs zip unzip unra
 
 #### Fonts
 ```
-ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji ttf-liberation
+ttf-jetbrains-mono-nerd noto-fonts noto-fonts-emoji ttf-liberation otf-ipafont
 ```
 
 #### Services
