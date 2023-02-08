@@ -44,11 +44,11 @@ brightness=$(light -G | cut -d '.' -f1)
 
 # Storage
 root_storage=$(btrfs filesystem usage / | grep Free | head -n1 | awk '{print $3}')
+home_storage=$(homectl inspect | grep Free | awk '{print $3}')
 
 # Task
 pending_task=$(task +PENDING count)
 overdue_task=$(task +OVERDUE count)
 
 # Echo command for swaybar
-echo "[ !${overdue_task}/${pending_task}] [ ${root_storage}] [ ${brightness}%] [ﯱ ${network}] [ ${source_volume}] [ ${sink_volume}] [ ${bat_capacity}%${bat_info}] [${date_formatted}]"
-
+echo "[󰢨 !${overdue_task}/${pending_task}] [ ${root_storage}] [ ${home_storage}] [ ${brightness}%] [󰛳 ${network}] [ ${source_volume}] [ ${sink_volume}] [ ${bat_capacity}%${bat_info}] [ ${date_formatted}]"
