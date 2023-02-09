@@ -2,7 +2,7 @@
 
 Configuration and tools that I use in my daily life.
 
-![](./src/screenshot.jpg)
+![](./src/screenshot.png)
 
 ## Installation
 See https://wiki.archlinux.org/title/Installation_guide.
