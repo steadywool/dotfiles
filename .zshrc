@@ -4,12 +4,16 @@ for FILE in ${ZHOME}/*; do
 done
 
 # Autosuggestions
-zuse github.com/zsh-users/zsh-autosuggestions
+zuse https://github.com/zsh-users/zsh-autosuggestions
 source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Custom completion
-zuse github.com/zsh-users/zsh-completions
+zuse https://github.com/zsh-users/zsh-completions
 source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
+
+zuse https://github.com/nix-community/nix-zsh-completions
+source ${ZPLUG}/nix-zsh-completions/nix-zsh-completions.plugin.zsh
+fpath=(${ZPLUG}/nix-zsh-completions $fpath)
 
 # Vi mode
 bindkey -v

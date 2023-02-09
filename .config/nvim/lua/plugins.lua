@@ -2,9 +2,6 @@ return require('packer').startup(function(use)
     -- Plugin manager
     use 'wbthomason/packer.nvim'
 
-    -- Mason
-    use 'williamboman/mason.nvim'
-
     -- Appearance
     use 'sainnhe/gruvbox-material'
     use 'kyazdani42/nvim-web-devicons'
@@ -48,7 +45,6 @@ return require('packer').startup(function(use)
     use {
         'iamcco/markdown-preview.nvim',
         run = function() vim.fn['mkdp#util#install']() end,
-        ft = 'markdown',
     }
 
     -- Search

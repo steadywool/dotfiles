@@ -12,7 +12,7 @@ zuse() {
 
     # Install plugins
     if [[ ! -d ${module_path} ]]; then
-        git clone --recursive https://${url}.git ${module_path}
+        git clone --recursive ${url}.git ${module_path}
     fi
 }
 

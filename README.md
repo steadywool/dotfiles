@@ -23,7 +23,7 @@ See https://wiki.archlinux.org/title/Installation_guide.
 ### Packages
 #### Base
 ```
-base base-devel linux-{firmware,hardened} intel-ucode btrfs-progs zip unzip unrar p7zip efibootmgr grub
+base base-devel linux-{firmware,hardened} intel-ucode btrfs-progs ntfs-3g zip unzip unrar p7zip efibootmgr grub
 ```
 
 #### Fonts
@@ -38,7 +38,7 @@ udisks2 tlp bluez networkmanager pipewire-{alsa,jack,pulse} wireplumber apparmor
 
 #### Terminal
 ```
-git android-tools zsh htop tmux neovim ranger task wl-clipboard
+zsh htop tmux neovim ranger task wl-clipboard
 ```
 
 #### Desktop
@@ -48,12 +48,29 @@ foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnom
 
 #### Applications
 ```
-distrobox docker docker-compose qemu-base swayimg mpv flatpak mupdf rclone snapper light alsa-utils man-db bluez-utils wget
+swayimg mpv mupdf
 ```
 
 #### Tools
 ```
-xdg-{utils,user-dirs} libnotify python-i3ipc jq ghostscript npm xdg-desktop-portal-{gnome,wlr}
+git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak snapper alsa-utils light android-tools nix
+```
+
+#### Needed
+```
+xdg-{utils,user-dirs} libnotify python-i3ipc jq ghostscript xdg-desktop-portal-{gnome,wlr} libappindicator-gtk3
+```
+
+#### AUR
+```
+yay distrobox
+```
+
+#### Nix
+```
+nixpkgs.nodePackages.vscode-langservers-extracted nixpkgs.clang-tools nixpkgs.omnisharp-roslyn nixpkgs.nodePackages.intelephense
+nixpkgs.nodePackages.bash-language-server nixpkgs.sumneko-lua-language-server nixpkgs.nodePackages.typescript-language-server nixpkgs.marksman
+nixpkgs.nodePackages.dockerfile-language-server-nodejs nixpkgs.nodePackages.pyright nixpkgs.arduino-language-server nixpkgs.nodePackages.prettier
 ```
 
 ## Configuration
@@ -72,12 +89,18 @@ We need to create a .conf file to `/etc/sysctl.d/`.
 kernel.unprivileged_userns_clone=1
 ```
 
-### Systemd units
+### Systemd
+#### Systemd services
 ```
-systemd-timesyncd.service systemd-resolved.service tlp bluetooth.service NetworkManager.service apparmor.service nftables.service cups.service snapper-timeline.timer snapper-cleanup.timer
+systemd-timesyncd.service systemd-resolved.service systemd-homed.service tlp.service docker.service bluetooth.service NetworkManager.service apparmor.service nftables.service cups.service
 ```
 
-### Systemd homed
+#### Systemd timers
+```
+snapper-timeline.timer snapper-cleanup.timer
+```
+
+#### Systemd homed
 Creating the user with systemd-homed:
 ```
 homectl create username --storage=luks --shell=/usr/bin/zsh --member-of=wheel,video,audio,games,adbusers
