@@ -53,7 +53,7 @@ swayimg mpv mupdf
 
 #### Tools
 ```
-git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak snapper alsa-utils light android-tools nix
+git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak snapper alsa-utils light android-tools nix atool
 ```
 
 #### Needed
