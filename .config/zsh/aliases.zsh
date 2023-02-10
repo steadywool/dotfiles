@@ -23,10 +23,3 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color'
-
-# Create snapshot
-alias snap_root='btrfs subvolume snapshot -r / /.snapshots/`date +%s_root`'
-alias snap_home='btrfs subvolume snapshot -r /home /.snapshots/`date +%s_home`'
-
-# Pacman
-alias pacman_explicit='pacman -Qqe | grep -vxf <(pacman -Qqg base-devel)'
