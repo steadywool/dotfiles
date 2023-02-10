@@ -43,7 +43,7 @@ zsh htop tmux neovim ranger task wl-clipboard
 
 #### Desktop
 ```
-foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring papirus-icon-theme xorg-xwayland
+foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring xorg-xwayland
 ```
 
 #### Applications
