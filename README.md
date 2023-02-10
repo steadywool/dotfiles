@@ -46,11 +46,6 @@ zsh htop tmux neovim ranger task wl-clipboard
 foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring xorg-xwayland
 ```
 
-#### Applications
-```
-swayimg mpv mupdf
-```
-
 #### Tools
 ```
 git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak snapper alsa-utils light android-tools nix atool
@@ -64,6 +59,11 @@ xdg-{utils,user-dirs} libnotify python-i3ipc jq ghostscript xdg-desktop-portal-{
 #### AUR
 ```
 yay distrobox
+```
+
+#### Flatpak
+```
+org.gnome.eog io.mpv.Mpv org.gnome.Evince com.github.tchx84.Flatseal com.discordapp.Discord org.pulseaudio.pavucontrol org.libreoffice.LibreOffice
 ```
 
 #### Nix
