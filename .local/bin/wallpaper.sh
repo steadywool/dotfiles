@@ -1,29 +1,41 @@
 #!/bin/bash
 
-WALLPAPER="${HOME}/Pictures/Wallpaper"
+# Your wallpaper directory
+WALLPAPER_DIR="${HOME}/Pictures/Wallpaper"
 
 # Create wallpaper folder if there is none
-if [[ ! -d ${WALLPAPER} ]]; then
-    mkdir -p ${WALLPAPER}
+if [[ ! -d ${WALLPAPER_DIR} ]]; then
+    mkdir -p ${WALLPAPER_DIR}
 fi
 
-# If there is NO wallpaper in $WALLPAPER
-if [[ -z $(ls -A ${WALLPAPER}) ]]; then
+case ${1} in
+    '--random' | '-r')
+        swaymsg output '*' bg $(find ${WALLPAPER_DIR} -type f | shuf -n1) fill
+    ;;
 
-    # Download the wallpaper
-    curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080'
-
-    # If curl OK
-    if [[ ${?} -eq 0 ]]; then
+    '--download' | '-d')
+        curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080'
         swaymsg output '*' bg /tmp/wallpaper.jpg fill
+    ;;
 
-    # If curl NOT OK
-    else
-        swaymsg output '*' bg '#1d2021' solid_color
-    fi
+    '--select' | '-s')
+        swaymsg output '*' bg ${2} fill
+    ;;
 
-# If there is wallpaper(s) in $WALLPAPER
-else
-    # Select a random wallpaper from $WALLPAPER directory
-    swaymsg output '*' bg $(find ${WALLPAPER} -type f | shuf -n1) fill
-fi
+    '--color' | '-c')
+        swaymsg output '*' bg ${2} solid_color
+    ;;
+
+    '--help' | '-h')
+        echo "Commands:"
+        echo "  -r, --random           Select a random wallpaper from the default directory"
+        echo "  -d, --download         Download a wallpaper from Picsum"
+        echo "  -s, --select <string>  Select a picture as a wallpaper"
+        echo "  -c, --color <string>   Select a color as a wallapaper"
+        echo "  -h, --help             Show the help"
+    ;;
+
+    *)
+        ${0} --help
+    ;;
+esac

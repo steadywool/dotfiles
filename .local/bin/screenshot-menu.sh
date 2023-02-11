@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCREENSHOT="${HOME}/Pictures/Screenshot"
+SCREENSHOT_DIR="${HOME}/Pictures/Screenshot"
 
 var+=(' save-all')
 var+=(' save-output')
@@ -18,8 +18,8 @@ output=$(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name')
 window=$(swaymsg -t get_tree | jq -j '.. | select(.type?) | select(.focused).rect | "\(.x),\(.y) \(.width)x\(.height)"')
 
 # Create screenshot folder if there is none
-if [[ ! -d ${SCREENSHOT} ]]; then
-    mkdir -p ${SCREENSHOT}
+if [[ ! -d ${SCREENSHOT_DIR} ]]; then
+    mkdir -p ${SCREENSHOT_DIR}
 fi
 
 # Save screenshot
@@ -27,26 +27,26 @@ case ${CHOICE} in
 
     # Screenshot of every outputs
     ' save-all')
-        grim ${SCREENSHOT}/$(date +%s_all).png && \
-        notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim ${SCREENSHOT_DIR}/$(date +%s_all).png && \
+        notify-send --urgency=low "Saved in ${SCREENSHOT_DIR}"
     ;;
 
     # Screenshot of current output
     ' save-output')
-        grim -o "${output}" ${SCREENSHOT}/$(date +%s_output).png && \
-        notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim -o "${output}" ${SCREENSHOT_DIR}/$(date +%s_output).png && \
+        notify-send --urgency=low "Saved in ${SCREENSHOT_DIR}"
     ;;
 
     # Screenshot of current window
     ' save-window')
-        grim -g "${window}" ${SCREENSHOT}/$(date +%s_window).png && \
-        notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim -g "${window}" ${SCREENSHOT_DIR}/$(date +%s_window).png && \
+        notify-send --urgency=low "Saved in ${SCREENSHOT_DIR}"
     ;;
 
     # Screenshot of selected area
     ' save-area')
-        grim -g "$(slurp)" ${SCREENSHOT}/$(date +%s_area).png && \
-        notify-send --urgency=low "Saved in ${SCREENSHOT}"
+        grim -g "$(slurp)" ${SCREENSHOT_DIR}/$(date +%s_area).png && \
+        notify-send --urgency=low "Saved in ${SCREENSHOT_DIR}"
     ;;
 esac
 
