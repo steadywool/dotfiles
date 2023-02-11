@@ -26,9 +26,6 @@ bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
-## Wallpaper
-bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh --random
-
 ## Light control
 bindsym XF86MonBrightnessUp exec light -A 5
 bindsym XF86MonBrightnessDown exec light -U 5

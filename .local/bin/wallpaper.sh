@@ -1,40 +1,44 @@
 #!/bin/bash
 
-# Your wallpaper directory
+# Default folder
 WALLPAPER_DIR="${HOME}/Pictures/Wallpaper"
-
-# Create wallpaper folder if there is none
 if [[ ! -d ${WALLPAPER_DIR} ]]; then
     mkdir -p ${WALLPAPER_DIR}
 fi
 
 case ${1} in
+    # Use a random wallpaper from a folder
     '--random' | '-r')
-        swaymsg output '*' bg $(find ${WALLPAPER_DIR} -type f | shuf -n1) fill
+        swaymsg output '*' bg $(find ${2:-${WALLPAPER_DIR}} -type f | shuf -n1) fill
     ;;
 
+    #download a temporary wallpaper with Picsum
     '--download' | '-d')
-        curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080'
+        curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080' && \
         swaymsg output '*' bg /tmp/wallpaper.jpg fill
     ;;
 
-    '--select' | '-s')
+    # Select an image as wallpaper
+    '--image' | '-i')
         swaymsg output '*' bg ${2} fill
     ;;
-
+ 
+    # Select a color as wallpaper
     '--color' | '-c')
         swaymsg output '*' bg ${2} solid_color
     ;;
 
+    # Show the help
     '--help' | '-h')
         echo "Commands:"
-        echo "  -r, --random           Select a random wallpaper from the default directory"
-        echo "  -d, --download         Download a wallpaper from Picsum"
-        echo "  -s, --select <string>  Select a picture as a wallpaper"
-        echo "  -c, --color <string>   Select a color as a wallapaper"
-        echo "  -h, --help             Show the help"
+        echo "  -r, --random <directory>  Use a random wallpaper from a folder"
+        echo "  -d, --download            download a temporary wallpaper with Picsum"
+        echo "  -i, --image <file>        Select an image as wallpaper"
+        echo "  -c, --color <string>      Select a color as wallpaper"
+        echo "  -h, --help                Show the help"
     ;;
 
+    # Default
     *)
         ${0} --help
     ;;
