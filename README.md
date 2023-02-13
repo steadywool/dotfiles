@@ -15,9 +15,8 @@ See https://wiki.archlinux.org/title/Installation_guide.
 | `/dev/sda3`             |                                           | Luks2          |               |
 | `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@`           | Btrfs          | `/`           |
 | `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@.snapshots` | Btrfs          | `/.snapshots` |
-| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var_cache`  | Btrfs          | `/var/cache`  |
-| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var_log`    | Btrfs          | `/var/log`    |
-| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var_tmp`    | Btrfs          | `/var/tmp`    |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@var`        | Btrfs          | `/var`        |
+| `/dev/mapper/luks_sda3` |`noatime,compress=zstd,subvol=@nix`        | Btrfs          | `/nix`        |
 | `/dev/sda4`             |                                           | Ext4           | `/home`       |
 
 ### Packages
@@ -43,7 +42,7 @@ zsh htop tmux neovim ranger task wl-clipboard
 
 #### Desktop
 ```
-foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring xorg-xwayland
+foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep polkit-gnome gnome-keyring xorg-xwayland papirus-icon-theme
 ```
 
 #### Tools
@@ -93,7 +92,8 @@ kernel.unprivileged_userns_clone=1
 ### Systemd
 #### Systemd services
 ```
-systemd-timesyncd.service systemd-resolved.service systemd-homed.service tlp.service docker.service bluetooth.service NetworkManager.service apparmor.service nftables.service cups.service
+systemd-timesyncd.service systemd-resolved.service systemd-homed.service docker.service tlp.service bluetooth.service NetworkManager.service
+apparmor.service nftables.service cups.service
 ```
 
 #### Systemd timers
