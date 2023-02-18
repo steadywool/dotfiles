@@ -111,6 +111,16 @@ homectl create username --storage=luks --shell=/usr/bin/zsh --member-of=wheel,vi
 ### Use Focusrite Scarlett
 https://github.com/Focusrite-Scarlett-on-Linux/sound-usb-kernel-module
 
+### Use Nintendo GameCube Controller Adapter
+We need to create a .rule file to `/etc/udev/rules.d` (51-gcadapter.rules).
+```
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="0337", MODE="0666"
+```
+And then reload Udev rules.
+```
+udevadm control --reload-rules
+```
+
 ### Install "Ranger devicons"
 ```
 git clone https://github.com/alexanderjeurissen/ranger_devicons \
