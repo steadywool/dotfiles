@@ -1,9 +1,9 @@
 -- Telescope
-vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>')
-vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>')
-vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR>')
-vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>')
-vim.keymap.set('n', '<leader>fe', '<cmd>Telescope file_browser<CR>')
+vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
+vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, {})
+vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
+vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
+vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser, {})
 
 -- Go to next/previous buffer in buffer list
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
@@ -30,3 +30,7 @@ vim.keymap.set('n', '<leader>ln', vim.lsp.buf.rename, opts)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
+
+-- Duck
+vim.keymap.set('n', '<leader>dh', function() require("duck").hatch("ඞ") end, {})
+vim.keymap.set('n', '<leader>dc', function() require("duck").cook() end, {})

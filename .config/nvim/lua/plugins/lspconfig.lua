@@ -10,7 +10,7 @@ local servers = {
     'omnisharp', --C#
     'intelephense', --PHP
     'bashls', --Bash
-    'sumneko_lua', --Lua
+    'lua_ls', --Lua
     'tsserver', --Javascript/Typescript
     'dockerls', --Dockerfile
     'marksman', --Markdown
@@ -25,7 +25,7 @@ for _, lsp in pairs(servers) do
 end
 
 -- Sumneko_lua
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').lua_ls.setup {
     settings = {
         Lua = {
             runtime = { version = 'LuaJIT' },
@@ -38,7 +38,7 @@ require('lspconfig').sumneko_lua.setup {
 
 -- Omnisharp
 require('lspconfig').omnisharp.setup {
-    cmd = { 'dotnet', '/home/kani/.local/share/nvim/mason/packages/omnisharp/OmniSharp.dll' },
+    cmd = { 'dotnet', '/home/kani/.nix-profile/lib/omnisharp-roslyn/OmniSharp.dll' },
     enable_editorconfig_support = true,
     enable_ms_build_load_projects_on_demand = false,
     enable_roslyn_analyzers = false,

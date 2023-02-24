@@ -23,3 +23,12 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip -color'
+
+# Usbguard
+alias usbl='usbguard list-devices -t'
+alias usba='usbguard allow-device'
+alias usbp='usbguard allow-device --permanent'
+
+# Distrobox
+alias debian_start='distrobox-enter -r debian-distrobox'
+alias debian_stop='distrobox-stop -r debian-distrobox'

@@ -31,7 +31,7 @@ case ${CHOICE} in
         swaylock
     ;;
 
-    '󰗼 exit-sway')
+    ' exit-sway')
         swaymsg exit
     ;;
 esac
