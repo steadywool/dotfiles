@@ -43,13 +43,14 @@ foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep xsettingsd polkit
 
 ##### Tools
 ```
-git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak alsa-utils light android-tools nix atool jq zsh htop tmux ranger neovim
+git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak alsa-utils light android-tools nix atool jq zsh htop tmux ranger \
+neovim tcpdump neofetch
 ```
 
 ##### Other
 ```
 xdg-{utils,user-dirs} libnotify python-i3ipc ghostscript xdg-desktop-portal-{gnome,wlr} libappindicator-gtk3 zip unzip unrar p7zip iptables-nft \
-gvfs-{mtp,smb} wl-clipboard
+gvfs-{mtp,smb} wl-clipboard realtime-privileges
 ```
 
 #### AUR
