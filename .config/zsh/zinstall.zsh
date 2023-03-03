@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Download plugins
-zuse() {
+zinstall() {
     local url=${1} module=${1:t}
     local module_path=${ZPLUG}/${module}
 

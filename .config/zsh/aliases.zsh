@@ -28,7 +28,3 @@ alias ip='ip -color'
 alias usbl='usbguard list-devices -t'
 alias usba='usbguard allow-device'
 alias usbp='usbguard allow-device --permanent'
-
-# Distrobox
-alias debian_enter='distrobox-enter -r debian-distrobox'
-alias debian_stop='distrobox-stop -r debian-distrobox'

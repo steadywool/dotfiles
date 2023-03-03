@@ -61,7 +61,7 @@ yay distrobox
 #### Flatpak
 ```
 org.gnome.eog io.mpv.Mpv org.gnome.Evince com.github.tchx84.Flatseal com.discordapp.Discord org.pulseaudio.pavucontrol org.libreoffice.LibreOffice \
-org.mozilla.firefox org.keepassxc.KeePassXC org.gnome.Calendar com.valvesoftware.Steam org.gnome.Characters
+org.mozilla.firefox org.keepassxc.KeePassXC org.gnome.Calendar com.valvesoftware.Steam org.gnome.Characters com.usebottles.bottles
 ```
 
 #### Nix
