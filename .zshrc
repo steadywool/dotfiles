@@ -1,23 +1,13 @@
-# Source configuration
-for FILE in ${ZHOME}/*; do
-    source ${FILE}
-done
+# Functions
+source ${ZHOME}/functions.zsh
 
 # Autosuggestions
-zinstall https://github.com/zsh-users/zsh-autosuggestions
-source ${ZPLUG}/zsh-autosuggestions/zsh-autosuggestions.zsh
+zuse https://github.com/zsh-users/zsh-autosuggestions
 
 # Custom completion
-zinstall https://github.com/zsh-users/zsh-completions
-source ${ZPLUG}/zsh-completions/zsh-completions.plugin.zsh
-
-zinstall https://github.com/nix-community/nix-zsh-completions
-source ${ZPLUG}/nix-zsh-completions/nix-zsh-completions.plugin.zsh
+zuse https://github.com/zsh-users/zsh-completions
+zuse https://github.com/nix-community/nix-zsh-completions
 fpath=(${ZPLUG}/nix-zsh-completions $fpath)
-
-# Syntax highlighting
-zinstall https://github.com/zdharma-continuum/fast-syntax-highlighting
-source ${ZPLUG}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Vi mode
 bindkey -v
@@ -45,5 +35,13 @@ SAVEHIST=5000
 setopt inc_append_history
 setopt hist_ignore_dups
 
+# Aliases, Completion & custom prompt
+source ${ZHOME}/aliases.zsh
+source ${ZHOME}/completion.zsh
+source ${ZHOME}/prompt.zsh
+
 # Now tab does only completion, not expansion
 bindkey '^i' complete-word
+
+# Syntax highlighting
+zuse https://github.com/zdharma-continuum/fast-syntax-highlighting

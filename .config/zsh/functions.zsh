@@ -1,5 +1,34 @@
 #!/bin/zsh
 
+# Download plugins
+zuse() {
+    local plugin_path=${ZPLUG}/${1:t}
+    local script_path=(${plugin_path}/(init.zsh|${1:t}.(zsh|plugin.zsh|zsh-theme|sh))(NOL[1]))
+
+    # Create the installation path if needed
+    if [[ ! -d ${ZPLUG} ]]; then
+        mkdir -p ${ZPLUG}
+    fi
+
+    # Install plugins
+    if [[ ! -d ${plugin_path} ]]; then
+        git clone --recursive ${1}.git ${plugin_path}
+    fi
+
+    # Source plugins
+    if [[ ! -z ${2} ]]; then
+        source ${plugin_path}/${2}
+    elif [[ -f ${script_path} ]]; then
+        source ${script_path}
+    fi
+}
+
+# Update plugins
+zupdate() {
+    for repo in ${ZPLUG}/*; do
+        git -C ${repo%} pull
+    done
+}
 # Create BTRFS snapshots
 snapshot() {
     if [[ ! -z ${1} ]]; then
@@ -12,7 +41,7 @@ snapshot() {
 # Use Wl-clipboard with ZSH
 vi-yank-wl() {
     zle vi-yank
-    echo "$CUTBUFFER" | wl-copy -n
+    echo ${CUTBUFFER} | wl-copy -n
 }
 
 # Change the cursor when changing of Vi mode
