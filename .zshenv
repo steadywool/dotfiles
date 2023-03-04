@@ -1,8 +1,14 @@
 # ZSH
-ZHOME=${HOME}/.config/zsh
-ZPLUG=${HOME}/.config/zsh/plugins
+ZSH_CONFIG_DIR=${HOME}/.config/zsh
+ZSH_PLUGIN_DIR=${HOME}/.config/zsh/plugins
 
+# Vi Mode
+KEYTIMEOUT=1
+
+# History
 HISTFILE=${HOME}/.zhistory
+HISTSIZE=5000
+SAVEHIST=5000
 
 # Variables
 export EDITOR=nvim

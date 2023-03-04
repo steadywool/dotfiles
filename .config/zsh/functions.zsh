@@ -2,30 +2,26 @@
 
 # Download plugins
 zuse() {
-    local plugin_path=${ZPLUG}/${1:t}
-    local script_path=(${plugin_path}/(init.zsh|${1:t}.(zsh|plugin.zsh|zsh-theme|sh))(NOL[1]))
-
     # Create the installation path if needed
-    if [[ ! -d ${ZPLUG} ]]; then
-        mkdir -p ${ZPLUG}
+    if [[ ! -d ${ZSH_PLUGIN_DIR} ]]; then
+        mkdir -p ${ZSH_PLUGIN_DIR}
     fi
 
     # Install plugins
-    if [[ ! -d ${plugin_path} ]]; then
-        git clone --recursive ${1}.git ${plugin_path}
+    if [[ ! -d ${ZSH_PLUGIN_DIR}/${1:t} ]]; then
+        git clone --recursive ${1}.git ${ZSH_PLUGIN_DIR}/${1:t}
     fi
 
     # Source plugins
-    if [[ ! -z ${2} ]]; then
-        source ${plugin_path}/${2}
-    elif [[ -f ${script_path} ]]; then
-        source ${script_path}
+    local plugin=(${ZSH_PLUGIN_DIR}/${1:t}/(init.zsh|${1:t}.(zsh|plugin.zsh|zsh-theme|sh))(NOL[1]))
+    if [[ -f ${plugin} ]]; then
+        source ${plugin}
     fi
 }
 
 # Update plugins
 zupdate() {
-    for repo in ${ZPLUG}/*; do
+    for repo in ${ZSH_PLUGIN_DIR}/*; do
         git -C ${repo%} pull
     done
 }
@@ -46,13 +42,14 @@ vi-yank-wl() {
 
 # Change the cursor when changing of Vi mode
 zle-keymap-select() {
-    if [[ ${KEYMAP} == 'vicmd' ]] || [[ ${1} = 'block' ]]; then
-        echo -ne ${cursor_block}
+    if [[ ${KEYMAP} == 'vicmd' ]]; then
+        echo -ne '\e[1 q' # Block
     else
-        echo -ne ${cursor_beam}
+        echo -ne '\e[5 q' # Beam
     fi
 }
 
+# Use the beam cursor by default
 zle-line-init() {
-    echo -ne ${cursor_beam}
+    echo -ne '\e[5 q' # Beam
 }
