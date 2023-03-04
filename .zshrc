@@ -9,15 +9,23 @@ zuse https://github.com/zsh-users/zsh-completions
 zuse https://github.com/nix-community/nix-zsh-completions
 fpath=(${ZSH_PLUGIN_DIR}/nix-zsh-completions $fpath)
 
-# History
-setopt inc_append_history
-setopt hist_ignore_dups
-
-# Aliases, Completion & custom prompt
+# Aliases, bindkeys, options & zstyles
 source ${ZSH_CONFIG_DIR}/aliases.zsh
-source ${ZSH_CONFIG_DIR}/completion.zsh
 source ${ZSH_CONFIG_DIR}/bindkeys.zsh
-source ${ZSH_CONFIG_DIR}/prompt.zsh
+source ${ZSH_CONFIG_DIR}/options.zsh
+source ${ZSH_CONFIG_DIR}/zstyles.zsh
+
+# Vcs
+autoload -Uz vcs_info
+precmd() {vcs_info}
+
+# Prompt
+autoload -Uz promptinit
+promptinit
+
+# Completion
+autoload -Uz compinit
+compinit
 
 # Syntax highlighting
 zuse https://github.com/zdharma-continuum/fast-syntax-highlighting

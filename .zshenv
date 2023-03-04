@@ -10,6 +10,10 @@ HISTFILE=${HOME}/.zhistory
 HISTSIZE=5000
 SAVEHIST=5000
 
+# Prompt
+PS1='%B%(!.%F{red}.%F{green})%n@%m%f %F{blue}%(4~|.../%3~|%~)%f ❯ %b'
+RPS1='%B${vcs_info_msg_0_} %F{red}%(?..[%? ⨯])%f%b%E'
+
 # Variables
 export EDITOR=nvim
 export VISUAL=nvim

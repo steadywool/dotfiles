@@ -101,7 +101,7 @@ battery-notifier.timer
 #### Systemd homed
 Creating the user with systemd-homed:
 ```
-homectl create username --storage=luks --shell=/usr/bin/zsh --member-of=users,wheel,video,audio,games,adbusers,nix-users,users
+homectl create username --storage=luks --shell=/usr/bin/zsh --member-of=users,wheel,video,audio,games,adbusers,nix-users,users,realtime
 ```
 
 ## Help
