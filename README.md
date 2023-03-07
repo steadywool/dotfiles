@@ -44,7 +44,7 @@ foot sway sway{bg,idle,lock} dunst fuzzel grim slurp gammastep xsettingsd polkit
 ##### Tools
 ```
 git wget rclone man-db bluez-utils docker docker-compose qemu-base flatpak alsa-utils light android-tools nix atool jq zsh htop tmux ranger \
-neovim tcpdump neofetch
+neovim tcpdump neofetch arch-audit
 ```
 
 ##### Other

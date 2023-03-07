@@ -11,8 +11,8 @@ fpath=(${ZSH_PLUGIN_DIR}/nix-zsh-completions $fpath)
 
 # Aliases, bindkeys, options & zstyles
 source ${ZSH_CONFIG_DIR}/aliases.zsh
-source ${ZSH_CONFIG_DIR}/bindkeys.zsh
 source ${ZSH_CONFIG_DIR}/options.zsh
+source ${ZSH_CONFIG_DIR}/keymaps.zsh
 source ${ZSH_CONFIG_DIR}/zstyles.zsh
 
 # Vcs
