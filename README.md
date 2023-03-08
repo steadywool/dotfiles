@@ -23,8 +23,7 @@ See https://wiki.archlinux.org/title/Installation_guide.
 See [PACKAGES.md](./PACKAGES.md)
 
 ## Configuration
-### Kernel parameters
-#### At Kernel startup
+### Bootloader options
 We can add them to our Bootloader.
 ```
 lsm=landlock,lockdown,yama,apparmor,bpf
@@ -32,25 +31,14 @@ lockdown=confidentiality
 cryptdevice=/dev/sda3:luks_root
 ```
 
-#### At runtime
+### Kernel parameters
 We need to create .conf files to `/etc/sysctl.d/`.
 ```
 kernel.unprivileged_userns_clone=1
 net.ipv4.ip_forward=1
 ```
 
-### Systemd
-#### System services
-```
-systemd-timesyncd systemd-resolved systemd-homed docker tlp bluetooth NetworkManager apparmor nftables cups nix-daemon
-```
-
-#### User services
-```
-battery-notifier.timer
-```
-
-#### Systemd homed
+### Systemd-homed user
 Creating the user with systemd-homed:
 ```
 homectl create username --storage=luks --shell=/usr/bin/zsh --member-of=users,wheel,video,audio,games,adbusers,nix-users,users,realtime

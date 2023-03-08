@@ -50,10 +50,10 @@ zinit() {
 
 # Create BTRFS snapshots
 snapshot() {
-    if [[ ! -z ${1} ]]; then
-        sudo btrfs subvolume snapshot -r ${1} /.snapshots/`date +%s`_${1//\/}
+    if [[ -z ${1//\/} ]]; then
+        sudo btrfs subvolume snapshot -r ${1} /.snapshots/`date +%s`
     else
-        sudo btrfs subvolume snapshot -r / /.snapshots/`date +%s`
+        sudo btrfs subvolume snapshot -r ${1} /.snapshots/`date +%s`_${1//\/}
     fi
 }
 

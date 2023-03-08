@@ -15,9 +15,6 @@ source ${ZSH_CONFIG_DIR}/options.zsh
 source ${ZSH_CONFIG_DIR}/keymaps.zsh
 source ${ZSH_CONFIG_DIR}/zstyles.zsh
 
-# History
-autoload -Uz history-search-end
-
 # Vcs
 autoload -Uz vcs_info
 precmd() {vcs_info}
