@@ -27,19 +27,4 @@ case ${1} in
     '--color' | '-c')
         swaymsg output '*' bg ${2} solid_color
     ;;
-
-    # Show the help
-    '--help' | '-h')
-        echo "Commands:"
-        echo "  -r, --random <directory>  Use a random wallpaper from a folder"
-        echo "  -d, --download            download a temporary wallpaper with Picsum"
-        echo "  -i, --image <file>        Select an image as wallpaper"
-        echo "  -c, --color <string>      Select a color as wallpaper"
-        echo "  -h, --help                Show the help"
-    ;;
-
-    # Default
-    *)
-        ${0} --help
-    ;;
 esac
