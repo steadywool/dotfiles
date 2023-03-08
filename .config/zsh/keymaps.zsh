@@ -14,8 +14,10 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 
 # Search
-bindkey "^[[A" history-beginning-search-backward
-bindkey "^[[B" history-beginning-search-forward
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^[[B" history-beginning-search-forward-end
 
 # Now tab does only completion, not expansion
 bindkey '^i' complete-word

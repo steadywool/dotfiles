@@ -49,7 +49,7 @@ neovim tcpdump neofetch arch-audit
 
 ##### Other
 ```
-xdg-{utils,user-dirs} libnotify python-i3ipc ghostscript xdg-desktop-portal-{gnome,wlr} libappindicator-gtk3 zip unzip unrar p7zip iptables-nft \
+xdg-{utils,user-dirs} libnotify python-{i3ipc,psutil} ghostscript xdg-desktop-portal-{gnome,wlr} libappindicator-gtk3 zip unzip unrar p7zip iptables-nft \
 gvfs-{mtp,smb} wl-clipboard realtime-privileges
 ```
 
