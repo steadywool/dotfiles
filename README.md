@@ -82,9 +82,10 @@ cryptdevice=/dev/sda3:luks_root
 ```
 
 #### At runtime
-We need to create a .conf file to `/etc/sysctl.d/`.
+We need to create .conf files to `/etc/sysctl.d/`.
 ```
 kernel.unprivileged_userns_clone=1
+net.ipv4.ip_forward=1
 ```
 
 ### Systemd
@@ -115,21 +116,9 @@ And then reload Udev rules.
 udevadm control --reload-rules
 ```
 
-### Install "Yay"
-```
-git clone https://aur.archlinux.org/yay-bin.git
-cd yay-bin
-makepkg -si
-```
-
-### Install "Ranger devicons"
-```
-git clone https://github.com/alexanderjeurissen/ranger_devicons.git \
-~/.config/ranger/plugins/ranger_devicons
+### Install "Yay", "Ranger devicons" and "Packer.nvim"
+Install the zsh configuration and use this function.
+```zsh
+zinit
 ```
 
-### Install "Packer.nvim"
-```
-git clone https://github.com/wbthomason/packer.nvim.git \
-~/.local/share/nvim/site/pack/packer/start/packer.nvim
-```
