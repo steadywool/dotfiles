@@ -1,5 +1,7 @@
 # Archlinux dotfiles 🐧
 
+# NEW CONFIGURATION AT [HTTPS://GITHUB.COM/KANIVILLE/ANSIBLE-DOTFILES](https://github.com/kaniville/ansible-dotfiles) !
+
 Configuration and tools that I use in my daily life.
 
 ![](./src/screenshot.png)
