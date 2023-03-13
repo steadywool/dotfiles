@@ -26,7 +26,7 @@ pipewire-jack
 pipewire-pulse
 wireplumber
 apparmor
-nftables
+firewalld
 usbguard
 cups
 ```
@@ -53,6 +53,8 @@ nautilus
 
 ## Tools
 ```
+scrcpy
+ansible
 git
 wget
 rclone
@@ -60,6 +62,7 @@ man-db
 bluez-utils
 docker
 docker-compose
+docker-scan
 qemu-base
 flatpak
 light
@@ -131,4 +134,5 @@ nixpkgs.nodePackages.dockerfile-language-server-nodejs
 nixpkgs.nodePackages.pyright
 nixpkgs.arduino-language-server
 nixpkgs.nodePackages.prettier
+nixpkgs.ansible-language-server
 ```
