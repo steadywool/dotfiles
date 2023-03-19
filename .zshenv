@@ -23,9 +23,7 @@ export PAGER=less
 export GPG_TTY=$(tty)
 
 # PATH
-export PATH=${PATH}:${HOME}/.local/bin:${HOME}/.nix-profile/bin
-export XDG_DATA_DIRS=${XDG_DATA_DIRS}:${HOME}/.nix-profile/share
-export LOCALE_ARCHIVE=/usr/lib/locale/locale-archive
+export PATH=${PATH}:${HOME}/.local/bin
 
 # Wayland / Sway
 export XDG_CURRENT_DESKTOP=sway

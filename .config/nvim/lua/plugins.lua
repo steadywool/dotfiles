@@ -2,6 +2,12 @@ return require('packer').startup(function(use)
     -- Plugin manager
     use 'wbthomason/packer.nvim'
 
+    -- Mason
+    use {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+    }
+
     -- Appearance
     use 'sainnhe/gruvbox-material'
     use 'kyazdani42/nvim-web-devicons'
@@ -40,6 +46,8 @@ return require('packer').startup(function(use)
     use 'NvChad/nvim-colorizer.lua'
     use 'lewis6991/gitsigns.nvim'
     use 'lukas-reineke/indent-blankline.nvim'
+    use 'windwp/nvim-autopairs'
+
 
     -- Markdown preview
     use {

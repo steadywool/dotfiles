@@ -6,8 +6,6 @@ zuse https://github.com/zsh-users/zsh-autosuggestions
 
 # Custom completion
 zuse https://github.com/zsh-users/zsh-completions
-zuse https://github.com/nix-community/nix-zsh-completions
-fpath=(${ZSH_PLUGIN_DIR}/nix-zsh-completions $fpath)
 
 # Aliases, bindkeys, options & zstyles
 source ${ZSH_CONFIG_DIR}/aliases.zsh

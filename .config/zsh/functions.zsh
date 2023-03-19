@@ -26,28 +26,6 @@ zupdate() {
     done
 }
 
-# Install external stuff to my config
-zinit() {
-    # Ranger Devicons
-    local ranger_dev_dir=${HOME}/.config/ranger/plugins/ranger_devicons
-    if [[ ! -d ${ranger_dev_dir} ]]; then
-        git clone https://github.com/alexanderjeurissen/ranger_devicons.git ${ranger_dev_dir}
-    fi
-
-    # Packer.nvim
-    local packer_dir=${HOME}/.local/share/nvim/site/pack/packer/start/packer.nvim
-    if [[ ! -d ${packer_dir} ]]; then
-        git clone https://github.com/wbthomason/packer.nvim.git ${packer_dir}
-    fi
-
-    # Yay
-    if [[ `command -v yay` == '' ]]; then
-        git clone https://aur.archlinux.org/yay-bin.git ${HOME}/yay-bin
-        cd ${HOME}/yay-bin
-        makepkg -si
-    fi
-}
-
 # Create BTRFS snapshots
 snapshot() {
     if [[ -z ${1//\/} ]]; then
