@@ -2,7 +2,7 @@
 
 Configuration of tools that I use in my daily life.
 
-![](./src/screenshot.png)
+![](src/screenshot.png)
 
 To install these dotfiles, use:
 
