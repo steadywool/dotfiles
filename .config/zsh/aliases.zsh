@@ -1,4 +1,5 @@
 #!/bin/zsh
+
 # Git
 alias g='git'
 alias gp='git push --verbose'
@@ -28,3 +29,7 @@ alias ip='ip -color'
 alias usbl='usbguard list-devices -t'
 alias usba='usbguard allow-device'
 alias usbp='usbguard allow-device --permanent'
+
+# Snapshots
+alias snap_root='btrfs subvolume snapshot -r / /.snapshots/`date +%s`'
+alias snap_var='btrfs subvolume snapshot -r /var /.snapshots/`date +%s`_var'

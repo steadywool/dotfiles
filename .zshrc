@@ -1,5 +1,7 @@
-# Functions
-source ${ZSH_CONFIG_DIR}/functions.zsh
+# Source configuration
+for FILE in ${ZSH_CONFIG_DIR}/*; do
+    source ${FILE}
+done
 
 # Autosuggestions
 zuse https://github.com/zsh-users/zsh-autosuggestions
@@ -7,23 +9,13 @@ zuse https://github.com/zsh-users/zsh-autosuggestions
 # Custom completion
 zuse https://github.com/zsh-users/zsh-completions
 
-# Aliases, bindkeys, options & zstyles
-source ${ZSH_CONFIG_DIR}/aliases.zsh
-source ${ZSH_CONFIG_DIR}/options.zsh
-source ${ZSH_CONFIG_DIR}/keymaps.zsh
-source ${ZSH_CONFIG_DIR}/zstyles.zsh
-
-# Vcs
-autoload -Uz vcs_info
-precmd() {vcs_info}
-
-# Prompt
-autoload -Uz promptinit
-promptinit
-
-# Completion
-autoload -Uz compinit
-compinit
-
 # Syntax highlighting
 zuse https://github.com/zdharma-continuum/fast-syntax-highlighting
+
+# ZSH Vi Mode
+zuse https://github.com/jeffreytse/zsh-vi-mode
+
+# Options
+setopt inc_append_history
+setopt hist_ignore_dups
+setopt autocd
