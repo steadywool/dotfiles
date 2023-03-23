@@ -9,6 +9,10 @@ bindkey -M viins '^H' backward-delete-char
 zle -N vi-yank-wl
 bindkey -M vicmd 'y' vi-yank-wl
 
+# Cursor
+zle -N zle-keymap-select
+zle -N zle-line-init
+
 # Search
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
