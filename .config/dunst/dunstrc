@@ -1,44 +1,36 @@
 [global]
-# Display
-follow = keyboard
+    # Monitor
+    follow = keyboard
 
-# Geometry
-width = 300
-height = 300
-origin = top-right
-offset = 14x2
+    # Appearance
+    offset = 14x2
+    progress_bar_frame_width = 0
+    frame_width = 0
+    separator_height = 0
 
-# Progress bar
-progress_bar = false
-separator_color = frame
-idle_threshold = 120
+    # Text
+    font = monospace 9
 
-# Text
-font = monospace 9
-
-# Icon
-enable_recursive_icon_lookup = true
-icon_theme = Papirus-Dark
-icon_position = left
-min_icon_size = 32
-max_icon_size = 64
+    # Icons
+    enable_recursive_icon_lookup = true
+    icon_theme = Papirus-Dark
 
 [urgency_low]
-background = "#1d2021"
-foreground = "#83a598"
-frame_color = "#1d2021"
-timeout = 10
+    background = "#1d2021"
+    foreground = "#83a598"
+    highlight = "#83a598"
+    timeout = 10
 
 [urgency_normal]
-background = "#1d2021"
-foreground = "#b8bb26"
-frame_color = "#1d2021"
-timeout = 10
+    background = "#1d2021"
+    foreground = "#b8bb26"
+    highlight = "#b8bb26"
+    timeout = 10
 
 [urgency_critical]
-background = "#1d2021"
-foreground = "#fb4934"
-frame_color = "#1d2021"
-timeout = 20
+    background = "#1d2021"
+    foreground = "#fb4934"
+    highlight = "#fb4934"
+    timeout = 20
 
 # vim: ft=cfg
