@@ -1,14 +1,14 @@
 # ZSH
-ZSH_CONFIG_DIR=${HOME}/.config/zsh
-ZSH_PLUGIN_DIR=${HOME}/.local/share/zsh/plugins
+export ZSH_CONFIG_DIR=${HOME}/.config/zsh
+export ZSH_PLUGIN_DIR=${HOME}/.local/share/zsh/plugins
 
 # Key timeout
-KEYTIMEOUT=1
+export KEYTIMEOUT=1
 
 # History
-HISTFILE=${HOME}/.zhistory
-HISTSIZE=5000
-SAVEHIST=5000
+export HISTFILE=${HOME}/.zhistory
+export HISTSIZE=5000
+export SAVEHIST=5000
 
 # Env variables
 export EDITOR=nvim
@@ -26,3 +26,4 @@ export LIBSEAT_BACKEND=logind
 
 # GPG Agent
 export GPG_TTY=$(tty)
+
