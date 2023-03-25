@@ -40,9 +40,13 @@ def status():
     else:
         sink_volume = 'Mute'
 
+    # Taskwarrior
+    overdue_task = check_output("task +OVERDUE count", shell=True ).strip().decode("utf-8")
+    pending_task = check_output("task +PENDING count", shell=True ).strip().decode("utf-8")
+
     # Send all data to stdout
-    format = "[ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
-    stdout.write(format % (root_disk, home_disk, brightness, ip_address, source_volume, sink_volume, battery_capacity, battery_status, date))
+    format = "[ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
+    stdout.write(format % (overdue_task, pending_task, root_disk, home_disk, brightness, ip_address, source_volume, sink_volume, battery_capacity, battery_status, date))
     stdout.flush()
 
 while True:

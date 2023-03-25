@@ -2,12 +2,11 @@
 
 var+=('⏻ power-off')
 var+=('勒 reboot')
-var+=('⏾ hibernate')
 var+=('⏾ suspend')
 var+=(' lock')
 var+=(' exit-sway')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 6)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 5)
 
 case ${CHOICE} in
 
@@ -17,10 +16,6 @@ case ${CHOICE} in
 
     '勒 reboot')
         shutdown -r now
-    ;;
-
-    '⏾ hibernate')
-        systemctl hibernate
     ;;
 
     '⏾ suspend')
