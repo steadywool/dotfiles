@@ -19,6 +19,7 @@ Here are the tools that these dotfiles supply:
 - `ranger` as file explorer
 - `dunst` as notification daemon
 - `xsettingsd` to provide settings to X11 applications
+- `cliphist` as clipboard manager
 
 ## Installation
 To install these dotfiles, use https://github.com/kaniville/ansible-configuration.
