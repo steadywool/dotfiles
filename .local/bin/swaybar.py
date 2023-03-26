@@ -16,7 +16,9 @@ def status():
     ip_address = gethostbyname(gethostname())
 
     # Brightness
-    brightness = check_output('light -G', shell=True).strip().decode("utf-8")
+    max_brightness = check_output('brightnessctl max', shell=True).strip().decode("utf-8")
+    current_brightness = check_output('brightnessctl get', shell=True).strip().decode("utf-8")
+    brightness = int(current_brightness) / int(max_brightness) * 100
 
     # Battery
     battery_capacity = int(sensors_battery().percent)
