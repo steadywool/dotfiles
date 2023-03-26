@@ -23,8 +23,8 @@ bindsym Mod4+Shift+q exec $terminal htop
 bindsym Mod4+d exec $menu
 
 ## Clipboard
-bindsym Mod4+m exec cliphist list | $menu -d | cliphist decode | wl-copy
-bindsym Mod4+Shift+m exec cliphist list | $menu -d | cliphist delete
+bindsym Mod4+m exec cliphist list | sed 's/\t/ /g' | $menu -d | sed 's/ /\t/g' | cliphist decode | wl-copy
+bindsym Mod4+Shift+m exec cliphist list | sed 's/\t/ /g' | $menu -d | sed 's/ /\t/g' | cliphist delete
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
