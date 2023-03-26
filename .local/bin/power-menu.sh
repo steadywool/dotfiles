@@ -6,27 +6,22 @@ var+=('⏾ suspend')
 var+=(' lock')
 var+=(' exit-sway')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 5)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 5 --index)
 
 case ${CHOICE} in
-
-    '⏻ power-off')
+    0)
         shutdown -h now
     ;;
-
-    '勒 reboot')
+    1)
         shutdown -r now
     ;;
-
-    '⏾ suspend')
+    2)
         systemctl suspend
     ;;
-
-    ' lock')
+    3)
         swaylock
     ;;
-
-    ' exit-sway')
+    4)
         swaymsg exit
     ;;
 esac
