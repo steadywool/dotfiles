@@ -15,7 +15,7 @@ Here are the tools that these dotfiles supply:
 - `sway` as window manager
 - `swaylock` as screen locker
 - `fuzzel` as application launcher
-- `grim`, `slurp` and `swappy` as screenshot utility
+- `grim` and `slurp` as screenshot utility
 - `ranger` as file explorer
 - `dunst` as notification daemon
 - `xsettingsd` to provide settings to X11 applications
