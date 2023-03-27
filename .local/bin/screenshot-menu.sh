@@ -3,13 +3,13 @@
 SCREENSHOT_DIR="${HOME}/Pictures/Screenshot"
 
 var+=('󰍹 save-screen')
-var+=('󰅌 copy-screen')
+var+=('󰍹 copy-screen')
 var+=('󰹑 save-output')
-var+=('󰅌 copy-output')
+var+=('󰹑 copy-output')
 var+=(' save-active')
-var+=('󰅌 copy-active')
+var+=(' copy-active')
 var+=('󰒉 save-area')
-var+=('󰅌 copy-area')
+var+=('󰒉 copy-area')
 
 CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -l 8 --index)
 
@@ -18,7 +18,7 @@ if [[ ! -d ${SCREENSHOT_DIR} ]]; then
     mkdir -p ${SCREENSHOT_DIR}
 fi
 
-# Save or copy a screenshot
+# Take a screenshot
 case ${CHOICE} in
     0)
         /usr/share/sway/scripts/grimshot --notify save screen ${SCREENSHOT_DIR}/$(date +%s).png
