@@ -48,7 +48,7 @@ def status():
 
     # Send all data to stdout
     format = "[ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
-    stdout.write(format % (overdue_task, pending_task, root_disk, home_disk, brightness, ip_address, source_volume, sink_volume, battery_capacity, battery_status, date))
+    stdout.write(format % (overdue_task, pending_task, root_disk, home_disk, round(brightness), ip_address, source_volume, sink_volume, battery_capacity, battery_status, date))
     stdout.flush()
 
 while True:

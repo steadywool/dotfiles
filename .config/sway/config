@@ -23,8 +23,11 @@ bindsym Mod4+Shift+q exec $terminal htop
 bindsym Mod4+d exec $menu
 
 ## Clipboard
-bindsym Mod4+m exec cliphist list | sed 's/\t/ /g' | $menu -d | sed 's/ /\t/g' | cliphist decode | wl-copy
-bindsym Mod4+Shift+m exec cliphist list | sed 's/\t/ /g' | $menu -d | sed 's/ /\t/g' | cliphist delete
+bindsym Mod4+m exec $HOME/.local/bin/clipboard-menu.sh select
+bindsym Mod4+Shift+m exec $HOME/.local/bin/clipboard-menu.sh delete
+
+## Wallpaper
+bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh random
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh

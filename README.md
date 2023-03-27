@@ -11,6 +11,7 @@ Here are the tools that these dotfiles supply:
 - `zsh` as shell
 - `neovim` as editor
 - `foot` as terminal
+- `fzf` as fuzzy finder
 - `tmux` as terminal multiplexer
 - `sway` as window manager
 - `swaylock` as screen locker
