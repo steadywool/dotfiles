@@ -27,5 +27,5 @@ To install these dotfiles, use https://github.com/kaniville/ansible-configuratio
 
 You can also clone this repository with Git:
 ```
-$ git clone https://github.com/kaniville/dotfiles.git
+$ git clone https://github.com/kaniville/linux-dotfiles.git
 ```
