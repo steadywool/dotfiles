@@ -1,12 +1,12 @@
 # ZSH
-export ZSH_CONFIG_DIR=${HOME}/.config/zsh
-export ZSH_PLUGIN_DIR=${HOME}/.local/share/zsh/plugins
+export ZSH_CONFIG_DIR="${HOME}/.config/zsh"
+export ZSH_PLUGIN_DIR="${HOME}/.local/share/zsh/plugins"
 
 # Key timeout
 export KEYTIMEOUT=1
 
 # History
-export HISTFILE=${HOME}/.zhistory
+export HISTFILE="${HOME}/.zhistory"
 export HISTSIZE=5000
 export SAVEHIST=5000
 
@@ -16,7 +16,7 @@ export VISUAL=nvim
 export PAGER=less
 
 # PATH
-export PATH=${PATH}:${HOME}/.local/bin
+export PATH="${PATH}:${HOME}/.local/bin"
 
 # Wayland / Sway
 export XDG_CURRENT_DESKTOP=sway
