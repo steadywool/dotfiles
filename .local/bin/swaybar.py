@@ -53,8 +53,8 @@ def status():
     # Scratchpad
     def num_scratchpad():
         sway_connection = Connection()
-        workspace = sway_connection.get_tree().find_focused().workspace()
-        return len([number for number in workspace.scratchpad()])
+        scratchpad_nodes = sway_connection.get_tree().scratchpad().descendants()
+        return len(scratchpad_nodes)
 
     # Send all data to stdout
     format = "[ %s] [ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
