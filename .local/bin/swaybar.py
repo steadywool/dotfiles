@@ -7,6 +7,7 @@ from psutil._common import bytes2human
 from subprocess import check_output
 from sys import stdout
 from time import sleep
+from i3ipc import Connection
 
 def status():
     # Curent time
@@ -16,9 +17,10 @@ def status():
     ip_address = gethostbyname(gethostname())
 
     # Brightness
-    max_brightness = check_output('brightnessctl max', shell=True).strip().decode("utf-8")
-    current_brightness = check_output('brightnessctl get', shell=True).strip().decode("utf-8")
-    brightness = int(current_brightness) / int(max_brightness) * 100
+    def brightness():
+        max_brightness = check_output('brightnessctl max', shell=True).strip().decode("utf-8")
+        current_brightness = check_output('brightnessctl get', shell=True).strip().decode("utf-8")
+        return round(int(current_brightness) / int(max_brightness) * 100)
 
     # Battery
     battery_capacity = int(sensors_battery().percent)
@@ -29,26 +31,35 @@ def status():
     home_disk = bytes2human(disk_usage('/home/kani').free)
 
     # Source volume
-    mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
-    if mute == '':
-        source_volume = check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
-    else:
-        source_volume = 'Mute'
+    def source_volume():
+        mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
+        if mute == '':
+            return check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
+        else:
+            return 'Mute'
 
     # Sink volume
-    mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
-    if mute == '':
-        sink_volume = check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
-    else:
-        sink_volume = 'Mute'
+    def sink_volume():
+        mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
+        if mute == '':
+            return check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
+        else:
+            return 'Mute'
 
     # Taskwarrior
     overdue_task = check_output("task +OVERDUE count", shell=True ).strip().decode("utf-8")
     pending_task = check_output("task +PENDING count", shell=True ).strip().decode("utf-8")
 
+    # Scratchpad
+    def num_scratchpad():
+        sway_connection = Connection()
+        workspace = sway_connection.get_tree().find_focused().workspace()
+        return len([number for number in workspace.scratchpad()])
+
     # Send all data to stdout
-    format = "[ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
-    stdout.write(format % (overdue_task, pending_task, root_disk, home_disk, round(brightness), ip_address, source_volume, sink_volume, battery_capacity, battery_status, date))
+    format = "[ %s] [ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
+    values = (num_scratchpad(), overdue_task, pending_task, root_disk, home_disk, brightness(), ip_address, source_volume(), sink_volume(), battery_capacity, battery_status, date)
+    stdout.write(format % values)
     stdout.flush()
 
 while True:
