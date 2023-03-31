@@ -29,6 +29,9 @@ bindsym Mod4+Shift+m exec $HOME/.local/bin/clipboard-menu.sh --delete
 ## Emoji
 bindsym Mod4+i exec $HOME/.local/bin/emoji-menu.sh
 
+## Wallpaper
+bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh --random
+
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 
@@ -36,8 +39,8 @@ bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
 bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
-## Wallpaper
-bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh --random
+## Window menu
+bindsym Mod4+Shift+d exec $HOME/.local/bin/window-menu.py
 
 ## Light control
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
