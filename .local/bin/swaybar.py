@@ -9,6 +9,7 @@ from sys import stdout
 from time import sleep
 from i3ipc import Connection
 
+
 def status():
     # Curent time
     date = datetime.now().strftime('%Y-%m-%d %H:%M')
@@ -18,8 +19,10 @@ def status():
 
     # Brightness
     def brightness():
-        max_brightness = check_output('brightnessctl max', shell=True).strip().decode("utf-8")
-        current_brightness = check_output('brightnessctl get', shell=True).strip().decode("utf-8")
+        max_brightness = check_output(
+            'brightnessctl max', shell=True).strip().decode("utf-8")
+        current_brightness = check_output(
+            'brightnessctl get', shell=True).strip().decode("utf-8")
         return round(int(current_brightness) / int(max_brightness) * 100)
 
     # Battery
@@ -32,23 +35,27 @@ def status():
 
     # Source volume
     def source_volume():
-        mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
+        mute = check_output(
+            "wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
         if mute == '':
-            return check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
+            return check_output("wpctl get-volume @DEFAULT_AUDIO_SOURCE@ | awk '{print $2}'", shell=True).strip().decode("utf-8")
         else:
             return 'Mute'
 
     # Sink volume
     def sink_volume():
-        mute = check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
+        mute = check_output(
+            "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}'", shell=True).strip().decode("utf-8")
         if mute == '':
-            return check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}'", shell=True ).strip().decode("utf-8")
+            return check_output("wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}'", shell=True).strip().decode("utf-8")
         else:
             return 'Mute'
 
     # Taskwarrior
-    overdue_task = check_output("task +OVERDUE count", shell=True ).strip().decode("utf-8")
-    pending_task = check_output("task +PENDING count", shell=True ).strip().decode("utf-8")
+    overdue_task = check_output(
+        "task +OVERDUE count", shell=True).strip().decode("utf-8")
+    pending_task = check_output(
+        "task +PENDING count", shell=True).strip().decode("utf-8")
 
     # Scratchpad
     def num_scratchpad():
@@ -58,9 +65,11 @@ def status():
 
     # Send all data to stdout
     format = "[ %s] [ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
-    values = (num_scratchpad(), overdue_task, pending_task, root_disk, home_disk, brightness(), ip_address, source_volume(), sink_volume(), battery_capacity, battery_status, date)
+    values = (num_scratchpad(), overdue_task, pending_task, root_disk, home_disk, brightness(
+    ), ip_address, source_volume(), sink_volume(), battery_capacity, battery_status, date)
     stdout.write(format % values)
     stdout.flush()
+
 
 while True:
     status()
