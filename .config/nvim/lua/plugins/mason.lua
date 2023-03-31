@@ -39,4 +39,19 @@ require('mason-lspconfig').setup_handlers {
             useModernNet = false,
         }
     end,
+
+    ["pylsp"] = function ()
+        require('lspconfig').pylsp.setup {
+            settings = {
+                pylsp = {
+                    plugins = {
+                        pycodestyle = {
+                            ignore = {'E722'},
+                            maxLineLength = 150
+                        }
+                    }
+                }
+            }
+        }
+    end,
 }
