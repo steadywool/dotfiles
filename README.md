@@ -2,7 +2,9 @@
 
 Configuration of tools that I use in my daily life.
 
-![](src/screenshot.png)
+![](src/screenshot-1.png)
+
+![](src/screenshot-2.png)
 
 ## Details
 Here are the tools that these dotfiles supply:

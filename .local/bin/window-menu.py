@@ -31,6 +31,10 @@ def get_node_information():
             else:
                 focus_char = " "
 
+            # Replace None by scratchpad
+            if str(node_num) == 'None':
+                node_num = "#"
+
             # Remove parents from the tuple and create strings
             if node_name is not None:
                 node_information.append(f'{focus_char} [{node_id}] [{node_num}] {node_name}')
@@ -43,12 +47,10 @@ def menu_choice():
     node_information = '\n'.join(get_node_information())
 
     # Default menu
-    menu_process = subprocess.Popen(
-        ['fuzzel', '-d', '-w 75'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    menu_process = subprocess.Popen(['fuzzel', '-d', '-w 75'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
     # Select a node with the menu
-    selected_node, _ = menu_process.communicate(
-        input=node_information.encode())
+    selected_node, _ = menu_process.communicate(input=node_information.encode())
     selected_node = selected_node.decode().strip()
 
     return selected_node
