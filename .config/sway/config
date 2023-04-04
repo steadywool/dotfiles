@@ -30,7 +30,7 @@ bindsym Mod4+Shift+m exec $HOME/.local/bin/clipboard-menu.sh --delete
 bindsym Mod4+i exec $HOME/.local/bin/emoji-menu.sh
 
 ## Wallpaper
-bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper.sh --random
+bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper-changer.sh --random
 
 ## Power menu
 bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
