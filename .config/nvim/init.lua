@@ -42,7 +42,7 @@ vim.opt.autoindent = true
 vim.opt.foldenable = true
 vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 99
---vim.opt.foldcolumn = '0'
+--vim.opt.foldcolumn = '1'
 --vim.opt.fillchars = { eob = ' ', fold = ' ', foldopen = '', foldsep = ' ', foldclose = '' }
 
 -- Tabs & spaces
@@ -56,6 +56,7 @@ vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
 -- Status
 vim.opt.statusline = '%#search# %n %#statusline# %F %r%m %= %w%y %#incsearch# %l:%c %p%% '
 
+--[[
 vim.o.statuscolumn = ' %r %#FoldColumn#%{'
 .. 'foldlevel(v:lnum) > foldlevel(v:lnum - 1)' -- Check that the current line has a higher fold level than the previous one
 .. '? foldclosed(v:lnum) == -1' -- Check if the current line is a closed fold
@@ -63,3 +64,4 @@ vim.o.statuscolumn = ' %r %#FoldColumn#%{'
 .. ': ""' -- Else show this one
 .. ': " "' -- If the current line is not in a fold, display a blank space
 ..'} '
+--]]
