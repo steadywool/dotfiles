@@ -64,6 +64,12 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Folding
+    use {
+        'kevinhwang91/nvim-ufo',
+        requires = 'kevinhwang91/promise-async'
+    }
+
     -- Duck
     use 'tamton-aquib/duck.nvim'
 end)

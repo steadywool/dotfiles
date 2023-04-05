@@ -27,7 +27,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 
 -- Lines
-vim.opt.number = true
+--vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
 vim.opt.wrap = false
@@ -39,10 +39,11 @@ vim.opt.termguicolors = true
 vim.opt.autoindent = true
 
 -- Folding
-vim.opt.foldmethod = 'expr'
-vim.opt.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.opt.foldenable = true
 vim.opt.foldlevel = 99
-vim.opt.foldenable = false
+vim.opt.foldlevelstart = 99
+--vim.opt.foldcolumn = '0'
+--vim.opt.fillchars = { eob = ' ', fold = ' ', foldopen = '', foldsep = ' ', foldclose = '' }
 
 -- Tabs & spaces
 vim.opt.expandtab = true
@@ -52,5 +53,13 @@ vim.opt.shiftwidth = 4
 vim.opt.list = true
 vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
 
--- Statusline
+-- Status
 vim.opt.statusline = '%#search# %n %#statusline# %F %r%m %= %w%y %#incsearch# %l:%c %p%% '
+
+vim.o.statuscolumn = ' %r %#FoldColumn#%{'
+.. 'foldlevel(v:lnum) > foldlevel(v:lnum - 1)' -- Check that the current line has a higher fold level than the previous one
+.. '? foldclosed(v:lnum) == -1' -- Check if the current line is a closed fold
+.. '? ""' -- If it is, show this icon
+.. ': ""' -- Else show this one
+.. ': " "' -- If the current line is not in a fold, display a blank space
+..'} '
