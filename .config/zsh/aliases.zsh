@@ -5,8 +5,8 @@ alias g='git'
 alias gp='git push --verbose'
 alias ga='git add --verbose'
 alias gaa='git add --all --verbose'
-alias gc='git commit -S -am'
-alias gca='git commit -S -av'
+alias gc='git commit -am'
+alias gca='git commit -av'
 
 # Tmux
 alias ta='tmux attach'

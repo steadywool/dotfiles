@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Network Manager
+Exec=nmtui
+Icon=org.gnome.NetworkDisplays
+Terminal=true
+Type=Application
+Categories=Network;
