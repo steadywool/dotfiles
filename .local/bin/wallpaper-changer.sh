@@ -9,7 +9,10 @@ fi
 case ${1} in
     # Use a random wallpaper from a folder
     '-r' | '--random')
-        swaymsg output '*' bg $(find ${2:-${WALLPAPER_DIR}} -type f | shuf -n1) fill
+        for output in $(swaymsg -t get_outputs | jq -r '.[] | .name'); do
+            swaymsg output "*" bg $(find ${2:-${WALLPAPER_DIR}} -type f | shuf -n1) fill
+            swaymsg output "${output}" bg $(find ${2:-${WALLPAPER_DIR}} -type f | shuf -n1) fill
+        done
     ;;
 
     #download a temporary wallpaper with Picsum
