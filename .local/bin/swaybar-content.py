@@ -1,8 +1,7 @@
 #!/bin/python3
 
 from datetime import datetime
-from socket import gethostname, gethostbyname
-from psutil import disk_usage, sensors_battery
+from psutil import disk_usage, sensors_battery, net_io_counters
 from psutil._common import bytes2human
 from subprocess import check_output
 from sys import stdout
@@ -14,8 +13,14 @@ def status():
     # Curent time
     date = datetime.now().strftime('%Y-%m-%d %H:%M')
 
-    # Ip address
-    ip_address = gethostbyname(gethostname())
+    # Data rate
+    def data_rate():
+        old_value = net_io_counters()
+        sleep(0.5)
+        new_value = net_io_counters()
+        incoming_data = '{:.2f} Mb/s'.format(((new_value.bytes_recv - old_value.bytes_recv) / 125000.0) * 2)
+        outgoing_data = '{:.2f} Mb/s'.format(((new_value.bytes_sent - old_value.bytes_sent) / 125000.0) * 2)
+        return incoming_data, outgoing_data
 
     # Brightness
     def brightness():
@@ -64,9 +69,10 @@ def status():
         return len(scratchpad_nodes)
 
     # Send all data to stdout
-    format = "[ %s] [ !%s/%s] [ %s] [ %s] [ %s%%] [󰛳 %s] [ %s] [ %s] [ %s%% %s] [ %s]"
-    values = (num_scratchpad(), overdue_task, pending_task, root_disk, home_disk, brightness(
-    ), ip_address, source_volume(), sink_volume(), battery_capacity, battery_status, date)
+    format = "[ %s] [ !%s/%s] [ %s] [ %s] [ %s%%] [ %s  %s] [ %s] [ %s] [ %s%% %s] [ %s]"
+    values = (num_scratchpad(), overdue_task, pending_task, root_disk, home_disk, brightness(),
+              data_rate()[0], data_rate()[1], source_volume(), sink_volume(), battery_capacity, battery_status, date)
+
     stdout.write(format % values)
     stdout.flush()
 
