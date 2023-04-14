@@ -25,9 +25,9 @@ Here are the tools that these dotfiles supply:
 - `cliphist` as clipboard manager
 
 ## Installation
-To install these dotfiles, use https://github.com/Kaniville/ansible-configuration.
+To install these dotfiles, use https://github.com/kaniville/ansible-configuration.
 
 You can also clone this repository with Git:
 ```
-$ git clone https://github.com/Kaniville/linux-dotfiles.git
+$ git clone https://github.com/kaniville/linux-dotfiles.git
 ```

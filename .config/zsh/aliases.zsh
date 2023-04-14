@@ -14,8 +14,8 @@ alias td='tmux detach'
 alias tn='tmux new'
 
 # Rclone copy & sync
-alias mega_copy='rclone copy -P backup: $HOME/Documents/Cours'
-alias mega_sync='rclone sync -P $HOME/Documents/Cours backup:'
+alias mega_copy='rclone copy -P mega: $HOME/Documents/Cours'
+alias mega_sync='rclone sync -P $HOME/Documents/Cours mega:'
 
 # Sudo
 alias sudo='sudo '
