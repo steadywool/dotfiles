@@ -1,10 +1,8 @@
 #!/bin/python3
 
 from i3ipc import Connection
-import subprocess
-import re
-
-sway_connection = Connection()
+from subprocess import Popen, PIPE
+from re import search
 
 
 # Get every informations about windows
@@ -35,7 +33,7 @@ def get_node_information():
             if str(node_num) == 'None':
                 node_num = "#"
 
-            # Remove parents from the tuple and create strings
+            # Add scratchpad informations to the tuple
             if node_name is not None:
                 node_information.append(f'{focus_char} [{node_id}] [{node_num}] {node_name}')
 
@@ -47,7 +45,7 @@ def menu_choice():
     node_information = '\n'.join(get_node_information())
 
     # Default menu
-    menu_process = subprocess.Popen(['fuzzel', '-d', '-w 75'], stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    menu_process = Popen(['fuzzel', '-d', '-w 75'], stdin=PIPE, stdout=PIPE)
 
     # Select a node with the menu
     selected_node, _ = menu_process.communicate(input=node_information.encode())
@@ -61,7 +59,7 @@ def switch_node():
     selected_node = menu_choice()
 
     # Get the value between the first two brackets
-    match = re.search(r'\[(.*?)\]', selected_node)
+    match = search(r'\[(.*?)\]', selected_node)
 
     # Check if something have been matched
     if match:
@@ -72,4 +70,6 @@ def switch_node():
 
 
 # Execute the program
-switch_node()
+if __name__ == "__main__":
+    sway_connection = Connection()
+    switch_node()
