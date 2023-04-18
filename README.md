@@ -23,6 +23,7 @@ Here are the tools that these dotfiles supply:
 - `dunst` as notification daemon
 - `xsettingsd` to provide settings to X11 applications
 - `cliphist` as clipboard manager
+- `calcurse` as calendar
 
 ## Installation
 To install these dotfiles, use https://github.com/kaniville/ansible-configuration.
