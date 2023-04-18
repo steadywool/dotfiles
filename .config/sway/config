@@ -11,13 +11,16 @@ bindsym Mod4+Shift+Return exec $terminal
 bindsym Mod4+Shift+o exec $file_manager
 
 ## Ranger
-bindsym Mod4+o exec $terminal -a ranger ranger
+bindsym Mod4+o exec $terminal -a float ranger
 
 ## Neovim
-bindsym Mod4+n exec $terminal nvim
+bindsym Mod4+n exec $terminal -a float nvim
+
+# Calcurse
+bindsym Mod4+Shift+n exec $terminal -a float calcurse
 
 ## Htop
-bindsym Mod4+Shift+q exec $terminal htop
+bindsym Mod4+Shift+q exec $terminal -a float htop
 
 ## Launcher
 bindsym Mod4+d exec $menu
