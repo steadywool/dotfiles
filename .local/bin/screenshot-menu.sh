@@ -4,12 +4,12 @@ SCREENSHOT_DIR="${HOME}/Pictures/Screenshot"
 
 var+=('󰍹 save-screen')
 var+=('󰹑 save-output')
-var+=(' save-active')
+var+=(' save-window')
 var+=('󰒉 save-area')
 
 var+=('󰍹 copy-screen')
 var+=('󰹑 copy-output')
-var+=(' copy-active')
+var+=(' copy-window')
 var+=('󰒉 copy-area')
 
 CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 15 -l 8 --index)
