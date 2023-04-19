@@ -2,7 +2,7 @@
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
 
-# WM INDEPENDANT HOTKEYS
+# APPLICATIONS
 ## Terminal
 bindsym Mod4+Return exec $terminal bash -c "tmux attach || tmux new"
 bindsym Mod4+Shift+Return exec $terminal
@@ -17,17 +17,19 @@ bindsym Mod4+Shift+o exec $file_manager
 bindsym Mod4+o exec $terminal -a float ranger
 
 ## Nmtui
-bindsym Mod4+n exec $terminal -a float nmtui
-
-## Neovim
-bindsym Mod4+Shift+n exec $terminal -a float nvim
+bindsym Mod4+x exec $terminal -a float nmtui connect
+bindsym Mod4+Shift+x exec $terminal -a float nmtui edit
 
 ## Calcurse
 bindsym Mod4+p exec $terminal -a float calcurse
 
+## Neovim
+bindsym Mod4+Shift+p exec $terminal -a float nvim
+
 ## Htop
 bindsym Mod4+Shift+q exec $terminal -a float htop
 
+# SCRIPTS
 ## Clipboard
 bindsym Mod4+m exec $HOME/.local/bin/clipboard-menu.sh --select
 bindsym Mod4+Shift+m exec $HOME/.local/bin/clipboard-menu.sh --delete
@@ -48,6 +50,7 @@ bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 ## Window menu
 bindsym Mod4+Shift+d exec $HOME/.local/bin/window-menu.py
 
+# XF86 KEYS
 ## Light control
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
@@ -80,16 +83,17 @@ bindsym Mod4+f fullscreen
 ## Tiling/floating mode
 bindsym Mod4+Shift+Space floating toggle
 
-## Split current object horizontaly/verticaly
-bindsym Mod4+b splith
-bindsym Mod4+v splitv
+## Split current container
+bindsym Mod4+b split horizontal
+bindsym Mod4+v split vertical
+bindsym Mod4+n split none
 
 ## Sticky window
 bindsym Mod4+Shift+f sticky toggle
 
 ## Scratchpad
-bindsym Mod4+Shift+parenright move scratchpad
 bindsym Mod4+parenright scratchpad show
+bindsym Mod4+Shift+parenright move scratchpad
 
 # FOCUS/MOVE/RESIZE
 ## Focus the given workspace
@@ -133,7 +137,7 @@ bindsym Mod4+Right focus right
 
 ## Focus to parent/child container
 bindsym Mod4+a focus parent
-bindsym Mod4+c focus child
+bindsym Mod4+Shift+a focus child
 
 ## Move window
 bindsym Mod4+Shift+h move left

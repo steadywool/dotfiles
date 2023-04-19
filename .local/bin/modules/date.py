@@ -9,4 +9,4 @@ def date(informations, lock):
         lock.acquire()
         informations[9] = current_date
         lock.release()
-        sleep(1)
+        sleep(2)
