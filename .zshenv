@@ -12,7 +12,7 @@ export ZSH_PLUGIN_DIR="${XDG_DATA_HOME}/zsh/plugins"
 export KEYTIMEOUT=1
 
 # History
-export HISTFILE="${XDG_DATA_HOME}/.zhistory"
+export HISTFILE="${XDG_DATA_HOME}/zsh/history"
 export HISTSIZE=5000
 export SAVEHIST=5000
 
