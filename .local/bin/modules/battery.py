@@ -9,7 +9,7 @@ def battery(informations, lock):
         battery_status = battery_status_strings[sensors_battery().power_plugged]
 
         lock.acquire()
-        informations[7] = battery_capacity
-        informations[8] = battery_status
+        informations[8] = battery_capacity
+        informations[9] = battery_status
         lock.release()
         sleep(5)
