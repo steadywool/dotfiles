@@ -1,4 +1,7 @@
-source ${ZSH_CONFIG_DIR}/functions.zsh
+# Functions
+for FILE in ${ZSH_CONFIG_DIR}/functions/*; do
+    source ${FILE}
+done
 
 # Custom completion
 zuse https://github.com/zsh-users/zsh-completions
@@ -8,6 +11,9 @@ source ${ZSH_CONFIG_DIR}/completion.zsh
 
 # Keymaps
 source ${ZSH_CONFIG_DIR}/keymaps.zsh
+
+# Prompt
+source ${ZSH_CONFIG_DIR}/vcs.zsh
 
 # Prompt
 source ${ZSH_CONFIG_DIR}/prompt.zsh

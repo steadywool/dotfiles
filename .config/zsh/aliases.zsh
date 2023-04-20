@@ -29,3 +29,6 @@ alias ip='ip -color'
 alias usbl='usbguard list-devices -t'
 alias usba='usbguard allow-device'
 alias usbp='usbguard allow-device --permanent'
+
+# Calcurse
+alias todo='calcurse -Q'

@@ -1,12 +1,18 @@
+# XDG directories
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CACHE_HOME="${HOME}/.cache"
+export XDG_DATA_HOME="${HOME}/.local/share"
+export PATH="${PATH}:${HOME}/.local/bin"
+
 # ZSH
-export ZSH_CONFIG_DIR="${HOME}/.config/zsh"
-export ZSH_PLUGIN_DIR="${HOME}/.local/share/zsh/plugins"
+export ZSH_CONFIG_DIR="${XDG_CONFIG_HOME}/zsh"
+export ZSH_PLUGIN_DIR="${XDG_DATA_HOME}/zsh/plugins"
 
 # Key timeout
 export KEYTIMEOUT=1
 
 # History
-export HISTFILE="${HOME}/.zhistory"
+export HISTFILE="${XDG_DATA_HOME}/.zhistory"
 export HISTSIZE=5000
 export SAVEHIST=5000
 
@@ -14,9 +20,6 @@ export SAVEHIST=5000
 export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
-
-# PATH
-export PATH="${PATH}:${HOME}/.local/bin"
 
 # Wayland / Sway
 export XDG_CURRENT_DESKTOP=sway
@@ -26,4 +29,3 @@ export LIBSEAT_BACKEND=logind
 
 # GPG Agent
 export GPG_TTY=$(tty)
-
