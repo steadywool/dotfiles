@@ -1,0 +1,9 @@
+[Unit]
+Description=Change the wallpaper every 10 minutes
+
+[Service]
+Type=simple
+ExecStart=/home/kani/.local/bin/wallpaper-changer.sh --random
+
+[Install]
+WantedBy=default.target
