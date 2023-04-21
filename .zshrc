@@ -1,3 +1,8 @@
+# Autostart Tmux
+if [[ -z ${TMUX} ]]; then
+    tmux attach || tmux new
+fi
+
 # Functions
 for FILE in ${ZSH_CONFIG_DIR}/functions/*; do
     source ${FILE}
