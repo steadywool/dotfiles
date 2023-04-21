@@ -6,6 +6,7 @@ Configuration of tools that I use in my daily life.
 Here are the tools that these dotfiles supply:
 
 - `archlinux` as distribution
+- `alacritty` as terminal emulator
 - `zsh` as shell
 - `neovim` as editor
 - `fzf` as fuzzy finder

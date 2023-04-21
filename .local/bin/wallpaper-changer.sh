@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Default folder
-WALLPAPER_DIR="${HOME}/Pictures/Wallpaper"
+WALLPAPER_DIR="${HOME}/Pictures/Backgrounds"
 if [[ ! -d ${WALLPAPER_DIR} ]]; then
     mkdir -p ${WALLPAPER_DIR}
 fi
