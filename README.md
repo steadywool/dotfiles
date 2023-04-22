@@ -1,3 +1,10 @@
+
+### This repository is archived and will not be updated anymore. ⛔
+
+**Following the replacement of SwayWM by Gnome, all configuration files are located
+[here](https://github.com/kaniville/ansible-configuration/tree/main/ansible/roles/07-homedir/files),
+in the "[ansible-configuration](https://github.com/kaniville/ansible-configuration)" repository.**
+
 # Dotfiles 🐧
 
 Configuration of tools that I use in my daily life.
