@@ -1,0 +1,6 @@
+ignore-empty-password
+daemonize
+no-unlock-indicator
+color=#1d2021
+
+# vim: ft=conf
