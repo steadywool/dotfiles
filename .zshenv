@@ -22,7 +22,5 @@ export VISUAL=nvim
 export PAGER=less
 
 # Wayland / Sway
-if [[ ${XDG_SESSION_TYPE} = 'wayland' ]]; then
-    export _JAVA_AWT_WM_NONREPARENTING=1
-    export MOZ_ENABLE_WAYLAND=1
-fi
+export _JAVA_AWT_WM_NONREPARENTING=1
+export MOZ_ENABLE_WAYLAND=1
