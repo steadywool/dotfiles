@@ -21,5 +21,10 @@ export EDITOR=nvim
 export VISUAL=nvim
 export PAGER=less
 
+# Wayland / Sway
+if [[ ${XDG_SESSION_DESKTOP} = 'sway' ]] ;
+    export _JAVA_AWT_WM_NONREPARENTING=1
+fi
+
 # GPG Agent
 export GPG_TTY=$(tty)
