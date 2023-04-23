@@ -27,10 +27,6 @@ zuse https://github.com/zsh-users/zsh-autosuggestions
 # Syntax highlighting
 zuse https://github.com/zdharma-continuum/fast-syntax-highlighting
 
-# Fuzzy Finder
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
-
 # Options
 setopt inc_append_history
 setopt hist_ignore_dups

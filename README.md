@@ -17,7 +17,6 @@ Here are the tools that these dotfiles supply:
 - `tmux` as terminal multiplexer
 - `neovim` as editor
 - `ranger` as file explorer
-- `fzf` as fuzzy finder
 - `calcurse` as calendar
 
 ## Installation
