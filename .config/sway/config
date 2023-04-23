@@ -5,7 +5,8 @@ include $HOME/.config/sway/config.d/*
 #-------------------------------------------------------------------
 # BASE APPLICATIONS
 ## Terminal
-bindsym $mod+Return exec $terminal
+bindsym $mod+Return exec $terminal -e bash -c "tmux attach || tmux new"
+bindsym $mod+Shift+Return exec $terminal
 
 ## Launcher
 bindsym $mod+d exec $menu
