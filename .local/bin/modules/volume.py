@@ -11,7 +11,7 @@ def source_volume(informations, lock):
             audio_source = 'Mute'
 
         lock.acquire()
-        informations[6] = audio_source
+        informations[7] = audio_source
         lock.release()
         sleep(1)
 
@@ -25,6 +25,6 @@ def sink_volume(informations, lock):
             audio_sink = 'Mute'
 
         lock.acquire()
-        informations[7] = audio_sink
+        informations[8] = audio_sink
         lock.release()
         sleep(1)

@@ -12,26 +12,24 @@ bindsym $mod+d exec $menu
 
 #-------------------------------------------------------------------
 # EXTRA APPLICATIONS
-## Ranger
-bindsym $mod+o exec $terminal -a float ranger
+## Ranger & Calcurse
+bindsym $mod+o exec $terminal --class float -e ranger
+bindsym $mod+Shift+o exec $terminal --class float -e calcurse
 
 ## Nmtui
-bindsym $mod+x exec $terminal -a float nmtui connect
-bindsym $mod+Shift+x exec $terminal -a float nmtui edit
-
-## Calcurse
-bindsym $mod+p exec $terminal -a float calcurse
+bindsym $mod+c exec $terminal --class float -e nmtui connect
+bindsym $mod+Shift+c exec $terminal --class float -e nmtui edit
 
 ## Htop
-bindsym $mod+Shift+q exec $terminal -a float htop
+bindsym $mod+Shift+q exec $terminal --class float -e htop
 
 #-------------------------------------------------------------------
 # SCRIPTS
-## Wallpaper
-bindsym $mod+Shift+w exec $HOME/.local/bin/wallpaper-changer.sh --random
-
 ## Power menu
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
+
+# Profile menu
+bindsym $mod+p exec $HOME/.local/bin/profile-menu.sh
 
 ## Screenshot
 bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh

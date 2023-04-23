@@ -22,7 +22,7 @@ export VISUAL=nvim
 export PAGER=less
 
 # Wayland / Sway
-if [[ ${XDG_SESSION_DESKTOP} = 'sway' ]] ;
+if [[ ${XDG_SESSION_DESKTOP} = 'sway' ]]; then
     export _JAVA_AWT_WM_NONREPARENTING=1
 fi
 

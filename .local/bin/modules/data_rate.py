@@ -17,7 +17,7 @@ def data_rate(informations, lock):
         incoming_data, outgoing_data = get_data_rate()
 
         lock.acquire()
-        informations[4] = round(incoming_data, 2)
-        informations[5] = round(outgoing_data, 2)
+        informations[5] = round(incoming_data, 2)
+        informations[6] = round(outgoing_data, 2)
         lock.release()
         sleep(1)

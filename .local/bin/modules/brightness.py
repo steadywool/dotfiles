@@ -12,6 +12,6 @@ def brightness(informations, lock):
         human_brightness = str(round(current_brightness / max_brightness * 100))
 
         lock.acquire()
-        informations[3] = human_brightness
+        informations[4] = human_brightness
         lock.release()
         sleep(2)

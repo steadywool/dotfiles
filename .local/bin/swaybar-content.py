@@ -11,13 +11,14 @@ from modules.data_rate import data_rate
 from modules.brightness import brightness
 from modules.storage import storage
 from modules.scratchpad import scratchpad
+from modules.power_profile import power_profile
 
 
 # Print informations
 def print_informations(informations, lock):
     while True:
         lock.acquire()
-        format = "[ %s] [ %s] [ %s] [ %s%%] [ %s  %s] [ %s] [ %s] [ %s%% %s] [ %s]"
+        format = "[ %s] [ %s] [ %s] [ %s] [ %s%%] [ %s  %s] [ %s] [ %s] [ %s%% %s] [ %s]"
         stdout.write(format % tuple(informations))
         stdout.flush()
         lock.release()
@@ -41,11 +42,11 @@ def create_threads(informations, lock, functions):
 
 # Main function
 def main():
-    functions = [scratchpad, storage, brightness, data_rate, sink_volume, source_volume, battery, date]
+    functions = [scratchpad, power_profile, storage, brightness, data_rate, sink_volume, source_volume, battery, date]
     functions.append(print_informations)
 
     # Edit this number if you add modules
-    informations = ['-'] * 11
+    informations = ['-'] * 12
     lock = Lock()
 
     # Run create_threads function

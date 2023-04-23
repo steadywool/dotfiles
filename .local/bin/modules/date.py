@@ -7,6 +7,6 @@ def date(informations, lock):
         current_date = datetime.now().strftime('%F %R')
 
         lock.acquire()
-        informations[10] = current_date
+        informations[11] = current_date
         lock.release()
         sleep(2)
