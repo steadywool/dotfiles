@@ -22,10 +22,9 @@ export VISUAL=nvim
 export PAGER=less
 
 # Wayland / Sway
-export XDG_CURRENT_DESKTOP=sway
-export _JAVA_AWT_WM_NONREPARENTING=1
-export MOZ_ENABLE_WAYLAND=1
-export LIBSEAT_BACKEND=logind
+if [[ ${XDG_SESSION_DESKTOP} = 'sway' ]] ;
+    export _JAVA_AWT_WM_NONREPARENTING=1
+fi
 
 # GPG Agent
 export GPG_TTY=$(tty)

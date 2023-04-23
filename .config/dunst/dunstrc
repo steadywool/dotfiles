@@ -13,7 +13,7 @@
 
     # Icons
     enable_recursive_icon_lookup = true
-    icon_theme = Papirus-Dark
+    icon_theme = Papirus
 
 [urgency_low]
     background = "#1d2021"
@@ -23,8 +23,8 @@
 
 [urgency_normal]
     background = "#1d2021"
-    foreground = "#b8bb26"
-    highlight = "#b8bb26"
+    foreground = "#fabd2f"
+    highlight = "#fabd2f"
     timeout = 10
 
 [urgency_critical]

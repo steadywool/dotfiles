@@ -2,54 +2,45 @@
 include /etc/sway/config.d/*
 include $HOME/.config/sway/config.d/*
 
-# APPLICATIONS
+#-------------------------------------------------------------------
+# BASE APPLICATIONS
 ## Terminal
-bindsym Mod4+Return exec $terminal bash -c "tmux attach || tmux new"
-bindsym Mod4+Shift+Return exec $terminal
+bindsym $mod+Return exec $terminal
 
 ## Launcher
-bindsym Mod4+d exec $menu
+bindsym $mod+d exec $menu
 
-## Nautilus
-bindsym Mod4+Shift+o exec $file_manager
-
+#-------------------------------------------------------------------
+# EXTRA APPLICATIONS
 ## Ranger
-bindsym Mod4+o exec $terminal -a float ranger
+bindsym $mod+o exec $terminal -a float ranger
 
 ## Nmtui
-bindsym Mod4+x exec $terminal -a float nmtui connect
-bindsym Mod4+Shift+x exec $terminal -a float nmtui edit
+bindsym $mod+x exec $terminal -a float nmtui connect
+bindsym $mod+Shift+x exec $terminal -a float nmtui edit
 
 ## Calcurse
-bindsym Mod4+p exec $terminal -a float calcurse
-
-## Neovim
-bindsym Mod4+Shift+p exec $terminal -a float nvim
+bindsym $mod+p exec $terminal -a float calcurse
 
 ## Htop
-bindsym Mod4+Shift+q exec $terminal -a float htop
+bindsym $mod+Shift+q exec $terminal -a float htop
 
+#-------------------------------------------------------------------
 # SCRIPTS
-## Clipboard
-bindsym Mod4+m exec $HOME/.local/bin/clipboard-menu.sh --select
-bindsym Mod4+Shift+m exec $HOME/.local/bin/clipboard-menu.sh --delete
-
-## Emoji
-bindsym Mod4+i exec $HOME/.local/bin/emoji-menu.sh
-
 ## Wallpaper
-bindsym Mod4+Shift+w exec $HOME/.local/bin/wallpaper-changer.sh --random
+bindsym $mod+Shift+w exec $HOME/.local/bin/wallpaper-changer.sh --random
 
 ## Power menu
-bindsym Mod4+Shift+e exec $HOME/.local/bin/power-menu.sh
+bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 
 ## Screenshot
-bindsym Mod4+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
+bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
 ## Window menu
-bindsym Mod4+Shift+d exec $HOME/.local/bin/window-menu.py
+bindsym $mod+Shift+d exec $HOME/.local/bin/window-menu.py
 
+#-------------------------------------------------------------------
 # XF86 KEYS
 ## Light control
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
@@ -61,97 +52,100 @@ bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-
 bindsym XF86AudioMute exec wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86AudioMicMute exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
+#-------------------------------------------------------------------
 # SWAY HOTKEYS
 ## Reload Sway
-bindsym Mod4+Shift+r reload
+bindsym $mod+Shift+r reload
 
 ## kill window
-bindsym Mod4+q kill
+bindsym $mod+q kill
 
 ## Floating modifier
-floating_modifier Mod4 normal
+floating_modifier $mod normal
 
+#-------------------------------------------------------------------
 # LAYOUT STUFF
 ## Layout styles
-bindsym Mod4+s layout stacking
-bindsym Mod4+w layout tabbed
-bindsym Mod4+e layout toggle split
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
 
 ## Tiling/fullscreen mode
-bindsym Mod4+f fullscreen
+bindsym $mod+f fullscreen
 
 ## Tiling/floating mode
-bindsym Mod4+Shift+Space floating toggle
+bindsym $mod+Shift+Space floating toggle
 
 ## Split current container
-bindsym Mod4+b split horizontal
-bindsym Mod4+v split vertical
-bindsym Mod4+n split none
+bindsym $mod+b split horizontal
+bindsym $mod+v split vertical
+bindsym $mod+n split none
 
 ## Sticky window
-bindsym Mod4+Shift+f sticky toggle
+bindsym $mod+Shift+f sticky toggle
 
 ## Scratchpad
-bindsym Mod4+parenright scratchpad show
-bindsym Mod4+Shift+parenright move scratchpad
+bindsym $mod+parenright scratchpad show
+bindsym $mod+Shift+parenright move scratchpad
 
+#-------------------------------------------------------------------
 # FOCUS/MOVE/RESIZE
 ## Focus the given workspace
-bindsym Mod4+ampersand workspace number 1
-bindsym Mod4+eacute workspace number 2
-bindsym Mod4+quotedbl workspace number 3
-bindsym Mod4+apostrophe workspace number 4
-bindsym Mod4+parenleft workspace number 5
-bindsym Mod4+minus workspace number 6
-bindsym Mod4+egrave workspace number 7
-bindsym Mod4+underscore workspace number 8
-bindsym Mod4+ccedilla workspace number 9
-bindsym Mod4+agrave workspace number 10
+bindsym $mod+ampersand workspace number 1
+bindsym $mod+eacute workspace number 2
+bindsym $mod+quotedbl workspace number 3
+bindsym $mod+apostrophe workspace number 4
+bindsym $mod+parenleft workspace number 5
+bindsym $mod+minus workspace number 6
+bindsym $mod+egrave workspace number 7
+bindsym $mod+underscore workspace number 8
+bindsym $mod+ccedilla workspace number 9
+bindsym $mod+agrave workspace number 10
 
 ## Focus the next/previous workspace
-bindsym Mod4+Tab workspace next_on_output
-bindsym Mod4+Shift+Tab workspace prev_on_output
+bindsym $mod+Tab workspace next_on_output
+bindsym $mod+Shift+Tab workspace prev_on_output
 
 ## Move window to the given workspace
-bindsym Mod4+Shift+ampersand move container workspace number 1
-bindsym Mod4+Shift+eacute move container workspace number 2
-bindsym Mod4+Shift+quotedbl move container workspace number 3
-bindsym Mod4+Shift+apostrophe move container workspace number 4
-bindsym Mod4+Shift+parenleft move container workspace number 5
-bindsym Mod4+Shift+minus move container workspace number 6
-bindsym Mod4+Shift+egrave move container workspace number 7
-bindsym Mod4+Shift+underscore move container workspace number 8
-bindsym Mod4+Shift+ccedilla move container workspace number 9
-bindsym Mod4+Shift+agrave move container workspace number 10
+bindsym $mod+Shift+ampersand move container workspace number 1
+bindsym $mod+Shift+eacute move container workspace number 2
+bindsym $mod+Shift+quotedbl move container workspace number 3
+bindsym $mod+Shift+apostrophe move container workspace number 4
+bindsym $mod+Shift+parenleft move container workspace number 5
+bindsym $mod+Shift+minus move container workspace number 6
+bindsym $mod+Shift+egrave move container workspace number 7
+bindsym $mod+Shift+underscore move container workspace number 8
+bindsym $mod+Shift+ccedilla move container workspace number 9
+bindsym $mod+Shift+agrave move container workspace number 10
 
 ## Focus window
-bindsym Mod4+h focus left
-bindsym Mod4+j focus down
-bindsym Mod4+k focus up
-bindsym Mod4+l focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
-bindsym Mod4+Left focus left
-bindsym Mod4+Down focus down
-bindsym Mod4+Up focus up
-bindsym Mod4+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 ## Focus to parent/child container
-bindsym Mod4+a focus parent
-bindsym Mod4+Shift+a focus child
+bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 
 ## Move window
-bindsym Mod4+Shift+h move left
-bindsym Mod4+Shift+j move down
-bindsym Mod4+Shift+k move up
-bindsym Mod4+Shift+l move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
-bindsym Mod4+Shift+Left move left
-bindsym Mod4+Shift+Down move down
-bindsym Mod4+Shift+Up move up
-bindsym Mod4+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 ## Swap focus Tiling/floating area
-bindsym Mod4+Space focus mode_toggle
+bindsym $mod+Space focus mode_toggle
 
 ## Move workspace
 mode "move workspace" {
@@ -168,7 +162,7 @@ mode "move workspace" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym Mod4+t mode "move workspace"
+bindsym $mod+t mode "move workspace"
 
 ## Resize window
 mode "resize" {
@@ -185,4 +179,4 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym Mod4+r mode "resize"
+bindsym $mod+r mode "resize"
