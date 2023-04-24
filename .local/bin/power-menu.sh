@@ -19,7 +19,7 @@ case ${CHOICE} in
         systemctl suspend
     ;;
     3)
-        swaylock
+        swaylock -u -i "/home/kani/.local/share/backgrounds/blurred_wallpaper"
     ;;
     4)
         swaymsg exit
