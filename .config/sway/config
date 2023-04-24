@@ -5,8 +5,7 @@ include $HOME/.config/sway/config.d/*
 #-------------------------------------------------------------------
 # BASE APPLICATIONS
 ## Terminal
-bindsym $mod+Return exec $terminal -e bash -c "tmux attach || tmux new"
-bindsym $mod+Shift+Return exec $terminal
+bindsym $mod+Return exec $terminal
 
 ## Launcher
 bindsym $mod+d exec $menu
@@ -14,15 +13,15 @@ bindsym $mod+d exec $menu
 #-------------------------------------------------------------------
 # EXTRA APPLICATIONS
 ## Ranger & Calcurse
-bindsym $mod+o exec $terminal -e ranger
-bindsym $mod+Shift+o exec $terminal -e calcurse
+bindsym $mod+o exec $terminal ranger
+bindsym $mod+Shift+o exec $terminal calcurse
 
 ## Nmtui
-bindsym $mod+c exec $terminal -e nmtui connect
-bindsym $mod+Shift+c exec $terminal -e nmtui edit
+bindsym $mod+c exec $terminal nmtui connect
+bindsym $mod+Shift+c exec $terminal nmtui edit
 
 ## Htop
-bindsym $mod+Shift+q exec $terminal -e htop
+bindsym $mod+Shift+q exec $terminal htop
 
 #-------------------------------------------------------------------
 # SCRIPTS
