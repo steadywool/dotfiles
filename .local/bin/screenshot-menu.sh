@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SCREENSHOT_DIR="${HOME}/Pictures/Screenshot"
+SCREENSHOT_DIR="${HOME}/Pictures/Screenshots"
 
 var+=('󰍹 save-screen')
 var+=('󰹑 save-output')
