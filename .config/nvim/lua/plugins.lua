@@ -4,7 +4,6 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 require('lazy').setup {
     -- Appearance
     'sainnhe/gruvbox-material',
-    'nvim-lualine/lualine.nvim',
     'kyazdani42/nvim-web-devicons',
 
     -- Completion
@@ -29,10 +28,14 @@ require('lazy').setup {
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
 
-    -- Tools
-    'NvChad/nvim-colorizer.lua',
+    -- Status
+    'akinsho/bufferline.nvim',
+    'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
+
+    -- Tools
+    'NvChad/nvim-colorizer.lua',
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
 
