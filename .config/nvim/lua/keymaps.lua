@@ -32,7 +32,3 @@ vim.keymap.set('n', '<leader>ln', vim.lsp.buf.rename, opts)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
-
--- Duck
-vim.keymap.set('n', '<leader>dh', function() require("duck").hatch() end)
-vim.keymap.set('n', '<leader>dc', function() require("duck").cook() end)

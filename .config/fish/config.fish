@@ -1,6 +1,6 @@
-# Always source functions
-for i in (ls $__fish_config_dir/functions/)
-    source $__fish_config_dir/functions/$i
+# Always source aliases
+for i in (ls $__fish_config_dir/aliases/)
+    source $__fish_config_dir/aliases/$i
 end
 
 # Remove fish greeting

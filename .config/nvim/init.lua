@@ -18,12 +18,6 @@ require('keymaps')
 vim.opt.swapfile = true
 vim.opt.undofile = true
 
--- Providers
-vim.g.loaded_python3_provider = 0
-vim.g.loaded_ruby_provider = 0
-vim.g.loaded_node_provider = 0
-vim.g.loaded_perl_provider = 0
-
 -- Clipboard
 vim.opt.clipboard = 'unnamedplus'
 
@@ -56,6 +50,3 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.list = true
 vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
-
--- Status
-vim.opt.statusline = '%#search# %n %#statusline# %F %r%m %= %w%y %#incsearch# %l:%c %p%% '
