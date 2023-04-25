@@ -1,9 +1,12 @@
 [global]
-    # Monitor
+    # Display
     follow = keyboard
 
-    # Appearance
-    offset = 14x2
+    # Geometry
+    origin = top-right
+    offset = 15x5
+
+    # Progress bar
     progress_bar_frame_width = 0
     frame_width = 0
     separator_height = 0
@@ -14,6 +17,7 @@
     # Icons
     enable_recursive_icon_lookup = true
     icon_theme = Papirus
+    icon_position = left
 
 [urgency_low]
     background = "#1d2021"

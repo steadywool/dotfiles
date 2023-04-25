@@ -7,7 +7,7 @@ end
 set fish_greeting
 
 # PATH variable
-set PATH $HOME/.local/bin $PATH
+set PATH $HOME/.local/bin $HOME/.local/share/flatpak/exports/bin $PATH
 
 # XDG variables
 set -Ux XDG_CONFIG_HOME $HOME/.config

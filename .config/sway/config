@@ -13,15 +13,15 @@ bindsym $mod+d exec $menu
 #-------------------------------------------------------------------
 # EXTRA APPLICATIONS
 ## Ranger & Calcurse
-bindsym $mod+o exec $terminal ranger
-bindsym $mod+Shift+o exec $terminal calcurse
+bindsym $mod+o exec $terminal --class kitty-float ranger
+bindsym $mod+Shift+o exec $terminal --class kitty-float calcurse
 
 ## Nmtui
-bindsym $mod+c exec $terminal nmtui connect
-bindsym $mod+Shift+c exec $terminal nmtui edit
+bindsym $mod+c exec $terminal --class kitty-float nmtui connect
+bindsym $mod+Shift+c exec $terminal --class kitty-float nmtui edit
 
 ## Htop
-bindsym $mod+Shift+q exec $terminal htop
+bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 
 #-------------------------------------------------------------------
 # SCRIPTS
