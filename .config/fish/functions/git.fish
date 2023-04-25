@@ -1,5 +1,5 @@
 function g
-    git
+    git $argv
 end
 
 function ga
@@ -7,5 +7,9 @@ function ga
 end
 
 function gc
-    git commit -am
+    git commit -am $argv
+end
+
+function gp
+    git push
 end

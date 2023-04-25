@@ -3,9 +3,9 @@ function usbl
 end
 
 function usba
-    usbguard allow-device
+    usbguard allow-device $argv
 end
 
 function usbp
-    usbguard allow-device --permanent
+    usbguard allow-device --permanent $argv
 end

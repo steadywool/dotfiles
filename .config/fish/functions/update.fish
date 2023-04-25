@@ -1,7 +1,7 @@
 function update -d 'Update the system'
     echo 'Updating Pacman packages'
-    pacman -Syu
+    sudo pacman -Syu
 
     echo 'Updating flatpak packages'
-    flaptak update
+    flatpak update
 end

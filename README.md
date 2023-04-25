@@ -11,10 +11,9 @@ Here are the tools that these dotfiles supply:
 - `swayidle` as idle manager
 - `fuzzel` as application launcher
 - `dunst` as notification daemon
-- `alacritty` as terminal
+- `kitty` as terminal
 - `grim` and `slurp` as screenshot utility
-- `zsh` as shell
-- `tmux` as terminal multiplexer
+- `fish` as shell
 - `neovim` as editor
 - `ranger` as file explorer
 - `calcurse` as calendar
