@@ -20,19 +20,19 @@
     icon_position = left
 
 [urgency_low]
-    background = "#1d2021"
+    background = "#1d2021dd"
     foreground = "#83a598"
     highlight = "#83a598"
     timeout = 10
 
 [urgency_normal]
-    background = "#1d2021"
+    background = "#1d2021dd"
     foreground = "#fabd2f"
     highlight = "#fabd2f"
     timeout = 10
 
 [urgency_critical]
-    background = "#1d2021"
+    background = "#1d2021dd"
     foreground = "#fb4934"
     highlight = "#fb4934"
     timeout = 20
