@@ -81,7 +81,7 @@ bindsym $mod+parenright scratchpad show
 bindsym $mod+Shift+parenright move scratchpad
 
 #-------------------------------------------------------------------
-# FOCUS/MOVE/RESIZE
+# FOCUS
 ## Focus the given workspace
 bindsym $mod+ampersand workspace number 1
 bindsym $mod+eacute workspace number 2
@@ -98,18 +98,6 @@ bindsym $mod+agrave workspace number 10
 bindsym $mod+Tab workspace next_on_output
 bindsym $mod+Shift+Tab workspace prev_on_output
 
-## Move window to the given workspace
-bindsym $mod+Shift+ampersand move container workspace number 1
-bindsym $mod+Shift+eacute move container workspace number 2
-bindsym $mod+Shift+quotedbl move container workspace number 3
-bindsym $mod+Shift+apostrophe move container workspace number 4
-bindsym $mod+Shift+parenleft move container workspace number 5
-bindsym $mod+Shift+minus move container workspace number 6
-bindsym $mod+Shift+egrave move container workspace number 7
-bindsym $mod+Shift+underscore move container workspace number 8
-bindsym $mod+Shift+ccedilla move container workspace number 9
-bindsym $mod+Shift+agrave move container workspace number 10
-
 ## Focus window
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -124,6 +112,20 @@ bindsym $mod+Right focus right
 ## Focus to parent/child container
 bindsym $mod+a focus parent
 bindsym $mod+Shift+a focus child
+
+#-------------------------------------------------------------------
+# MOVE
+## Move window to the given workspace
+bindsym $mod+Shift+ampersand move container workspace number 1
+bindsym $mod+Shift+eacute move container workspace number 2
+bindsym $mod+Shift+quotedbl move container workspace number 3
+bindsym $mod+Shift+apostrophe move container workspace number 4
+bindsym $mod+Shift+parenleft move container workspace number 5
+bindsym $mod+Shift+minus move container workspace number 6
+bindsym $mod+Shift+egrave move container workspace number 7
+bindsym $mod+Shift+underscore move container workspace number 8
+bindsym $mod+Shift+ccedilla move container workspace number 9
+bindsym $mod+Shift+agrave move container workspace number 10
 
 ## Move window
 bindsym $mod+Shift+h move left
@@ -156,6 +158,8 @@ mode "move workspace" {
 }
 bindsym $mod+t mode "move workspace"
 
+#-------------------------------------------------------------------
+# RESIZE
 ## Resize window
 mode "resize" {
     bindsym h resize shrink width 10px

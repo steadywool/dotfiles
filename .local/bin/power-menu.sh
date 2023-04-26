@@ -23,10 +23,9 @@ case ${CHOICE} in
         ${HOME}/.local/bin/profile-menu.sh
     ;;
     4)
-        swaylock -u -i "/home/kani/.local/share/backgrounds/blurred_wallpaper"
+        swaylock
     ;;
     5)
         swaymsg exit
     ;;
 esac
-

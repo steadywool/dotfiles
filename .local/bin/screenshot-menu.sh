@@ -12,7 +12,7 @@ var+=('󰹑 copy-output')
 var+=(' copy-window')
 var+=('󰒉 copy-area')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 15 -l 8 --index)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 8 --index)
 
 # Create screenshot folder if there is none
 if [[ ! -d ${SCREENSHOT_DIR} ]]; then

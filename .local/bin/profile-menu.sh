@@ -4,7 +4,7 @@ var+=('󰾆 power-saver')
 var+=('󰾅 balanced')
 var+=('󰓅 performance')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 15 -l 3 --index)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 3 --index)
 
 case ${CHOICE} in
     0)
