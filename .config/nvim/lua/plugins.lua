@@ -4,14 +4,20 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 require('lazy').setup {
     -- Appearance
     'sainnhe/gruvbox-material',
-    'kyazdani42/nvim-web-devicons',
+    { 'kyazdani42/nvim-web-devicons', lazy = true },
+    { 'glepnir/dashboard-nvim', event = 'VimEnter' },
 
     -- Completion
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-nvim-lsp',
-    'saadparwaiz1/cmp_luasnip',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-buffer',
+    {
+        'hrsh7th/nvim-cmp',
+        event = 'InsertEnter',
+        dependencies = {
+            'hrsh7th/cmp-nvim-lsp',
+            'saadparwaiz1/cmp_luasnip',
+            'hrsh7th/cmp-path',
+            'hrsh7th/cmp-buffer',
+        },
+    },
 
     -- Snippets
     'L3MON4D3/LuaSnip',
@@ -37,11 +43,19 @@ require('lazy').setup {
     'iamcco/markdown-preview.nvim',
 
     -- Telescope
-    'nvim-telescope/telescope.nvim',
-    'nvim-lua/plenary.nvim',
-    'nvim-telescope/telescope-file-browser.nvim',
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+            'nvim-telescope/telescope-file-browser.nvim',
+        },
+    },
 
     -- Folding
-    'kevinhwang91/nvim-ufo',
-    'kevinhwang91/promise-async',
+    {
+        'kevinhwang91/nvim-ufo',
+        dependencies = {
+            'kevinhwang91/promise-async',
+        },
+    },
 }
