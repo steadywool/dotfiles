@@ -1,12 +1,13 @@
 #!/bin/bash
 
-var+=('⏻ power-off')
-var+=('勒 reboot')
-var+=('⏾ suspend')
-var+=(' lock')
-var+=(' exit-sway')
+power_var+=('⏻ power-off')
+power_var+=('勒 reboot')
+power_var+=('⏾ suspend')
+power_var+=(' profile')
+power_var+=(' lock')
+power_var+=(' exit-sway')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 15 -l 5 --index)
+CHOICE=$(printf '%s\n' ${power_var[@]} | fuzzel -d -w 20 -l 6 --index)
 
 case ${CHOICE} in
     0)
@@ -19,9 +20,13 @@ case ${CHOICE} in
         systemctl suspend
     ;;
     3)
-        swaylock -u -i "/home/kani/.local/share/backgrounds/blurred_wallpaper"
+        ${HOME}/.local/bin/profile-menu.sh
     ;;
     4)
+        swaylock -u -i "/home/kani/.local/share/backgrounds/blurred_wallpaper"
+    ;;
+    5)
         swaymsg exit
     ;;
 esac
+

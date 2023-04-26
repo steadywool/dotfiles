@@ -28,15 +28,9 @@ bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 ## Power menu
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 
-# Profile menu
-bindsym $mod+p exec $HOME/.local/bin/profile-menu.sh
-
 ## Screenshot
 bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
-
-## Window menu
-bindsym $mod+Shift+d exec $HOME/.local/bin/window-menu.py
 
 #-------------------------------------------------------------------
 # XF86 KEYS
