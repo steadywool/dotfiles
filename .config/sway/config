@@ -14,7 +14,9 @@ bindsym $mod+d exec $menu
 # EXTRA APPLICATIONS
 ## Ranger & Calcurse
 bindsym $mod+o exec $terminal --class kitty-float ranger
-bindsym $mod+Shift+o exec $terminal --class kitty-float calcurse
+
+bindsym $mod+p exec $terminal --class kitty-float calcurse
+bindsym $mod+Shift+p exec $terminal --class kitty-float nvim
 
 ## Nmtui
 bindsym $mod+c exec $terminal --class kitty-float nmtui connect
