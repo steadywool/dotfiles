@@ -17,11 +17,8 @@ require('lazy').setup {
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
 
-    -- Mason
-    'williamboman/mason.nvim',
-    'williamboman/mason-lspconfig.nvim',
-
     -- LSP
+    'williamboman/mason.nvim',
     'neovim/nvim-lspconfig',
     'jose-elias-alvarez/null-ls.nvim',
 
