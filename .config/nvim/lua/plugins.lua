@@ -4,6 +4,7 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 require('lazy').setup {
     -- Appearance
     'sainnhe/gruvbox-material',
+    'sainnhe/everforest',
     { 'kyazdani42/nvim-web-devicons', lazy = true },
     { 'glepnir/dashboard-nvim', event = 'VimEnter' },
 

@@ -32,3 +32,6 @@ vim.keymap.set('n', '<leader>ln', vim.lsp.buf.rename, opts)
 vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
+
+-- Help
+vim.keymap.set('n', '<leader>hl', '<cmd>h lspconfig-server-configurations<CR>')

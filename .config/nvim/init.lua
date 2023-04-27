@@ -14,6 +14,9 @@ require('autocmds')
 -- Keymaps
 require('keymaps')
 
+-- Theme
+vim.cmd('colorscheme gruvbox-material')
+
 -- Files
 vim.opt.swapfile = true
 vim.opt.undofile = true
