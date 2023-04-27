@@ -22,7 +22,7 @@ def print_informations(informations, lock):
         stdout.write(format % tuple(informations))
         stdout.flush()
         lock.release()
-        sleep(0.5)
+        sleep(1)
 
 
 # Create threads automatically
@@ -42,11 +42,12 @@ def create_threads(informations, lock, functions):
 
 # Main function
 def main():
+    # Functions
     functions = [scratchpad, power_profile, storage, brightness, data_rate, sink_volume, source_volume, battery, date]
     functions.append(print_informations)
 
-    # Edit this number if you add modules
-    informations = ['-'] * 12
+    # Variables
+    informations = ['-'] * (11 + 1)
     lock = Lock()
 
     # Run create_threads function
