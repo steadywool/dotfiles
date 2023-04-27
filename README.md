@@ -2,6 +2,8 @@
 
 Configuration of tools that I use in my daily life.
 
+![](src/screenshot.png)
+
 ## Details
 Here are the tools that these dotfiles supply:
 
