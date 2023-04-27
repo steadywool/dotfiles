@@ -23,7 +23,7 @@ case ${CHOICE} in
         ${HOME}/.local/bin/profile-menu.sh
     ;;
     4)
-        swaylock
+        loginctl lock-session
     ;;
     5)
         swaymsg exit
