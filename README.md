@@ -2,9 +2,7 @@
 
 Configuration of tools that I use in my daily life.
 
-<div id="rounded">
-  <img src="src/screenshot.png" style="border-radius: 15px;"/>
-</div>
+![](src/screenshot.png)
 
 ## Details 🌻
 Here are the tools that these dotfiles supply:
