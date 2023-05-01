@@ -18,7 +18,7 @@ from modules.power_profile import power_profile
 def print_informations(informations, lock):
     while True:
         lock.acquire()
-        format = "[ %s] [ %s] [ %s] [ %s] [ %s%%] [ %s  %s] [ %s] [ %s] [ %s%% %s] [ %s]"
+        format = "[ %s] [ %s] [ %s] [ %s] [󰃞 %s%%] [ %s  %s] [ %s] [ %s] [󰁹 %s%% %s] [ %s]"
         stdout.write(format % tuple(informations))
         stdout.flush()
         lock.release()

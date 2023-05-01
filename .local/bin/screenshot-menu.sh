@@ -45,7 +45,6 @@ case ${CHOICE} in
         /usr/share/sway/scripts/grimshot --notify save area ${SCREENSHOT_DIR}/$(date +%s).png
     ;;
     5)
-    ;;
         /usr/share/sway/scripts/grimshot --notify copy area -
     ;;
 esac
