@@ -26,6 +26,6 @@ case ${CHOICE} in
         loginctl lock-session
     ;;
     5)
-        swaymsg exit
+        loginctl terminate-session ${XDG_SESSION_ID}
     ;;
 esac
