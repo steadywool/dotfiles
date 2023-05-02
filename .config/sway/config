@@ -6,15 +6,18 @@ include $HOME/.config/sway/config.d/*
 # BASE APPLICATIONS
 ## Terminal
 bindsym $mod+Return exec $terminal
+bindsym $mod+Shift+Return exec $terminal --class kitty-float
 
 ## Launcher
 bindsym $mod+d exec $menu
 
 #-------------------------------------------------------------------
 # EXTRA APPLICATIONS
-## Ranger & Calcurse
+## Ranger & Sway
 bindsym $mod+o exec $terminal --class kitty-float ranger
+bindsym $mod+Shift+o exec $terminal --class kitty-float nvim ${HOME}/.config/sway/config.d/*.conf
 
+## Calcurse & Neovim
 bindsym $mod+p exec $terminal --class kitty-float calcurse
 bindsym $mod+Shift+p exec $terminal --class kitty-float nvim
 
