@@ -1,16 +1,17 @@
 # VARIABLES
 ## PATH variable
-set PATH $HOME/.local/bin $HOME/.local/share/flatpak/exports/bin $PATH
+set -gx PATH $HOME/.local/bin $HOME/.local/share/flatpak/exports/bin $PATH
 
 ## XDG variables
-set -Ux XDG_CONFIG_HOME $HOME/.config
-set -Ux XDG_CACHE_HOME $HOME/.cache
-set -Ux XDG_DATA_HOME $HOME/.local/share
+set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx XDG_CACHE_HOME $HOME/.cache
+set -gx XDG_DATA_HOME $HOME/.local/share
 
 ## Editor variables
-set -Ux EDITOR nvim
-set -Ux VISUAL nvim
-set -Ux PAGER less
+set -gx EDITOR nvim
+set -gx VISUAL nvim
+set -gx PAGER less
+set -gx TERMINAL 'kitty --single-instance'
 
 ## Wayland variables
 set -x _JAVA_AWT_WM_NONREPARENTING 1
@@ -38,9 +39,10 @@ if status is-interactive
 end
 
 #-------------------------------------------------------------------
-# SWAYWM
-## Current TTY
-set TTY (tty)
+if status is-login
+    ## Current TTY
+    set TTY (tty)
 
-## Start Sway on the first tty
-[ $TTY = '/dev/tty1' ] && exec sway
+    ## Start Sway on the first tty
+    [ $TTY = '/dev/tty1' ] && exec sway
+end
