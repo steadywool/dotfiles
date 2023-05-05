@@ -1,10 +1,9 @@
 require('dashboard').setup {
     theme = 'hyper',
     config = {
-        week_header = { enable = true },
         shortcut = {
             {
-                desc = ' Update',
+                desc = '󰚰 Update',
                 group = 'Number',
                 action = 'Lazy update',
                 key = 'u',
@@ -14,6 +13,12 @@ require('dashboard').setup {
                 group = 'Label',
                 action = 'Telescope find_files',
                 key = 'f',
+            },
+            {
+                desc = ' New',
+                group = 'Identifier',
+                action = 'enew',
+                key = 'n',
             },
             {
                 desc = ' Browse',
