@@ -15,6 +15,9 @@ vim.keymap.set('n', '<S-TAB>', '<cmd>bprevious<CR>')
 vim.keymap.set('i', 'jk', '<Esc>')
 vim.keymap.set('i', 'kj', '<Esc>')
 
+-- Exit Terminal mode
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
 -- LSP Config
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, opts)
@@ -33,5 +36,8 @@ vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
 
--- Help
-vim.keymap.set('n', '<leader>hl', '<cmd>h lspconfig-server-configurations<CR>')
+-- Nvim DAP
+vim.keymap.set('n', '<leader>db', require('dap').toggle_breakpoint)
+vim.keymap.set('n', '<leader>dc', require('dap').continue)
+vim.keymap.set('n', '<leader>dl', require('dap').run_last)
+vim.keymap.set('n', '<leader>dt', require('dapui').toggle)

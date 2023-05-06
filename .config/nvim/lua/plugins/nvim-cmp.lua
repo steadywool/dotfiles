@@ -9,9 +9,6 @@ require('cmp').setup {
             require('luasnip').lsp_expand(args.body)
         end,
     },
-    experimental = {
-        ghost_text = true;
-    },
     mapping = cmp.mapping.preset.insert({
         -- Completion
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),

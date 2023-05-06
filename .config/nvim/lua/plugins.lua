@@ -8,6 +8,7 @@ require('lazy').setup {
     { 'kyazdani42/nvim-web-devicons', lazy = true },
     { 'glepnir/dashboard-nvim', event = 'VimEnter' },
 
+    ---------------------------------------------------------------------
     -- Completion
     {
         'hrsh7th/nvim-cmp',
@@ -24,16 +25,23 @@ require('lazy').setup {
     'L3MON4D3/LuaSnip',
     'rafamadriz/friendly-snippets',
 
+    ---------------------------------------------------------------------
+    -- Mason
+    'neovim/nvim-lspconfig',
+
     -- LSP
     'williamboman/mason.nvim',
-    'neovim/nvim-lspconfig',
     'jose-elias-alvarez/null-ls.nvim',
 
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
 
+    -- DAP
+    'mfussenegger/nvim-dap',
+    'rcarriga/dap-ui.nvim',
+
+    ---------------------------------------------------------------------
     -- Status
-    'akinsho/bufferline.nvim',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
