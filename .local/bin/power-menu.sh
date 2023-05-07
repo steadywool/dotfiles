@@ -1,13 +1,13 @@
 #!/bin/bash
 
-power_var+=('⏻ power-off')
-power_var+=('󰑓 reboot')
-power_var+=('⏾ suspend')
-power_var+=(' profile')
-power_var+=(' lock')
-power_var+=('󰗼 exit-session')
+var+=('⏻ power-off')
+var+=('󰑓 reboot')
+var+=('⏾ suspend')
+var+=(' profile')
+var+=(' lock')
+var+=('󰗼 exit-session')
 
-CHOICE=$(printf '%s\n' ${power_var[@]} | fuzzel -d -w 20 -l 6 --index)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 6 --index)
 
 case ${CHOICE} in
     0)

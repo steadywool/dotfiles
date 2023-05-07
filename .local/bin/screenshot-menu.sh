@@ -13,7 +13,7 @@ var+=('󰒉 copy-area')
 
 CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 6 --index)
 
-# Create scree
+# Create screenshot dir
 if [[ ! -d ${SCREENSHOT_DIR} ]]; then
     mkdir -p ${SCREENSHOT_DIR}
 fi

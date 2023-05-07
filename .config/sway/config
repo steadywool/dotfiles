@@ -15,7 +15,6 @@ bindsym $mod+d exec $menu
 # EXTRA APPLICATIONS
 ## Ranger & Sway
 bindsym $mod+o exec $terminal --class kitty-float ranger
-bindsym $mod+Shift+o exec $terminal --class kitty-float nvim ${HOME}/.config/sway/config.d/*.conf
 
 ## Calcurse & Neovim
 bindsym $mod+p exec $terminal --class kitty-float calcurse
@@ -32,6 +31,9 @@ bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 # SCRIPTS
 ## Power menu
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
+
+# Theme menu
+bindsym $mod+Shift+o exec $HOME/.local/bin/theme-menu.sh
 
 ## Screenshot
 bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
