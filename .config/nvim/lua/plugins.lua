@@ -6,7 +6,6 @@ require('lazy').setup {
     'sainnhe/gruvbox-material',
     'sainnhe/everforest',
     { 'kyazdani42/nvim-web-devicons', lazy = true },
-    { 'glepnir/dashboard-nvim', event = 'VimEnter' },
 
     ---------------------------------------------------------------------
     -- Completion
@@ -37,11 +36,17 @@ require('lazy').setup {
     'nvim-treesitter/nvim-treesitter',
 
     -- DAP
-    'mfussenegger/nvim-dap',
-    'rcarriga/dap-ui.nvim',
+    {
+        'mfussenegger/nvim-dap',
+        dependencies = {
+            'rcarriga/nvim-dap-ui',
+        },
+
+    },
 
     ---------------------------------------------------------------------
     -- Status
+    'akinsho/bufferline.nvim',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
