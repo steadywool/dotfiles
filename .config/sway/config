@@ -32,9 +32,6 @@ bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 ## Power menu
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 
-# Theme menu
-bindsym $mod+Shift+o exec $HOME/.local/bin/theme-menu.sh
-
 ## Screenshot
 bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
