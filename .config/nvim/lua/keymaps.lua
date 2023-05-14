@@ -41,3 +41,6 @@ vim.keymap.set('n', '<leader>db', require('dap').toggle_breakpoint)
 vim.keymap.set('n', '<leader>dc', require('dap').continue)
 vim.keymap.set('n', '<leader>dl', require('dap').run_last)
 vim.keymap.set('n', '<leader>dt', require('dapui').toggle)
+
+-- Toggle term
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>')

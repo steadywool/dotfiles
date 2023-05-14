@@ -51,10 +51,14 @@ require('lazy').setup {
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
 
+    -- Dashboard
+    'nvimdev/dashboard-nvim',
+
     -- Tools
     'NvChad/nvim-colorizer.lua',
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
+    'akinsho/toggleterm.nvim',
 
     -- Telescope
     {
