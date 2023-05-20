@@ -36,9 +36,6 @@ bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
 
-# Dark mode
-bindsym $mod+Shift+o exec $HOME/.local/bin/dark-mode.sh
-
 #-------------------------------------------------------------------
 # XF86 KEYS
 ## Light control
