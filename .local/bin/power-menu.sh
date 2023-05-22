@@ -6,7 +6,7 @@ var+=('⏾ suspend')
 var+=(' lock')
 var+=('󰗼 exit-session')
 
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 6 --index)
+CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 5 --index)
 
 case ${CHOICE} in
     0)

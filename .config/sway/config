@@ -29,8 +29,8 @@ bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 
 ## Screenshot
-bindsym Print exec $HOME/.local/bin/screenshot-menu.sh --save
-bindsym Shift+Print exec $HOME/.local/bin/screenshot-menu.sh --copy
+bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
+bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 
 #-------------------------------------------------------------------
 # XF86 KEYS

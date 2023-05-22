@@ -4,14 +4,14 @@ from sys import stdout
 from time import sleep
 from threading import Lock, Thread
 
-from modules.date import date
-from modules.battery import battery
-from modules.volume import source_volume, sink_volume
-from modules.data_rate import data_rate
-from modules.brightness import brightness
-from modules.storage import storage
-from modules.scratchpad import scratchpad
-from modules.power_profile import power_profile
+from date import date
+from battery import battery
+from volume import source_volume, sink_volume
+from data_rate import data_rate
+from brightness import brightness
+from storage import storage
+from scratchpad import scratchpad
+from power_profile import power_profile
 
 
 # Print informations
