@@ -3,7 +3,6 @@
 var+=('⏻ power-off')
 var+=('󰑓 reboot')
 var+=('⏾ suspend')
-var+=(' profile')
 var+=(' lock')
 var+=('󰗼 exit-session')
 
@@ -20,12 +19,9 @@ case ${CHOICE} in
         systemctl suspend
     ;;
     3)
-        ${HOME}/.local/bin/profile-menu.sh
-    ;;
-    4)
         loginctl lock-session
     ;;
-    5)
+    4)
         loginctl terminate-session ${XDG_SESSION_ID}
     ;;
 esac
