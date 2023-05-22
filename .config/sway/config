@@ -20,10 +20,6 @@ bindsym $mod+o exec $terminal --class kitty-float ranger
 bindsym $mod+p exec $terminal --class kitty-float calcurse
 bindsym $mod+Shift+p exec $terminal --class kitty-float nvim
 
-## Nmtui
-bindsym $mod+c exec $terminal --class kitty-float nmtui connect
-bindsym $mod+Shift+c exec $terminal --class kitty-float nmtui edit
-
 ## Htop
 bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 
@@ -33,8 +29,8 @@ bindsym $mod+Shift+q exec $terminal --class kitty-float htop
 bindsym $mod+Shift+e exec $HOME/.local/bin/power-menu.sh
 
 ## Screenshot
-bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
-bindsym Print exec $HOME/.local/bin/screenshot-menu.sh
+bindsym Print exec $HOME/.local/bin/screenshot-menu.sh --save
+bindsym Shift+Print exec $HOME/.local/bin/screenshot-menu.sh --copy
 
 #-------------------------------------------------------------------
 # XF86 KEYS

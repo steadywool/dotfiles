@@ -1,50 +1,69 @@
 #!/bin/bash
 
 SCREENSHOT_DIR="${HOME}/Images/Screenshots"
-
-var+=('󰹑 save-output')
-var+=('󰹑 copy-output')
-
-var+=(' save-active')
-var+=(' copy-active')
-
-var+=('󰒉 save-area')
-var+=('󰒉 copy-area')
-
-CHOICE=$(printf '%s\n' ${var[@]} | fuzzel -d -w 20 -l 6 --index)
+MENU="fuzzel -d -w 20 -l 4 --index"
 
 # Create screenshot dir
 if [[ ! -d ${SCREENSHOT_DIR} ]]; then
     mkdir -p ${SCREENSHOT_DIR}
 fi
 
-# Output
-case ${CHOICE} in
-    0)
+# Save the screenshot to ${SCREENSHOT_DIR}
+save_screenshot() {
+    var+=('󰹑 save-screen')
+    var+=('󱣴 save-output')
+    var+=(' save-active')
+    var+=('󰒉 save-area')
 
-        /usr/share/sway/scripts/grimshot --notify save output ${SCREENSHOT_DIR}/$(date +%s).png
-    ;;
-    1)
-        /usr/share/sway/scripts/grimshot --notify copy output -
-    ;;
-esac
+    CHOICE=$(printf '%s\n' ${var[@]} | ${MENU})
 
-# Active
-case ${CHOICE} in
-    2)
-        /usr/share/sway/scripts/grimshot --notify save active ${SCREENSHOT_DIR}/$(date +%s).png
-    ;;
-    3)
-        /usr/share/sway/scripts/grimshot --notify copy active -
-    ;;
-esac
+    case ${CHOICE} in
+        0)
+            /usr/share/sway/scripts/grimshot --notify save screen ${SCREENSHOT_DIR}/$(date +%s).png
+        ;;
+        1)
+            /usr/share/sway/scripts/grimshot --notify save output ${SCREENSHOT_DIR}/$(date +%s).png
+        ;;
+        2)
+            /usr/share/sway/scripts/grimshot --notify save active ${SCREENSHOT_DIR}/$(date +%s).png
+        ;;
+        3)
+            /usr/share/sway/scripts/grimshot --notify save area ${SCREENSHOT_DIR}/$(date +%s).png
+        ;;
+    esac
+}
 
-# Area
-case ${CHOICE} in
-    4)
-        /usr/share/sway/scripts/grimshot --notify save area ${SCREENSHOT_DIR}/$(date +%s).png
+# Copy the screenshot to clipboard
+copy_screenshot() {
+    var+=('󰹑 copy-screen')
+    var+=('󱣴 copy-output')
+    var+=(' copy-active')
+    var+=('󰒉 copy-area')
+
+    CHOICE=$(printf '%s\n' ${var[@]} | ${MENU})
+
+    case ${CHOICE} in
+        0)
+            /usr/share/sway/scripts/grimshot --notify copy screen -
+        ;;
+        1)
+            /usr/share/sway/scripts/grimshot --notify copy output -
+        ;;
+        2)
+            /usr/share/sway/scripts/grimshot --notify copy active -
+        ;;
+        3)
+            /usr/share/sway/scripts/grimshot --notify copy area -
+        ;;
+    esac
+}
+
+# Select screenshot mode
+case ${1} in
+    '--save')
+        save_screenshot
     ;;
-    5)
-        /usr/share/sway/scripts/grimshot --notify copy area -
+    '--copy')
+        copy_screenshot
     ;;
 esac
