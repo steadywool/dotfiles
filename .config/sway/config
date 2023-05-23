@@ -38,6 +38,12 @@ bindsym $mod+Shift+s exec $HOME/.local/bin/screenshot-menu.sh
 bindsym XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
+## MPRIS
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioStop exec playerctl pause
+bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86AudioNext exec playerctl next
+
 ## Pipewire
 bindsym XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
 bindsym XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-

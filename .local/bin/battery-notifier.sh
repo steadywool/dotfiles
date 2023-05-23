@@ -13,7 +13,7 @@ if [[ ${bat_status} = 'Charging' ]]; then
 
 else
 
-    # If the battery capacity is lower than 20%, send a notification, & change profile
+    # If the battery capacity is lower than 20%, send a notification
     if [[ ${bat_capacity} -lt 20 ]]; then
         notify-send --urgency=critical 'Battery capacity' "${bat_capacity}% remaining"
     fi
