@@ -8,10 +8,8 @@ require('functions')
 require('plugins')
 Require_plugins()
 
--- Autocmds
+-- Autocmds & Keymaps
 require('autocmds')
-
--- Keymaps
 require('keymaps')
 
 -- Theme
@@ -53,3 +51,7 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.list = true
 vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
+
+-- disable Netrw
+vim.g.loaded_netrw = 0
+vim.g.loaded_netrwPlugin = 0

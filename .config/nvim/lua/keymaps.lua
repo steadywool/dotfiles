@@ -1,12 +1,3 @@
--- Telescope
-vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files)
-vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep)
-vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers)
-vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags)
-vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics)
-vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
-vim.keymap.set('n', '<leader>fe', require('telescope').extensions.file_browser.file_browser)
-
 -- Go to next/previous buffer in buffer list
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bprevious<CR>')
@@ -36,6 +27,14 @@ vim.keymap.set('n', '<leader>lc', vim.lsp.buf.code_action, opts)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.references, opts)
 vim.keymap.set('n', '<leader>lf', function() vim.lsp.buf.format { async = true } end, opts)
 
+-- Telescope
+vim.keymap.set('n', '<leader>ff', require('telescope.builtin').find_files)
+vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep)
+vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers)
+vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags)
+vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics)
+vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
+
 -- Nvim DAP
 vim.keymap.set('n', '<leader>db', require('dap').toggle_breakpoint)
 vim.keymap.set('n', '<leader>dc', require('dap').continue)
@@ -44,3 +43,6 @@ vim.keymap.set('n', '<leader>dd', require('dapui').toggle)
 
 -- Toggle term
 vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>')
+
+-- Nvim Tree
+vim.keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>')

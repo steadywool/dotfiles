@@ -65,9 +65,11 @@ require('lazy').setup {
         'nvim-telescope/telescope.nvim',
         dependencies = {
             'nvim-lua/plenary.nvim',
-            'nvim-telescope/telescope-file-browser.nvim',
         },
     },
+
+    -- Tree
+    'nvim-tree/nvim-tree.lua',
 
     -- Folding
     {
