@@ -44,5 +44,5 @@ if status is-login
     set TTY (tty)
 
     ## Start Sway on the first tty
-    [ $TTY = '/dev/tty1' ] && exec dbus-run-session sway
+    [ $TTY = '/dev/tty1' ] && exec sway
 end
