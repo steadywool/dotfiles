@@ -13,7 +13,7 @@ bindsym $mod+d exec $menu
 
 #-------------------------------------------------------------------
 # EXTRA APPLICATIONS
-## Ranger & Sway
+## Ranger
 bindsym $mod+o exec $terminal --class kitty-float ranger
 
 ## Calcurse & Neovim
@@ -22,6 +22,10 @@ bindsym $mod+Shift+p exec $terminal --class kitty-float nvim
 
 ## Htop
 bindsym $mod+Shift+q exec $terminal --class kitty-float htop
+
+## Nmtui
+bindsym $mod+c exec $terminal --class kitty-float nmtui connect
+bindsym $mod+Shift+c exec $terminal --class kitty-float nmtui edit
 
 #-------------------------------------------------------------------
 # SCRIPTS
