@@ -11,7 +11,6 @@ set -gx XDG_DATA_HOME $HOME/.local/share
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx PAGER less
-set -gx TERMINAL 'kitty --single-instance'
 
 ## Wayland variables
 set -x _JAVA_AWT_WM_NONREPARENTING 1
@@ -36,13 +35,4 @@ if status is-interactive
     for i in (ls $__fish_config_dir/aliases/)
         source $__fish_config_dir/aliases/$i
     end
-end
-
-#-------------------------------------------------------------------
-if status is-login
-    ## Current TTY
-    set TTY (tty)
-
-    ## Start Sway on the first tty
-    [ $TTY = '/dev/tty1' ] && exec sway
 end

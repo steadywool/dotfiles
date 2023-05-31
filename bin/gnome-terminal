@@ -1,3 +1,0 @@
-#!/bin/bash
-
-${TERMINAL} $(echo ${@} | sed "s/--/-e/g")

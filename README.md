@@ -7,7 +7,6 @@ Here are the tools that these dotfiles supply:
 
 - `archlinux` as distribution
 - `gnome` as desktop environment
-- `kitty` as terminal
 - `fish` as shell
 - `neovim` as code editor
 - `ranger` as file explorer
