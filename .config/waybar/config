@@ -1,0 +1,58 @@
+{
+    "layer": "top",
+    "modules-left": ["sway/workspaces", "sway/scratchpad", "sway/mode"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["idle_inhibitor", "backlight", "network", "wireplumber", "battery", "clock", "tray"],
+
+    "sway/scratchpad": {
+        "format": " {count}",
+        "tooltip-format": "{app}: {title}"
+    },
+
+    "sway/window": {
+        "max-length": 20
+    },
+
+    "idle_inhibitor": {
+        "format": "[{icon}]",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " "
+        }
+    },
+
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "[󰃞 {percent}%]"
+    },
+
+    "network": {
+        "format": "[󰛳 {essid}]",
+        "format-disconnected": "",
+        "tooltip-format": "{ipaddr}/{cidr} ({ifname})",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+
+    "wireplumber": {
+        "format": "[ {volume}%]",
+        "format-muted": "[ mute]",
+    },
+
+    "battery": {
+        "format": "[󰁹 {capacity}%]",
+        "format-charging": "[󱐋 {capacity}%]",
+        "format-plugged": "[ {capacity}%]"
+    },
+
+    "clock": {
+        "format": "[󰃭 {:%F}]",
+        "format-alt": "[ {:%R}]"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    }
+}
+
+# vim: ft=config

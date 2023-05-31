@@ -11,6 +11,7 @@ Here are the tools that these dotfiles supply:
 - `sway` as window manager
 - `swaylock` as screen locker
 - `swayidle` as idle manager
+- `waybar` as status bar
 - `fuzzel` as application launcher
 - `dunst` as notification daemon
 - `kitty` as terminal
