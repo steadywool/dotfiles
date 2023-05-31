@@ -7,3 +7,4 @@ vim.cmd('autocmd Filetype markdown setlocal expandtab tabstop=2 shiftwidth=2 sof
 vim.cmd('autocmd Filetype php setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 autoindent')
 vim.cmd('autocmd Filetype css setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
 vim.cmd('autocmd Filetype nix setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')
+vim.cmd('autocmd Filetype template setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2')

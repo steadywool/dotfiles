@@ -23,7 +23,7 @@ require('dashboard').setup {
             {
                 desc = ' Browse',
                 group = 'Character',
-                action = 'Telescope file_browser',
+                action = 'NvimTreeToggle',
                 key = 'b',
             },
         },
