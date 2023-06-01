@@ -13,7 +13,7 @@ require('autocmds')
 require('keymaps')
 
 -- Theme
-vim.cmd('colorscheme gruvbox-material')
+vim.cmd('colorscheme onedark')
 
 -- Files
 vim.opt.swapfile = true
