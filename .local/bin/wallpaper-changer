@@ -1,11 +1,7 @@
 #!/bin/bash
 
 # Default folder
-WALLPAPER_DIR="${HOME}/Pictures/Backgrounds"
-
-if [[ -d ${WALLPAPER_DIR} ]]; then
-    mkdir -p ${WALLPAPER_DIR}
-fi
+WALLPAPER_DIR="${HOME}/Images/Backgrounds"
 
 case ${1} in
     # Use a random wallpaper from a folder
@@ -20,6 +16,5 @@ case ${1} in
         curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080' && \
         gsettings set org.gnome.desktop.background picture-uri file:///tmp/wallpaper.jpg
         gsettings set org.gnome.desktop.background picture-uri-dark file:///tmp/wallpaper.jpg
-        swaymsg output '*' bg /tmp/wallpaper.jpg fill
     ;;
 esac
