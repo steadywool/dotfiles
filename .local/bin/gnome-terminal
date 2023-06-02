@@ -1,0 +1,3 @@
+#!/bin/bash
+
+alacritty $(echo ${@} | sed "s/--/-e/g")
