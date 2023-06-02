@@ -8,12 +8,11 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_DATA_HOME $HOME/.local/share
 
 ## Editor variables
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+set -gx EDITOR nano
+set -gx VISUAL nano
 set -gx PAGER less
 
 ## Wayland variables
-set -x _JAVA_AWT_WM_NONREPARENTING 1
 set -x MOZ_ENABLE_WAYLAND 1
 
 #-------------------------------------------------------------------
