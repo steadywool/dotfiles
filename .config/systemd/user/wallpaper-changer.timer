@@ -3,7 +3,7 @@ Description=Timer to run wallpaper-changer.service
 
 [Timer]
 Unit=wallpaper-changer.service
-OnCalendar=*:0/15
+OnCalendar=*:0/30
 
 [Install]
 WantedBy=timers.target
