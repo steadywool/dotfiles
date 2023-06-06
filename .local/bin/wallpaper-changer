@@ -11,51 +11,62 @@ from argparse import ArgumentParser
 argument_parser = ArgumentParser()
 argument_parser.add_argument('-b', '--bing', action="store_true", help='Set a Bing walpaper')
 argument_parser.add_argument('-p', '--picsum', action="store_true", help='Set a Picsum walpaper')
-argument_parser.add_argument('-r', '--random', help='Set a random wallpaper', required=False)
+argument_parser.add_argument('-r', '--random', required=False, help='Select a random wallpaper from a directory')
 option = argument_parser.parse_args()
 
 
-# ---------------------------------------------------------------------------------------------------------------------
-# Get the daily Bing wallpaper
-def get_bing_wallpaper():
-    bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
+# ------------------------------------------------------------------------------------------
+class Downloaded_wallpaper():
+    def __init__(self):
+        # Default directory to store background
+        self.background_dir = path.abspath(path.expanduser('~/.cache'))
 
-    bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
-    bing_wallpaper = "https://bing.com" + bing_json['images'][0]['url']
+    # Get daily Bing wallpaper, download it and set it
+    def bing_wallpaper(self):
+        bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
+        bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
 
-    urlretrieve(bing_wallpaper, "/tmp/background.jpg")
+        wallpaper_file = f'{self.background_dir}/background.jpg'
+        wallpaper_url = "https://bing.com" + bing_json['images'][0]['url']
+
+        urlretrieve(wallpaper_url, wallpaper_file)
+        set_wallpaper(wallpaper_file)
+
+    # Get random Picsum wallpaper, download it and set it
+    def picsum_wallpaper(self):
+        wallpaper_file = f'{self.background_dir}/background.jpg'
+        wallpaper_url = 'https://picsum.photos/1920/1080'
+
+        urlretrieve(wallpaper_url, wallpaper_file)
+        set_wallpaper(wallpaper_file)
 
 
-# Get a Picsum wallpaper
-def get_picsum_wallpaper():
-    picsum_wallpaper = 'https://picsum.photos/1920/1080'
-    urlretrieve(picsum_wallpaper, "/tmp/background.jpg")
+# ------------------------------------------------------------------------------------------
+class Local_wallpaper():
+    def __init__(self):
+        # Default directory to store background
+        self.background_dir = path.abspath(path.expanduser(option.random))
+
+    # Get random wallpaper from a selected directory and set it
+    def random_wallpaper(self):
+        random_wallpaper = choice(listdir(self.background_dir))
+        wallpaper_file = f'{self.background_dir}/{random_wallpaper}'
+
+        set_wallpaper(wallpaper_file)
 
 
-# ---------------------------------------------------------------------------------------------------------------------
-# Set a downloaded wallpaper as background
-def set_downloaded_wallpaper():
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', 'file:///tmp/background.jpg'], check=True)
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', 'file:///tmp/background.jpg'], check=True)
-
-
-# Set a random wallpaper from a dir as background
-def set_random_wallpaper():
-
-    random_dir = path.abspath(path.expanduser(option.random))
-    random_wallpaper = choice(listdir(random_dir))
-
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{random_dir}/{random_wallpaper}'], check=True)
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{random_dir}/{random_wallpaper}'], check=True)
+# ------------------------------------------------------------------------------------------
+# Set gnome wallpaper
+def set_wallpaper(wallpaper_file):
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{wallpaper_file}'], check=True)
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{wallpaper_file}'], check=True)
 
 
 # ---------------------------------------------------------------------------------------------------------------------
 # Select an option
 if option.bing:
-    get_bing_wallpaper()
-    set_downloaded_wallpaper()
+    Downloaded_wallpaper().bing_wallpaper()
 if option.picsum:
-    get_picsum_wallpaper()
-    set_downloaded_wallpaper()
+    Downloaded_wallpaper().picsum_wallpaper()
 if option.random:
-    set_random_wallpaper()
+    Local_wallpaper().random_wallpaper()
