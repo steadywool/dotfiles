@@ -1,20 +1,61 @@
-#!/bin/bash
+#!/bin/python3
 
-# Default folder
-WALLPAPER_DIR="${HOME}/Images/Backgrounds"
+from urllib.request import urlopen, urlretrieve
+from json import loads
+from os import listdir, path
+from random import choice
+from subprocess import run
+from argparse import ArgumentParser
 
-case ${1} in
-    # Use a random wallpaper from a folder
-    '-r' | '--random')
-        random_wallpaper=$(find ${2:-${WALLPAPER_DIR}} -type f | shuf -n1)
-        gsettings set org.gnome.desktop.background picture-uri file://${random_wallpaper}
-        gsettings set org.gnome.desktop.background picture-uri-dark file://${random_wallpaper}
-    ;;
+# Argument parser setup
+argument_parser = ArgumentParser()
+argument_parser.add_argument('-b', '--bing', action="store_true", help='Set a Bing walpaper')
+argument_parser.add_argument('-p', '--picsum', action="store_true", help='Set a Picsum walpaper')
+argument_parser.add_argument('-r', '--random', help='Set a random wallpaper', required=False)
+option = argument_parser.parse_args()
 
-    #download a temporary wallpaper with Picsum
-    '-d' | '--download')
-        curl -L -o /tmp/wallpaper.jpg 'https://picsum.photos/1920/1080' && \
-        gsettings set org.gnome.desktop.background picture-uri file:///tmp/wallpaper.jpg
-        gsettings set org.gnome.desktop.background picture-uri-dark file:///tmp/wallpaper.jpg
-    ;;
-esac
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Get the daily Bing wallpaper
+def get_bing_wallpaper():
+    bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
+
+    bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
+    bing_wallpaper = "https://bing.com" + bing_json['images'][0]['url']
+
+    urlretrieve(bing_wallpaper, "/tmp/background.jpg")
+
+
+# Get a Picsum wallpaper
+def get_picsum_wallpaper():
+    picsum_wallpaper = 'https://picsum.photos/1920/1080'
+    urlretrieve(picsum_wallpaper, "/tmp/background.jpg")
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Set a downloaded wallpaper as background
+def set_downloaded_wallpaper():
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', 'file:///tmp/background.jpg'], check=True)
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', 'file:///tmp/background.jpg'], check=True)
+
+
+# Set a random wallpaper from a dir as background
+def set_random_wallpaper():
+
+    random_dir = path.abspath(path.expanduser(option.random))
+    random_wallpaper = choice(listdir(random_dir))
+
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{random_dir}/{random_wallpaper}'], check=True)
+    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{random_dir}/{random_wallpaper}'], check=True)
+
+
+# ---------------------------------------------------------------------------------------------------------------------
+# Select an option
+if option.bing:
+    get_bing_wallpaper()
+    set_downloaded_wallpaper()
+if option.picsum:
+    get_picsum_wallpaper()
+    set_downloaded_wallpaper()
+if option.random:
+    set_random_wallpaper()
