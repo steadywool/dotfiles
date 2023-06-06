@@ -29,16 +29,22 @@ class Downloaded_wallpaper():
         wallpaper_file = f'{self.background_dir}/background.jpg'
         wallpaper_url = "https://bing.com" + bing_json['images'][0]['url']
 
-        urlretrieve(wallpaper_url, wallpaper_file)
-        set_wallpaper(wallpaper_file)
+        try:
+            urlretrieve(wallpaper_url, wallpaper_file)
+            set_wallpaper(wallpaper_file)
+        except:
+            exit()
 
     # Get random Picsum wallpaper, download it and set it
     def picsum_wallpaper(self):
         wallpaper_file = f'{self.background_dir}/background.jpg'
         wallpaper_url = 'https://picsum.photos/1920/1080'
 
-        urlretrieve(wallpaper_url, wallpaper_file)
-        set_wallpaper(wallpaper_file)
+        try:
+            urlretrieve(wallpaper_url, wallpaper_file)
+            set_wallpaper(wallpaper_file)
+        except:
+            exit()
 
 
 # ------------------------------------------------------------------------------------------
@@ -52,7 +58,10 @@ class Local_wallpaper():
         random_wallpaper = choice(listdir(self.background_dir))
         wallpaper_file = f'{self.background_dir}/{random_wallpaper}'
 
-        set_wallpaper(wallpaper_file)
+        try:
+            set_wallpaper(wallpaper_file)
+        except:
+            exit()
 
 
 # ------------------------------------------------------------------------------------------
