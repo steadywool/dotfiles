@@ -1,5 +1,6 @@
 [Unit]
 Description=Timer to run wallpaper-changer.service
+After=network-online.target
 
 [Timer]
 Unit=wallpaper-changer.service

@@ -24,7 +24,12 @@ class Downloaded_wallpaper():
     # Get daily Bing wallpaper, download it and set it
     def bing_wallpaper(self):
         bing_url = 'https://www.bing.com/HPImageArchive.aspx?format=js&idx=0&n=1&mkt=fr-FR'
-        bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
+
+        # Get Json
+        try:
+            bing_json = loads(urlopen(bing_url).read().decode("utf-8"))
+        except:
+            exit("Please check your connection.")
 
         wallpaper_file = f'{self.background_dir}/background.jpg'
         wallpaper_url = "https://bing.com" + bing_json['images'][0]['url']
@@ -33,7 +38,7 @@ class Downloaded_wallpaper():
             urlretrieve(wallpaper_url, wallpaper_file)
             set_wallpaper(wallpaper_file)
         except:
-            exit()
+            exit("Please check your connection.")
 
     # Get random Picsum wallpaper, download it and set it
     def picsum_wallpaper(self):
@@ -44,7 +49,7 @@ class Downloaded_wallpaper():
             urlretrieve(wallpaper_url, wallpaper_file)
             set_wallpaper(wallpaper_file)
         except:
-            exit()
+            exit("Please check your connection.")
 
 
 # ------------------------------------------------------------------------------------------
@@ -61,7 +66,7 @@ class Local_wallpaper():
         try:
             set_wallpaper(wallpaper_file)
         except:
-            exit()
+            exit("Please check that the chosen directory contains only the images.")
 
 
 # ------------------------------------------------------------------------------------------
