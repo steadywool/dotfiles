@@ -7,30 +7,38 @@ from argparse import ArgumentParser
 
 # Argument parser setup
 argument_parser = ArgumentParser()
-argument_parser.add_argument('-r', '--random', required=False, help='Select a random wallpaper from a directory')
+argument_parser.add_argument('-r', '--random', required=False, help='Select a random wallpaper from the given directory')
+argument_parser.add_argument('-s', '--select', required=False, help='Change the wallpaper to the given image')
 option = argument_parser.parse_args()
-
-# Default directory to store background
-background_dir = path.abspath(path.expanduser(option.random))
 
 
 # Get random wallpaper from a selected directory and set it
 def random_wallpaper():
+    background_dir = path.abspath(path.expanduser(option.random))
     random_wallpaper = choice(listdir(background_dir))
     wallpaper_file = f'{background_dir}/{random_wallpaper}'
 
-    try:
-        set_wallpaper(wallpaper_file)
-    except:
-        exit("Please check that the chosen directory contains only the images.")
+    set_wallpaper(wallpaper_file)
+
+
+# Choose the wallpaper
+def select_wallpaper():
+    wallpaper_file = path.abspath(path.expanduser(option.select))
+
+    set_wallpaper(wallpaper_file)
 
 
 # Set gnome wallpaper
 def set_wallpaper(wallpaper_file):
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{wallpaper_file}'], check=True)
-    run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{wallpaper_file}'], check=True)
+    try:
+        run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', f'file://{wallpaper_file}'], check=True)
+        run(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri-dark', f'file://{wallpaper_file}'], check=True)
+    except:
+        exit("Please check that the chosen file is an image.")
 
 
 # Select an option
 if option.random:
     random_wallpaper()
+if option.select:
+    select_wallpaper()
