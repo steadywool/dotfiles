@@ -34,30 +34,16 @@ require('lazy').setup {
     -- Treesitter
     'nvim-treesitter/nvim-treesitter',
 
-    -- DAP
-    {
-        'mfussenegger/nvim-dap',
-        dependencies = {
-            'rcarriga/nvim-dap-ui',
-        },
-
-    },
-
     ---------------------------------------------------------------------
     -- Status
-    'akinsho/bufferline.nvim',
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
-
-    -- Dashboard
-    'nvimdev/dashboard-nvim',
 
     -- Tools
     'NvChad/nvim-colorizer.lua',
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
-    'akinsho/toggleterm.nvim',
 
     -- Telescope
     {

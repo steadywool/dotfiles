@@ -35,14 +35,5 @@ vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics)
 vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
 
--- Nvim DAP
-vim.keymap.set('n', '<leader>db', require('dap').toggle_breakpoint)
-vim.keymap.set('n', '<leader>dc', require('dap').continue)
-vim.keymap.set('n', '<leader>dl', require('dap').run_last)
-vim.keymap.set('n', '<leader>dd', require('dapui').toggle)
-
--- Toggle term
-vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>')
-
 -- Nvim Tree
 vim.keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>')
