@@ -1,0 +1,14 @@
+[Desktop Entry]
+# Application, Link or Directory
+Type=Application
+
+# What to execute
+Name=Discord
+Comment=Execute Discord at startup
+Exec=/usr/bin/flatpak run com.discordapp.Discord --start-minimized
+
+# Don't show this .destkop
+NoDisplay=true
+
+# Set this to "false" if you want to disable the automatic startup of the app
+X-GNOME-Autostart-enabled=true
