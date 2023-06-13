@@ -1,0 +1,15 @@
+[Desktop Entry]
+# Application, Link or Directory
+Type=Application
+
+# Categories, see https://specifications.freedesktop.org/menu-spec/latest/apa.html
+Categories=Utility;Calendar;
+
+# What to execute
+Name=Calcurse
+Comment=Start Calendar
+Exec=calcurse
+Icon=calendar
+
+# Launch the app in a terminal
+Terminal=true
