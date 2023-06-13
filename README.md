@@ -13,7 +13,6 @@ Here are the tools that these dotfiles supply:
 - `fish` as shell
 - `neovim` as code editor
 - `ranger` as file explorer
-- `calcurse` as calendar
 
 ## How it work ? 🔬
 By default, only the applications needed to run the system are installed.
