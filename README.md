@@ -1,4 +1,4 @@
-# Dotfiles 🐧
+# My dotfiles 🐧
 
 Configuration of tools that I use in my daily life.
 
@@ -17,7 +17,7 @@ Here are the tools that these dotfiles supply:
 ## How it work ? 🔬
 By default, only the applications needed to run the system are installed.
 
-To install additional graphic applications, [Flatpak](https://www.flatpak.org) is within the user's reach.
+To install additional graphical applications, [Flatpak](https://www.flatpak.org) is within the user's reach.
 
 For applications in CLI, or not present in Flatpak, [Distrobox](https://github.com/89luca89/distrobox) and [Podman](https://podman.io) are installed.
 
