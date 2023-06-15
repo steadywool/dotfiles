@@ -8,7 +8,7 @@
 
 <p align="center">
 	<a href="https://github.com/kaniville/dotfiles/stargazers">
-		<img src="https://img.shields.io/github/stars/kaniville/dotfiles?color=magenta&style=for-the-badge"/>
+		<img src="https://img.shields.io/github/stars/kaniville/dotfiles?color=pink&style=for-the-badge"/>
   </a>
 	<a href="https://github.com/kaniville/dotfiles/commits/main">
 		<img src="https://img.shields.io/github/commit-activity/m/kaniville/dotfiles?color=blue&style=for-the-badge"/>
