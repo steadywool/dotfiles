@@ -1,22 +1,6 @@
-<h3 align="center">🐧 My dotfiles</h3>
+# 🐧 My dotfiles
 
-<p align="center">Configuration of tools that I use in my daily life.</p>
-
-<p align="center">
-  <img src="src/screenshot.png"/>
-</p>
-
-<p align="center">
-	<a href="https://github.com/kaniville/dotfiles/stargazers">
-		<img src="https://img.shields.io/github/stars/kaniville/dotfiles?color=pink&style=for-the-badge"/>
-  </a>
-	<a href="https://github.com/kaniville/dotfiles/commits/main">
-		<img src="https://img.shields.io/github/commit-activity/m/kaniville/dotfiles?color=blue&style=for-the-badge"/>
-  </a>
-	<a href="https://github.com/kaniville/dotfiles/forks">
-		<img src="https://img.shields.io/github/forks/kaniville/dotfiles?color=orange&style=for-the-badge"/>
-  </a>
-</p>
+Configuration of tools that I use in my daily life.
 
 ## 🌻 Details
 Here are the tools that these dotfiles supply:
