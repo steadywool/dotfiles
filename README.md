@@ -37,7 +37,7 @@ For applications in CLI, or not present in Flatpak, [Distrobox](https://github.c
 
 System snapshots are taken before each update with [Btrfs autosnap](https://github.com/kaniville/btrfs-autosnap).
 
-## 🌄 Installation
+## 🚀 Installation
 To install these dotfiles, use https://github.com/kaniville/ansible-configuration.
 
 You can also clone this repository with Git:
