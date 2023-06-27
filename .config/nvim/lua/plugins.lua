@@ -25,7 +25,12 @@ require('lazy').setup {
 
     ---------------------------------------------------------------------
     -- Mason
-    'neovim/nvim-lspconfig',
+    {
+        'neovim/nvim-lspconfig',
+        dependencies = {
+            'williamboman/mason-lspconfig.nvim',
+        },
+    },
 
     -- LSP
     'williamboman/mason.nvim',
@@ -55,12 +60,4 @@ require('lazy').setup {
 
     -- Tree
     'nvim-tree/nvim-tree.lua',
-
-    -- Folding
-    {
-        'kevinhwang91/nvim-ufo',
-        dependencies = {
-            'kevinhwang91/promise-async',
-        },
-    },
 }

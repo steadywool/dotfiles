@@ -40,11 +40,6 @@ vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.wrap = false
 
--- Folding
-vim.opt.foldenable = true
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-
 -- Tabs & spaces
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
