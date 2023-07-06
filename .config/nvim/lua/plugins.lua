@@ -3,7 +3,7 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 
 require('lazy').setup {
     -- Appearance
-    'sainnhe/gruvbox-material',
+    'sainnhe/edge',
     { 'kyazdani42/nvim-web-devicons', lazy = true },
 
     ---------------------------------------------------------------------
