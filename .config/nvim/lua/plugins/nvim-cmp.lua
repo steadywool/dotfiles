@@ -1,9 +1,9 @@
-local cmp = require('cmp')
+-- Snippet
+require('luasnip.loaders.from_vscode').lazy_load()
 
+-- Completion
+local cmp = require('cmp')
 require('cmp').setup {
-   completion = {
-        completeopt = 'menu,menuone,noinsert'
-    },
     snippet = {
         expand = function(args)
             require('luasnip').lsp_expand(args.body)

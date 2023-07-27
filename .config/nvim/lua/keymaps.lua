@@ -2,13 +2,6 @@
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
--- Use jk or kj to escape
-vim.keymap.set('i', 'jk', '<Esc>')
-vim.keymap.set('i', 'kj', '<Esc>')
-
--- Exit Terminal mode
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
-
 -- LSP Config
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, opts)

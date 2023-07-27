@@ -1,5 +1,7 @@
+-- Nvim-cmp
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+-- Nvim-lspconfig
 local servers = {
     'html', --HTML
     'cssls', --CSS
@@ -7,15 +9,14 @@ local servers = {
     'eslint', --Javascript/Typescript
     'tsserver', --Javascript/Typescript
     'intelephense', --PHP
-
     'pyright', --Python
     'pylsp', -- Python
-
     'clangd', --C/C++
     'bashls', --Bash
     'lua_ls', --Lua
 }
 
+-- General
 for _, lsp in pairs(servers) do
     require('lspconfig')[lsp].setup {
         capabilities = capabilities,

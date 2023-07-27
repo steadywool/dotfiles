@@ -3,8 +3,6 @@ vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 
 require('lazy').setup {
     -- Appearance
-    'sainnhe/edge',
-    'sainnhe/everforest',
     'sainnhe/gruvbox-material',
     { 'kyazdani42/nvim-web-devicons', lazy = true },
 
@@ -46,6 +44,9 @@ require('lazy').setup {
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
+
+    -- Dashboard
+    'nvimdev/dashboard-nvim',
 
     -- Tools
     'NvChad/nvim-colorizer.lua',
