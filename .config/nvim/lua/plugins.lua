@@ -26,14 +26,14 @@ require('lazy').setup {
     ---------------------------------------------------------------------
     -- Mason
     {
-        'neovim/nvim-lspconfig',
+        'williamboman/mason.nvim',
         dependencies = {
             'williamboman/mason-lspconfig.nvim',
         },
     },
 
     -- LSP
-    'williamboman/mason.nvim',
+    'neovim/nvim-lspconfig',
     'jose-elias-alvarez/null-ls.nvim',
 
     -- Treesitter
@@ -44,6 +44,7 @@ require('lazy').setup {
     'nvim-lualine/lualine.nvim',
     'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
+    'akinsho/bufferline.nvim',
 
     -- Dashboard
     'nvimdev/dashboard-nvim',
@@ -55,12 +56,10 @@ require('lazy').setup {
 
     -- Telescope
     {
-        'nvim-telescope/telescope.nvim',
+    	'nvim-telescope/telescope-file-browser.nvim',
         dependencies = {
+            'nvim-telescope/telescope.nvim',
             'nvim-lua/plenary.nvim',
         },
     },
-
-    -- Tree
-    'nvim-tree/nvim-tree.lua',
 }

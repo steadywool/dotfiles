@@ -1,6 +1,0 @@
-[Service]
-Type=simple
-ExecStart=/home/kani/.local/bin/wallpaper-changer --random /home/kani/Images/Backgrounds
-
-[Install]
-WantedBy=default.target
