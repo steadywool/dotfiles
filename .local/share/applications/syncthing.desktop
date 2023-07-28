@@ -1,0 +1,18 @@
+[Desktop Entry]
+# Application, Link or Directory
+Type=Application
+
+# Name of the application
+Name=Syncthing
+
+# Icon of the application
+Icon=syncthing
+
+# The command to execute
+Exec=xdg-open http://localhost:8384/
+
+# Hide the app
+NoDisplay=false
+
+# Start from terminal
+Terminal=false
