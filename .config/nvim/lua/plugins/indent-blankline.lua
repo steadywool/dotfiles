@@ -5,4 +5,4 @@ require('indent_blankline').setup {
 }
 
 -- Disable some filetypes
-vim.g.indent_blankline_filetype_exclude = {'dashboard'}
+vim.g.indent_blankline_filetype_exclude = {'dashboard', 'help'}
