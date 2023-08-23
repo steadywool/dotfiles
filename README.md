@@ -9,7 +9,7 @@ Here are the tools that these dotfiles supply:
 
 - `archlinux` as distribution
 - `gnome` as desktop environment
-- `alacritty` as terminal emulator
+- `gnome-console` as terminal emulator
 - `fish` as shell
 - `neovim` as code editor
 - `ranger` as file explorer

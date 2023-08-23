@@ -50,3 +50,9 @@ vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
 -- disable Netrw
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
+
+-- disable providers
+vim.g.loaded_python3_provider = 0
+vim.g.loaded_ruby_provider = 0
+vim.g.loaded_node_provider = 0
+vim.g.loaded_perl_provider = 0

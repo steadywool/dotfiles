@@ -54,11 +54,11 @@ require('lazy').setup {
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
 
-    -- Telescope
+    -- Search
+    'nvim-tree/nvim-tree.lua',
     {
-    	'nvim-telescope/telescope-file-browser.nvim',
+        'nvim-telescope/telescope.nvim',
         dependencies = {
-            'nvim-telescope/telescope.nvim',
             'nvim-lua/plenary.nvim',
         },
     },

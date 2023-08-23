@@ -28,5 +28,5 @@ vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags)
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics)
 vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
 
--- Telescope file browser
-vim.keymap.set('n', '<leader>nn', require "telescope".extensions.file_browser.file_browser)
+-- Nvim Tree
+vim.keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>')
