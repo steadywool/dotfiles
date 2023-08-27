@@ -1,0 +1,14 @@
+{
+    "dev.containers.dockerPath": "podman-remote",
+    "workbench.colorTheme": "Gruvbox Material Dark",
+    "window.menuBarVisibility": "toggle",
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "telemetry.telemetryLevel": "off",
+    "extensions.ignoreRecommendations": true,
+    "gruvboxMaterial.darkSelection": "yellow",
+    "github.gitAuthentication": false,
+    "remote.containers.copyGitConfig": false,
+    "remote.containers.gitCredentialHelperConfigLocation": "none",
+}

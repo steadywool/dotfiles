@@ -1,7 +1,5 @@
 # 🐧 My dotfiles
 
-> ⛔ **THESE DOTFILES ARE ARCHIVED. tHE CONFIGURATION OF MY TOOLS IS NOW IN THE "ANSIBLE-CONFIGURATION" REPOSITORY.**
-
 Configuration of tools that I use in my daily life.
 
 ![](src/screenshot.png)
@@ -12,7 +10,7 @@ Here are the tools that these dotfiles supply:
 - `archlinux` as distribution
 - `gnome` as desktop environment
 - `fish` as shell
-- `neovim` as code editor
+- `VSCode` as code editor
 - `ranger` as file explorer
 
 Here is the partitioning I use:
