@@ -1,38 +1,30 @@
--- Leader key
+-- Essential
 vim.g.mapleader = ';'
-
--- Functions
 require('functions')
 
 -- Plugins
 require('plugins')
 Require_plugins()
 
--- Autocmds & Keymaps
-require('autocmds')
+-- Additional settings
+require('autocmd')
 require('keymaps')
 
--- Theme
+-- Appearance
 vim.cmd('colorscheme gruvbox-material')
+vim.opt.termguicolors = true
+Diagnostics_sign()
 
--- Files
-vim.opt.swapfile = true
-vim.opt.undofile = true
-
--- Clipboard
+-- Clipboard/Mouse
 vim.opt.clipboard = 'unnamedplus'
-
--- Mouse usage
 vim.opt.mouse = 'a'
 
--- Colors
-vim.opt.termguicolors = true
+-- Search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
--- Indentation
-vim.opt.autoindent = true
-
--- Diagnostics
-Diagnostics_sign()
+-- Files
+vim.opt.undofile = true
 
 -- Lines
 vim.opt.relativenumber = true
@@ -44,14 +36,10 @@ vim.opt.wrap = false
 vim.opt.expandtab = true
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.list = true
-vim.opt.listchars = { tab = '▶ ', trail = '•', nbsp = '␣' }
 
--- disable Netrw
+-- Disable
 vim.g.loaded_netrw = 0
 vim.g.loaded_netrwPlugin = 0
-
--- disable providers
 vim.g.loaded_python3_provider = 0
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_node_provider = 0

@@ -2,48 +2,54 @@
 vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 
 require('lazy').setup {
-    -- Appearance
-    'sainnhe/gruvbox-material',
-    { 'kyazdani42/nvim-web-devicons', lazy = true },
-
-    ---------------------------------------------------------------------
-    -- Completion
+    -- Autocompletion
     {
         'hrsh7th/nvim-cmp',
-        event = 'InsertEnter',
         dependencies = {
             'hrsh7th/cmp-nvim-lsp',
+
+            -- Snippets
+            'L3MON4D3/LuaSnip',
             'saadparwaiz1/cmp_luasnip',
-            'hrsh7th/cmp-path',
-            'hrsh7th/cmp-buffer',
-        },
-    },
 
-    -- Snippets
-    'L3MON4D3/LuaSnip',
-    'rafamadriz/friendly-snippets',
-
-    ---------------------------------------------------------------------
-    -- Mason
-    {
-        'williamboman/mason.nvim',
-        dependencies = {
-            'williamboman/mason-lspconfig.nvim',
+            -- Additional snippets
+            'rafamadriz/friendly-snippets',
         },
     },
 
     -- LSP
-    'neovim/nvim-lspconfig',
-    'jose-elias-alvarez/null-ls.nvim',
+    {
+        'neovim/nvim-lspconfig',
+        dependencies = {
+        'williamboman/mason.nvim',
+            'williamboman/mason-lspconfig.nvim',
+        },
+    },
 
     -- Treesitter
-    'nvim-treesitter/nvim-treesitter',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        dependencies = {
+            'nvim-treesitter/nvim-treesitter-textobjects',
+        },
+    },
 
-    ---------------------------------------------------------------------
+    -- Telescope
+    {
+        'nvim-telescope/telescope.nvim',
+        dependencies = {
+            'nvim-lua/plenary.nvim',
+        },
+    },
+
+    -- Appearance
+    'sainnhe/gruvbox-material',
+    'kyazdani42/nvim-web-devicons',
+
     -- Status
     'nvim-lualine/lualine.nvim',
-    'lewis6991/gitsigns.nvim',
     'lukas-reineke/indent-blankline.nvim',
+    'lewis6991/gitsigns.nvim',
     'akinsho/bufferline.nvim',
 
     -- Dashboard
@@ -54,12 +60,6 @@ require('lazy').setup {
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
 
-    -- Search
+    -- Tree
     'nvim-tree/nvim-tree.lua',
-    {
-        'nvim-telescope/telescope.nvim',
-        dependencies = {
-            'nvim-lua/plenary.nvim',
-        },
-    },
 }
