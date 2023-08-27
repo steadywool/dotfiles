@@ -8,8 +8,8 @@ set -gx XDG_CACHE_HOME $HOME/.cache
 set -gx XDG_DATA_HOME $HOME/.local/share
 
 ## Editor variables
-set -gx EDITOR nvim
-set -gx VISUAL nvim
+set -gx EDITOR distrobox enter dev-container -- nvim
+set -gx VISUAL distrobox enter dev-container -- nvim
 set -gx PAGER less
 
 ## Wayland variables
