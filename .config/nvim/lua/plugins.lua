@@ -59,6 +59,7 @@ require('lazy').setup {
     'NvChad/nvim-colorizer.lua',
     'windwp/nvim-autopairs',
     'iamcco/markdown-preview.nvim',
+    'akinsho/toggleterm.nvim',
 
     -- Tree
     'nvim-tree/nvim-tree.lua',

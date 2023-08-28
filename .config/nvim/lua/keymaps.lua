@@ -2,6 +2,9 @@
 vim.keymap.set('n', '<TAB>', '<cmd>bnext<CR>')
 vim.keymap.set('n', '<S-TAB>', '<cmd>bprevious<CR>')
 
+-- Exit Terminal mode
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
+
 -- LSP Config
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>lD', vim.lsp.buf.declaration, opts)
@@ -30,3 +33,6 @@ vim.keymap.set('n', '<leader>fo', require('telescope.builtin').oldfiles)
 
 -- Nvim Tree
 vim.keymap.set('n', '<leader>nn', '<cmd>NvimTreeToggle<CR>')
+
+-- Toggle term
+vim.keymap.set('n', '<leader>tt', '<cmd>ToggleTerm<CR>')
