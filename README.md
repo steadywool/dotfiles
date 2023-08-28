@@ -1,5 +1,7 @@
 # 🐧 My dotfiles
 
+> ⛔ **THESE DOTFILES ARE ARCHIVED. tHE CONFIGURATION OF MY TOOLS IS NOW IN THE "ANSIBLE-CONFIGURATION" REPOSITORY.**
+
 Configuration of tools that I use in my daily life.
 
 ![](src/screenshot.png)
