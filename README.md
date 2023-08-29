@@ -1,6 +1,6 @@
 # 🐧 My dotfiles
 
-> ⛔ **THESE DOTFILES ARE ARCHIVED. tHE CONFIGURATION OF MY TOOLS IS NOW IN THE "ANSIBLE-CONFIGURATION" REPOSITORY.**
+> ⛔ **THESE DOTFILES ARE ARCHIVED. tHE CONFIGURATION OF MY TOOLS IS NOW IN THE "[ANSIBLE-CONFIGURATION](https://github.com/kaniville/ansible-configuration)" REPOSITORY.**
 
 Configuration of tools that I use in my daily life.
 
