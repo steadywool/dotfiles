@@ -1,6 +1,7 @@
 # 🐧 My dotfiles
 
-> ⛔ **THESE DOTFILES ARE ARCHIVED. tHE CONFIGURATION OF MY TOOLS IS NOW IN THE "[ANSIBLE-CONFIGURATION](https://github.com/kaniville/ansible-configuration)" REPOSITORY.**
+> ⛔ This repository has been archived and is no longer actively maintained. ⛔
+> **Please visit our new repository for the latest updates: [ansible-configuration](https://github.com/kaniville/ansible-configuration)**
 
 Configuration of tools that I use in my daily life.
 
