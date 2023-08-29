@@ -1,8 +1,7 @@
 # 🐧 My dotfiles
 
-> ⛔ This repository has been archived and is no longer actively maintained. ⛔
-> 
-> **Please visit our new repository for the latest updates: [ansible-configuration](https://github.com/kaniville/ansible-configuration)**
+### ⛔ This repository has been archived and is no longer actively maintained. ⛔
+### ⛔ Please visit this repository for the latest updates: [ansible-dotfiles](https://github.com/kaniville/ansible-dotfiles). ⛔
 
 Configuration of tools that I use in my daily life.
 
