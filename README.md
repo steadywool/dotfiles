@@ -1,7 +1,7 @@
 # 🐧 My dotfiles
 
 ### ⛔ This repository has been archived and is no longer actively maintained. ⛔
-### ⛔ Please visit this repository for the latest updates: [ansible-dotfiles](https://github.com/kaniville/ansible-dotfiles). ⛔
+### ⛔ Please visit this repository for the latest updates: [ansible-dotfiles](https://github.com/steadywool/ansible-dotfiles). ⛔
 
 Configuration of tools that I use in my daily life.
 
@@ -30,7 +30,7 @@ To install additional graphical applications, [Flatpak](https://www.flatpak.org)
 
 For applications in CLI, or not present in Flatpak, [Distrobox](https://github.com/89luca89/distrobox) and [Podman](https://podman.io) are installed.
 
-System snapshots are taken before each update with [Btrfs autosnap](https://github.com/kaniville/btrfs-autosnap).
+System snapshots are taken before each update with [Btrfs autosnap](https://github.com/steadywool/btrfs-autosnap).
 
 ## 🚀 Installation
 To install these dotfiles, use https://github.com/kaniville/ansible-configuration.
