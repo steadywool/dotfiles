@@ -1,7 +1,14 @@
-# 🐧 My dotfiles
+### ⛔ This repository has been archived and is no longer actively maintained. 
+### Please visit this repository for the latest updates: [ansible-dotfiles](https://github.com/steadywool/ansible-dotfiles).
 
-### ⛔ This repository has been archived and is no longer actively maintained. ⛔
-### ⛔ Please visit this repository for the latest updates: [ansible-dotfiles](https://github.com/steadywool/ansible-dotfiles). ⛔
+#### You can browse through existing branches to view dotfiles at specific points in time:
+- Latest i3 WM commit (2020/07/27) : https://github.com/steadywool/dotfiles/tree/i3
+- Latest BSPWM commit (2021/07/01) : https://github.com/steadywool/dotfiles/tree/bspwm
+- Latest Sway WM commit (2023/05/31) : https://github.com/steadywool/dotfiles/tree/sway
+
+---
+
+# 🐧 My dotfiles
 
 Configuration of tools that I use in my daily life.
 
