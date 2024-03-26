@@ -1,0 +1,22 @@
+{
+  // Vscode
+  "telemetry.telemetryLevel": "off",
+  "github.gitAuthentication": false,
+  "update.mode": "none",
+
+  // Appearance
+  "workbench.tree.indent": 15,
+  "window.titleBarStyle": "custom",
+  "editor.minimap.enabled": false,
+
+  // Change default font
+  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontLigatures": true,
+
+  // Git
+  "git.enableSmartCommit": true,
+
+  // Dev Containers
+  "dev.containers.dockerPath": "podman",
+  "dev.containers.dockerComposePath": "podman compose"
+}
