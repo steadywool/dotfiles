@@ -1,4 +1,4 @@
-# 🐧 Linux Dotfiles
+# 🐧 Dotfiles
 
 Personal dotfiles for Penguin.
 
@@ -13,5 +13,5 @@ To install these dotfiles, you can use https://github.com/steadywool/fedora-play
 
 You can also clone this repository with Git:
 ```
-$ git clone https://github.com/steadywool/linux-dotfiles.git
+$ git clone https://github.com/steadywool/dotfiles.git
 ```
