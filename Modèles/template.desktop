@@ -8,3 +8,9 @@ Comment=
 Exec=
 Icon=
 Categories=
+
+# Show or hide this desktop app
+NoDisplay=false
+
+# Set this to "false" if you want to disable the automatic startup of the app
+# X-GNOME-Autostart-enabled=true
