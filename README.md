@@ -1,6 +1,8 @@
 # 🐧 Linux Dotfiles
 
-Personal dotfiles.
+Personal dotfiles for Penguin.
+
+![](src/screenshot.png)
 
 ## 🧰 Applications
 - **Shell :** Fish
