@@ -14,9 +14,5 @@
   "editor.fontLigatures": true,
 
   // Git
-  "git.enableSmartCommit": true,
-
-  // Dev Containers
-  "dev.containers.dockerPath": "podman",
-  "dev.containers.dockerComposePath": "podman compose"
+  "git.enableSmartCommit": true
 }
