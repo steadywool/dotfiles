@@ -10,7 +10,7 @@
   "editor.minimap.enabled": false,
 
   // Change default font
-  "editor.fontFamily": "FiraCode Nerd Font",
+  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
 
   // Git
